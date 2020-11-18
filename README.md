@@ -5,6 +5,7 @@ Este repositório contém todas as atividades de aprendizagem desenvolvidas por 
 _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando conseguir um bom trabalho."_
 
 O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.
+<br>
 
 ## Fundamentos do Desenvolvimento Web :white_check_mark:
 
@@ -80,6 +81,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] (10.3) Jest - Simulando comportamentos
 - [ ] (10.4) Projeto - Jest Assíncrono e Mocking
 ---
+<br>
+
+## Desenvolvimento Front-end :hourglass_flowing_sand:
+
 ##### Bloco 11: Introdução à React
 - [ ] (11.1) Introdução - Front-end
 - [ ] (11.1) Introdução - React
@@ -127,6 +132,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 19: Projeto App de Receitas
 - [ ] (19.1) Projeto - App de Receitas 
 ---
+<br>
+
+## Desenvolvimento Back-end :hourglass_flowing_sand:
+
 ##### Bloco 20: Introdução à SQL
 - [ ] (20.1) Introdução - Back-end
 - [ ] (20.1) Introdução - Bancos de dados relacionais
@@ -216,6 +225,10 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] (34.3) Redes de computadores, ferramentas e segurança
 - [ ] (34.4) Projeto - Explorando os protocolos
 ---
+<br>
+
+## Ciência da Computação :hourglass_flowing_sand:
+
 ##### Bloco 35: Introdução à Python e Raspagem de Dados da Web
 - [ ] (35.1) Aprendendo Python
 - [ ] (35.2) Testes e Exceções
