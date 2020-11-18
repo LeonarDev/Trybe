@@ -16,19 +16,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] (1.3) Introdução - Unix & Shell 
 - [x] (1.3) Unix & Bash - Parte 1 
 - [x] (1.4) Unix & Bash - Parte 2 
----
+<br>
 ##### Bloco 2: Git, GitHub e Internet
 - [x] (2.1) Git & GitHub - O que é e para que serve 
 - [x] (2.2) Git & GitHub - Entendendo os comandos 
 - [x] (2.3) Internet - Entendendo como ela funciona 
----
+<br>
 ##### Bloco 3: Introdução à HTML e CSS
 - [ ] (3.1) HTML & CSS - Estruturas de página 
 - [ ] (3.2) HTML & CSS - Primeiros passos em CSS
 - [ ] (3.4) HTML & CSS - Seletores e posicionamento
 - [ ] (3.4) HTML Semântico
 - [ ] (3.5) Projeto - Lessons Learned
----
+<br>
 ##### Bloco 4: Introdução à JavaScript e Lógica de Programação
 - [ ] (4.1) Introdução - JavaScript
 - [ ] (4.1) JavaScript - Primeiros Passos
@@ -36,7 +36,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] (4.3) JavaScript - Lógica de Programação e Algoritmos
 - [ ] (4.4) JavaScript - Objetos e funções
 - [ ] (4.5) JavaScript - Playground Functions
----
+<br>
 ##### Bloco 5: JavaScript: DOM, Eventos e Web Storage
 - [ ] (5.1) JavaScript - DOM e seletores
 - [ ] (5.2) JavaScript - Trabalhando com elementos
