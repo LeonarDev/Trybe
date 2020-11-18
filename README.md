@@ -1,5 +1,7 @@
-[x] Unix, Bash e Shell Script
-[x] Git, GitHub e Internet
-[ ] HTML & CSS - Estruturas de página
-[ ] HTML & CSS - Primeiros passos em CSS
-[ ] HTML & CSS - Seletores e posicionamento
+- [x] (1.0) Unix, Bash e Shell Script
+- [x] (2.0) Git, GitHub e Internet
+- [ ] (3.1) HTML & CSS - Estruturas de página
+- [ ] (3.2) HTML & CSS - Primeiros passos em CSS
+- [ ] (3.4) HTML & CSS - Seletores e posicionamento
+- [ ] (3.4) HTML Semântico
+- [ ] (3.5) Projeto - Lessons Learned
