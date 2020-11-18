@@ -1,6 +1,6 @@
 # GIT - Instalação e configuração
 
-#### Instalação
+### Instalação
 - [x] Para instalar o Git abra o seu terminal e digite o seguinte comando:
 ```
 sudo apt-get install git-all
