@@ -8,21 +8,19 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 <br>
 
-## Fundamentos do Desenvolvimento Web :white_check_mark:
+## Fundamentos do Desenvolvimento Web :hourglass_flowing_sand:
 
-##### Bloco 1: Unix, Bash e Shell Script
-- [x] (1.3) Setup
+#### Bloco 1: Unix, Bash e Shell Script :green_check_mark:
+- [x] 1.3: Setup
 - [x] (1.3) Fundamentos do Desenvolvimento Web
 - [x] (1.3) Introdução - Unix & Shell 
 - [x] (1.3) Unix & Bash - Parte 1 
 - [x] (1.4) Unix & Bash - Parte 2 
 
-
-##### Bloco 2: Git, GitHub e Internet
+#### Bloco 2: Git, GitHub e Internet :green_check_mark:
 - [x] (2.1) Git & GitHub - O que é e para que serve 
 - [x] (2.2) Git & GitHub - Entendendo os comandos 
 - [x] (2.3) Internet - Entendendo como ela funciona 
-
 
 ##### Bloco 3: Introdução à HTML e CSS
 - [ ] (3.1) HTML & CSS - Estruturas de página 
@@ -30,7 +28,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] (3.4) HTML & CSS - Seletores e posicionamento
 - [ ] (3.4) HTML Semântico
 - [ ] (3.5) Projeto - Lessons Learned
-<br>
 
 ##### Bloco 4: Introdução à JavaScript e Lógica de Programação
 - [ ] (4.1) Introdução - JavaScript
@@ -39,7 +36,6 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] (4.3) JavaScript - Lógica de Programação e Algoritmos
 - [ ] (4.4) JavaScript - Objetos e funções
 - [ ] (4.5) JavaScript - Playground Functions
-<br>
 
 ##### Bloco 5: JavaScript: DOM, Eventos e Web Storage
 - [ ] (5.1) JavaScript - DOM e seletores
