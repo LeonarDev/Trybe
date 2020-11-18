@@ -11,7 +11,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ## Fundamentos do Desenvolvimento Web :construction:
 
 #### Bloco 1: Unix, Bash e Shell Script :heavy_check_mark:
-- [x] 1.3: Setup
+- [x] (1.3) Setup
 - [x] (1.3) Fundamentos do Desenvolvimento Web
 - [x] (1.3) Introdução - Unix & Shell 
 - [x] (1.3) Unix & Bash - Parte 1 
@@ -65,11 +65,11 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] (7.4) Projeto - JavaScript Testes Unitários
 
 #### Bloco 8: Higher Order Functions do JavaScript ES6 :hourglass_flowing_sand:
-- [ ] (8.1) 
-- [ ] (8.2) 
-- [ ] (8.3) 
-- [ ] (8.4) 
-- [ ] (8.5) 
+- [ ] (8.1) JavaScript ES6 - Higher Orders Functions - forEach, find, some, every, sort
+- [ ] (8.2) JavaScript ES6 - Higher Orders Functions - map e filter
+- [ ] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
+- [ ] (8.4) JavaScript ES6 - Spread operator, parâmetro rest, destructuring e mais
+- [ ] (8.5) Projeto - Zoo functions
 
 #### Bloco 9: JavaScript Assíncrono e Promises :hourglass_flowing_sand:
 - [ ] (9.1) JavaScript Assíncrono e Callbacks
@@ -81,6 +81,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [ ] (10.2) Jest - Testes Assíncronos
 - [ ] (10.3) Jest - Simulando comportamentos
 - [ ] (10.4) Projeto - Jest Assíncrono e Mocking
+
+<br>
 
 ## Desenvolvimento Front-end :hourglass_flowing_sand:
 
@@ -130,6 +132,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 #### Bloco 19: Projeto App de Receitas :hourglass_flowing_sand:
 - [ ] (19.1) Projeto - App de Receitas 
+
+<br>
 
 ## Desenvolvimento Back-end :hourglass_flowing_sand:
 
@@ -215,14 +219,16 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 #### Bloco 33: Projeto Trybeer II :hourglass_flowing_sand:
 - [ ] (33.1) Projeto - Trybeer v2
 
+<br>
+
+## Ciência da Computação :hourglass_flowing_sand:
+
 #### Bloco 34: Arquitetura de Computadores e Redes :hourglass_flowing_sand:
 - [ ] (34.1) Introdução - Ciência da Computação
 - [ ] (34.1) Arquitetura de Computadores
 - [ ] (34.2) Arquitetura de redes
 - [ ] (34.3) Redes de computadores, ferramentas e segurança
 - [ ] (34.4) Projeto - Explorando os protocolos
-
-## Ciência da Computação :hourglass_flowing_sand:
 
 #### Bloco 35: Introdução à Python e Raspagem de Dados da Web :hourglass_flowing_sand:
 - [ ] (35.1) Aprendendo Python
