@@ -12,17 +12,17 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 ##### Bloco 1: Unix, Bash e Shell Script
 - [x] (1.3) Setup
 - [x] (1.3) Fundamentos do Desenvolvimento Web
-- [x] (1.3) Introdução - Unix & Shell 11/11/20
-- [x] (1.3) Unix & Bash - Parte 1 12/11/20
-- [x] (1.4) Unix & Bash - Parte 2 13/11/20
+- [x] (1.3) Introdução - Unix & Shell 
+- [x] (1.3) Unix & Bash - Parte 1 
+- [x] (1.4) Unix & Bash - Parte 2 
 ---
 ##### Bloco 2: Git, GitHub e Internet
-- [x] (2.1) Git & GitHub - O que é e para que serve 13/11/20
-- [x] (2.2) Git & GitHub - Entendendo os comandos 16/11/20
-- [x] (2.3) Internet - Entendendo como ela funciona 17/11/20
+- [x] (2.1) Git & GitHub - O que é e para que serve 
+- [x] (2.2) Git & GitHub - Entendendo os comandos 
+- [x] (2.3) Internet - Entendendo como ela funciona 
 ---
 ##### Bloco 3: Introdução à HTML e CSS
-- [ ] (3.1) HTML & CSS - Estruturas de página 18/11/20
+- [ ] (3.1) HTML & CSS - Estruturas de página 
 - [ ] (3.2) HTML & CSS - Primeiros passos em CSS
 - [ ] (3.4) HTML & CSS - Seletores e posicionamento
 - [ ] (3.4) HTML Semântico
