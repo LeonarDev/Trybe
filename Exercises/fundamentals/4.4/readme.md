@@ -1,4 +1,4 @@
-***Parte I - Objetos e For/In
+###Parte I - Objetos e For/In
 
 Usando o objeto abaixo, faça os exercícios a seguir:
 ```
@@ -56,7 +56,7 @@ Ambos recorrentes // Atenção para essa última linha!
 
 ---
 
-***Parte II - Funções
+###Parte II - Funções
 
 1. Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
   - Exemplo de palíndromo: arara .
