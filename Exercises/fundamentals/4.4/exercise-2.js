@@ -8,4 +8,4 @@ let info = {
 
 info.recorrente = 'Sim';
 
-console.log(info.recorrente);
+console.log(info);
