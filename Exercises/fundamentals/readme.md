@@ -19,16 +19,16 @@
 - [x] (3.4) HTML Semântico
 - [x] (3.5) _[Projeto - Lessons Learned]()_
 
-#### Bloco 4: Introdução à JavaScript e Lógica de Programação :triangular_flag_on_post:
+#### Bloco 4: Introdução à JavaScript e Lógica de Programação :heavy_check_mark:
 - [x] (4.1) Introdução - JavaScript
 - [x] (4.1) JavaScript - Primeiros Passos
 - [x] (4.2) JavaScript - Array e loop For
 - [x] (4.3) JavaScript - Lógica de Programação e Algoritmos
 - [x] (4.4) JavaScript - Objetos e funções
-- [ ] (4.5) _[Projeto - Playground Functions]()_
+- [x] (4.5) _[Projeto - Playground Functions]()_
 
-#### Bloco 5: JavaScript: DOM, Eventos e Web Storage :hourglass_flowing_sand:
-- [ ] (5.1) JavaScript - DOM e seletores
+#### Bloco 5: JavaScript: DOM, Eventos e Web Storage :triangular_flag_on_post:
+- [x] (5.1) JavaScript - DOM e seletores
 - [ ] (5.2) JavaScript - Trabalhando com elementos
 - [ ] (5.3) JavaScript - Eventos
 - [ ] (5.4) JavaScript - Web Storage
