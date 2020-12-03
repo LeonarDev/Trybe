@@ -95,7 +95,18 @@
     div3.appendChild(image);
     
     // 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
-    
+      let unorderedList = document.createElement('ul');
+      div4.appendChild(unorderedList);
+      
+      let arrayNumbers = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+
+      for (let index = 0; index < arrayNumbers.length; index += 1) {
+        let listItem = document.createElement('li')
+        listItem.innerHTML = arrayNumbers[index];
+        unorderedList.appendChild(listItem);
+      }
+
+      let listItem = document.createElement('li');
     // 9. Adicione 3 tags h3, todas sendo filhas do div criado no passo 2;
     
     // 10. Adicione a classe title na tag h1 criada;
