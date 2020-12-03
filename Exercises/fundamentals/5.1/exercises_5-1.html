@@ -64,11 +64,15 @@
         function changeBackgroundColorToWhite() {
           let redSquare = document.getElementsByClassName('center-content')[0];
           redSquare.style.background = ('rgb(255,255,255)');
-        };
+        }
         changeBackgroundColorToWhite();
 
         // 4. Crie uma função que corrija o texto da tag <h1>.
-        
+        function titleCorrection() {
+          let correctTitle = document.getElementsByClassName('title')[0];
+          correctTitle.innerText = ('Exercício 5.1 - JavaScript');
+        }
+        titleCorrection();
 
         // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         
