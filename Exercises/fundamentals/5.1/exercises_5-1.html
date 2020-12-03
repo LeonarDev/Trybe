@@ -54,14 +54,18 @@
         changeText();
 
         // 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-        function changeBackgroundColor() {
-          let yellowSquareToGreenColor = document.getElementsByClassName('main-content')[0];
-          yellowSquareToGreenColor.style.background = ('rgb(76,164,109)');
+        function changeBackgroundColorToGreen() {
+          let yellowSquare = document.getElementsByClassName('main-content')[0];
+          yellowSquare.style.background = ('rgb(76,164,109)');
         }
-        changeBackgroundColor();
+        changeBackgroundColorToGreen();
 
         // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
-        
+        function changeBackgroundColorToWhite() {
+          let redSquare = document.getElementsByClassName('center-content')[0];
+          redSquare.style.background = ('rgb(255,255,255)');
+        };
+        changeBackgroundColorToWhite();
 
         // 4. Crie uma função que corrija o texto da tag <h1>.
         
