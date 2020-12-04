@@ -1,4 +1,5 @@
 # Calendário Tryber
+O objetivo destes exercícios é colocar em prática o conhecimento aprendido sobre <b>DOM, seletores, manipulação de elementos HTML e Eventos em JavaScript</b>. Por isso, os exercícios devem ser realizados utilizando apenas código JavaScript, o qual deve ser inserido no arquivo "scripts.js".
 
 ### Exercício 1:
 O array dezDaysList contém os dois últimos dias de novembro e os dias do mês de dezembro. Desenvolva uma função que crie dinamicamente cada dia do calendário e os adicione como filhos/filhas da tag `<ul>` com ID "days" . Note que os dias 29 e 30 de novembro estão no array pois representam respectivamente Segunda-feira e Terça-feira.
