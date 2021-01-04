@@ -1,78 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-  <title>Currículo</title>
-</head>
-<body>
-  <form action="" method="GET" enctype="multipart/form-data">
-    <fieldset>
-      <label for="input-name">Nome
-        <input type="text" maxlength="40" id="input-name" required>
-      </label>
-      <br>
-      <label for="input-email">Email
-        <input type="text" maxlength="50" id="input-email" required>
-      </label>
-      <br>
-      <label for="input-cpf">CPF
-        <input type="text" maxlength="11" id="input-cpf" required>
-      </label>
-      <br>
-      <label for="input-adress">Endereço
-        <input type="text" maxlength="200" id="input-adress" required>
-      </label>
-      <br>
-      <label for="input-city">Cidade
-        <input type="text" maxlength="28" id="input-city" required>
-      </label>
-      <br>
-      <label for="input-estate">Estado
-        <select name="estado" id="input-estate" required>
-          <option value="">Selecione</option>
-          <option value="ac">Acre</option> 
-          <option value="al">Alagoas</option> 
-          <option value="am">Amazonas</option> 
-          <option value="ap">Amapá</option> 
-          <option value="ba">Bahia</option> 
-          <option value="ce">Ceará</option> 
-          <option value="df">Distrito Federal</option> 
-          <option value="es">Espírito Santo</option> 
-          <option value="go">Goiás</option> 
-          <option value="ma">Maranhão</option> 
-          <option value="mt">Mato Grosso</option> 
-          <option value="ms">Mato Grosso do Sul</option> 
-          <option value="mg">Minas Gerais</option> 
-          <option value="pa">Pará</option> 
-          <option value="pb">Paraíba</option> 
-          <option value="pr">Paraná</option> 
-          <option value="pe">Pernambuco</option> 
-          <option value="pi">Piauí</option> 
-          <option value="rj">Rio de Janeiro</option> 
-          <option value="rn">Rio Grande do Norte</option> 
-          <option value="ro">Rondônia</option> 
-          <option value="rs">Rio Grande do Sul</option> 
-          <option value="rr">Roraima</option> 
-          <option value="sc">Santa Catarina</option> 
-          <option value="se">Sergipe</option> 
-          <option value="sp">São Paulo</option> 
-          <option value="to">Tocantins</option>
-        </select>
-      </label>
-      <br>
-        <label for="house-type">
-        <input name="adress-type" type="radio" id="house-type" required>Casa
-      </label>
-      <label for="apartment-type">
-        <input name="adress-type" type="radio" id="apartment-type" required>Apartamento
-      </label>
-    </fieldset>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario-curriculo</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="form-header">
+      <h1>Formulário para cadastro de currículo</h1>
+      <p>Preencha os campos abaixo.</p>
+    </header>
 
-    
-  </form>
-  <script src='script.js'></script>
-</body>
+    <form id="cv-form">
+      <div class="form-row">
+        <fieldset>
+          <div class="line-content">
+            <label for="name">Nome: </label>
+            <input type="text" name="name" id="name" maxlength="40" required>
+          </div>
+          <div class="line-content">
+            <label for="email">Endereço de e-mail: </label>
+            <input class="email-input" type="email" name="email" id="email" maxlength="50" required>
+          </div>
+          <div class="line-content">
+            <label for="cpf-number">CPF: </label>
+            <input type="text" name="cpf" id="cpf-number" maxlength="11" required>
+          </div>
+          <div class="line-content">
+            <label for="address">Endereço: </label>
+            <input type="text" name="address" id="address" maxlength="200" required>
+          </div>
+          <div class="line-content">
+            <label for="city">Cidade: </label>
+            <input type="text" name="city" id="city" maxlength="200" required>
+          </div>
+          <div class="line-content">
+            <label for="state">Estado: </label>
+            <select name="state" id="state" value = "" required>
+            </select>
+          </div>
+          <div class="line-content">
+            <label for="house-apartment">Tipo de imóvel: </label>
+            <input type="radio" name="house-apartment" id="house" value="house" required> <span>Casa</span>
+            <input type="radio" name="house-apartment" id="apartment" value="apartment" required > <span>Apartamento</span>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="line-content">
+            <label for="cv-resume">Resumo do currículo: </label>
+            <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="50" rows="20" required></textarea>
+          </div>
+          <div class="line-content">
+            <label for="position">Cargo: </label>
+            <input type="text" name="position" id="position" maxlength="40" required >
+          </div>
+          <div class="line-content">
+            <label for="description">Descrição do cargo: </label>
+            <input type="text" id="description" name="description" required>
+          </div>
+          <div class="line-content">
+            <label for="start-date">Data de início: </label>
+            <input type="text" class="input-data" name="start-date" value="" required>
+          </div>
+        </fieldset>
+
+        <div class="button-line">
+          <button class="submit-button" type="button">Enviar</button>
+          <button class="clear-button" type="button">Limpar</button>
+        </div>
+
+      </div>
+      </form>
+    <section class="form-data"></section>
+    <script src="script.js"></script>
+  </body>
 </html>
