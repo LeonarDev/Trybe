@@ -37,7 +37,7 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] (4.4) JavaScript - Objetos e funções
 - [x] (4.5) _[Projeto - Playground Functions]()_
 
-#### Bloco 5: JavaScript: DOM, Eventos e Web Storage :triangular_flag_on_post:
+#### Bloco 5: JavaScript: DOM, Eventos e Web Storage :heavy_check_mark:
 - [x] (5.1) JavaScript - DOM e seletores
 - [x] (5.2) JavaScript - Trabalhando com elementos
 - [x] (5.3) JavaScript - Eventos
@@ -49,8 +49,8 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] (5.8) _[Projeto - Adivinhe a Cor]()_
 - [x] (5.8) _[Projeto - Carta Misteriosa]()_
 
-#### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo :hourglass_flowing_sand:
-- [ ] (6.1) HTML & CSS - Forms
+#### Bloco 6: HTML e CSS: Forms, Flexbox e Responsivo :triangular_flag_on_post:
+- [x] (6.1) HTML & CSS - Forms
 - [ ] (6.2) Bibliotecas JavaScript e Frameworks CSS
 - [ ] (6.3) Introdução - CSS Flexbox
 - [ ] (6.3) CSS Flexbox - Parte 1
