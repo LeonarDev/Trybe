@@ -51,4 +51,4 @@
 - Execute as validações que foram pedidas ao longo da montagem do formulário.
 - Monte uma `<div>` com o consolidado dos dados que foram inseridos no formulário.
 
-4) Crie um botão Limpar que limpa todos os campos do formulário e a `<div>` com seu currículo também.
+#### 4) Crie um botão Limpar que limpa todos os campos do formulário e a `<div>` com seu currículo também.
