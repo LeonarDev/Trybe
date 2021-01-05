@@ -8,13 +8,14 @@
   </head>
   <body>
     <header class="form-header">
-      <h1>Formulário para cadastro de currículo</h1>
-      <p>Preencha os campos abaixo.</p>
+      <h1>Formulário</h1>
+      <p>Preencha os campos abaixo para cadastrar seu currículo.</p>
     </header>
 
     <form id="cv-form">
       <div class="form-row">
         <fieldset>
+          <legend>Dados Pessoais</legend>
           <div class="line-content">
             <label for="name">Nome: </label>
             <input type="text" name="name" id="name" maxlength="40" required>
@@ -46,10 +47,14 @@
             <input type="radio" name="house-apartment" id="apartment" value="apartment" required > <span>Apartamento</span>
           </div>
         </fieldset>
+        <br>
         <fieldset>
+          <legend>Último emprego</legend>
           <div class="line-content">
             <label for="cv-resume">Resumo do currículo: </label>
-            <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="50" rows="20" required></textarea>
+            <br>
+            <br>
+            <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="50" rows="5" required></textarea>
           </div>
           <div class="line-content">
             <label for="position">Cargo: </label>
