@@ -3,8 +3,8 @@
 - Caso julgue necessário, crie estilos CSS para o seu formulário, de acordo com a sua imaginação. Coloque-os em um arquivo styles.css .
 - Crie também um arquivo script.js para seu código JavaScript .
 
-Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
-1) Crie um `<fieldset>` para os seguintes dados pessoais:
+## Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
+#### 1) Crie um `<fieldset>` para os seguintes dados pessoais:
 - Nome - Texto
     - Limite de 40 caracteres
     - Campo obrigatório
@@ -28,7 +28,7 @@ Vamos criar um formulário de cadastro de currículo com base na especificação
     - Casa, Apartamento
     - Campo obrigatório
 
-2) Crie outro `<fieldset>` para dados do seu último emprego
+#### 2) Crie outro `<fieldset>` para dados do seu último emprego
 - Resumo do currículo - TextArea
     - Limite de 1000 caracteres
     - Campo obrigatório
@@ -46,9 +46,9 @@ Vamos criar um formulário de cadastro de currículo com base na especificação
     - Caso alguma das condições for inválida no momento do envio do formulário, exibir mensagem de erro contextualizada.
     - Campo obrigatório
 
-3) Logo abaixo do formulário, crie um botão que:
+#### 3) Logo abaixo do formulário, crie um botão que:
 - Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() .
 - Execute as validações que foram pedidas ao longo da montagem do formulário.
 - Monte uma `<div>` com o consolidado dos dados que foram inseridos no formulário.
 
-4) Crie um botão Limpar que limpa todos os campos do formulário e a `<div>` com seu currículo também.
+#### 4) Crie um botão Limpar que limpa todos os campos do formulário e a `<div>` com seu currículo também.
