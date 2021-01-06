@@ -3,80 +3,69 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script rel="stylesheet" href="bootstrap/jquery-3.5.1.min.js"></script>
+    <script rel="stylesheet" href="bootstrap/bootstrap.min.js"></script>
     <title>Formulario-curriculo</title>
   </head>
   <body>
-    <header>
+    <header class="form-header">
       <h1>Formulário</h1>
-      <p>Preencha os campos abaixo para cadastrar seu currículo.</p>
+      <p>Preencha os campos abaixo para cadastrar seu currículo</p>
     </header>
-
     <form id="cv-form">
-      <div>
-        <fieldset>
-          <legend>Dados Pessoais</legend>
-          <div>
-            <label for="name">Nome: </label>
-            <input type="text" name="name" id="name" maxlength="40" required>
+      <div class="form-row">
+          <div class="mb-3">
+            <label class="form-label" class="form-label" for="name">Nome: </label>
+            <input class="form-control" type="text" name="name" id="name" maxlength="40" required>
           </div>
-          <div>
-            <label for="email">Endereço de e-mail: </label>
-            <input type="email" name="email" id="email" maxlength="50" required>
+          <div class="mb-3">
+            <label class="form-label" for="email">Endereço de e-mail: </label>
+            <input class="form-control" class="email-input" type="email" name="email" id="email" maxlength="50" required>
           </div>
-          <div>
-            <label for="cpf-number">CPF: </label>
-            <input type="text" name="cpf" id="cpf-number" maxlength="11" required>
+          <div class="mb-3">
+            <label class="form-label" for="cpf-number">CPF: </label>
+            <input class="form-control" type="text" name="cpf" id="cpf-number" maxlength="11" required>
           </div>
-          <div>
-            <label for="address">Endereço: </label>
-            <input type="text" name="address" id="address" maxlength="200" required>
+          <div class="mb-3">
+            <label class="form-label" for="address">Endereço: </label>
+            <input class="form-control" type="text" name="address" id="address" maxlength="200" required>
           </div>
-          <div>
-            <label for="city">Cidade: </label>
-            <input type="text" name="city" id="city" maxlength="200" required>
+          <div class="mb-3">
+            <label class="form-label" for="city">Cidade: </label>
+            <input class="form-control" type="text" name="city" id="city" maxlength="200" required>
           </div>
-          <div>
-            <label for="state">Estado: </label>
-            <select name="state" id="state" value = "" required>
+          <div class="mb-3">
+            <label class="form-label" aria-label="Default select example" for="state">Estado: </label>
+            <select class="form-select" name="state" id="state" value = "" required>
             </select>
           </div>
-          <div>
-            <label for="house-apartment">Tipo de imóvel: </label>
-            <input type="radio" name="house-apartment" id="house" value="house" required> <span>Casa</span>
-            <input type="radio" name="house-apartment" id="apartment" value="apartment" required > <span>Apartamento</span>
+          <div class="mb-3">
+            <label class="form-label" for="house-apartment">Tipo de imóvel: </label>
+            <input  type="radio" name="house-apartment" id="house" value="house" required> <span>Casa</span>
+            <input  type="radio" name="house-apartment" id="apartment" value="apartment" required > <span>Apartamento</span>
           </div>
-        </fieldset>
-        <br>
-        <fieldset>
-          <legend>Último emprego</legend>
-          <div>
-            <label for="cv-resume">Resumo do currículo: </label>
-            <br>
-            <br>
-            <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="50" rows="5" required></textarea>
+          <div class="mb-3">
+            <label class="form-label" for="cv-resume">Resumo do currículo: </label>
+            <textarea id="cv-resume" name="cv-resume" maxlength="1000" rows="5" required></textarea>
           </div>
-          <div>
-            <label for="position">Cargo: </label>
-            <input type="text" name="position" id="position" maxlength="40" required >
+          <div class="mb-3">
+            <label class="form-label" for="position">Cargo: </label>
+            <input class="form-control" type="text" name="position" id="position" maxlength="40" required >
           </div>
-          <div>
-            <label for="description">Descrição do cargo: </label>
-            <input type="text" id="description" name="description" required>
+          <div class="mb-3">
+            <label class="form-label" for="description">Descrição do cargo: </label>
+            <input class="form-control" type="text" id="description" name="description" required>
           </div>
-          <div>
-            <label for="start-date">Data de início: </label>
-            <input type="text" name="start-date" value="" required>
+          <div class="mb-3">
+            <label class="form-label" for="start-date">Data de início: </label>
+            <input class="form-control" type="text" class="input-data" name="start-date" value="" required>
           </div>
-        </fieldset>
-
-        <div>
-          <button type="button">Enviar</button>
-          <button type="button">Limpar</button>
-        </div>
-
+        <button class="btn btn-primary" type="button">Enviar</button>
+        <button class="clear-button" type="button">Limpar</button>
       </div>
       </form>
-    <section></section>
+    <section class="form-data"></section>
     <script src="script.js"></script>
   </body>
 </html>
