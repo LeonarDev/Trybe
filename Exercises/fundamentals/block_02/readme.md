@@ -8,7 +8,7 @@
 
 <a href="https://www.youtube.com/watch?v=E6fK7-O8Ow0">What is GIT?</a>
 
-<a href="https://forms.gle/pjdre9Dtv2vGN7aS6">Fixation Quiz</a>
+<a href="https://forms.gle/pjdre9Dtv2vGN7aS6">Fixation Quiz about Git</a>
 
 <a href="https://git-scm.com/book/pt-br/v2">Official book for <strong><em>Git</em></strong></a>
 
