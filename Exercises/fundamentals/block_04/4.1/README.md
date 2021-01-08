@@ -46,19 +46,19 @@ In today's exercises, you will be doing fifteen small programs. All work with co
       * profit = salesValue - TotalCost (profit of a product)
 
 1. A person who works with a formal contract in Brazil has the INSS and the IR deducted from his gross salary. Make a program that, given a gross salary, calculates the net to be received.
-    * The notation for a salary of R $ 1500.10, for example, must be 1500.10. For tax ranges, use the following references:
+    * The notation for a salary of R$ 1500.10, for example, must be R$ 1500.10. For tax ranges, use the following references:
       * **INSS**
-        * Gross salary up to R $ 1,556.94: 8% rate
-        * Gross salary from R $ 1,556.95 to R $ 2,594.92: 9% rate
-        * Gross salary from R $ 2,594.93 to R $ 5,189.82: 11% rate
-        * Gross salary above R $ 5,189.82: maximum rate of R $ 570.88
+        * Gross salary up to R$ 1,556.94: 8% rate
+        * Gross salary from R$ 1,556.95 to R$ 2,594.92: 9% rate
+        * Gross salary from R$ 2,594.93 to R$ 5,189.82: 11% rate
+        * Gross salary above R$ 5,189.82: maximum rate of R$ 570.88
     
       * **IR**
-        * Up to R $ 1,903.98: exempt from income tax
-        * From R $ 1,903.99 to 2,826.65: rate of 7.5% and installment of R $ 142.80 to be deducted from tax
-        * From R $ 2,826.66 to R $ 3,751.05: rate of 15% and installment of R $ 354.80 to be deducted from tax
-        * From R $ 3,751.06 to R $ 4,664.68: rate of 22.5% and installment of R $ 636.13 to be deducted from tax
-        * Above R $ 4,664.68: rate of 27.5% and installment of R $ 869.36 to be deducted from tax.
+        * Up to R$ 1,903.98: exempt from income tax
+        * From R$ 1,903.99 to R$ 2,826.65: rate of 7.5% and installment of R$ 142.80 to be deducted from tax
+        * From R$ 2,826.66 to R$ 3,751.05: rate of 15% and installment of R$ 354.80 to be deducted from tax
+        * From R$ 3,751.06 to R$ 4,664.68: rate of 22.5% and installment of R$ 636.13 to be deducted from tax
+        * Above R$ 4,664.68: rate of 27.5% and installment of R$ 869.36 to be deducted from tax.
 
 
 Example - A person has a gross salary of R$ 3,000.00. The calculation will be:
