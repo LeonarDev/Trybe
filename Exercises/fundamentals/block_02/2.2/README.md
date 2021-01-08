@@ -1,4 +1,4 @@
-# (2.1) Git & GitHub - What it is and what it is for
+# (2.1) Git & GitHub - Understanding commands
 
 ### Pull Request no GitHub
 Read carefully this tutorial that explains how to create a Pull Request on GitHub:
