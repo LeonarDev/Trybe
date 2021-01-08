@@ -1,4 +1,4 @@
-# HTML e CSS - Estruturas de página
+# 3.1 HTML e CSS - Estruturas de página
 
 <ul>
   <li>
@@ -61,7 +61,7 @@
 
 <hr>
 
-# HTML & CSS - Primeiros passos em CSS
+# 3.2 HTML & CSS - Primeiros passos em CSS
 
 <ul>
   <li>
@@ -145,7 +145,7 @@
 
 <hr>
 
-# HTML & CSS - Seletores e posicionamento
+# 3.3 HTML & CSS - Seletores e posicionamento
 
 <ul>
   <li>
@@ -208,7 +208,7 @@
 
 <hr>
 
-# HTML Semântico
+# 3.4 HTML Semântico
 
 <ul>
   <li>
