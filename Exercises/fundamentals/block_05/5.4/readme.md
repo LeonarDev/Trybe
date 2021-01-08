@@ -1,4 +1,4 @@
-# Agora a prática
+# (5.4) JavaScript - Web Storage
 
 Imagine que você é a pessoa responsável por desenvolver uma página que servirá como um leitor de conteúdo escrito.
 
