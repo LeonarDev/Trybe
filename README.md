@@ -7,7 +7,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 
 <br>
 
-<h3 align=center>MODULE 1</h3>
+### MODULE 1
 | [FUNDAMENTALS OF WEB DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals) | Status
 | --- | :---: |
 | Block 01 - Unix, Bash & Shell Script | :heavy_check_mark:
