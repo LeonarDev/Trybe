@@ -1,4 +1,6 @@
-# Calendário Tryber
+# (5.3) JavaScript - Events
+
+## Calendário Tryber
 O objetivo destes exercícios é colocar em prática o conhecimento aprendido sobre <b>DOM, seletores, manipulação de elementos HTML e Eventos em JavaScript</b>. Por isso, os exercícios devem ser realizados utilizando apenas código JavaScript, o qual deve ser inserido no arquivo "scripts.js".
 
 ### Exercício 1:
