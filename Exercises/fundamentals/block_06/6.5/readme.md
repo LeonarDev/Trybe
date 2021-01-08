@@ -583,8 +583,8 @@ The purpose of this exercise is to use media queries to make the page above look
 
 <img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_print.png"> 
 Visualização da página antes da impressão
-
-
+<br>
+<br>
 <br>
 
 * Adicione uma media query no arquivo CSS e as regras necessárias para que a página se pareça com as imagens abaixo quando a tela for redimensionada para larguras menores. Especificamente:
@@ -593,17 +593,19 @@ Visualização da página antes da impressão
     * As imagens não devem exceder a largura da tela;
     * Os itens dentro do elemento navigation devem aparecer cada um em sua própria linha;
     * O elemento com id header deve ser fixo, de forma que ele fique aparecendo sempre no topo da tela mesmo apos o usuário rolar a página.
+<br>
+<br>
 
 <img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_small_phone.png"> 
 240x320: tela pequena
-
-
+<br>
+<br>
 <br>
 
 <img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_android.png"> 
 360x640 tela de smartphone
-
-
+<br>
+<br>
 <br>
 
 
