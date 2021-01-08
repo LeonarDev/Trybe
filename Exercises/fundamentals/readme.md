@@ -1,4 +1,4 @@
-## Fundamentals of Web Development :construction:
+# Fundamentals of Web Development :construction:
 
 #### Block 01: [Unix, Bash and Shell Script](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_01) :heavy_check_mark:
 - [x] (1.3) Setup
