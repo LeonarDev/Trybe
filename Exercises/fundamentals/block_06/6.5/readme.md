@@ -379,6 +379,7 @@ Before you start, copy the HTML and CSS template below, and save the respective 
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -573,7 +574,8 @@ The purpose of this exercise is to use media queries to make the page above look
     * Elements with `id header`, `navigation` and `footer` should disappear;
     * The element with `id aside` must be shown below the main content.
 
-<img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_print.png"> Visualização da página antes da impressão
+<img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_print.png"> 
+Visualização da página antes da impressão
 
 
 * Adicione uma media query no arquivo CSS e as regras necessárias para que a página se pareça com as imagens abaixo quando a tela for redimensionada para larguras menores. Especificamente:
@@ -583,10 +585,12 @@ The purpose of this exercise is to use media queries to make the page above look
     * Os itens dentro do elemento navigation devem aparecer cada um em sua própria linha;
     * O elemento com id header deve ser fixo, de forma que ele fique aparecendo sempre no topo da tela mesmo apos o usuário rolar a página.
 
-<img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_small_phone.png"> 240x320: tela pequena
+<img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_small_phone.png"> 
+240x320: tela pequena
 
 
-<img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_android.png"> 360x640 tela de smartphone
+<img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_android.png"> 
+360x640 tela de smartphone
 
 
 <br>
