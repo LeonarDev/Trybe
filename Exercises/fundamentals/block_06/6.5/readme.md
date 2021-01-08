@@ -584,6 +584,8 @@ The purpose of this exercise is to use media queries to make the page above look
 * Add a media query to the CSS file and the necessary rules so that the page looks like the image below when it is printed. Specifically:
     * Elements with `id header`, `navigation` and `footer` should disappear;
     * The element with `id aside` must be shown below the main content.
+<br>
+<br>
 
 <img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_print.png"> 
 Visualização da página antes da impressão
