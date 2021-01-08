@@ -1,150 +1,151 @@
-<div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="layout-e-box-model-no-seu-portfolio-web" class="title-section">
-  Layout e Box Model no seu Portfólio Web
-</h3>
-<div class="pt-1 pb-1">
-  Antes de começar, você deve seguir estas instruções e fazer o setup para o exercício de hoje:
-</div>
+# (3.4) HTML & CSS - Selectors and positioning
+
+<div>
+  <h3> Layout and Box Model in your Web Portfolio </h3>
+  <div>
+  Before you begin, you must follow these instructions and set up for today's exercise:
+  </div>
 <ol>
   <li>
-    Entre no diretório que você criou no dia anterior;
+    Enter the directory you created the day before;
   </li>
   <li>
-    Procure a tag 
-<code class="inline">&lt;style&gt;&lt;/style&gt;</code>    , onde você fez as alterações ontem. Mova todo o conteúdo da tag 
-<code class="inline">style</code>     e coloque em um arquivo 
-<code class="inline">style.css</code>    ;
+    Search for the tag
+<code class = "inline"> & lt; style & gt; & lt; / style & gt; </code>, where you made the changes yesterday. Move all tag content
+<code class = "inline"> style </code> and place it in a file
+<code class = "inline"> style.css </code>;
   </li>
   <li>
-    Adicione as novas alterações dentro do arquivo 
-<code class="inline">style.css</code>    ;
+    Add new changes within the file
+<code class = "inline"> style.css </code>;
   </li>
   <li>
-    Não se esqueça de importar esse arquivo na sua página;
+    Don't forget to import this file on your page;
   </li>
   <li>
-    Depois de importar o arquivo 
-<code class="inline">style.css</code>    , você já pode remover a tag 
-<code class="inline">style</code>     do seu documento.
+    After importing the file
+<code class = "inline"> style.css </code>, you can now remove the tag
+<code class = "inline"> style </code> of your document.
   </li>
   <li>
-    Lembre-se que para executar o seu código enquanto o desenvolve você deve utilizar a extensão 
-<code class="inline">Live Server</code>    , para saber mais sobre ela acesse nosso 
+    Remember that to execute your code while developing it you must use the extension
+<code class = "inline"> Live Server </code>, to learn more about it visit our
     <a href="/course/real-life-engineer/vscode">
-      conteúdo
+      content
     </a>
-     sobre isso.
+     about this.
   </li>
 </ol>
-<hr class="thin">
+<hr class = "thin">
 </div>
 
-<div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="requisitos" class="title-section">
-  Requisitos
+<div class = "col-span-12 content-section-box"> <div class = "dark-screen"> </div> <h3 id = "requirements" class = "title-section">
+  Requirements
 </h3>
-<div class="pt-1 pb-1">
-  Seu Portfólio Web deve ter ter um layout usando 
+<div class = "pt-1 pb-1">
+  Your Web Portfolio must have a layout using
   <em>
     Box Model
   </em>
-   com as informações a seguir:
+   with the following information:
 </div>
 <ul>
   <li>
-    <div class="pt-1 pb-1">
-      Coloque seu nome, sua foto e a descrição que você escreveu sobre você dentro de blocos;
+    <div class = "pt-1 pb-1">
+      Put your name, your photo and the description you wrote about yourself inside blocks;
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      A descrição deve ficar 
+    <div class = "pt-1 pb-1">
+      The description should be
       <em>
-        ao lado
+        next to
       </em>
-       da foto;
+       of the picture;
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      Centralize seu nome na página;
+    <div class = "pt-1 pb-1">
+      Center your name on the page;
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      Use 
-<code class="inline">padding</code>       e coloque uma cor de fundo na sua foto que seja diferente da cor de fundo do resto da página;
+    <div class = "pt-1 pb-1">
+      Use
+<code class = "inline"> padding </code> and put a background color in your photo that is different from the background color of the rest of the page;
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      Adicione 
-<code class="inline">margin</code>       e 
-<code class="inline">padding</code>       nos elementos que julgue necessário
+    <div class = "pt-1 pb-1">
+      Add
+<code class = "inline"> margin </code> and
+<code class = "inline"> padding </code> on the elements you deem necessary
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      Coloque estilo somente nos ítens ímpares da lista das suas habilidades.
+    <div class = "pt-1 pb-1">
+      Style only the odd items in your skills list.
     </div>
   </li>
 </ul>
-<hr class="thin">
+<hr class = "thin">
 </div>
 
-<div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="dicas" class="title-section">
-  Dicas
+<div class = "col-span-12 content-section-box"> <div class = "dark-screen"> </div> <h3 id = "tips" class = "title-section">
+  Tips
 </h3>
 <ul>
   <li>
-    <div class="pt-1 pb-1">
-      Use a função de "Inspecionar" do browser para analisar o estilo de outras páginas web;
+    <div class = "pt-1 pb-1">
+      Use the browser's "Inspect" function to analyze the style of other web pages;
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      Você pode fazer alterações direto no 
+    <div class = "pt-1 pb-1">
+      You can make changes right in the
       <em>
         console
       </em>
-       do browser, depois de inspecionar algum elemento na página:
+       browser, after inspecting something on the page:
     </div>
     <ul>
       <li>
-        Na aba "Elementos", à direita, tem uma lista com os seletores CSS aplicados ao elemento;
+        In the "Elements" tab, on the right, there is a list with the CSS selectors applied to the element;
       </li>
       <li>
-        Você pode adicionar novas regras CSS a esse elemento especificamente, escrevendo-as dentro de 
-<code class="inline">element.style</code>         no 
+        You can add new CSS rules to that element specifically, by writing them inside
+<code class = "inline"> element.style </code> on
         <em>
           console
         </em>
-         do browser;
+         browser;
       </li>
       <li>
-        Lembre-se de que as alterações não são salvas, então se você recarregar a página elas vão se perder.
+        Remember that changes are not saved, so if you reload the page they will be lost.
       </li>
     </ul>
   </li>
 </ul>
-<hr class="thin">
+<hr class = "thin">
 </div>
 
-<div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="atualizando-seu-portfolio-web-para-o-mundo-ver" class="title-section">
-  Atualizando seu Portfólio Web para o mundo ver!
+<div class = "col-span-12 content-section-box"> <div class = "dark-screen"> </div> <h3 id = "updating-your-portfolio-web-for-the-world- see "class =" title-section ">
+   Updating your Web Portfolio for the world to see!
 </h3>
-<div class="pt-1 pb-1">
-  Agora que você usou layout e 
-  <em>
-    Box Model
-  </em>
-   no seu 
-  <em>
-    Portfólio Web
-  </em>
-  , chegou o momento de atualizar tudo que você fez e colocar no seu GitHub Pages! 🎉
+<div class = "pt-1 pb-1">
+   Now that you’ve used layout and
+   <em>
+     Box Model
+   </em>
+    in your
+   <em>
+     Web Portfolio
+   </em>
+   , the time has come to update everything you've done and put it on your GitHub Pages! 🎉
 </div>
-<div class="pt-1 pb-1">
-  Para isso, basta você atualizar seu projeto usando o que você aprendeu de 
-<code class="inline">Git</code>  .
+<div class = "pt-1 pb-1">
+   For that, you just need to update your project using what you learned from
+<code class = "inline"> Git </code>.
 </div>
-<hr class="thin">
+<hr class = "thin">
 </div>
