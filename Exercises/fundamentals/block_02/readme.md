@@ -2,7 +2,7 @@
 
 - (2.1) [Git & GitHub - What it is and what it is for](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_02/2.1)
 - (2.2) [Git & GitHub - Understanding commands](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_02/2.2)
-- (2.3) [Internet - Understanding how it works](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_02/2.3)
+- (2.3) Internet - Understanding how it works
 
 <hr>
 
