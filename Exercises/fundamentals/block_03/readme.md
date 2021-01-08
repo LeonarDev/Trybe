@@ -1,4 +1,4 @@
-# Block 03: Introduction to HTML e CSS heavy_check_mark
+# Block 03: Introduction to HTML e CSS
 
 ## (3.1) HTML e CSS - Page structures
 
