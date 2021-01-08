@@ -24,7 +24,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 <br>
 
 ### Module 2
-| FRONT-END DEVELOPMENT | Status
+| [FRONT-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end) | Status
 | --- | :---: |
 | Block 11 - Introduction to React | :hourglass_flowing_sand:
 | Block 12 - React: Components with Status, Events and Forms	| :hourglass_flowing_sand:
@@ -39,7 +39,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 <br>
 
 ### Module 3
-| BACK-END DEVELOPMENT | Status
+| [BACK-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end) | Status
 | --- | :---: |
 | Block 20 - Introduction to SQL | :hourglass_flowing_sand:
 | Block 21 - SQL Functions, Joins and Subqueries	| :hourglass_flowing_sand:
@@ -59,7 +59,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 <br>
 
 ### Module 4
-| COMPUTER SCIENCE | Status
+| [COMPUTER SCIENCE](https://github.com/LeonarDev/Trybe/tree/main/Exercises/computer-science) | Status
 | --- | :---: |
 | Block 34 - Computer and Network Architecture | :hourglass_flowing_sand:
 | Block 35 - Introduction to Python and Web Data Scraping	| :hourglass_flowing_sand:
