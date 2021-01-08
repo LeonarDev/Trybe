@@ -19,6 +19,7 @@
 
 `attribute`: These are all the attributes that a specific node has, such as a class or id.
 
+<hr>
 
 ### Events
 
@@ -33,6 +34,7 @@ The way to search the data stored in these structures, in some cases, can change
 
 - [How to compare dates in Javascript](https://pt.stackoverflow.com/questions/217881/comparar-data-atual-com-javascript?rq=1) (PT-BR)
 
+<hr>
 
 ### Web Storage
 
@@ -44,6 +46,7 @@ Unlike **Cookies**, the storage limit is much higher (at least 5MB), and informa
 
 **Web Storage** is by origin (by domain and protocol). All pages in a source can save and access the same data.
 
+<hr>
 
 #### Local and Session Storage
 
