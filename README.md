@@ -9,7 +9,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 <br>
 
 ### Module 1
-| Fundamentals of Web Development | Status
+| [FUNDAMENTALS OF WEB DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals) | Status
 | --- | :---: |
 | Block 01 - Unix, Bash & Shell Script | :heavy_check_mark:
 | Block 02 - Git, GitHub & Internet	| :heavy_check_mark:
@@ -25,7 +25,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 <br>
 
 ### Module 2
-| Frond-end Development | Status
+| FRONT-END DEVELOPMENT | Status
 | --- | :---: |
 | Block 11 - Introduction to React | :hourglass_flowing_sand:
 | Block 12 - React: Components with Status, Events and Forms	| :hourglass_flowing_sand:
@@ -40,7 +40,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 <br>
 
 ### Module 3
-| Back-end Development | Status
+| BACK-END DEVELOPMENT | Status
 | --- | :---: |
 | Block 20 - Introduction to SQL | :hourglass_flowing_sand:
 | Block 21 - SQL Functions, Joins and Subqueries	| :hourglass_flowing_sand:
@@ -60,7 +60,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 <br>
 
 ### Module 4
-| Computer Science | Status
+| COMPUTER SCIENCE | Status
 | --- | :---: |
 | Block 34 - Computer and Network Architecture | :hourglass_flowing_sand:
 | Block 35 - Introduction to Python and Web Data Scraping	| :hourglass_flowing_sand:
