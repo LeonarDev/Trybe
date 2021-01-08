@@ -574,6 +574,10 @@ Before you start, copy the HTML and CSS template below, and save the respective 
   height: 1%;
 }
 ```
+<br>
+<br>
+<br>
+
 
 The purpose of this exercise is to use media queries to make the page above look different at the time of printing and on different screen sizes.
 
@@ -593,6 +597,7 @@ Visualização da página antes da impressão
     * As imagens não devem exceder a largura da tela;
     * Os itens dentro do elemento navigation devem aparecer cada um em sua própria linha;
     * O elemento com id header deve ser fixo, de forma que ele fique aparecendo sempre no topo da tela mesmo apos o usuário rolar a página.
+<br>
 <br>
 <br>
 
