@@ -1,18 +1,20 @@
-1. Nesse primeiro exercício, percorra o array imprimindo todos os valores nele contidos com a função console.log() ;
+# (4.2) JavaScript - Array and loop For
 
-2. Para o segundo exercício, você deve somar todos os valores contidos no array e imprimir o resultado;
+1. In this first exercise, scroll through the array by printing all the values contained in it with the function console.log();
 
-3. Para o terceiro exercício, calcule e imprima a média aritmética dos valores contidos no array;
-	- A média aritmética é o resultado da soma de todos os elementos divido pelo número total de elementos.
+2. For the second exercise, you must add all the values contained in the array and print the result;
 
-4. Com o mesmo código do exercício anterior, caso valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20";
+3. For the third exercise, calculate and print the arithmetic mean of the values contained in the array;
+- The arithmetic mean is the result of the sum of all elements divided by the total number of elements.
 
-5. Utilizando for , descubra qual o maior valor contido no array e imprima-o;
+4. Using the same code as in the previous exercise, if the final value is greater than 20, print the message: "value greater than 20". If not, print the message: "value less than or equal to 20";
 
-6. Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado";
+5. Using for, find out what is the largest value contained in the array and print it;
 
-7. Utilizando for , descubra qual o menor valor contido no array e imprima-o;
+6. Find out how many odd values are in the array and print the result. If none exist, print the message: "no odd values ​​found";
 
-8. Utilizando for , crie uma array que vá de 1 até 25 e imprima o resultado;
+7. Using for, find out the lowest value contained in the array and print it;
 
-9. Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2 .
+8. Using for, create an array that goes from 1 to 25 and print the result;
+
+9. Using the array created in the previous exercise, print the result of dividing each of the elements by 2.
