@@ -1,4 +1,4 @@
-# (3.4) HTML & CSS - Selectors and positioning
+# (3.3) HTML & CSS - Selectors and positioning
 
 <div>
   <h3> Layout and Box Model in your Web Portfolio </h3>
