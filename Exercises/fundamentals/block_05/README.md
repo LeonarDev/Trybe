@@ -1,5 +1,18 @@
 # Block 05: JavaScript: DOM, Events and Web Storage
 
+- (5.1) JavaScript - DOM and Selectors
+- (5.2) JavaScript - Working with Elements
+- (5.3) JavaScript - Events
+- (5.4) JavaScript - Web Storage
+- (5.5) Fundamentals - JavaScript - Projetcs
+- (5.5) Project - Pixels Art
+- (5.6) Project - To-Do List
+- (5.7) Project - Meme Generator
+- (5.8) Project - Color Guessing Game
+- (5.8) Project - Mysterious Card
+
+<hr>
+
 <img src="https://course.betrybe.com//fundamentals/javascript/images/dom.jpg">
 
 
