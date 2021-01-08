@@ -103,3 +103,23 @@
 <code>footer</code>, 
 <code>table</code> e 
 <code>img</code>.</p>
+
+<hr>
+
+# Validate the exercise
+
+Now that you have created the page showing interesting facts about Stomatopoda, suppose that a person with visual impairment accesses your page. Will your page be accessible to that person? 🤔
+
+Let's find out!
+
+Enter [this site](https://achecker.ca/checker/index.php#output_div), which validates whether your page is accessible or not. On the site there are 3 ways for you to submit your HTML code:
+
+1. Via url (the first, already selected when loading the site).
+1. Via uploading the HTML file (second tab).
+1. Via copying + pasting the HTML code (third and last tab).
+
+When submitting the code, you will come across validation errors present on your page, starting your second exercise: fixing all the errors pointed out.
+
+For each validation error shown, a link to the page with its description is available. Before going back to the code and fixing it, read the description of each error to understand and be able to fix it.
+
+At the end of the exercise, in addition to having an accessible page, you will reinforce the practice of fixing errors, be it validation (for this exercise) or logic, which you will encounter throughout your developer career.
