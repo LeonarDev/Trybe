@@ -1,4 +1,4 @@
-# Block 01 - Git, GitHub and Internet
+# Block 02 - Git, GitHub and Internet
 
 <a href="https://www.youtube.com/watch?v=E6fK7-O8Ow0">O que é GIT?</a>
 
