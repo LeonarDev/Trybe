@@ -1,6 +1,6 @@
 ## Fundamentals of Web Development :construction:
 
-#### Block 01: [Unix, Bash e Shell Script](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_01) :heavy_check_mark:
+#### Block 01: [Unix, Bash and Shell Script](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_01) :heavy_check_mark:
 - [x] (1.3) Setup
 - [x] (1.3) Fundamentals of Web Development
 - [x] (1.3) Introduction - Unix & Shell 
@@ -8,13 +8,13 @@
 - [x] (1.4) Unix & Bash - Part 2 
 <hr>
 
-#### Block 02: [Git, GitHub e Internet](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_02) :heavy_check_mark:
+#### Block 02: [Git, GitHub and Internet](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_02) :heavy_check_mark:
 - [x] (2.1) Git & GitHub - What it is and what it is for 
 - [x] (2.2) Git & GitHub - Understanding commands 
 - [x] (2.3) Internet - Understanding how it works 
 <hr>
 
-#### Block 03: [Introdução à HTML e CSS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_03) :heavy_check_mark:
+#### Block 03: [Introduction to HTML e CSS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_03) :heavy_check_mark:
 - [x] (3.1) HTML & CSS - Page structures
 - [x] (3.2) HTML & CSS - Getting Started with CSS 
 - [x] (3.4) HTML & CSS - Selectors and positioning
