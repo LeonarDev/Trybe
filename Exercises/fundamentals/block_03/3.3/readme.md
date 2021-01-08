@@ -11,7 +11,7 @@
   </li>
   <li>
     Search for the tag
-<code class = "inline">&lt;style&gt;&t;/style&gt; </code>, where you made the changes yesterday. Move all tag content
+<code class = "inline">&lt;style&gt;&lt;/style&gt;</code>, where you made the changes yesterday. Move all tag content
 <code class = "inline"> style </code> and place it in a file
 <code class = "inline"> style.css </code>;
   </li>
