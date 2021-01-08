@@ -10,7 +10,7 @@
 
 <h3> nav </h3>
 <p> The <code>nav</code> element represents a set of navigation links. </p>
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"> Link to the element</a>.
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"> Link to the nav element</a>.
 <br>
 <br>
 
