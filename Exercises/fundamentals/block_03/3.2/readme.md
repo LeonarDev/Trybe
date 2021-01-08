@@ -64,7 +64,7 @@ Set different fonts for your name and the description you created;    </div>
 </div>
 
 <div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="atualizando-seu-portfolio-web-para-o-mundo-ver" class="title-section">
-  Updating your Web Portfolio for the world to see!
+  Updating your Web Portfolio for the whole world to see!
 </h3>
 <div class = "pt-1 pb-1">
    Now that you've styled your <em> Web Portfolio </em>, it's time to update everything you've done and put it on your GitHub Pages!
