@@ -16,11 +16,12 @@ Utilize a propriedade align-self no elemento correto para que o header da págin
 <img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-4.jpeg">
 Header Exercicio 4
 
-###Parte 2
+### Parte 2
 
 Vamos continuar praticando com a continuação do header realizado no exercício acima e construir um main com o restante de sua página. Copie o restante dos códigos HTML e CSS e aplique a seus documentos criados anteriormente.
 
-`    <main class="main-container">
+```    
+<main class="main-container">
       <div class="movie-container">
         <section>
           <h2>Assista hoje</h2>
@@ -64,9 +65,11 @@ Vamos continuar praticando com a continuação do header realizado no exercício
         <h4>Title</h4>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet officia in provident esse excepturi ipsam!</p>
       </aside>
-    </main>`
+    </main>
+```
 
-    `.main-container {
+```
+.main-container {
   display: flex;
   flex-wrap: wrap;
 }
@@ -111,7 +114,8 @@ Vamos continuar praticando com a continuação do header realizado no exercício
 .aside-container p {
   margin: 10px 0;
   text-align: justify;
-}`
+}
+```
 
 1) Aplique uma base de 350px para seu container aside . Deverá ficar similar a imagem abaixo:
 <img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-1.png">
