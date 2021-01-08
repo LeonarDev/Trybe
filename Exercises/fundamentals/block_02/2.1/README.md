@@ -1,4 +1,4 @@
-# GIT - Instalação e configuração
+# 2.1 Git e GitHub - O que é e para que serve
 
 ### Instalação
 - [x] Para instalar o Git abra o seu terminal e digite o seguinte comando:
