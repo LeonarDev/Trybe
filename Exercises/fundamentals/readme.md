@@ -17,7 +17,7 @@
 #### Block 03: [Introduction to HTML e CSS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_03) :heavy_check_mark:
 - [x] (3.1) HTML & CSS - Page structures
 - [x] (3.2) HTML & CSS - Getting Started with CSS 
-- [x] (3.4) HTML & CSS - Selectors and positioning
+- [x] (3.3) HTML & CSS - Selectors and positioning
 - [x] (3.4) Semantic HTML
 - [x] (3.5) _[Project - Lessons Learned]()_
 <hr>
