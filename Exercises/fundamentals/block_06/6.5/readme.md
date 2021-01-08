@@ -1,4 +1,7 @@
-# Part I - Create a page for a small screen
+# (6.5) Responsive CSS - Mobile First
+
+
+### Part I - Create a page for a small screen
 
 Before you start, copy the HTML and CSS template below, and save the respective files:
 
