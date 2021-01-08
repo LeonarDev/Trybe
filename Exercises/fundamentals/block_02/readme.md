@@ -25,3 +25,5 @@
 <a href="https://www.youtube.com/embed/72snZctFFtA">DNS Explained</a>
 
 <a href="https://www.youtube.com/embed/ewrBalT_eBM">How Does Internet Works?</a>
+
+[HTTP - Hypertext Transfer Protocol](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:web-protocols/a/hypertext-transfer-protocol-http)
