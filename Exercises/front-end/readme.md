@@ -1,4 +1,4 @@
-## Desenvolvimento Front-end :hourglass_flowing_sand:
+## Front-end Development :hourglass_flowing_sand:
 
 #### Bloco 11: Introduction to React :hourglass_flowing_sand:
 - [ ] (11.1) Introduction - Front-end
