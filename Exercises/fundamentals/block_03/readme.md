@@ -1,6 +1,12 @@
 # Block 03: Introduction to HTML e CSS
 
-### (3.1) HTML e CSS - Page structures
+ (3.1) HTML & CSS - Page structures
+ (3.2) HTML & CSS - Getting Started with CSS
+ (3.3) HTML & CSS - Selectors and positioning
+ (3.4) Semantic HTML
+ (3.5) Project - Lessons Learned
+ 
+ <hr>
 
 <ul>
   <li>
@@ -61,10 +67,6 @@
   </li>
 </ul>
 
-<hr>
-
-### (3.2) HTML & CSS - Getting Started with CSS
-
 <ul>
   <li>
     <div class="pt-1 pb-1">
@@ -89,10 +91,6 @@
   </li>
 </ul>
 
-<hr>
-
-### (3.3) HTML & CSS - Selectors and positioning
-
 <ul>
   <li>
     <div class="pt-1 pb-1">
@@ -116,10 +114,6 @@
     </div>
   </li>
 </ul>
-
-<hr>
-
-### (3.4) Semantic HTML
 
 <ul>
   <li>
