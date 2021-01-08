@@ -6,7 +6,6 @@ _"Trybe is a school of the future for anyone who wants to improve their lives an
 The program has more than 1.500 hours of in-person and online classes and deals with software development introduction, front-end, back-end, computer science, software engineering, agile methodologies and behavioral skills."_
 
 <br>
-<br>
 
 ### Module 1
 | [FUNDAMENTALS OF WEB DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals) | Status
