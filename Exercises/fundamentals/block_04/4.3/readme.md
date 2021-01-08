@@ -47,6 +47,7 @@ n = 5
 
 
 Bonus
+
 5- Make a pyramid with n base asterisks that is empty in the middle. Assume that the value of n will always be odd:
 ```
 Finally, let us increase the variable with the value corresponding to each loop;
