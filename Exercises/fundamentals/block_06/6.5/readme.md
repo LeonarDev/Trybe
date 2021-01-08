@@ -63,6 +63,7 @@ Before you start, copy the HTML and CSS template below, and save the respective 
 </html>
 ```
 
+<br>
 
 - `exercise1.css`
 
@@ -85,6 +86,7 @@ figure {
     margin: 0;
 }
 ```
+<br>
 
 Start the exercise by analyzing the page on a small screen to simulate what it might look like on a mobile device (you can use Chrome for this, see the detail in **Additional Resources**).
 
@@ -372,6 +374,7 @@ Before you start, copy the HTML and CSS template below, and save the respective 
 
 </html>
 ```
+<br>
 
 - `exercise2.css`
 
@@ -384,6 +387,8 @@ html {
   box-sizing: inherit;
 }
 ```
+
+<br>
 
 > The page above is a **non-stylized** version of the first chapter of the book: *Alice in Wonderland*.
 
@@ -480,6 +485,8 @@ Before you start, copy the HTML and CSS template below, and save the respective 
 
 </html>
 ```
+
+<br>
 
 - `exercise3.css`
 
@@ -578,6 +585,8 @@ The purpose of this exercise is to use media queries to make the page above look
 Visualização da página antes da impressão
 
 
+<br>
+
 * Adicione uma media query no arquivo CSS e as regras necessárias para que a página se pareça com as imagens abaixo quando a tela for redimensionada para larguras menores. Especificamente:
     * O elemento com id aside deve desaparecer;
     * O elemento body não deve ter padding ;
@@ -589,6 +598,8 @@ Visualização da página antes da impressão
 240x320: tela pequena
 
 
+<br>
+
 <img src="https://course.betrybe.com//fundamentals/css-responsive/images/exercise_3_before_android.png"> 
 360x640 tela de smartphone
 
@@ -598,7 +609,7 @@ Visualização da página antes da impressão
 
 # Bonus
 
-[Using Bootstrap](https://www.youtube.com/watch?v=n2tuBD2bwIw)
+[Watch this video to fulfill the following requirements](https://www.youtube.com/watch?v=n2tuBD2bwIw)
 
 Now that you’re really good at creating specific layouts for different screen sizes using the mobile first approach, how about going back to the page that you created in the [Semantic HTML](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_03/3.4) class about prawn mantis and creating a really nice layout for it to be accessed at from smaller screens? 🦐🦗🥊
 
