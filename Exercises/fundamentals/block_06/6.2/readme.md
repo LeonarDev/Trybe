@@ -1,4 +1,6 @@
-## Adicione um framework CSS de sua escolha ao formulário que você construiu na última aula e o utilize para estilizar o formulário.
+# (6.2) JavaScript Libraries and CSS Frameworks
+
+### Adicione um framework CSS de sua escolha ao formulário que você construiu na última aula e o utilize para estilizar o formulário.
 
 - Sugestões: Bulma , Bootstrap , Semantic UI e Materialize .
 
