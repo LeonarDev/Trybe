@@ -1,58 +1,58 @@
-# 3.1 HTML e CSS - Estruturas de página
+# 3.1 HTML e CSS - Page structures
 
 <ul>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.khanacademy.org/computing/computer-programming/html-css/web-development-tools/a/using-the-browser-developer-tools" target="_blank" rel="noopener noreferrer">
-        Tutorial - Como utilizar as ferramentas de desenvolvedor do browser
+    <div>
+      <a href="https://www.khanacademy.org/computing/computer-programming/html-css/web-development-tools/a/using-the-browser-developer-tools">
+        Tutorial - How to use the browser developer tools
       </a>
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="http://jmcglone.com/guides/github-pages/" target="_blank" rel="noopener noreferrer">
-        Artigo - GitHub Pages
+    <div>
+      <a href="http://jmcglone.com/guides/github-pages/">
+        Article - GitHub Pages
       </a>
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o" target="_blank" rel="noopener noreferrer">
-        Playlist - Curso de HTML 5 - Gustavo Guanabara
+    <div>
+      <a href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o">
+        HTML5 Free Course - Gustavo Guanabara (PT-BR)
       </a>
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://scrimba.com/g/ghtml" target="_blank" rel="noopener noreferrer">
-        Curso Online Gratuito - Introdução ao HTML - Scrimba
+    <div>
+      <a href="https://scrimba.com/g/ghtml">
+        Free Course - HTML Introduction - Scrimba
       </a>
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/welcome" target="_blank" rel="noopener noreferrer">
-        Curso Online Gratuito - HTML, CSS, e JavaScript para desenvolvedores web
+    <div>
+      <a href="https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/welcome">
+        Free Course - HTML, CSS, and JavaScript for web developers
       </a>
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://internetingishard.com/" target="_blank" rel="noopener noreferrer">
-        Tutorial - Série de artigos ensinando HTML &amp; CSS
+    <div>
+      <a href="https://internetingishard.com/">
+        Tutorial - Series of articles teaching HTML & amp; CSS
       </a>
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank" rel="noopener noreferrer">
-        Tutorial - Aprenda a estilizar o HTML com CSS - Mozilla
+    <div>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">
+        Tutorial - Learn to style HTML with CSS - Mozilla
       </a>
     </div>
   </li>
   <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">
+    <div>
+      <a href="https://css-tricks.com/">
         Site - CSS Tricks
       </a>
     </div>
@@ -61,65 +61,9 @@
 
 <hr>
 
-# 3.2 HTML & CSS - Primeiros passos em CSS
+# 3.2 HTML & CSS - Getting Started with CSS
 
 <ul>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.khanacademy.org/computing/computer-programming/html-css/web-development-tools/a/using-the-browser-developer-tools" target="_blank" rel="noopener noreferrer">
-        Tutorial - Como utilizar as ferramentas de desenvolvedor do browser
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="http://jmcglone.com/guides/github-pages/" target="_blank" rel="noopener noreferrer">
-        Artigo - GitHub Pages
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o" target="_blank" rel="noopener noreferrer">
-        Playlist - Curso de HTML 5 - Gustavo Guanabara
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://scrimba.com/g/ghtml" target="_blank" rel="noopener noreferrer">
-        Curso Online Gratuito - Introdução ao HTML - Scrimba
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/welcome" target="_blank" rel="noopener noreferrer">
-        Curso Online Gratuito - HTML, CSS, e JavaScript para desenvolvedores web
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://internetingishard.com/" target="_blank" rel="noopener noreferrer">
-        Tutorial - Série de artigos ensinando HTML &amp; CSS
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank" rel="noopener noreferrer">
-        Tutorial - Aprenda a estilizar o HTML com CSS - Mozilla
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">
-        Site - CSS Tricks
-      </a>
-    </div>
-  </li>
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-css/pt/css-basics" target="_blank" rel="noopener noreferrer">
@@ -130,14 +74,14 @@
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://pt.khanacademy.org/computing/computer-programming/html-css/css-text-properties/pt/css-font-family-property" target="_blank" rel="noopener noreferrer">
-        Propriedades de texto no CSS - Português
+        CSS text properties - (PT BR)
       </a>
     </div>
   </li>
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://www.khanacademy.org/computing/computer-programming/html-css/more-ways-to-embed-css/pt/using-inline-css-styles" target="_blank" rel="noopener noreferrer">
-        Usando CSS inline - Inglês
+        Using inline CSS
       </a>
     </div>
   </li>
@@ -145,93 +89,37 @@
 
 <hr>
 
-# 3.3 HTML & CSS - Seletores e posicionamento
-
-<ul>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.khanacademy.org/computing/computer-programming/html-css/web-development-tools/a/using-the-browser-developer-tools" target="_blank" rel="noopener noreferrer">
-        Tutorial - Como utilizar as ferramentas de desenvolvedor do browser
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="http://jmcglone.com/guides/github-pages/" target="_blank" rel="noopener noreferrer">
-        Artigo - GitHub Pages
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.youtube.com/playlist?list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o" target="_blank" rel="noopener noreferrer">
-        Playlist - Curso de HTML 5 - Gustavo Guanabara
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://scrimba.com/g/ghtml" target="_blank" rel="noopener noreferrer">
-        Curso Online Gratuito - Introdução ao HTML - Scrimba
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://www.coursera.org/learn/html-css-javascript-for-web-developers/home/welcome" target="_blank" rel="noopener noreferrer">
-        Curso Online Gratuito - HTML, CSS, e JavaScript para desenvolvedores web
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://internetingishard.com/" target="_blank" rel="noopener noreferrer">
-        Tutorial - Série de artigos ensinando HTML &amp; CSS
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Learn/CSS" target="_blank" rel="noopener noreferrer">
-        Tutorial - Aprenda a estilizar o HTML com CSS - Mozilla
-      </a>
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      <a class="external-link" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">
-        Site - CSS Tricks
-      </a>
-    </div>
-  </li>
-</ul>
-
-<hr>
-
-# 3.4 HTML Semântico
+# 3.3 HTML & CSS - Selectors and positioning
 
 <ul>
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-4ccb7b77371d" target="_blank" rel="noopener noreferrer">
-        Artigo - Pare de chutar e aprenda como funciona o display: inline
+        Article - Stop kicking and learn how the display works: inline
       </a>
     </div>
   </li>
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-block-98480c987950" target="_blank" rel="noopener noreferrer">
-        Artigo - Pare de chutar e aprenda como funciona o display: block
+        Article - Stop kicking and learn how the display works: block
       </a>
     </div>
   </li>
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://medium.com/collabcode/pare-de-chutar-e-aprenda-como-funciona-o-display-inline-block-4e6cba2f19d4" target="_blank" rel="noopener noreferrer">
-        Artigo - Pare de chutar e aprenda como funciona o display: inline-block
+        Article - Stop kicking and learn how the display works: inline-block
       </a>
     </div>
   </li>
+</ul>
+
+<hr>
+
+# 3.4 Semantic HTML
+
+<ul>
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://css-tricks.com/why-how-and-when-to-use-semantic-html-and-aria/" target="_blank" rel="noopener noreferrer">
