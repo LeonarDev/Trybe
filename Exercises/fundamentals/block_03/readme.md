@@ -1,4 +1,4 @@
-# 3.1 HTML e CSS - Page structures
+# (3.1) HTML e CSS - Page structures
 
 <ul>
   <li>
@@ -61,7 +61,7 @@
 
 <hr>
 
-# 3.2 HTML & CSS - Getting Started with CSS
+# (3.2) HTML & CSS - Getting Started with CSS
 
 <ul>
   <li>
@@ -89,7 +89,7 @@
 
 <hr>
 
-# 3.3 HTML & CSS - Selectors and positioning
+# (3.3) HTML & CSS - Selectors and positioning
 
 <ul>
   <li>
@@ -117,7 +117,7 @@
 
 <hr>
 
-# 3.4 Semantic HTML
+# (3.4) Semantic HTML
 
 <ul>
   <li>
