@@ -10,87 +10,42 @@
    O elemento 
       <code class="inline">header</code>   representa um cabeçalho contendo texto introdutório.
    </div>
-<div class="pt-1 pb-1">
-  <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header" target="_blank" rel="noopener noreferrer">
+<div>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">
     link para o elemento header
   </a>
 </div>
 <h4>
   nav
 </h4>
-<div class="pt-1 pb-1">
-  O elemento 
-<code class="inline">nav</code>   representa um conjunto de links de navegação.
-</div>
-<div class="pt-1 pb-1">
-  <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav" target="_blank" rel="noopener noreferrer">
-    link para o elemento 
-  </a>
-  .
-</div>
-<h4>
-  aside
-</h4>
-<div class="pt-1 pb-1">
-  O elemento 
-<code class="inline">aside</code>   representa um conteúdo à parte, sendo comumente usado para mostrar:
-</div>
+<div>O elemento <code>nav</code>representa um conjunto de links de navegação.</div>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">link para o elemento</a>.
+<h4>aside</h4>
+  O elemento <code>aside</code>representa um conteúdo à parte, sendo comumente usado para mostrar:
 <ul>
-  <li>
-    <div class="pt-1 pb-1">
-      barras laterais;
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      conteúdo adjacente a um conteúdo principal.
-    </div>
-  </li>
+  <li>barras laterais;</li>
+  <li>conteúdo adjacente a um conteúdo principal.</li>
 </ul>
-<div class="pt-1 pb-1">
-  <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank" rel="noopener noreferrer">
-    link para o elemento aside
-  </a>
-  .
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">link para o elemento aside</a>.
+<h4>article</h4>
+<div>
+   O elemento 
+   <code>article</code>representa um conteúdo autocontido. Ou seja, todo o conteúdo presente dentro de um 
+   <code>article</code>provê as informações necessárias para sua compreensão, podendo ser reusado em outras páginas.
 </div>
-<h4>
-  article
-</h4>
-<div class="pt-1 pb-1">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">link para o elemento article</a>.
+<h4>section</h4>
+<div>
   O elemento 
-<code class="inline">article</code>   representa um conteúdo autocontido. Ou seja, todo o conteúdo presente dentro de um 
-<code class="inline">article</code>   provê as informações necessárias para sua compreensão, podendo ser reusado em outras páginas.
+<code>section</code>representa uma seção do documento.
 </div>
-<div class="pt-1 pb-1">
-  <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article" target="_blank" rel="noopener noreferrer">
-    link para o elemento article
-  </a>
-  .
-</div>
-<h4>
-  section
-</h4>
-<div class="pt-1 pb-1">
-  O elemento 
-<code class="inline">section</code>   representa uma seção do documento.
-</div>
-<div class="pt-1 pb-1">
-  <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section" target="_blank" rel="noopener noreferrer">
-    link para o elemento section
-  </a>
-  .
-</div>
-<h4>
-  footer
-</h4>
-<div class="pt-1 pb-1">
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">link para o elemento section</a>.
+<h4>footer</h4>
+<div>
   O elemento 
 <code class="inline">footer</code>   representa o rodapé do documento e/ou de uma seção.
 </div>
-<div class="pt-1 pb-1">
-  <a class="external-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer" target="_blank" rel="noopener noreferrer">
-    link para o elemento footer
-  </a>
-  .
+<div>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">link para o elemento footer</a>.
 </div>
 </div>
