@@ -1,6 +1,6 @@
 ## Fundamentals of Web Development :construction:
 
-#### Block 01: Unix, Bash e Shell Script :heavy_check_mark:
+#### Block 01: [Unix, Bash e Shell Script](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_01) :heavy_check_mark:
 - [x] (1.3) Setup
 - [x] (1.3) Fundamentals of Web Development
 - [x] (1.3) Introduction - Unix & Shell 
