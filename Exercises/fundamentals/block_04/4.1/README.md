@@ -1,10 +1,10 @@
 Nos exercícios de hoje, você vai fazer quinze pequenos programas. Todos trabalham a lógica condicional (`if/else` e `switch`), operadores aritméticos ( + , - , * , / , % ) e operadores lógicos ( > , < , && , || ). Para que consiga executar seus códigos recomendamos que utilize a extensão Code Runner , você pode ver mais sobre ela no conteúdo que fizemos sobre o uso do VS Code .
 1. Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas variáveis, a e b , definidas no começo com os valores que serão operados. Faça programas para:
-- - Adição
-- - Subtração
-- - Multiplicação
-- - Divisão
-- - Módulo
+1 - Adição
+1 - Subtração
+1 - Multiplicação
+1 - Divisão
+1 - Módulo
 Faça um programa que retorne o maior de dois números. Defina no começo do programa duas variáveis com os valores que serão comparados.
 Faça um programa que retorne o maior de três números. Defina no começo do programa três variáveis com os valores que serão comparados.
 Faça um programa que, dado um valor definido numa variável, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero" caso contrário.
