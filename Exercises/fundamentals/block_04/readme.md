@@ -1,5 +1,12 @@
 # Block 04: Introduction to JavaScript and Programming Logic
 
+- (4.1) JavaScript - Introduction
+- (4.1) JavaScript - First Steps
+- (4.2) JavaScript - Array and loop For
+- (4.3) JavaScript - Programming Logic and Algorithms
+- (4.4) JavaScript - Objects and Functions
+- (4.5) Project - Playground Functions
+
 - [JS Manual](https://tableless.github.io/iniciantes/manual/js/) (PT-BR)
 - [JS basics article](https://www.freecodecamp.org/news/learn-these-javascript-fundamentals-and-become-a-better-developer-2a031a0dc9cf/)
 - [JavaScript Online Course](https://learnjavascript.online/)
