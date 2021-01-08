@@ -20,6 +20,8 @@ Utilize a propriedade align-self no elemento correto para que o header da págin
 Header Exercicio 4</p>
 
 
+
+
 ## Parte 2
 
 Vamos continuar praticando com a continuação do header realizado no exercício acima e construir um main com o restante de sua página. Copie o restante dos códigos HTML e CSS e aplique a seus documentos criados anteriormente.
@@ -73,6 +75,7 @@ Vamos continuar praticando com a continuação do header realizado no exercício
 ```
 
 
+
 ```css
 .main-container {
   display: flex;
@@ -122,30 +125,37 @@ Vamos continuar praticando com a continuação do header realizado no exercício
 }
 ```
 
+<hr>
 
 1) Aplique uma base de 350px para seu container aside . Deverá ficar similar a imagem abaixo:
 <p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-1.png">
 Main do Exercicio 1</p>
 
+<hr>
 
 2) Aplique um alinhamento para centralizar e outro para expandir. Seu aside apresentar o seguinte comportamento:
 <p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-2.png">
 Main do Exercicio 2</p>
 
+<hr>
 
 3) Adicione uma propriedade que faça com que seu container de filmes tenha uma base de 700px e outra base de 16% para as div do container de seu card. Deve ficar similar a imagem abaixo:
 <p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-3.png">
 Main do Exercicio 3</p>
 
+<hr>
 
 4) Aplique uma propridade com o valor 10 que expanda o container de filmes. Deve ficar similar a imagem abaixo:
 <p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-4.png">
 Main do Exercicio 4</p>
 
+<hr>
 
 5) Adicione uma propriedade com o valor 1 que faça com que suas div do container de filmes ocupe todo o espaço em branco. Deve ficar similar a imagem abaixo:
 <p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-5.png">
 Main do Exercicio 5</p>
+
+
 
 ## Parte 3 (opcional)
 
