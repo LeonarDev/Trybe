@@ -67,14 +67,14 @@
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://pt.khanacademy.org/computing/computer-programming/html-css/intro-to-css/pt/css-basics" target="_blank" rel="noopener noreferrer">
-        CSS Básico - Português
+        Basic CSS
       </a>
     </div>
   </li>
   <li>
     <div class="pt-1 pb-1">
       <a class="external-link" href="https://pt.khanacademy.org/computing/computer-programming/html-css/css-text-properties/pt/css-font-family-property" target="_blank" rel="noopener noreferrer">
-        CSS text properties - (PT BR)
+        CSS text properties
       </a>
     </div>
   </li>
