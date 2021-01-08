@@ -1,5 +1,11 @@
 # Block 02 - Git, GitHub and Internet
 
+- (2.1) Git & GitHub - What it is and what it is for
+- (2.2) Git & GitHub - Understanding commands
+- (2.3) Internet - Understanding how it works
+
+<hr>
+
 <a href="https://www.youtube.com/watch?v=E6fK7-O8Ow0">What is GIT?</a>
 
 <a href="https://forms.gle/pjdre9Dtv2vGN7aS6">Fixation Quiz</a>
