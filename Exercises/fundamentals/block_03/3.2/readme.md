@@ -1,69 +1,62 @@
+# (3.2) HTML & CSS - Getting Started with CSS
+
 <div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="estilizando-seu-portfolio-web" class="title-section">
-  Estilizando seu Portfólio Web!
-</h3>
+Stylizing your Web Portfolio!</h3>
 <div class="pt-1 pb-1">
-  Antes de começar, você deve seguir as instruções abaixo e fazer o setup para o exercício de hoje:
-</div>
+Before you begin, you must follow the instructions below and setup for today's exercise:
+   Before you begin, you must follow the instructions below and setup for today's exercise:</div>
 <ol>
   <li>
-    Entre no diretório que você criou no dia anterior;
+    Enter the directory you created the day before;
+    Enter the directory you created the day before;  </li>
+  <li>
+    Add the tag
+<code class="inline">&lt;style&gt;&lt;/style&gt;</code>, which is where you will put your changes;
   </li>
   <li>
-    Adicione a tag 
-<code class="inline">&lt;style&gt;&lt;/style&gt;</code>    , que é onde você vai colocar suas alterações;
-  </li>
-  <li>
-    Procure uma palheta de cores com que você mais se identifica e que você pode gerar  
+    Look for a color palette that you most identify with and that you can generate 
     <a class="external-link" href="https://coolors.co/" target="_blank" rel="noopener noreferrer">
-      nesse site
+      on this site
     </a>
     .
   </li>
   <li>
-    Lembre-se que para executar o seu código enquanto o desenvolve você deve utilizar a extensão 
-<code class="inline">Live Server</code>    , para saber mais sobre ela acesse nosso 
-    <a href="/course/real-life-engineer/vscode">
-      conteúdo
-    </a>
-     sobre isso.
+    Remember that to execute your code while developing it you must use the extension
+<code class = "inline"> Live Server </code>, to learn more about it visit our
+     <a href="/course/real-life-engineer/vscode">
+       content
+     </a>
+      about this.
   </li>
 </ol>
 <hr class="thin">
 </div>
 
 <div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="requisitos" class="title-section">
-  Requisitos
+  Requirements
 </h3>
 <div class="pt-1 pb-1">
-  Seu 
-  <em>
-    Portfólio Web
-  </em>
-   deve ser estilizado usando as informações a seguir:
+  Your <em> Web Portfolio </em> should be styled using the following information:
 </div>
 <ul>
   <li>
     <div class="pt-1 pb-1">
-      Defina fontes diferentes para o seu nome e para a descrição que você criou;
-    </div>
+Set different fonts for your name and the description you created;    </div>
   </li>
   <li>
     <div class="pt-1 pb-1">
-      Defina uma cor base de background do seu 
-      <em>
-        Portfólio Web
-      </em>
+      Set a base color for your <em> Web Portfolio </em> background
       ;
     </div>
   </li>
   <li>
     <div class="pt-1 pb-1">
-      Altere o estilo das tags que você usou para destacar algumas informações, como sua nacionalidade e a cidade/estado onde mora;
-    </div>
-  </li>
-  <li>
-    <div class="pt-1 pb-1">
-      Coloque tamanhos diferentes para os elementos da lista de habilidades que você criou. Lembre-se de usar classes para cada um dos elementos;
+      Change the style of the tags you used to highlight some information, such as your nationality and the city / state where you live;
+     </div>
+   </li>
+   <li>
+     <div class = "pt-1 pb-1">
+       Put different sizes for the elements of the list of skills that you created. Remember to use classes for each of the elements;
     </div>
   </li>
 </ul>
@@ -71,18 +64,13 @@
 </div>
 
 <div class=" col-span-12 content-section-box"><div class="dark-screen"></div><h3 id="atualizando-seu-portfolio-web-para-o-mundo-ver" class="title-section">
-  Atualizando seu Portfólio Web para o mundo ver!
+  Updating your Web Portfolio for the world to see!
 </h3>
-<div class="pt-1 pb-1">
-  Agora que você estilizou seu 
-  <em>
-    Portfólio Web
-  </em>
-  , chegou o momento de atualizar tudo que o você fez e colocar no seu GitHub Pages!
+<div class = "pt-1 pb-1">
+   Now that you've styled your <em> Web Portfolio </em>, it's time to update everything you've done and put it on your GitHub Pages!
 </div>
-<div class="pt-1 pb-1">
-  Para isso, basta você atualizar seu projeto usando o que você aprendeu de 
-<code class="inline">Git</code>  . 😉
+<div class = "pt-1 pb-1">
+   For that, you just need to update your project using what you learned from <code class = "inline"> Git </code> . 😉
 </div>
 <hr class="thin">
 </div>
