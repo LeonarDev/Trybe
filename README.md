@@ -49,7 +49,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 24 - MongoDB: Simple and complex updates	| :hourglass_flowing_sand:
 | Block 25 - MongoDB: Aggregation Framework	| :hourglass_flowing_sand:
 | Block 26 - Introduction to web development with NodeJS | :hourglass_flowing_sand:
-| Block 27 - NodeJS: Service layer and Rest and Restful Architectures | :hourglass_flowing_sand:
+| Block 27 - NodeJS: Service layer, Rest & Restful Architectures | :hourglass_flowing_sand:
 | Block 28 - Authentication and File Upload | :hourglass_flowing_sand:
 | Block 29 - Deployment | :hourglass_flowing_sand:
 | Block 30 - [Project: Tryber]() | :hourglass_flowing_sand:
