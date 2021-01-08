@@ -1,9 +1,9 @@
 ## Front-end Development :hourglass_flowing_sand:
 
 #### Block 11: Introduction to React :hourglass_flowing_sand:
-- [ ] (11.1) Introduction - Front-end
-- [ ] (11.1) Introduction - React
-- [ ] (11.1) 'Hello, world!' in React!
+- [ ] (11.1) Front-end - Introduction
+- [ ] (11.1) React - Introduction
+- [ ] (11.1) React 'Hello, world!'
 - [ ] (11.2) React components
 - [ ] (11.3) _[Project - Movie Cards Library]()_
 <hr>
