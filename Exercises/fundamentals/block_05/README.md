@@ -46,7 +46,7 @@ Unlike **Cookies**, the storage limit is much higher (at least 5MB), and informa
 
 **Web Storage** is by origin (by domain and protocol). All pages in a source can save and access the same data.
 
-<hr>
+<br>
 
 #### Local and Session Storage
 
