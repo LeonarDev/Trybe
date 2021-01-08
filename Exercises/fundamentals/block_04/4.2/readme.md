@@ -11,7 +11,7 @@
 
 5. Using for, find out what is the largest value contained in the array and print it;
 
-6. Find out how many odd values are in the array and print the result. If none exist, print the message: "no odd values ​​found";
+6. Find out how many odd values are in the array and print the result. If none exist, print the message: "no odd values found";
 
 7. Using for, find out the lowest value contained in the array and print it;
 
