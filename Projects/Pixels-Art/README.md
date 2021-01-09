@@ -1,5 +1,11 @@
 # Boas vindas ao repositório do projeto Arte com Pixels!
 
+Com este projeto, será reforçada a capacidade de modelagem de problemas, uma habilidade essencial com a qual a pessoa desenvolvedora vai se deparar o tempo todo na sua carreira! Uma forma de modelagem de problemas é quebrá-lo em vários menores.
+
+No contexto deste projeto, o problema é: dados um quadro composto por pixels e uma paleta de cores, você precisa permitir que o usuário consiga pintar o quadro com a cor que ele tiver selecionado na paleta.
+
+Além disso, terá a oportunidade de colocar novamente em prática o que aprendeu sobre HTML, CSS e JavaScript!
+
 <!--
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
