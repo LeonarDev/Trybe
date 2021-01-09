@@ -167,7 +167,7 @@ We will continue to practice with the continuation of the header made in the exe
 <br>
 
 5) Add a property with a value of 1 that makes your divs in the movie container occupy all the white space. It should look similar to the image below:
-<p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-5.png ">
+<p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-5.png">
 <em>Main of Exercise 5</em> </p>
 
 
