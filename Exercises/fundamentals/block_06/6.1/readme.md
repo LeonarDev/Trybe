@@ -1,9 +1,9 @@
 # (6.1) HTML & CSS - Forms
 
 ### Creating a resume form.
-- Create an HTML file called form.html for the form.
-- If necessary, create CSS styles for your form, according to your imagination. Place them in a styles.css file.
-- Also create a script.js file for your JavaScript code.
+- Create an HTML file called **form.html** for the form.
+- If necessary, create CSS styles for your form, according to your imagination. Place them in a **styles.css** file.
+- Also create a **script.js** file for your JavaScript code.
 
 ## We will create a curriculum registration form based on the following specification:
 #### 1) Create a `<fieldset>` for the following personal data:
@@ -48,9 +48,9 @@
     - If any of the conditions is invalid when sending the form, display a contextualized error message.
     - Required field
 
-#### 3) Right below the form, create a button that:
-- Call a JavaScript function and stop the automatic flow of the form using preventDefault ().
+#### 3) Right below the form, create a `button` that:
+- Call a JavaScript function and stop the automatic flow of the form using preventDefault().
 - Perform the validations that were requested during the assembly of the form.
 - Set up a `<div>` with the consolidated data that were inserted in the form.
 
-#### 4) Create a Clear button that clears all fields on the form and the `<div>` with your resume as well.
+#### 4) Create a Clear `button` that clears all fields on the form and the `<div>` with your resume as well.
