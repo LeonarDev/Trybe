@@ -89,7 +89,18 @@ If the container does not have enough space to properly dispose of all items,
 
 <br>
 
+## Media Queries
 
+Let's practice a little!
+[To perform the following tasks use this template from W3Schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_mediaqueries_minmax).
+- Change the code so that the yellow `div` is *"blue"* when the page width is between 900px and 1100px;
+- Change the code so that the yellow `div` becomes *"red"* when the page width is up to 600px;
+- Create another `div` identical to the existing one and make it appear next to the yellow `div` when the page width is greater than `1500px`;
+    - Tip: use Flexbox
+- Make the second `div` disappear when the screen width is between `600px` and `900px`;
+- Make the first `div` disappear when the screen width is up to `600px`.
+
+<br>
 
 ## Content Links
 
