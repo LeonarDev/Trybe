@@ -1,19 +1,19 @@
 # (5.4) JavaScript - Web Storage
 
-Imagine que você é a pessoa responsável por desenvolver uma página que servirá como um leitor de conteúdo escrito.
+Imagine that you are the person responsible for developing a page that will serve as a reader of written content.
 
-Esse conteúdo escrito pode ser uma página de livro, uma reportagem de revista ou uma nota de jornal online. Para que você não tenha que pensar no conteúdo da página, utilize este link para gerar o texto para sua página.
+This written content can be a book page, a magazine report or an online newspaper note. So that you don't have to think about the content of the page, use this link to generate the text for your page.
 
-Até aqui, nenhuma novidade, mas essa demanda exige que você aplique preferências das pessoas leitoras na página para melhorar a experiência de leitura dessas pessoas.
+So far, nothing new, but this demand requires that you apply preferences of the people reading on the page to improve their reading experience.
 
-As pessoas devem ter o poder de alterar:
-- Cor de fundo da tela;
-- Cor do texto;
-- Tamanho da fonte;
-- Espaçamento entre as linhas do texto;
-- Tipo da fonte ( Font family ).
+People should have the power to change:
+- Background color of the screen;
+- Text color;
+- Font size;
+- Spacing between lines of text;
+- Font type (Font family).
 
-Essas preferências devem ser salvas de forma que, ao retornar à página, as preferências que foram previamente configuradas possam ser aplicadas na tela.
+These preferences must be saved so that, when you return to the page, the preferences that were previously configured can be applied on the screen.
 
-## Bônus
-As propriedades descritas acima são obrigatórias , mas você é livre para adicionar qualquer outra propriedade que julgar válida e que tenha como objetivo a melhora da experiência da pessoa que lê em sua página.
+## Bonus
+The properties described above are mandatory, but you are free to add any other properties that you think are valid and that aim to improve the experience of the person who reads on your page.
