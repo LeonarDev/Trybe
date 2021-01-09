@@ -22,6 +22,8 @@
 - `space-between` creates equal spacing between the elements, keeping the first glued at the beginning and the last at the end
 - `space-around` also creates a spacing between the elements, but the spacing in the middle is twice as large as the beginning and end.
 
+<br>
+
 The `align-items` property **aligns the flex items** according to the **cross-axis**. The values that this property accepts are:
 - `stretch` which is its default value and causes the flex items to grow equally
 - `flex-start` aligns the items at the beginning
@@ -29,7 +31,9 @@ The `align-items` property **aligns the flex items** according to the **cross-ax
 - `center` aligns the items at the center
 - `baseline` which aligns the items according to the typography baseline.
 
-Finally, the `align-content` property **aligns the container lines** in relation to the **cross-axis**, and this property *only works if there are more than one line of flex items*. The alignment options that align-content presents are:
+<br>
+
+The `align-content` property **aligns the container lines** in relation to the **cross-axis**, and this property *only works if there are more than one line of flex items*. The alignment options that align-content presents are:
 - `stretch` its default value that makes flex items grow equally vertically
 - `flex-start` aligns all lines of items to the beginning
 - `flex-end` which aligns all lines of items at the end 
@@ -37,13 +41,18 @@ Finally, the `align-content` property **aligns the container lines** in relation
 - `space-between` which creates an equal spacing between the lines, keeping the first glued at the top and the last at the bottom
 - `space-around` which also creates a spacing between the lines, but the spacing in the middle is twice as large as the top and bottom
 
-The `align-self` property allows us to use the same alignment values learned previously (flex-start, flex-end, stretch, baseline, center), but **only for one item**. Thus, we can create a new class, pseudo-class or id for an item and edit its position individually, making it, unlike the others, be at the beginning or at the end of the container, centralized, as you prefer.
+<br>
+
+The `align-self` property allows us to use the same alignment values learned previously (`flex-start, flex-end, stretch, baseline, center`), but **only for one item**. Thus, we can create a new class, pseudo-class or id for an item and edit its position individually, making it, unlike the others, be at the beginning or at the end of the container, centralized, as you prefer.
 For more details, watch [this video](https://www.linkedin.com/learning/responsive-layout/aligning-individual-flex-items).
+
+<br>
 
 The `order` property allows us to **order items** from a given container. This property **is particular to each item** and, when used, will cause flexbox to display them in ascending order.
 By default, the order property, implicitly, **has a value of 0**, this means that if only one item out of 5 in a container receives the order: 1 property, all the others will be ordered in the way they were built in HTML, while this will be positioned after the others.
 It is interesting to draw attention to the fact that the property accepts negative values.
 
+<br>
 
 `flex-grow, flex-shrink, flex-basis`: This three properties must be exposed together. 
 - `flex-basis` has the function of defining the base size of an item in the container. The default value of this property is `auto` - maintaining the flexibility of the item according to the size of the container.
@@ -54,7 +63,7 @@ If the container does not have enough space to properly dispose of all items,
 <br>
 
 
- 
+
 ## Content Links
 
 - [A step-by-step guide to getting started with HTML forms](https://www.freecodecamp.org/news/a-step-by-step-guide-to-getting-started-with-html-forms-7f77ae4522b5/)
