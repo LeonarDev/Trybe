@@ -1,4 +1,4 @@
-# Block 06: HTML and CSS: Forms, Flexbox and Responsive Design
+# Block 06: HTML and CSS: Forms, Flexbox and Responsive Web Design
 
 - (6.1) [HTML & CSS - Forms](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.1)
 - (6.2) [JavaScript Libraries and CSS Frameworks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.2)
