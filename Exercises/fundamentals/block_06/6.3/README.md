@@ -4,5 +4,5 @@
 
 <br>
 
-##### Attention: 
+#### Attention: 
 Instructions on how to perform the exercise are in the `README.md` of the [_**exercise-tech-gallery**_](https://github.com/tryber/exercise-tech-gallery) repository. The images used are available in the images folder of the repository. 😉
