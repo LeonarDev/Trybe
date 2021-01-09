@@ -1,7 +1,7 @@
 # TRYBE PROJECTS
 
 ### FUNDAMENTALS
-- 01 - [Lessons Learned]()
+- 01 - Lessons Learned
 - 02 - [Playground Functions]()
 - 03 - [Pixels Art]()
 - 04 - [To-Do List]()
