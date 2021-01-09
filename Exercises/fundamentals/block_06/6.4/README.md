@@ -4,25 +4,28 @@
 
 1) Add a property that defines the base Flexbox size for the 268px image container and the 500px menu container. After applying the properties, the header should be similar to the image below:
 <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-1.jpeg">
-<p style = "text-align: center;"> Header Exercise 1 </p>
+<p align = "center"> Header Exercise 1 </p>
 
+<br>
 
 2) Add a Flexbox property that changes the order in which the logo and menu items appear on the screen. After applying the property, the header should be similar to the image below:
 <p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-2.jpeg">
 Header Exercise 2 </p>
 
+<br>
 
 Add a Flexbox property that changes the default size of the menu container when the page width is greater than 768px. After applying the property, the header should be similar to the image below:
 <p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-3.jpeg">
 Header Exercise 3 </p>
 
+<br>
 
 Use the align-self property on the correct element so that the page header has the following behavior:
 <p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-4.jpeg">
 Header Exercise 4 </p>
 
-
-
+<br>
+<br>
 
 ## Part 2
 
