@@ -1,13 +1,13 @@
-# (5.1) JavaScript - DOM and Selectors
+# (5.1) JavaScript - DOM and selectors
 
-- [x] 1. Crie uma função que mude o texto na tag `<p>` para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+- [x] 1. Create a function that changes the text in the `<p>` tag for a description of how you see yourself in 2 years. (Don't spend time thinking about the text, but doing the exercise)
 
-- [x] 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe `(rgb(76,164,109))`.
+- [x] 2. Create a function that changes the color of the yellow square to the green of Trybe `(rgb (76,164,109))`.
 
-- [x] 3. Crie uma função que mude a cor do quadrado vermelho para branco.
+- [x] 3. Create a function that changes the color of the red square to white.
 
-- [x] 4. Crie uma função que corrija o texto da tag `<h1>`.
+- [x] 4. Create a function that corrects the text of the `<h1>` tag.
 
-- [x] 5. Crie uma função que modifique todo o texto da tag `<p>` para maiúsculo.
+- [x] 5. Create a function that changes all text in the `<p>` tag to uppercase.
 
-- [x] 6. Crie uma função que exiba o conteúdo de todas as tags `<p>` no console.
+- [x] 6. Create a function that displays the contents of all `<p>` tags on the console.
