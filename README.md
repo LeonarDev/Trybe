@@ -15,7 +15,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 03 [Introduction to HTML and CSS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_03)	 | :heavy_check_mark:
 | Block 04 [Introduction to JavaScript and Programming Logic](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04)	 | :heavy_check_mark:
 | Block 05 [JavaScript: DOM, Events and Web Storage](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05)	 | :heavy_check_mark:
-| Block 06 [HTML and CSS: Forms, Flexbox and Responsive](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06)	| :triangular_flag_on_post:
+| Block 06 [HTML and CSS: Forms and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06)	| :triangular_flag_on_post:
 | Block 07 [Introduction to JavaScript ES 6 and Unit Testing] | :hourglass_flowing_sand:
 | Block 08 [Higher Order Functions JavaScript ES6] | :hourglass_flowing_sand:
 | Block 09 [Asynchronous Javascript and Promises] | :hourglass_flowing_sand:
