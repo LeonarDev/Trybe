@@ -81,7 +81,7 @@ It is interesting to draw attention to the fact that the property accepts negati
 
 <br>
 
-`flex-grow, flex-shrink, flex-basis`: This three properties must be exposed together. 
+`flex-basis, flex-shrink, flex-grow`: This three properties must be exposed together. 
 - `flex-basis` has the function of defining the base size of an item in the container. The default value of this property is `auto` - maintaining the flexibility of the item according to the size of the container.
 If the container does not have enough space to properly dispose of all items, 
 - The `flex-shrink` property appears to guarantee how much one item will be compressed compared to the others.
