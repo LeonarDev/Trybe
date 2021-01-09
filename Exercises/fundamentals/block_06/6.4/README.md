@@ -31,7 +31,7 @@ Header Exercise 4 </p>
 
 We will continue to practice with the continuation of the header made in the exercise above and build a main with the rest of your page. Copy the rest of the HTML and CSS code and apply it to your previously created documents.
 
-`` html
+```html
 <main class = "main-container">
   <div class = "movie-container">
     <section>
@@ -77,11 +77,11 @@ We will continue to practice with the continuation of the header made in the exe
     <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet officia in provident esse excepturi ipsam! </p>
   </aside>
 </main>
-``
+```
 
 <br>
 
-`` css
+```css
 .main-container {
   display: flex;
   flex-wrap: wrap;
@@ -128,14 +128,14 @@ We will continue to practice with the continuation of the header made in the exe
   margin: 10px 0;
   text-align: justify;
 }
-``
+```
 
 
 <br>
 
 
 1) Apply a 350px base to your container aside. It should look similar to the image below:
-<p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-1.png">
+<p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-1.png">
 Main of Exercise 1 </p>
 
 
@@ -143,28 +143,28 @@ Main of Exercise 1 </p>
 
 
 2) Apply an alignment to center and another to expand. Your aside exhibits the following behavior:
-<p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-2.png">
+<p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-2.png">
 Main of Exercise 2 </p>
 
 
 <br>
 
 3) Add a property that makes your movie container have a base of 700px and another base of 16% for your card's container divs. It should look similar to the image below:
-<p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-3.png">
+<p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-3.png">
 Main of Exercise 3 </p>
 
 
 <br>
 
 4) Apply a property with a value of 10 that expands the film container. It should look similar to the image below:
-<p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-4.png">
+<p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-4.png">
 Main for Exercise 4 </p>
 
 
 <br>
 
 5) Add a property with a value of 1 that makes your divs in the movie container occupy all the white space. It should look similar to the image below:
-<p align = "center"> <img src = "https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2 / images / exercicio-part2-5.png ">
+<p align="center"><img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-2/images/exercicio-part2-5.png ">
 Main of Exercise 5 </p>
 
 
