@@ -6,7 +6,7 @@
 - (4.4) [JavaScript - Objects and Functions](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04/4.4)
 - (4.5) [Project - Playground Functions](https://github.com/LeonarDev/Trybe/tree/main/Projects/Playground-Functions)
 
-<hr>
+
 
 ## Content Links
 - [JS Manual](https://tableless.github.io/iniciantes/manual/js/) (PT-BR)
