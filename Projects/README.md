@@ -1,7 +1,5 @@
 # TRYBE PROJECTS
 
-Personal page: https://leonardev.github.io./
-
 ### FUNDAMENTALS
 - 01 - [Lessons Learned]()
 - 02 - [Playground Functions]()
