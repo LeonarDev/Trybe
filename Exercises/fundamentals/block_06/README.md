@@ -9,11 +9,33 @@
 
 <br>
 
-<img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-1/images/css_flexbox_axes.png">
+## Flexbox;
+
+The first step to start using Flexbox is to create a **Flex container**. Child elements of a Flex container are called **Flex items** and are arranged within it using the Flexbox properties. Some of the Flexbox properties are applied to the container, and others to its items.
+A Flex container is created by using the `display` property of an element with the `flex` value:
+
+```css
+.flex-container {
+  display: flex;
+}
+```
+
+The `flex-direction` property is the one that **defines the direction of the flex items** and modifies who the Main Axis is. *By default, this property is `row`*, so the elements are next to each other. The other values that this property has are:
+- `row-reverse`, the items are in reverse line
+- `column` where the items are in a single column, one underneath the other
+- `column-reverse` in which the items are also a underneath the other, but in reverse order.
+
+The `flex-wrap` property defines whether the items should break the line or not, and *by default this property is `nowrap`*, that is, the items do not break the line. The values that cause the line to break are:
+- `wrap`, which breaks the line
+- `wrap-reverse`, which breaks the line in the opposite direction.
+
+In turn, `flex-flow` is a **shortcut to the flex-direction and flex-wrap properties**, the first value it receives is the flex-direction and the second is the flex-wrap.
 
 <br>
 
-### Display: flex;
+<img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-1/images/css_flexbox_axes.png">
+
+<br>
 
 `Justify-content` **aligns the flex items** in the container according to the direction. This property has this values:
 - `flex-start` that aligns the items to the beginning of the container 
