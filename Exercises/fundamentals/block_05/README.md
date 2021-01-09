@@ -60,7 +60,6 @@ Unlike **Cookies**, the storage limit is much higher (at least 5MB), and informa
 **Web Storage** is by origin (by domain and protocol). All pages in a source can save and access the same data.
 
 <br>
-
 #### Local and Session Storage
 
 HTML Web Storage provides two objects for storing data on the client (person's browser), in the key/value format in a more intuitive way than in **Cookies**:
