@@ -31,4 +31,4 @@
 - <a href="https://learn-the-web.algonquindesign.ca/topics/html-semantics-cheat-sheet/">Learn the Web - <strong><em>HTML </em></strong>semantics cheat sheet</a>
 - <a href="https://www.developerdrive.com/what-are-semantic-html-tags/">Developer Drive - What are Semantic <strong><em>HTML </em></strong>Tags and how to use them</a>
 - <a href="http://www.springboardseo.com/resources/what-is/semantic-html.html">SpringboardSEO - What is Semantic <strong><em>HTML</em></strong>?</a>
-- <a ref="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0">W3 - How to Meet WCAG (Quick Reference)</a>
+- <a href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0">W3 - How to Meet WCAG (Quick Reference)</a>
