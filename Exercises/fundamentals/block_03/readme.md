@@ -6,7 +6,7 @@
  - (3.4) Semantic HTML
  - (3.5) Project - Lessons Learned
  
-<hr>
+<br>
  
 ## Content Links
 
