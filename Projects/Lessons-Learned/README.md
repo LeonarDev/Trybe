@@ -50,11 +50,9 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   * Adicione uma descrição para o _Pull Request_, um título claro que o identifique, e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
   * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-09-project-lessons-learned/pulls) e confira que o seu _Pull Request_ está criado
--->
 
 # Entregáveis
 
-<!--
 Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
 -->
 
