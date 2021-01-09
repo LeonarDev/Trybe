@@ -1,5 +1,5 @@
 # Boas vindas ao repositório do Projeto Playground Functions!
-
+<!--
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #VQV 🚀
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma `branch` específica e um _Pull Request_ para colocar seus códigos.
@@ -81,7 +81,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 * Para verificar se a sua função foi criada corretamente você pode instalar a extensão `code runner` no _VSCode_.
 
----
+-->
 
 **1 - Usando o operador &&**
 -
