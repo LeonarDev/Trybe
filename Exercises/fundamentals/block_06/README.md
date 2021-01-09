@@ -9,7 +9,7 @@
 
 <br>
 
-## Flexbox;
+## Flexbox
 
 The first step to start using Flexbox is to create a **Flex container**. Child elements of a Flex container are called **Flex items** and are arranged within it using the Flexbox properties. Some of the Flexbox properties are applied to the container, and others to its items.
 A Flex container is created by using the `display` property of an element with the `flex` value:
