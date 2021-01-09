@@ -1,3 +1,4 @@
+<!--
 # Boas vindas ao repositório do projeto Lições Aprendidas!
 
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #VQV 🚀
@@ -49,14 +50,21 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   * Adicione uma descrição para o _Pull Request_, um título claro que o identifique, e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
   * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-09-project-lessons-learned/pulls) e confira que o seu _Pull Request_ está criado
----
+-->
 
 # Entregáveis
 
+<!--
 Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
+-->
 
 Este _Pull Request_ deverá conter os arquivos `index.html` e `style.css`, que conterão seu código HTML e CSS, respectivamente.
 
+## ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
+
+Você pode adicionar outros arquivos se julgar necessário.
+
+<!--
 ## Prazo para entrega
 
 O Prazo para entrega é de **7 dias corridos** após o último dia de projeto.
@@ -65,20 +73,16 @@ O Prazo para entrega é de **7 dias corridos** após o último dia de projeto.
 
 Vale ressaltar que os projetos podem ter mais de um dia de duração, por isso o prazo de **7 dias** é contado à partir do último dia de projeto.
 
-## ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
-
-Você pode adicionar outros arquivos se julgar necessário. Qualquer dúvida, procure a Pessoa Instrutora que te acompanha.
+Qualquer dúvida, procure a Pessoa Instrutora que te acompanha.
 
 Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
-
----
 
 ## Requisitos do projeto
 
 ### 💡Veja o exemplo a seguir de como o projeto pode se parecer depois de pronto. Lembre-se que você pode ~~e deve~~ ir além para deixar o projeto com a sua cara e impressionar à todos!
 
 ![exemplo](./exemplo.png)
-
+-->
 
 ## ⚠️ Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de _ids_ que alguns elementos de seu projeto devem possuir**. ⚠️
 
