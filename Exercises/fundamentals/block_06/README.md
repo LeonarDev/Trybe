@@ -19,21 +19,26 @@ A Flex container is created by using the `display` property of an element with t
   display: flex;
 }
 ```
+<br>
+
+<img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-1/images/css_flexbox_axes.png">
+
+<br>
 
 The `flex-direction` property is the one that **defines the direction of the flex items** and modifies who the Main Axis is. *By default, this property is `row`*, so the elements are next to each other. The other values that this property has are:
 - `row-reverse`, the items are in reverse line
 - `column` where the items are in a single column, one underneath the other
 - `column-reverse` in which the items are also a underneath the other, but in reverse order.
 
+<br>
+
 The `flex-wrap` property defines whether the items should break the line or not, and *by default this property is `nowrap`*, that is, the items do not break the line. The values that cause the line to break are:
 - `wrap`, which breaks the line
 - `wrap-reverse`, which breaks the line in the opposite direction.
 
-In turn, `flex-flow` is a **shortcut to the flex-direction and flex-wrap properties**, the first value it receives is the flex-direction and the second is the flex-wrap.
-
 <br>
 
-<img src="https://course.betrybe.com//fundamentals/css-flexbox/css-flexbox-part-1/images/css_flexbox_axes.png">
+In turn, `flex-flow` is a **shortcut to the flex-direction and flex-wrap properties**, the first value it receives is the flex-direction and the second is the flex-wrap.
 
 <br>
 
