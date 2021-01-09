@@ -44,7 +44,7 @@
 - [x] (5.8) _[Project - Mysterious Card]()_
 <hr>
 
-#### Block 06: [HTML and CSS: Forms, Flexbox and Responsive](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :triangular_flag_on_post:
+#### Block 06: [HTML and CSS: Forms, Flexbox and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :triangular_flag_on_post:
 - [x] (6.1) HTML & CSS - Forms
 - [x] (6.2) JavaScript Libraries and CSS Frameworks
 - [x] (6.3) Introduction - CSS Flexbox
