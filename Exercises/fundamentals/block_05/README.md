@@ -1,15 +1,15 @@
 # Block 05: JavaScript: DOM, Events and Web Storage
 
-- (5.1) JavaScript - DOM and Selectors
-- (5.2) JavaScript - Working with Elements
-- (5.3) JavaScript - Events
-- (5.4) JavaScript - Web Storage
+- (5.1) [JavaScript - DOM and Selectors](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05/5.1)
+- (5.2) [JavaScript - Working with Elements](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05/5.2)
+- (5.3) [JavaScript - Events](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05/5.3)
+- (5.4) [JavaScript - Web Storage](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05/5.4)
 - (5.5) Fundamentals - JavaScript - Projetcs
-- (5.5) Project - Pixels Art
-- (5.6) Project - To-Do List
-- (5.7) Project - Meme Generator
-- (5.8) Project - Color Guessing Game
-- (5.8) Project - Mysterious Card
+- (5.5) [Project - Pixels Art](https://github.com/LeonarDev/Trybe/tree/main/Projects/Pixels-Art)
+- (5.6) [Project - To-Do List](https://github.com/LeonarDev/Trybe/tree/main/Projects/To-Do-List)
+- (5.7) [Project - Meme Generator](https://github.com/LeonarDev/Trybe/tree/main/Projects/Meme-Generator)
+- (5.8) [Project - Color Guessing Game](https://github.com/LeonarDev/Trybe/tree/main/Projects/Color-Guessing)
+- (5.8) [Project - Mysterious Card](https://github.com/LeonarDev/Trybe/tree/main/Projects/Mysterious-Card)
 
 <hr>
 
