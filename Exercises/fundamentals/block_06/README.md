@@ -8,7 +8,9 @@
 - (6.5) [Responsive CSS - Mobile First](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.6)
 - (6.6) [Project - Facebook Homepage](https://github.com/LeonarDev/Trybe/tree/main/Projects)
 
-<hr>
+<br>
+ 
+## Content Links
 
 - [A step-by-step guide to getting started with HTML forms](https://www.freecodecamp.org/news/a-step-by-step-guide-to-getting-started-with-html-forms-7f77ae4522b5/)
 - [CSS Tricks: A Complete Guide To Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
