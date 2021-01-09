@@ -127,6 +127,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 **Ou seja, dada uma paleta de cores e um quadro composto por pixels, você vai permitir que quem usa consiga pintar o que quiser no quadro!** 👩‍🎨
 
+<br>
+
 ### 1 - A página deve possuir o título "Paleta de Cores".
 
 ##### As seguintes verificações serão feitas:
