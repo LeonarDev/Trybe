@@ -8,6 +8,7 @@
 
 <hr>
 
+## Content Links
 - [JS Manual](https://tableless.github.io/iniciantes/manual/js/) (PT-BR)
 - [JS basics article](https://www.freecodecamp.org/news/learn-these-javascript-fundamentals-and-become-a-better-developer-2a031a0dc9cf/)
 - [JavaScript Online Course](https://learnjavascript.online/)
