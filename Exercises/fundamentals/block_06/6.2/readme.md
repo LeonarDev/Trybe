@@ -1,13 +1,13 @@
-# (6.2) JavaScript Libraries and CSS Frameworks
+# (6.2) JavaScript libraries and CSS structures
 
-### Adicione um framework CSS de sua escolha ao formulário que você construiu na última aula e o utilize para estilizar o formulário.
+### Search for a CSS framework of your choice to the form you built in the last class and use it to style the form.
 
-- Sugestões: Bulma , Bootstrap , Semantic UI e Materialize .
+- Suggestions: Bulma, Bootstrap, Semantic UI and Materialize.
 
-## Adicione uma biblioteca JavaScript de date picker ao formulário que você construiu na última aula. Utilize essa biblioteca no campo "Data de início" do formulário. Você pode remover as validações de data que adicionou, uma vez que a biblioteca se encarregará de permitir somente datas válidas.
+## API of a JavaScript date picker library to the form you built in the last class. Use this library in the "Start date" field on the form. You can remove the date validations you have added, as the library will be in charge of allowing only valid dates.
 
-- Sugestões: DatePickerX e Pickaday .
+- Suggestions: DatePickerX and Pickaday.
 
-## Adicione uma biblioteca JavaScript de validações ao formulário que você construiu na última aula. Utilize essa biblioteca para substituir as validações que você fez manualmente.
+## API a JavaScript library of validations to the form you built in the last class. Use this library to override the validations you did manually.
 
-- Sugestões: Just-validate e popup-validation
+- Suggestions: Just-validate and popup-validation
