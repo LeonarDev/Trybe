@@ -58,7 +58,7 @@ Para entregar o seu projeto você deverá criar um _Pull Request_ neste reposit�
 
 Este _Pull Request_ deverá conter os arquivos `index.html` e `style.css`, que conterão seu código HTML e CSS, respectivamente.
 
-## ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
+#### ⚠️ É importante que seus arquivos tenham exatamente estes nomes! ⚠️
 
 Você pode adicionar outros arquivos se julgar necessário.
 
@@ -82,7 +82,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 ![exemplo](./exemplo.png)
 -->
 
-## ⚠️ Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de _ids_ que alguns elementos de seu projeto devem possuir**. ⚠️
+#### ⚠️ Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de _ids_ que alguns elementos de seu projeto devem possuir**. ⚠️
 
 O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
