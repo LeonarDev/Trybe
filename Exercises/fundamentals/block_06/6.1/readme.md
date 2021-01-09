@@ -1,56 +1,56 @@
 # (6.1) HTML & CSS - Forms
 
-### Criando um formulário de currículo.
-- Crie um arquivo HTML chamado form.html para o formulário.
-- Caso julgue necessário, crie estilos CSS para o seu formulário, de acordo com a sua imaginação. Coloque-os em um arquivo styles.css .
-- Crie também um arquivo script.js para seu código JavaScript .
+### Creating a resume form.
+- Create an HTML file called form.html for the form.
+- If necessary, create CSS styles for your form, according to your imagination. Place them in a styles.css file.
+- Also create a script.js file for your JavaScript code.
 
-## Vamos criar um formulário de cadastro de currículo com base na especificação a seguir:
-#### 1) Crie um `<fieldset>` para os seguintes dados pessoais:
-- Nome - Texto
-    - Limite de 40 caracteres
-    - Campo obrigatório
-- Email - Texto
-    - Limite de 50 caracteres
-    - Campo obrigatório
-- CPF - Texto
-    - Limite de 11 caracteres
-    - Campo obrigatório
-- Endereço - Texto
-    - Limite de 200 caracteres
-    - Campo obrigatório
-- Cidade - Texto
-    - Limite de 28 caracteres
-    - Campo obrigatório
-- Estado - ComboBox
-    - Todos os estados do Brasil
-    - Utilize estruturas de repetição via JavaScript para gerar os `<option>`
-    - Campo obrigatório
-- Tipo - Radio Button
-    - Casa, Apartamento
-    - Campo obrigatório
+## We will create a curriculum registration form based on the following specification:
+#### 1) Create a `<fieldset>` for the following personal data:
+- Name - Text
+    - 40 character limit
+    - Required field
+- Email - Text
+    - 50 character limit
+    - Required field
+- CPF - Text
+    - 11 character limit
+    - Required field
+- Address - Text
+    - 200 character limit
+    - Required field
+- City - Text
+    - 28 character limit
+    - Required field
+- Status - ComboBox
+    - All states of Brazil
+    - Use repetition structures via JavaScript to generate the `<option>`
+    - Required field
+- Type - Radio Button
+    - House, Apartment
+    - Required field
 
-#### 2) Crie outro `<fieldset>` para dados do seu último emprego
-- Resumo do currículo - TextArea
-    - Limite de 1000 caracteres
-    - Campo obrigatório
-- Cargo - Texto
-    - Limite de 40 caracteres
-    - Campo obrigatório
-- Descrição do cargo - Texto
-    - Limite de 500 caracteres
-    - Campo obrigatório
-- Data de início - Texto
-    - Verificar o formato da data dd/mm/aaaa .
-    - O dia deve ser > 0 e <= 31.
-    - O mês deve ser > 0 e <= 12.
-    - O ano não pode ser negativo.
-    - Caso alguma das condições for inválida no momento do envio do formulário, exibir mensagem de erro contextualizada.
-    - Campo obrigatório
+#### 2) Create another `<fieldset>` for data from your last job
+- Resume Summary - TextArea
+    - 1000 character limit
+    - Required field
+- Position - Text
+    - 40 character limit
+    - Required field
+- Job description - Text
+    - 500 character limit
+    - Required field
+- Start date - Text
+    - Check the date format dd / mm / yyyy.
+    - The day must be> 0 and <= 31.
+    - The month must be> 0 and <= 12.
+    - The year cannot be negative.
+    - If any of the conditions is invalid when sending the form, display a contextualized error message.
+    - Required field
 
-#### 3) Logo abaixo do formulário, crie um botão que:
-- Chame uma função JavaScript e interrompa o fluxo automático do form utilizando o preventDefault() .
-- Execute as validações que foram pedidas ao longo da montagem do formulário.
-- Monte uma `<div>` com o consolidado dos dados que foram inseridos no formulário.
+#### 3) Right below the form, create a button that:
+- Call a JavaScript function and stop the automatic flow of the form using preventDefault ().
+- Perform the validations that were requested during the assembly of the form.
+- Set up a `<div>` with the consolidated data that were inserted in the form.
 
-#### 4) Crie um botão Limpar que limpa todos os campos do formulário e a `<div>` com seu currículo também.
+#### 4) Create a Clear button that clears all fields on the form and the `<div>` with your resume as well.
