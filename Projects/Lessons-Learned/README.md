@@ -1,4 +1,13 @@
-Link deste projeto: https://leonardev.github.io/projects/lessons-learned/
+### Este é o primeiro projeto. Desenvolvido do zero apenas com HTML e CSS, sem utilização de flexbox.
+
+Link: https://leonardev.github.io/projects/lessons-learned/
+
+#### Objetivo:
+- Organização do código. 
+- Construir a estrutura do HTML de forma semântica
+- Realizar commits organizados no repositório.
+- Utilizar tags corretas, bem indentadas, com classes e ids adequados.
+- Construir a estrutura do CSS evitando repetição. Combinando e agrupando classes CSS bem definidas.
 
 <!--
 # Boas vindas ao repositório do projeto Lições Aprendidas!
