@@ -1,35 +1,35 @@
 # (5.2) JavaScript - Working with Elements
 
-### O objetivo desses exercícios é colocar em prática o que você acabou de aprender sobre DOM. Por isso, você deve fazer os exercícios utilizando apenas código JavaScript
+### The purpose of these exercises is to put into practice what you have just learned about DOM. Therefore, you should do the exercises using only JavaScript code
 
-- [x] 1. Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+- [x] 1. Add the h1 tag with the text Exercise 5.2 - JavaScript DOM as a child of the body tag;
 
-- [x] 2. Adicione a tag div com a classe main-content como filho da tag body;
+- [x] 2. Add the div tag with the main-content class as a child of the body tag;
 
-- [x] 3. Adicione a tag div com a classe center-content como filho da tag div criada no passo 2;
+- [x] 3. Add the div tag with the center-content class as a child of the div tag created in step 2;
 
-- [x] 4. Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+- [x] 4. Add the tag p as a child of the div created in step 3 and add some text;
 
-- [x] 5. Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+- [x] 5. Add the div tag with the left-content class as a child of the div tag created in step 2;
 
-- [x] 6. Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+- [x] 6. Add the div tag with the right-content class as a child of the div tag created in step 2;
 
-- [x] 7. Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
+- [x] 7. Add an image with src set to https://picsum.photos/200 and small-image class. This element must be a child of the div created in step 5;
 
-- [x] 8. Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+- [x] 8. Add an unordered list with values from 1 to 10 in full as list values. This list must be a child of the div created in step 6;
 
-- [x] 9. Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+- [x] 9. Add 3 h3 tags, all children of the div created in step 2.
 
-### Agora que você criou muita coisa, vamos fazer algumas alterações e remoções:
+### Now that you've created a lot, let's make some changes and removals:
 
-- [x] 10. Adicione a classe title na tag h1 criada;
+- [x] 10. Add the title class to the created h1 tag;
 
-- [x] 11. Adicione a classe description nas 3 tags h3 criadas;
+- [x] 11. Add the description class in the 3 h3 tags created;
 
-- [x] 12. Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
+- [x] 12. Remove the div created in step 5 (the one with the left-content class). Use the .removeChild () function;
 
-- [x] 13. Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div;
+- [x] 13. Center the div created in step 6 (the one that has the right-content class). Tip: to centralize, just configure margin-right: auto do div;
 
-- [x] 14. Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+- [x] 14. Change the background color of the parent element of the div created in step 3 (the one that has the center-content class) to green;
 
-- [x] 15. Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+- [x] 15. Remove the last two elements (nine and ten) from the list created in step 8.
