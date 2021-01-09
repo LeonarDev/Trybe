@@ -1,11 +1,12 @@
 # Block 04: Introduction to JavaScript and Programming Logic
 
-- (4.1) JavaScript - Introduction
-- (4.1) JavaScript - First Steps
-- (4.2) JavaScript - Array and loop For
-- (4.3) JavaScript - Programming Logic and Algorithms
-- (4.4) JavaScript - Objects and Functions
-- (4.5) Project - Playground Functions
+- (4.1) [JavaScript - First Steps](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04/4.1)
+- (4.2) [JavaScript - Array and loop For](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04/4.2)
+- (4.3) [JavaScript - Programming Logic and Algorithms](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04/4.3)
+- (4.4) [JavaScript - Objects and Functions](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04/4.4)
+- (4.5) [Project - Playground Functions](https://github.com/LeonarDev/Trybe/tree/main/Projects/Playground-Functions)
+
+<hr>
 
 - [JS Manual](https://tableless.github.io/iniciantes/manual/js/) (PT-BR)
 - [JS basics article](https://www.freecodecamp.org/news/learn-these-javascript-fundamentals-and-become-a-better-developer-2a031a0dc9cf/)
