@@ -100,6 +100,78 @@ Let's practice a little!
 - Make the second `div` disappear when the screen width is between `600px` and `900px`;
 - Make the first `div` disappear when the screen width is up to `600px`.
 
+### w3schools Exercise template
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  div.example {
+    font-size: 50px;
+    padding: 50px;
+    margin: 10px;
+    border: 8px solid black;
+    background: white
+  }
+  
+  div.example2 {
+    font-size: 50px;
+  	padding: 50px;
+    margin: 10px;
+  	border: 8px solid black;	
+  	background: gray;
+    visibility: hidden
+  }
+
+@media screen and (max-width: 600px) {
+  div.example {
+  	background: red;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  div.example {
+    background: yellow;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1100px) {
+  div.example {	
+    background: blue;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  div.example2 {
+    visibility: visible;
+  }
+  
+  div.papa {
+    display: flex;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h2>Change the appearance of DIV on different screen sizes</h2>
+
+<div class="papa">
+
+  <div class="example">Example DIV.</div>
+
+  <div class="example2">Example DIV TWO.</div>
+  
+</div>
+
+<strong>Resize the browser window to see the effect</strong>.</p>
+
+</body>
+</html>
+```
+
 <br>
 
 ## Content Links
