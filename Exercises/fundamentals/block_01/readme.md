@@ -10,11 +10,16 @@
 
 <img src="https://course.betrybe.com//fundamentals/unix/images/comandos_part1.png">
 
-<a href="https://www.howtogeek.com/412055/37-important-linux-commands-you-should-know/">Important Linux Commands</a>
-
-<a href="https://www.udacity.com/course/linux-command-line-basics--ud595" target="_blank" rel="noopener noreferrer">Udacity free course about Command Line</a>
-
-<a href="https://www.udacity.com/course/shell-workshop--ud206" target="_blank" rel="noopener noreferrer">Udacity free course about shell</a>
+<br>
 
 <img src="https://course.betrybe.com//fundamentals/unix/images/comandos_part2.png">
 
+<br>
+
+## Content Links
+
+- <a href="https://www.howtogeek.com/412055/37-important-linux-commands-you-should-know/">Important Linux Commands</a>
+
+- <a href="https://www.udacity.com/course/linux-command-line-basics--ud595" target="_blank" rel="noopener noreferrer">Udacity free course about Command Line</a>
+
+- <a href="https://www.udacity.com/course/shell-workshop--ud206" target="_blank" rel="noopener noreferrer">Udacity free course about shell</a>
