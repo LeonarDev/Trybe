@@ -54,7 +54,6 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 # Entregáveis
 
 Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
--->
 
 Este _Pull Request_ deverá conter os arquivos `index.html` e `style.css`, que conterão seu código HTML e CSS, respectivamente.
 
@@ -62,7 +61,6 @@ Este _Pull Request_ deverá conter os arquivos `index.html` e `style.css`, que c
 
 Você pode adicionar outros arquivos se julgar necessário.
 
-<!--
 ## Prazo para entrega
 
 O Prazo para entrega é de **7 dias corridos** após o último dia de projeto.
@@ -80,7 +78,6 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 ### 💡Veja o exemplo a seguir de como o projeto pode se parecer depois de pronto. Lembre-se que você pode ~~e deve~~ ir além para deixar o projeto com a sua cara e impressionar à todos!
 
 ![exemplo](./exemplo.png)
--->
 
 #### ⚠️ Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de _ids_ que alguns elementos de seu projeto devem possuir**. ⚠️
 
@@ -115,7 +112,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 * Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. _Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos._
 
----
+-->
 
 ## Requisitos Obrigatórios:
 
