@@ -2,10 +2,9 @@
 
 - (6.1) [HTML & CSS - Forms](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.1)
 - (6.2) [JavaScript Libraries and CSS Frameworks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.2)
-- (6.3) [Introduction - CSS Flexbox](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.3)
-- (6.3) [CSS Flexbox - Part 1](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.4)
-- (6.4) [CSS Flexbox - Part 2](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.5)
-- (6.5) [Responsive CSS - Mobile First](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.6)
+- (6.3) [CSS Flexbox - Part 1](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.3)
+- (6.4) [CSS Flexbox - Part 2](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.4)
+- (6.5) [Responsive CSS - Mobile First](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06/6.5)
 - (6.6) [Project - Facebook Homepage](https://github.com/LeonarDev/Trybe/tree/main/Projects)
 
 <br>
