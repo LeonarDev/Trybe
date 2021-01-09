@@ -6,6 +6,8 @@ No contexto deste projeto, o problema é: dados um quadro composto por pixels e 
 
 Além disso, terá a oportunidade de colocar novamente em prática o que aprendeu sobre HTML, CSS e JavaScript!
 
+<br>
+
 <!--
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
@@ -133,6 +135,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - O texto do título deve ser **exatamente** "Paleta de Cores".
 
+<br>
+
 ### 2 - A página deve possuir uma paleta de quatro cores distintas.
 
 ##### As seguintes verificações serão feitas:
@@ -147,11 +151,15 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - A paleta de cores não deve conter cores repetidas.
 
+<br>
+
 ### 3 - A cor **preta** deve ser a primeira na paleta de cores.
 
 ##### As seguintes verificações serão feitas:
 
 - As demais cores podem ser escolhidas livremente.
+
+<br>
 
 ### 4 - A página deve possuir um quadro de pixels, com 25 pixels.
 
@@ -165,6 +173,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 -  O quadro de "pixels" deve aparecer abaixo da paleta de cores.
 
+<br>
+
 ### 5 - Cada elemento do quadro de pixels deve possuir 40 _pixels_ de largura e 40 _pixels_ de altura e ser delimitado por uma borda preta de 1 pixel.
 
 ##### As seguintes verificações serão feitas:
@@ -173,6 +183,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
 
+<br>
+
 ### 6 - Ao carregar a página, a cor **preta** da paleta já deve estar selecionada para pintar os pixels.
 
 ##### As seguintes verificações serão feitas:
@@ -180,6 +192,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 - O elemento da cor preta deve possuir, inicialmente, a `classe` `selected`;
 
 - Note que o elemento que deverá receber a classe `selected` deve ser um dos elementos que possuem a classe `color`, como especificado no **requisito 2**.
+
+<br>
 
 ### 7 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
 
@@ -191,6 +205,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - Note que os elementos que deverão receber a classe `selected` devem ser os mesmos elementos que possuem a classe `color`, como especificado no **requisito 2**.
 
+<br>
+
 ### 8 - Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
 
 ##### As seguintes verificações serão feitas:
@@ -201,6 +217,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.
 
+<br>
+
 ### 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
 
 ##### As seguintes verificações serão feitas:
@@ -210,6 +228,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 - O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
 
 - O texto do botão deve ser **"Limpar"**.
+
+<br>
 
 ## Requisitos Bônus:
 
@@ -235,6 +255,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - O novo quadro deve ter todos os pixels preenchidos com a cor branca.
 
+<br>
+
 ### 11 - Limite o tamanho do mínimo e máximo do board.
 
 ##### As seguintes verificações serão feitas:
@@ -245,6 +267,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
   - Valor maior que 50, considerar 50 como padrão.
 
+<br>
+
 ### 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
 
 ##### As seguintes verificações serão feitas:
@@ -252,6 +276,8 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 - A cor preta ainda precisa estar presente e deve ser a primeira na sua paleta de cores.
 
 ---
+
+<br>
 
 ## Dicas
 
