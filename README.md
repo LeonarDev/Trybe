@@ -32,9 +32,9 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 14 - Agile Methodologies	| :hourglass_flowing_sand:
 | Block 15 - Automated testing with React Testing Library	| :hourglass_flowing_sand:
 | Block 16 - State management with Redux	| :hourglass_flowing_sand:
-| Block 17 - [Project: Trivia Game]() | :hourglass_flowing_sand:
+| Block 17 - [Project: Trivia Game] | :hourglass_flowing_sand:
 | Block 18 - Context API and Reack Hooks | :hourglass_flowing_sand:
-| Block 19 - [Project: Recipes App]() | :hourglass_flowing_sand:
+| Block 19 - [Project: Recipes App] | :hourglass_flowing_sand:
 
 <br>
 
@@ -51,10 +51,10 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 27 - NodeJS: Service layer, Rest & Restful Architectures | :hourglass_flowing_sand:
 | Block 28 - Authentication and File Upload | :hourglass_flowing_sand:
 | Block 29 - Deployment | :hourglass_flowing_sand:
-| Block 30 - [Project: Tryber]() | :hourglass_flowing_sand:
+| Block 30 - [Project: Tryber] | :hourglass_flowing_sand:
 | Block 31 - Architecture: SOLID and ORM | :hourglass_flowing_sand:
 | Block 32 - Sockets | :hourglass_flowing_sand:
-| Block 33 - [Project: Tryber II]() | :hourglass_flowing_sand:
+| Block 33 - [Project: Tryber II] | :hourglass_flowing_sand:
 
 <br>
 
