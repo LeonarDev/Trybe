@@ -50,7 +50,7 @@
 - [x] (6.3) Introduction - CSS Flexbox
 - [x] (6.3) CSS Flexbox - Part 1
 - [x] (6.4) CSS Flexbox - Part 2
-- [ ] (6.5) Responsive CSS - Mobile First
+- [x] (6.5) Responsive CSS - Mobile First
 - [ ] (6.6) _[Project - Facebook Homepage]()_
 <hr>
 
