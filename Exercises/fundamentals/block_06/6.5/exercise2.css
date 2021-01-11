@@ -1,0 +1,68 @@
+/* SMALL */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header {
+  background: rgb(230 , 230 , 230);
+  display: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+header ul li {
+  list-style: none;
+}
+
+.asides {
+  display: flex;
+  flex-flow:  wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.asides h2 {
+  text-align: center;
+}
+
+.aside-one {
+  list-style: upper-roman;
+}
+
+.aside-one h2 {
+  text-align: center;
+}
+
+.main-content h3 {
+  text-align: center;
+}
+
+.main-content {
+  margin: 10px;
+}
+
+footer {
+  text-align: center;
+}
+
+/* MEDIUM */
+@media screen and (min-width: 720px) {
+
+}
+
+
+/* LARGE */
+@media screen and (min-width: 1080px) {
+  
+}
