@@ -1,39 +1,44 @@
 // PART I
-
 // Exercise 1
-function testingScope(scope) { 
-  if (escopo === true) { 
-    var ifScope = 'I must not be used outside my scope (if)';
-    ifScope = ifScope + ' great, I was used in the scope!';
+const testingScope = scope => { 
+  if (scope) { 
+    let ifScope = 'I must not be used outside my scope (if).';
+    ifScope = `${ifScope} Great, I was used in the scope!`;
     console.log(ifScope);
   } else {
-    var elseScope = 'I must not be used outside my scope (else)';
-    console.log(elseScope);
+    const elseScope = 'I must not be used outside my scope (else)';
+    console.log(elseScope);''
   }
-  console.log(ifScope + ' What am I doing here ? :O');
 }
-
 testingScope(true);
+
+
 
 // Exercise II
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+console.log(`The numbers ${oddsAndEvens.sort((a, b) => a - b)} are ranked in increasing order`);
 
-// Your code here.
-
-console.log(oddsAndEvens);
 
 
 // PART II
-
 // Exercise I
+const factorial = number => {
+  if (number === 0) { 
+    return 1;
+  } else { 
+    return number * factorial(number - 1);
+  }
+}
+
 
 
 // Exercise II
+
 
 
 // Exercise III
 
 
-// Exercise IV
 
+// Exercise IV
 
