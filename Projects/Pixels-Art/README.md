@@ -1,10 +1,10 @@
-# Boas vindas ao repositório do projeto Arte com Pixels!
+# Welcome to the Arte com Pixels project repository!
 
-Com este projeto, será reforçada a capacidade de modelagem de problemas, uma habilidade essencial com a qual a pessoa desenvolvedora vai se deparar o tempo todo na sua carreira! Uma forma de modelagem de problemas é quebrá-lo em vários menores.
+With this project, the ability to model problems will be reinforced, an essential skill that the developer will encounter all the time in his career! One way of modeling problems is to break it down into several smaller ones.
 
-No contexto deste projeto, o problema é: dados um quadro composto por pixels e uma paleta de cores, você precisa permitir que o usuário consiga pintar o quadro com a cor que ele tiver selecionado na paleta.
+In the context of this project, the problem is: given a frame composed of pixels and a color palette, you need to allow the user to be able to paint the frame with the color he has selected in the palette.
 
-Além disso, terá a oportunidade de colocar novamente em prática o que aprendeu sobre HTML, CSS e JavaScript!
+In addition, you will have the opportunity to put what you have learned about HTML, CSS and JavaScript back into practice!
 
 <br>
 
@@ -121,161 +121,161 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 -->
 
-## Requisitos Obrigatórios:
+## Mandatory requirements:
 
-* Neste projeto, você implementará um editor de arte com pixels.
+* In this project, you will implement a pixel art editor.
 
-**Ou seja, dada uma paleta de cores e um quadro composto por pixels, você vai permitir que quem usa consiga pintar o que quiser no quadro!** 👩‍🎨
-
-<br>
-
-### 1 - A página deve possuir o título "Paleta de Cores".
-
-##### As seguintes verificações serão feitas:
-
-- O título deverá ficar dentro de uma tag `h1` com o `id` denominado `title`;
-
-- O texto do título deve ser **exatamente** "Paleta de Cores".
+** In other words, given a color palette and a frame composed of pixels, you will allow those who use it to be able to paint whatever they want on the frame! ** 👩‍🎨
 
 <br>
 
-### 2 - A página deve possuir uma paleta de quatro cores distintas.
+### 1 - The page must have the title "Palette of Colors".
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- A paleta de cores deve ser um elemento com `id` denominado `color-palette`, ao passo que cada cor individual da paleta de cores deve possuir a `classe` `color`;
+- The title must be inside an `h1` tag with the` id` called `title`;
 
-- A cor de fundo de cada elemento da paleta deverá ser a cor que o elemento representa. **A única cor não permitida na paleta é a cor branca.**;
-
-- Cada elemento da paleta de cores deverá ter uma borda preta, sólida e com 1 pixel de largura;
-
-- A paleta de cores deverá listar todas as cores disponíveis para utilização lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores";
-
-- A paleta de cores não deve conter cores repetidas.
+- The title text must be ** exactly ** "Color Palette".
 
 <br>
 
-### 3 - A cor **preta** deve ser a primeira na paleta de cores.
+### 2 - The page must have a palette of four different colors.
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- As demais cores podem ser escolhidas livremente.
+- The color palette must be an element with `id` called` color-palette`, whereas each individual color of the color palette must have the `color` class;
 
-<br>
+- The background color of each element in the palette should be the color that the element represents. ** The only color not allowed in the palette is white. **;
 
-### 4 - A página deve possuir um quadro de pixels, com 25 pixels.
+- Each element of the color palette must have a solid black border, 1 pixel wide;
 
-##### As seguintes verificações serão feitas:
+- The color palette should list all colors available for use side by side, and should be positioned under the title "Color Palette";
 
-- O quadro de "pixels" deve ter 5 elementos de largura e 5 elementos de comprimento;
-
-- O quadro de "pixels" deve possuir o `id` denominado `pixel-board`, ao passo que cada "pixel" individual dentro do quadro deve possuir a `classe` denominada `pixel`;
-
-- A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca;
-
--  O quadro de "pixels" deve aparecer abaixo da paleta de cores.
+- The color palette must not contain repeated colors.
 
 <br>
 
-### 5 - Cada elemento do quadro de pixels deve possuir 40 _pixels_ de largura e 40 _pixels_ de altura e ser delimitado por uma borda preta de 1 pixel.
+### 3 - The color ** black ** must be the first in the color palette.
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- O quadro de pixels tem altura e comprimento de 5 elementos;
-
-- 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
+- The other colors can be chosen freely.
 
 <br>
 
-### 6 - Ao carregar a página, a cor **preta** da paleta já deve estar selecionada para pintar os pixels.
+### 4 - The page must have a pixel frame, with 25 pixels.
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- O elemento da cor preta deve possuir, inicialmente, a `classe` `selected`;
+- The pixel frame must be 5 elements wide and 5 elements long;
 
-- Note que o elemento que deverá receber a classe `selected` deve ser um dos elementos que possuem a classe `color`, como especificado no **requisito 2**.
+- The "pixel" frame must have the `id` called` pixel-board`, whereas each individual "pixel" within the frame must have the `class` called` pixel`;
 
-<br>
+- The initial color of the "pixels" inside the frame, when opening the page, must be white;
 
-### 7 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
-
-##### As seguintes verificações serão feitas:
-
-- A `classe` `selected` deve ser adicionada à cor selecionada na paleta, ao mesmo tempo em que é removida da cor anteriormente selecionada;
-
-- Somente uma das cores da paleta deve ter a `classe` `selected` de cada vez;
-
-- Note que os elementos que deverão receber a classe `selected` devem ser os mesmos elementos que possuem a classe `color`, como especificado no **requisito 2**.
+- The "pixel" frame should appear below the color palette.
 
 <br>
 
-### 8 - Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
+### 5 - Each element of the pixel frame must be 40 _pixels_ wide and 40 _pixels_ high and be delimited by a black border of 1 pixel.
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- Ao carregar a página deve ser possível pintar os pixels de preto;
+- The pixel frame has a height and length of 5 elements;
 
-- Após selecionar uma outra cor na paleta, deve ser possível pintar os pixels com essa cor;
-
-- Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.
+- 40 pixels must be the total size of the element, including its content and excluding the black border, which must be created separately.
 
 <br>
 
-### 9 - Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+### 6 - When loading the page, the color ** black ** of the palette must already be selected to paint the pixels.
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- O botão deve ter o `id` denominado `clear-board`;
+- The element of black color must initially have the `class`` selected`;
 
-- O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
-
-- O texto do botão deve ser **"Limpar"**.
+- Note that the element that should receive the `selected` class must be one of the elements that have the` color` class, as specified in ** requirement 2 **.
 
 <br>
 
-## Requisitos Bônus:
+### 7 - When clicking on one of the palette colors, the selected color will be used to fill the pixels in the frame.
 
-### 10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.
+##### The following checks will be made:
 
-##### As seguintes verificações serão feitas:
+- The `class`` selected` must be added to the color selected in the palette, at the same time that it is removed from the previously selected color;
 
-- Crie um input e um botão que permitam definir um quadro de pixels com tamanho entre 5 e 50. Ao clicar no botão, deve ser gerado um quadro de **N** pixels de largura e **N** pixels de altura, onde **N** é o número inserido no input;
+- Only one color of the palette must have the `class`` selected` at a time;
 
- - Ou seja, se o valor passado para o input for 7, ao clicar no botão, vai ser gerado um quadro de 49 pixels (7 pixels de largura x 7 pixels de altura);
-
-- O input deve ter o `id` denominado `board-size` e o botão deve ter o `id` denominado `generate-board`;
-
-- O input só deve aceitar número maiores que zero. Essa restrição **deve** ser feita usando os atributos do elemento `input`;
-
-- O botão deve conter o texto "VQV";
-
-- O input deve estar posicionado entre a paleta de cores e o quadro de pixels;
-
-- O botão deve estar posicionado ao lado do input;
-
-- Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: "Board inválido!";
-
-- O novo quadro deve ter todos os pixels preenchidos com a cor branca.
+- Note that the elements that should receive the `selected` class must be the same elements that have the` color` class, as specified in ** requirement 2 **.
 
 <br>
 
-### 11 - Limite o tamanho do mínimo e máximo do board.
+### 8 - When clicking on a pixel inside the frame after selecting a color in the palette, the pixel must be filled with that color.
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- Caso o valor digitado no input `board-sze` fuja do intervalo de 5 a 50, faça:
+- When loading the page it should be possible to paint the pixels black;
 
-  - Valor menor que 5, considerar 5 como padrão;
+- After selecting another color in the palette, it should be possible to paint the pixels with that color;
 
-  - Valor maior que 50, considerar 50 como padrão.
+- Only the pixel that was clicked should be filled with the selected color, without influencing the color of the other pixels.
 
 <br>
 
-### 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
+### 9 - Create a button that, when clicked, clears the frame by filling the color of all its pixels with white.
 
-##### As seguintes verificações serão feitas:
+##### The following checks will be made:
 
-- A cor preta ainda precisa estar presente e deve ser a primeira na sua paleta de cores.
+- The button must have the `id` called` clear-board`;
+
+- The button must be positioned between the color palette and the pixel frame;
+
+- The button text must be ** "Clear" **.
+
+<br>
+
+Bonus Requirements:
+
+### 10 - Make the pixel frame have its size defined by the user.
+
+##### The following checks will be made:
+
+- Create an input and a button that allow you to define a pixel frame with size between 5 and 50. When clicking on the button, a frame of ** N ** pixels wide and ** N ** pixels high must be generated, where ** N ** is the number entered in the input;
+
+ - That is, if the value passed to the input is 7, when clicking on the button, a 49 pixel frame will be generated (7 pixels wide x 7 pixels high);
+
+- The input must have the `id` called` board-size` and the button must have the `id` called` generate-board`;
+
+- The input must only accept numbers greater than zero. This restriction ** must ** be made using the attributes of the `input` element;
+
+- The button must contain the text "VQV";
+
+- The input must be positioned between the color palette and the pixel frame;
+
+- The button must be positioned on the side the input;
+
+- If no value is placed in the input when clicking the button, show an `alert` with the text:" Board is invalid! ";
+
+- The new frame must have all pixels filled with white.
+
+<br>
+
+### 11 - Limit the minimum and maximum size of the board.
+
+##### The following checks will be made:
+
+- If the value entered in the input `board-sze` falls outside the range of 5 to 50, do:
+
+   - Value less than 5, consider 5 as standard;
+
+   - Value greater than 50, consider 50 as standard.
+
+<br>
+
+### 12 - Make the colors in the palette randomly generated when loading the page.
+
+##### The following checks will be made:
+
+- The black color still needs to be present and must be the first in your color palette.
 
 ---
 
