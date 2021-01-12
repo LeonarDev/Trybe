@@ -44,7 +44,6 @@ const longestWord = phrase => {
         result = word
     }
   }
-
 return result
 }
 console.log(longestWord("Antonio went to the bathroom and we don't know what happened"));
@@ -52,4 +51,24 @@ console.log(longestWord("Antonio went to the bathroom and we don't know what hap
 
 
 // Exercise IV
+const array = ["HTML", "CSS", "JavaScript", "React", "Node"]
+function buildSkillsPhrase (paramOne) {
+  const fun1 = paramInner => (
+    `Tryber ${paramInner} aqui!
+    Tudo bem?`
+  )
+  let result = `${fun1(paramOne)}
 
+  Minhas cinco principais habilidades são:`
+
+  array.forEach((skill, index) =>
+  result = `${result}
+  - ${skill}`)
+
+  result = `
+  ${result}
+
+  #goTrybe`
+  return result
+}
+console.log(buildSkillsPhrase("Majevski"))
