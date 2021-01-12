@@ -1,4 +1,4 @@
-# Boas vindas ao repositório do Projeto Playground Functions!
+# Welcome to the Playground Functions Project repository!
 <!--
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #VQV 🚀
 
@@ -83,125 +83,125 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 -->
 
-**1 - Usando o operador &&**
+** 1 - Using the && operator **
 -
-JavaScript possui um operador lógico `&&`, o qual recebe dois valores e retorna `true` se ambos os valores são verdadeiros, e retorna `false` se algum dos valores não o for.
+JavaScript has a logical operator `&&`, which takes two values ​​and returns `true` if both values ​​are true, and returns` false` if any of the values ​​are not.
 
-Considerando isso, crie uma função chamada `compareTrue` que, ao receber dois booleanos:
+Considering this, create a function called `compareTrue` that, when receiving two booleans:
 
-- Retorne `true` se ambos os valores são verdadeiros;
-- Retorne `false` se um ou ambos os parâmetros forem falsos.
+- Return `true` if both values ​​are true;
+- Return `false` if one or both parameters are false.
 
-Faça a função utilizando o operador `&&`.
+Perform the function using the `&&` operator.
 
 <br>
 
-**2 - Área do triângulo** 
+** 2 - Triangle area **
 -
-Escreva uma função com o nome `calcArea` que receba um valor de base (chamado `base`) e outro de altura (chamado `height`) de um triângulo e retorne o cálculo da sua área.
+Write a function named `calcArea` that receives a base value (called` base`) and a height value (called `height`) of a triangle and returns the calculation of its area.
 
-Lembre-se que a área de um triângulo é calculada através da seguinte fórmula: (base * altura) / 2.
+Remember that the area of ​​a triangle is calculated using the following formula: (base * height) / 2.
 
 <br>
 
-**3 - Dividindo a frase**
+** 3 - Dividing the sentence **
 -
-Escreva uma função com o nome `splitSentence`, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
+Write a function with the name `splitSentence`, which will receive a string and return an array of strings separated by each space in the original string.
 
-Exemplo: se a função receber a string `"go Trybe"`, o retorno deverá ser `['go', 'Trybe']`.
+Example: if the function receives the string `" go Trybe "`, the return should be `['go', 'Trybe']`.
 
 <br>
 
-**4 - Concatenação de strings**
+** 4 - String concatenation **
 -
-Escreva uma função com o nome `concatName` que, ao receber uma array de strings, retorne uma string com o formato `'ÚLTIMO ITEM, PRIMEIRO ITEM'`, independente do tamanho da array.
+Write a function with the name `concatName` that, upon receiving an array of strings, returns a string with the format` `LAST ITEM, FIRST ITEM'`, regardless of the size of the array.
 
-Isso quer dizer que, caso o parâmetro passado para `concatName` seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar `Paolillo, Lucas`.
+This means that if the parameter passed to `concatName` is Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], the function should return` Paolillo, Lucas`.
 
 <br>
 
-**5 - Pontos no futebol**
+** 5 - Points in football **
 -
-Escreva uma função com o nome `footballPoints` que receba o número de vitórias (esse parâmetro deverá se chamar `wins`) e o número de empates (esse parâmetro deverá se chamar `ties`) e retorne a quantidade de pontos que o time marcou em um campeonato.
+Write a function with the name `footballPoints` that receives the number of wins (this parameter should be called` wins`) and the number of ties (this parameter should be called `ties`) and return the number of points that the team scored in a championship.
 
-Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
+Therefore, consider that each victory is worth 3 points and each draw is worth 1 point.
 
 <br>
 
-**6 - Repetição do maior número**
+** 6 - Repetition of the largest number **
 -
-Escreva uma função chamada `highestCount` que, ao receber uma array de números, retorne  a quantidade de vezes que o maior deles se repete.
+Write a function called `highestCount` that, upon receiving an array of numbers, returns the number of times the largest of them is repeated.
 
-Exemplo: caso o parâmetro de `highestCount` seja uma array com valores `[9, 1, 2, 3, 9, 5, 7]`, a função deverá retornar `2`, que é a quantidade de vezes que o número `9` (maior número do array) se repete.
+Example: if the parameter of `highestCount` is an array with values` [9, 1, 2, 3, 9, 5, 7] `, the function should return` 2`, which is the number of times that the number ` 9` (highest number of the array) is repeated.
 
 <br>
 
-**7 - Caça ao rato**
+** 7 - Mouse Hunt **
 -
-Imagine que existem dois gatos, os quais chamaremos de `cat1` e `cat2`, e que ambos estão atrás de um rato chamado `mouse`. Imagine que cada um dos três animais está em uma posição representada por um número.
+Imagine that there are two cats, which we will call `cat1` and` cat2`, and that both are after a mouse called `mouse`. Imagine that each of the three animals is in a position represented by a number.
 
-Sabendo disso, crie uma função chamada `catAndMouse` que, ao receber a posição de `mouse`, `cat1` e `cat2`, **nessa ordem**, calcule as distâncias entre o rato e os gatos e retorne qual dos felinos irá alcançar o rato primeiro (sendo aquele que estará mais perto).
+Knowing this, create a function called `catAndMouse` that, upon receiving the position of` mouse`, `cat1` and` cat2`, ** in that order **, calculate the distances between the mouse and the cats and return which of the felines will reach the mouse first (the one that will be closest).
 
-Exemplo: caso o gato `cat2` esteja a 2 unidades de distância do rato, e `cat1` esteja a 3 unidades, sua função deverá retornar `"cat2"`.
+Example: if the cat `cat2` is 2 units away from the mouse, and` cat1` is 3 units away, its function should return `" cat2 "`.
 
-Caso os gatos estejam na mesma distância do rato, a função deverá retornar a string `"os gatos trombam e o rato foge"`.
+If the cats are at the same distance from the mouse, the function should return the string `" cats bump and the mouse runs away "`.
 
 <br>
 
-**8 - FizzBuzz**
+** 8 - FizzBuzz **
 -
-Crie uma função chamada `fizzBuzz` que receba uma array de números e retorne uma array da seguinte forma:
+Create a function called `fizzBuzz` that receives an array of numbers and returns an array as follows:
 
-- Para cada número da Array que seja divisível apenas por 3, apresente uma string `"fizz"`;
-- Para cada número da Array que seja divisível apenas por 5, apresente uma string `"buzz"`;
-- Caso o número seja divisível por 3 e 5, retorne a string `"fizzBuzz"`;
-- Caso o número não possa ser dividido por 3 nem por 5, retorne a string `"bug!"`;
+- For each Array number that is divisible by only 3, present a string "" fizz "`;
+- For each Array number that is divisible by only 5, present a string "" buzz "`;
+- If the number is divisible by 3 and 5, return the string `" fizzBuzz "`;
+- If the number cannot be divided by 3 or 5, return the string `" bug! "`;
 
-Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar `["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"]`.
+Example: if the parameter is [2, 15, 7, 9, 45], your function should return `[" bug! "," FizzBuzz "," bug! "," Fizz "," fizzBuzz "]`.
 
 <br>
 
-**9 - Codifique e Decodifique**
+** 9 - Encode and Decode **
 -
-Crie duas funções: a primeira deverá se chamar `encode` e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+Create two functions: the first should be called `encode` and, when receiving a string as a parameter, you should replace all lowercase vowels with numbers, according to the following format:
 
 a -> 1 \
-e -> 2 \
+and -> 2 \
 i -> 3 \
 o -> 4 \
 u -> 5
 
-Ou seja, caso o parâmetro de `encode` seja `"hi there!"`, o retorno deverá ser `"h3 th2r2!"`.
+That is, if the `encode` parameter is` "hi there!" `, The return should be` "h3 th2r2!" `.
 
-A segunda função deverá se chamar `decode` e faz o contrário de `encode` - ou seja, recebe uma string contendo números no lugar de letras minúsculas e retornará uma string com vogais minúsculas no lugar dos números (então, caso o parâmetro de `decode` seja `"h3 th2r2!"`, o retorno deverá ser `"hi there!"`).
+The second function should be called `decode` and does the opposite of` encode` - that is, it receives a string containing numbers instead of lowercase letters and will return a string with lowercase vowels instead of numbers (so, if the parameter of ` decode` is `" h3 th2r2! "`, the return should be `" hi there! "`).
 
 <br>
 
-**10 - Lista de tecnologias**
+** 10 - List of technologies **
 -
-Crie uma função que recebe um array de nomes de tecnologias que você quer aprender. Essa função deve receber também um segundo parâmetro chamado `name` com um nome.
+Create a function that receives an array of technology names that you want to learn. This function must also receive a second parameter called `name` with a name.
 
-Para cada tecnologia no array, crie um objeto com a seguinte estrutura:
+For each technology in the array, create an object with the following structure:
 
-```
+``
 {
   tech: "NomeTech",
   name: name
 }
-```
+``
 
-Estes objetos devem ser inseridos em uma nova lista em ordem crescente a partir do campo `tech` no objeto.
+These objects must be inserted in a new list in ascending order from the `tech` field in the object.
 
-A saída da sua função deve ser uma lista de objetos ordenada pelo campo `tech` dos objetos com o formato acima.
+The output of your function should be a list of objects ordered by the `tech` field of the objects with the format above.
 
-Exemplo:
-```
-Entradas da função:
+Example:
+``
+Function inputs:
 
 ["React", "Jest", "HTML", "CSS", "JavaScript"]
 "Lucas"
 
-// Saída:
+// Output:
 
 [
   {
@@ -225,75 +225,75 @@ Entradas da função:
     name: "Lucas"
   }
 ]
-```
+``
 
-Caso o array venha vazio sua função deve retornar 'Vazio!'
+If the array comes empty, its function should return 'Empty!'
 
 <br>
 
-**Bônus**
+**Bonus**
 =
-**11 - Número de telefone**
+** 11 - Phone number **
 -
-Crie uma função chamada `generatePhoneNumber` que receba uma array com 11 números e retorne um número de telefone, respeitando parênteses, traços e espaços.
+Create a function called `generatePhoneNumber` that receives an array with 11 numbers and returns a phone number, respecting parentheses, dashes and spaces.
 
-Exemplo: caso o parâmetro da função seja [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], `generatePhoneNumber` deverá retornar `(12) 34567-8901`.
+Example: if the function parameter is [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1], `generatePhoneNumber` should return` (12) 34567-8901`.
 
-- Se a função receber um array com tamanho diferente de 11, a mesma deve retornar `"Array com tamanho incorreto."`.
+- If the function receives an array with a size other than 11, it should return `" Array with incorrect size. "`.
 
-- Caso algum dos números da array seja menor que 0, maior que 9 ou se repita 3 vezes ou mais, `generatePhoneNumber` deverá retornar a string `"não é possível gerar um número de telefone com esses valores"`.
+- If any of the numbers in the array is less than 0, greater than 9 or is repeated 3 times or more, `generatePhoneNumber` must return the string` "it is not possible to generate a phone number with these values" `.
 
 <br>
 
-**12 - Condição de existência de um triângulo**
+** 12 - Condition of existence of a triangle **
 -
-Um triângulo é composto de três linhas: `lineA`, `lineB` e `lineC`. Crie uma função chamada `triangleCheck` que deverá receber as três linhas como parâmetro e retornar se é possível formar um triângulo com os valores apresentados de cada linha
+A triangle consists of three lines: `lineA`,` lineB` and `lineC`. Create a function called `triangleCheck` that should take the three lines as a parameter and return if it is possible to form a triangle with the values ​​presented for each line
 
-Para tanto, tenha em mente algumas considerações:
+To do so, keep in mind a few considerations:
 
-- Para que seja possível formar um triângulo, é necessário que a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois e maior que o valor absoluto da diferença entre essas medidas.
+- For it to be possible to form a triangle, it is necessary that the measurement of either side is less than the sum of the measurements of the other two and greater than the absolute value of the difference between these measurements.
 
-- Para obter o valor absoluto de um número em JavaScript, pesquise pela função `Math.abs`.
+- To obtain the absolute value of a number in JavaScript, search for the `Math.abs` function.
 
-- O retorno da sua função deverá ser um booleano.
+- The return of your function must be a Boolean.
 
-Exemplo: o retorno de `triangleCheck(10, 14, 8)` deverá ser `true`.
+Example: the return of `triangleCheck (10, 14, 8)` should be `true`.
 
 <br>
 
-**13 - Bem vindo ao Bar da Trybe!**
+** 13 - Welcome to the Trybe Bar! **
 -
-Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+According to the rules of this bar, each drink should drink a glass of water so that there is no hangover.
 
-Crie a função `hydrate` que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos:
-```
-String recebida:
-  "1 cerveja"
-String retornada:
-  "1 copo de água"
-```
+Create the function `hydrate` that receives a string, and return the suggestion of how many glasses of water you should drink. Examples:
+``
+String received:
+  "1 beer"
+Returned string:
+  "1 glass of water"
+``
 
-```
-String recebida:
-  "1 cachaça, 5 cervejas e 1 copo de vinho"
-String retornada:
-  "7 copos de água"
-```
+``
+String received:
+  "1 cachaça, 5 beers and 1 glass of wine"
+Returned string:
+  "7 glasses of water"
+``
 
-```
-String recebida:
-  "1 cachaça, 5 cervejas e 1 copo de vinho"
-String retornada:
-  "7 copos de água"
-```
+``
+String received:
+  "1 cachaça, 5 beers and 1 glass of wine"
+Returned string:
+  "7 glasses of water"
+``
 
-**Notas**
+**Grades**
 
-- Para simplificar, consideraremos que qualquer coisa com um número à frente é uma bebida **e que a sua string sempre virá com o formato quantidade (em número) + tipo da bebida**.
+- For simplicity, we will consider that anything with a number in front of it is a drink ** and that your string will always come in the format quantity (in number) + type of drink **.
 
-- O número na frente de cada bebida está no intervalo entre 1 e 9.
+- The number in front of each drink is in the range between 1 and 9.
 
-**Dica:** pesquise por algo similar a `get all integers inside a string js`.
+** Tip: ** search for something similar to `get all integers inside a string js`.
 
 <!--
 
