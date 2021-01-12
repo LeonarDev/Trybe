@@ -16,23 +16,29 @@ testingScope(true);
 
 // Exercise II
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
-const sortFunction = (a, b) => a - b;
-
-oddsAndEvens.sort(sortFunction);
-console.log(`The numbers ${oddsAndEvens} are ranked in increasing order`);
+console.log(`The numbers ${oddsAndEvens.sort((a, b) => a - b)} are ranked in increasing order`);
 
 
 
 // PART II
 // Exercise I
+const factorial = number => {
+  if (number === 0) { 
+    return 1;
+  } else { 
+    return number * factorial(number - 1);
+  }
+}
+
 
 
 // Exercise II
 
 
+
 // Exercise III
 
 
-// Exercise IV
 
+// Exercise IV
 
