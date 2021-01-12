@@ -1,18 +1,16 @@
 // PART I
 
 // Exercise 1
-function testingScope(scope) { 
-  if (escopo === true) { 
-    var ifScope = 'I must not be used outside my scope (if)';
-    ifScope = ifScope + ' great, I was used in the scope!';
+const testingScope = scope => { 
+  if (scope) { 
+    let ifScope = 'I must not be used outside my scope (if).';
+    ifScope = `${ifScope} Great, I was used in the scope!`;
     console.log(ifScope);
   } else {
-    var elseScope = 'I must not be used outside my scope (else)';
-    console.log(elseScope);
+    const elseScope = 'I must not be used outside my scope (else)';
+    console.log(elseScope);''
   }
-  console.log(ifScope + ' What am I doing here ? :O');
 }
-
 testingScope(true);
 
 // Exercise II
