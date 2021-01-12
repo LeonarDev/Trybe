@@ -47,7 +47,6 @@ const longestWord = phrase => {
 
 return result
 }
-
 console.log(longestWord("Antonio went to the bathroom and we don't know what happened"));
 
 
