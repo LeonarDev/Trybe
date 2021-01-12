@@ -215,7 +215,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 - Será verificada a presença de um elemento `button` com um id `remover-selecionado`
 - Será verificado que, no clicar no botão, somente o elemento selecionado é removido
 
----
+<!--
 
 ## Dicas
 
@@ -268,3 +268,4 @@ Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362
 Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
 
 #VQV 🚀
+-->
