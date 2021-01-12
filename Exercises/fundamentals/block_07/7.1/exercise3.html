@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Exercise III</title>
+</head>
+<body>
+  <div>
+    <span id="text">0</span>
+  </div>
+  <button id="button">CLICK</button>
+</body>
+<script>
+  let textOfCount = document.getElementById('text');
+  let clickCount = 0;
+
+  document.getElementById('button').addEventListener('click', () => textOfCount.innerText = clickCount += 1);
+</script>
+</html>
