@@ -12,7 +12,7 @@ Now you are going to do some fixation exercises.
 
 ```js
 function testingScope(scope) { 
-  if (escopo === true) { 
+  if (scope === true) { 
     var ifScope = 'I must not be used outside my scope (if)';
     ifScope = ifScope + ' great, I was used in the scope!';
     console.log(ifScope);
