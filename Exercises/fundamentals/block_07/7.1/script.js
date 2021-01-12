@@ -33,10 +33,22 @@ const factorial = number => {
 
 
 // Exercise II
+const longestWord = phrase => {
+  let wordArray = phrase.split(' ');
+  let maxLength = 0;
+  let result = '';
 
+  for (const word of wordArray) {
+    if (word.length > maxLength) {
+        maxLength = word.length
+        result = word
+    }
+  }
 
+return result
+}
 
-// Exercise III
+console.log(longestWord("Antonio went to the bathroom and we don't know what happened"));
 
 
 
