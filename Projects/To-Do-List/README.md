@@ -1,5 +1,5 @@
 # Boas vindas ao repositório do projeto Lista de Tarefas!
-
+<!--
 Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Fique atento a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
@@ -111,7 +111,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 * Contudo, tenha em mente que **nada além do que for pedido nos requisitos será avaliado**. _Esta é uma oportunidade de você exercitar sua criatividade e experimentar com os conhecimentos adquiridos._
 
----
+-->
 
 ## Requisitos Obrigatórios:
 
