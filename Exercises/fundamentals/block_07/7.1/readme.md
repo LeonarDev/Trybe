@@ -85,5 +85,6 @@ Don't forget to use `template literals`
 - **Function 2**: Write a function that will receive the `string` returned from Function 1 as a parameter. This function must concatenate the skills of the global array to the `string` that was passed to Function 2 via parameter. You must order the skills in alphabetical order. Your function must return this new `string`.
 
 **Example**: "Tryber x here! My top five skills are:
-    - JavaScript;
-    - HTML; ... #goTrybe ".
+
+    * JavaScript;
+    * HTML; ... #goTrybe ".
