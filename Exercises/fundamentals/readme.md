@@ -44,17 +44,17 @@
 - [x] (5.8) _[Project - Mysterious Card]()_
 <hr>
 
-#### Block 06: [HTML and CSS: Forms, Flexbox and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :triangular_flag_on_post:
+#### Block 06: [HTML and CSS: Forms, Flexbox and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :heavy_check_mark:
 - [x] (6.1) HTML & CSS - Forms
 - [x] (6.2) JavaScript Libraries and CSS Frameworks
 - [x] (6.3) Introduction - CSS Flexbox
 - [x] (6.3) CSS Flexbox - Part 1
 - [x] (6.4) CSS Flexbox - Part 2
 - [x] (6.5) Responsive CSS - Mobile First
-- [ ] (6.6) _[Project - Facebook Homepage]()_
+- [x] (6.6) _[Project - Facebook Homepage]()_
 <hr>
 
-#### Block 07: [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) :hourglass_flowing_sand:
+#### Block 07: [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) :triangular_flag_on_post:
 - [ ] (7.1) JavaScript ES6 - let, const, arrow functions e template literals
 - [ ] (7.2) JavaScript ES6 - Objects
 - [ ] (7.3) Unit Testing in JavaScript
