@@ -1,5 +1,4 @@
 // PART I
-
 // Exercise 1
 const testingScope = scope => { 
   if (scope) { 
@@ -13,16 +12,18 @@ const testingScope = scope => {
 }
 testingScope(true);
 
+
+
 // Exercise II
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+const sortFunction = (a, b) => a - b;
 
-// Your code here.
+oddsAndEvens.sort(sortFunction);
+console.log(`The numbers ${oddsAndEvens} are ranked in increasing order`);
 
-console.log(oddsAndEvens);
 
 
 // PART II
-
 // Exercise I
 
 
