@@ -1,9 +1,9 @@
 # TRYBE PROJECTS
 
 ### FUNDAMENTALS
-- 01 - Lessons Learned
-- 02 - [Playground Functions](https://github.com/LeonarDev/Trybe/tree/main/Projects/Playground-Functions)
-- 03 - [Pixels Art](https://github.com/LeonarDev/Trybe/tree/main/Projects/Pixels-Art)
+- 01 - [Lessons Learned]
+- 02 - [Playground Functions]
+- 03 - [Pixels Art]
 - 04 - [To-Do List]
 - 05 - [Meme Generator]
 - 06 - [Color Guessing]
