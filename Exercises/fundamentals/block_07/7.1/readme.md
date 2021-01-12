@@ -11,19 +11,19 @@ Now you are going to do some fixation exercises.
 * Copy the code below.
 
 ```js
-      function testingScope(scope) { 
-        if (escopo === true) { 
-          var ifScope = 'I must not be used outside my scope (if)';
-          ifScope = ifScope + ' great, I was used in the scope!';
-          console.log(ifScope);
-        } else {
-          var elseScope = 'I must not be used outside my scope (else)';
-          console.log(elseScope);
-        }
-        console.log(ifScope + ' What am I doing here ? :O');
-      }
+function testingScope(scope) { 
+  if (escopo === true) { 
+    var ifScope = 'I must not be used outside my scope (if)';
+    ifScope = ifScope + ' great, I was used in the scope!';
+    console.log(ifScope);
+  } else {
+    var elseScope = 'I must not be used outside my scope (else)';
+    console.log(elseScope);
+  }
+  console.log(ifScope + ' What am I doing here ? :O');
+}
 
-      testingScope(true);
+testingScope(true);
 ```
 
 2. Copy the code below and make a function that returns the `oddsAndEvens` array in ascending order.
@@ -36,11 +36,11 @@ Now you are going to do some fixation exercises.
 * Copy the code below.
 
 ```js
-      const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-      // Your code here.
+// Your code here.
 
-      console.log(oddsAndEvens);
+console.log(oddsAndEvens);
 ```
 
 <br>
