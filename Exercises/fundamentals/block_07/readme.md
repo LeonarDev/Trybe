@@ -13,3 +13,6 @@
 - [More examples of template literals](https://css-tricks.com/template-literals/)
 - [Content about arrow functions](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 - [How to Use Object.keys in JavaScript](https://levelup.gitconnected.com/learn-about-object-keys-in-javascript-cf2967ba6401)
+- [Converting objects to arrays](https://www.samanthaming.com/tidbits/76-converting-object-to-array/)
+- [How to use Object methods in JavaScript | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-use-object-methods-in-javascript-pt)
+- [Video about Object.assign](https://www.youtube.com/watch?v=JmGJUzNsGFs)
