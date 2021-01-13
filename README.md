@@ -1,4 +1,4 @@
-# Trybe - Full-Stack Web Developer
+# Trybe - Full Stack Web Development
 
 This repository contains all the learning activities developed by _[me](https://www.linkedin.com/in/leonardomajevski/)_ in moments of study with [Trybe](https://www.betrybe.com/) :rocket:
 
