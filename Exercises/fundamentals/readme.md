@@ -31,7 +31,7 @@
 - [x] (4.5) _[Project - Playground Functions]()_
 <hr>
 
-#### Block 05: [JavaScript: DOM, Events and Web Storage](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05) :heavy_check_mark:
+#### Block 05: [JavaScript: DOM, Events and Web Storage](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05) :white_check_mark:
 - [x] (5.1) JavaScript - DOM and Selectors
 - [x] (5.2) JavaScript - Working with Elements
 - [x] (5.3) JavaScript - Events
@@ -39,9 +39,9 @@
 - [x] (5.5) Fundamentals - JavaScript - Projetcs
 - [x] (5.5) _[Project - Pixels Art]()_
 - [x] (5.6) _[Project - To-Do List]()_
-- [x] (5.7) _[Project - Meme Generator]()_
-- [x] (5.8) _[Project - Color Guessing Game]()_
-- [x] (5.8) _[Project - Mysterious Card]()_
+- [ ] (5.7) _[Project - Meme Generator]()_
+- [ ] (5.8) _[Project - Color Guessing Game]()_
+- [ ] (5.8) _[Project - Mysterious Card]()_
 <hr>
 
 #### Block 06: [HTML and CSS: Forms, Flexbox and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :heavy_check_mark:
@@ -54,14 +54,14 @@
 - [x] (6.6) _[Project - Facebook Homepage]()_
 <hr>
 
-#### Block 07: [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) :triangular_flag_on_post:
-- [ ] (7.1) JavaScript ES6 - let, const, arrow functions e template literals
-- [ ] (7.2) JavaScript ES6 - Objects
-- [ ] (7.3) Unit Testing in JavaScript
-- [ ] (7.4) _[Project - JavaScript Unit Testing]()_
+#### Block 07: [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) :heavy_check_mark:
+- [x] (7.1) JavaScript ES6 - let, const, arrow functions e template literals
+- [x] (7.2) JavaScript ES6 - Objects
+- [x] (7.3) Unit Testing in JavaScript
+- [x] (7.4) _[Project - JavaScript Unit Testing]()_
 <hr>
 
-#### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :hourglass_flowing_sand:
+#### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :triangular_flag_on_post:
 - [ ] (8.1) JavaScript ES6 - Higher Orders Functions - forEach, find, some, every, sort
 - [ ] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [ ] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
