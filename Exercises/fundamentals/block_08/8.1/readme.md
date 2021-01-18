@@ -263,7 +263,7 @@ assert.strictEqual( smallerName(), 'Dune' );
 
 <br>
 
-### 3) Find the first book whose name is 26 characters long.
+### 3) Find the first book whose name is 30 characters long.
 ```js
 const assert = require('assert');
 
