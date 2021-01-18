@@ -30,7 +30,6 @@ To see how the sort works, play with [this example](https://codepen.io/pen/?temp
 
 <br>
 
-
 # Exercises
 
 In the following exercises, you will work with a data structure representing a list of books, containing information such as the name of the book, genre, author of the book and release date.
@@ -98,4 +97,609 @@ AssertionError [ERR_ASSERTION]: 'valor1' == 'valor2'
 [Done] exited with code=1 in 0.075 seconds
 ```
 
-Pay attention to the line that says why the execution failed: `AssertionError [ERR_ASSERTION]: 'value1' == 'value2'`. This means that the result of the function `anyFunction, value1`, is different from the expected `value2`.
+Pay attention to the line that says why the execution failed: `AssertionError [ERR_ASSERTION]: 'value1' == 'value2'`. This means that the result of the function `anyFunction, value1`, is different from the expected `alue2`.
+
+<hr>
+
+These exercises practice the concepts of Higher Order Functions associated with others already seen, such as arrow functions, template literals, objects and themes of the fundamentals. This mix of concepts is very important for your learning, so use everything you know to solve the exercises!
+
+### 1) Find the name of the first author of the book born in 1947.
+- Tip: use the `find` function.
+
+```js
+const assert = require ('assert');
+
+const books = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien ',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft ',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+function authorBornIn1947 () {
+  // write your code here
+}
+
+assert.strictEqual (authorBornIn1947 (), 'Stephen King');
+```
+
+<br>
+
+### 2) Return the name of the book with the lowest name.
+- Tip: use the `forEach` function.
+
+```js
+const assert = require ('assert');
+
+const books = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien ',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft ',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+function smallerName () {
+  let nameBook;
+  // write your code here
+
+  // variable nameBook that will receive the value of the smallest name;
+  return nameBook;
+}
+
+assert.strictEqual (smallerName (), 'Dune');
+```
+
+<br>
+
+### 3) Find the first book whose name is 26 characters long.
+```js
+const assert = require ('assert');
+
+const books = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien ',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft ',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+const expectedResult = {
+  author: {
+    birthYear: 1948,
+    name: 'George R. R. Martin'
+  },
+  genre: 'Fantasia',
+  id: 1,
+  name: 'The Chronicles of Ice and Fire',
+  releaseYear: 1991
+};
+
+function getNamedBook () {
+  // write your code here
+}
+
+assert.deepStrictEqual (getNamedBook (), expectedResult);
+```
+
+<br>
+
+### 4) Sort books by release date in descending order.
+```js
+const assert = require ('assert');
+
+const books = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien ',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft ',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+const expectedResult = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {name: 'George R. R. Martin', birthYear: 1948},
+    releaseYear: 1991
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {name: 'Stephen King', birthYear: 1947},
+    releaseYear: 1986
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {name: 'Frank Herbert', birthYear: 1920},
+    releaseYear: 1965
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {name: 'J. R. R. Tolkien ', birthYear: 1892},
+    releaseYear: 1954
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {name: 'Isaac Asimov', birthYear: 1920},
+    releaseYear: 1951
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {name: 'H. P. Lovecraft ', birthYear: 1890},
+    releaseYear: 1928
+  }
+];
+
+function booksOrderedByReleaseYearDesc () {
+  // write your code here
+}
+
+
+assert.deepStrictEqual (booksOrderedByReleaseYearDesc (), expectedResult);
+```
+
+<br>
+
+### 5) Make a function that returns `true`, if all authors were born in the 20th century, or `false`, otherwise.
+```js
+const assert = require ('assert');
+
+const books = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien ',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft ',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+const expectedResult = false
+
+function everyoneWasBornOnSecXX () {
+  // write your code here
+}
+
+assert.strictEqual (everyoneWasBornOnSecXX (), expectedResult);
+```
+
+<br>
+
+### 6) Make a function that returns `true`, if any book was released in the 1980s, or `false`, otherwise.
+```js
+const assert = require ('assert');
+
+const books = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien ',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft ',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+const expectedResult = true
+
+function someBookWasReleaseOnThe80s () {
+  // write your code here
+}
+
+assert.strictEqual (someBookWasReleaseOnThe80s (), expectedResult);
+```
+
+<br>
+
+### 7) Make a function that returns `true`, if no author was born in the same year, or `false`, otherwise.
+```js
+const assert = require ('assert');
+
+const books = [
+  {
+    id: 1,
+    name: 'The Chronicles of Ice and Fire',
+    genre: 'Fantasia',
+    author: {
+      name: 'George R. R. Martin',
+      birthYear: 1948
+    },
+    releaseYear: 1991,
+  },
+  {
+    id: 2,
+    name: 'The Lord of the Rings',
+    genre: 'Fantasia',
+    author: {
+      name: 'J. R. R. Tolkien ',
+      birthYear: 1892,
+    },
+    releaseYear: 1954,
+  },
+  {
+    id: 3,
+    name: 'Foundation',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Isaac Asimov',
+      birthYear: 1920,
+    },
+    releaseYear: 1951,
+  },
+  {
+    id: 4,
+    name: 'Dune',
+    genre: 'Science Fiction',
+    author: {
+      name: 'Frank Herbert',
+      birthYear: 1920,
+    },
+    releaseYear: 1965,
+  },
+  {
+    id: 5,
+    name: 'The Thing',
+    genre: 'Terror',
+    author: {
+      name: 'Stephen King',
+      birthYear: 1947
+    },
+    releaseYear: 1986,
+  },
+  {
+    id: 6,
+    name: 'The Call of Cthulhu',
+    genre: 'Terror',
+    author: {
+      name: 'H. P. Lovecraft ',
+      birthYear: 1890,
+    },
+    releaseYear: 1928,
+  },
+];
+
+const expectedResult = false;
+
+function authorUnique () {
+  // write your code here
+}
+
+assert.strictEqual (authorUnique (), expectedResult);
+```
