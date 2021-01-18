@@ -107,7 +107,7 @@ These exercises practice the concepts of Higher Order Functions associated with 
 - Tip: use the `find` function.
 
 ```js
-const assert = require ('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -153,7 +153,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -163,7 +163,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -172,11 +172,11 @@ const books = [
   },
 ];
 
-function authorBornIn1947 () {
+function authorBornIn1947() {
   // write your code here
 }
 
-assert.strictEqual (authorBornIn1947 (), 'Stephen King');
+assert.strictEqual( authorBornIn1947(), 'Stephen King' );
 ```
 
 <br>
@@ -185,7 +185,7 @@ assert.strictEqual (authorBornIn1947 (), 'Stephen King');
 - Tip: use the `forEach` function.
 
 ```js
-const assert = require ('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -231,7 +231,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -241,7 +241,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -250,7 +250,7 @@ const books = [
   },
 ];
 
-function smallerName () {
+function smallerName() {
   let nameBook;
   // write your code here
 
@@ -258,14 +258,14 @@ function smallerName () {
   return nameBook;
 }
 
-assert.strictEqual (smallerName (), 'Dune');
+assert.strictEqual( smallerName(), 'Dune' );
 ```
 
 <br>
 
 ### 3) Find the first book whose name is 26 characters long.
 ```js
-const assert = require ('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -311,7 +311,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -321,7 +321,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -341,18 +341,18 @@ const expectedResult = {
   releaseYear: 1991
 };
 
-function getNamedBook () {
+function getNamedBook() {
   // write your code here
 }
 
-assert.deepStrictEqual (getNamedBook (), expectedResult);
+assert.deepStrictEqual( getNamedBook(), expectedResult );
 ```
 
 <br>
 
 ### 4) Sort books by release date in descending order.
 ```js
-const assert = require ('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -398,7 +398,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -408,7 +408,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -428,7 +428,7 @@ const expectedResult = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {name: 'Stephen King', birthYear: 1947},
     releaseYear: 1986
   },
@@ -456,25 +456,25 @@ const expectedResult = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {name: 'H. P. Lovecraft ', birthYear: 1890},
     releaseYear: 1928
   }
 ];
 
-function booksOrderedByReleaseYearDesc () {
+function booksOrderedByReleaseYearDesc() {
   // write your code here
 }
 
 
-assert.deepStrictEqual (booksOrderedByReleaseYearDesc (), expectedResult);
+assert.deepStrictEqual( booksOrderedByReleaseYearDesc(), expectedResult );
 ```
 
 <br>
 
 ### 5) Make a function that returns `true`, if all authors were born in the 20th century, or `false`, otherwise.
 ```js
-const assert = require ('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -520,7 +520,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -530,7 +530,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -541,18 +541,18 @@ const books = [
 
 const expectedResult = false
 
-function everyoneWasBornOnSecXX () {
+function everyoneWasBornOnSecXX() {
   // write your code here
 }
 
-assert.strictEqual (everyoneWasBornOnSecXX (), expectedResult);
+assert.strictEqual ( everyoneWasBornOnSecXX(), expectedResult );
 ```
 
 <br>
 
 ### 6) Make a function that returns `true`, if any book was released in the 1980s, or `false`, otherwise.
 ```js
-const assert = require ('assert');
+const assert = require('assert');
 
 const books = [
   {
@@ -598,7 +598,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -608,7 +608,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -619,11 +619,11 @@ const books = [
 
 const expectedResult = true
 
-function someBookWasReleaseOnThe80s () {
+function someBookWasReleaseOnThe80s() {
   // write your code here
 }
 
-assert.strictEqual (someBookWasReleaseOnThe80s (), expectedResult);
+assert.strictEqual( someBookWasReleaseOnThe80s(), expectedResult );
 ```
 
 <br>
@@ -676,7 +676,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -686,7 +686,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -697,9 +697,9 @@ const books = [
 
 const expectedResult = false;
 
-function authorUnique () {
+function authorUnique() {
   // write your code here
 }
 
-assert.strictEqual (authorUnique (), expectedResult);
+assert.strictEqual (authorUnique(), expectedResult);
 ```
