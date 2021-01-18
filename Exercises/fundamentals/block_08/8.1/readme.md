@@ -1,4 +1,4 @@
-# 8.1 ECMAScript6 - Higher Order Functions
+# (8.1) ECMAScript6 - Higher Order Functions
 
 #### A Higher Order Function is simply a function that takes another function as a parameter or that returns a function.
 
