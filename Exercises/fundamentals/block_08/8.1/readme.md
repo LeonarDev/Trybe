@@ -58,6 +58,11 @@ assert.strictEqual(anyFunction(), 'value1');
 [Done] exited with code=0 in 0.087 seconds
 ```
 
+<br>
+
+When an assertion fails, the line where the error occurred and its cause is displayed, among other things:
+
+
 ```js
 const assert = require('assert');
 
