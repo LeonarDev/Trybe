@@ -1,4 +1,4 @@
-# 8.1 ECMAScript6 - Higher Order Functions
+# (8.1) ECMAScript6 - Higher Order Functions
 
 #### A Higher Order Function is simply a function that takes another function as a parameter or that returns a function.
 
@@ -29,6 +29,7 @@ To see how the sort works, play with [this example](https://codepen.io/pen/?temp
 
 
 <br>
+
 
 # Exercises
 
@@ -97,4 +98,4 @@ AssertionError [ERR_ASSERTION]: 'valor1' == 'valor2'
 [Done] exited with code=1 in 0.075 seconds
 ```
 
-Pay attention to the line that says why the execution failed: `AssertionError [ERR_ASSERTION]: 'value1' == 'value2'`. This means that the result of the function `anyFunction, value1`, is different from the expected `alue2`.
+Pay attention to the line that says why the execution failed: `AssertionError [ERR_ASSERTION]: 'value1' == 'value2'`. This means that the result of the function `anyFunction, value1`, is different from the expected `value2`.
