@@ -28,10 +28,3 @@ console.log(points); // [1, 5, 10, 25, 40, 100]
 To see how the sort works, play with [this example](https://codepen.io/pen/?template=gOMYaXy) made in CodePen.
 
 <br>
-
-The function passed to forEach has element, index and array as parameters, where:
-element - Value of the array element;
-
-index - Index at each iteration or position of the element in the array, starting from 0;
-
-array - Original array being traversed.
