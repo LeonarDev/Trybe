@@ -62,8 +62,8 @@
 <hr>
 
 #### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :triangular_flag_on_post:
-- [ ] (8.1) JavaScript ES6 - Higher Orders Functions - forEach, find, some, every, sort
-- [ ] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
+- [x] (8.1) JavaScript ES6 - Higher Orders Functions - forEach, find, some, every, sort
+- [x] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [ ] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
 - [ ] (8.4) JavaScript ES6 - Spread operator, parâmetro rest, destructuring and more
 - [ ] (8.5) _[Project - Zoo functions]()_
