@@ -1,4 +1,5 @@
-// 2. Build an array of objects from the book array. Each object must contain an `author` property, with the name of the person who authored the book, and a property acts at the age of that person when the book was released. The array should be ordered by age, that is, from the youngest person to the oldest person considering their age when the book was released.
+// 2. Build an array of objects from the books array. Each object must contain an `author` property, with the name of the person who authored the book, and a property 'age' with the age of that person when the book was released. 
+// The array should be ordered by age, that is, from the youngest person to the oldest person considering their age when the book was released.
 //   - Tip: use the `map` and `sort` functions
 
 const assert = require('assert');
@@ -76,7 +77,12 @@ const expectedResult = [
 ];
 
 function nameAndAge() {
-  // write your code here
+  const result = books.map((book) => {
+    return `age: ${book.author.age}, author: ${book.author.name}`
+  })
+  return result;
 }
 
-assert.deepStrictEqual(nameAndAge(), expectedResult);
+console.log(nameAndAge());
+
+// assert.deepStrictEqual(nameAndAge(), expectedResult);
