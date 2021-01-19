@@ -19,7 +19,7 @@ const books = [
     name: 'The Lord of the Rings',
     genre: 'Fantasy',
     author: {
-      name: 'J. R. R. Tolkien ',
+      name: 'J. R. R. Tolkien',
       birthYear: 1892,
     },
     releaseYear: 1954,
@@ -59,7 +59,7 @@ const books = [
     name: 'The Call of Cthulhu',
     genre: 'Horror',
     author: {
-      name: 'H. P. Lovecraft ',
+      name: 'H. P. Lovecraft',
       birthYear: 1890,
     },
     releaseYear: 1928,
@@ -92,6 +92,13 @@ const expectedResult = [
 
 function oldBooks() {
   // write your code here
-}
+  const currentYear = new Date().getFullYear();
+  return books
+    .filter( (book) => (
+      book.releaseYear < currentYear - 60
+    )).sort( (bookA, bookB) => bookA.releaseYear - bookB.releaseYear );
+};
 
 assert.deepStrictEqual(oldBooks(), expectedResult);
+
+// 4. Create an array sorted by books with more than 60 years of publication and sort by the oldest book.
