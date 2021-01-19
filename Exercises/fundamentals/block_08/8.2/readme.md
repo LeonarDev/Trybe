@@ -167,6 +167,9 @@ console.log(listProducts);
 ]
 ```
 
+<br>
+
+
 ### Exercises
 
 1. Create an array with strings in the format BOOK_NAME - BOOK_GENDER - BOOK_AUTHOR
@@ -353,7 +356,7 @@ const books = [
   {
     id: 1,
     name: 'The Chronicles of Ice and Fire',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'George R. R. Martin',
       birthYear: 1948
@@ -363,7 +366,7 @@ const books = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'J. R. R. Tolkien ',
       birthYear: 1892,
@@ -393,7 +396,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -403,7 +406,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft',
       birthYear: 1890,
@@ -416,7 +419,7 @@ const expectedResult = [
  {
     id: 1,
     name: 'The Chronicles of Ice and Fire',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'George R. R. Martin',
       birthYear: 1948
@@ -426,7 +429,7 @@ const expectedResult = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'J. R. R. Tolkien',
       birthYear: 1892,
@@ -474,7 +477,7 @@ const books = [
   {
     id: 1,
     name: 'The Chronicles of Ice and Fire',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'George R. R. Martin',
       birthYear: 1948
@@ -484,7 +487,7 @@ const books = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'J. R. R. Tolkien ',
       birthYear: 1892,
@@ -514,7 +517,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -524,7 +527,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft ',
       birthYear: 1890,
@@ -537,7 +540,7 @@ const expectedResult = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {name: 'H. P. Lovecraft', birthYear: 1890},
     releaseYear: 1928
   },
@@ -551,7 +554,7 @@ const expectedResult = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {name: 'J. R. R. Tolkien', birthYear: 1892},
     releaseYear: 1954
   }
@@ -575,7 +578,7 @@ const books = [
   {
     id: 1,
     name: 'The Chronicles of Ice and Fire',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'George R. R. Martin',
       birthYear: 1948
@@ -585,7 +588,7 @@ const books = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'J. R. R. Tolkien',
       birthYear: 1892,
@@ -615,7 +618,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -625,7 +628,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft',
       birthYear: 1890,
@@ -657,7 +660,7 @@ const books = [
   {
     id: 1,
     name: 'The Chronicles of Ice and Fire',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'George R. R. Martin',
       birthYear: 1948
@@ -667,7 +670,7 @@ const books = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'J. R. R. Tolkien',
       birthYear: 1892,
@@ -697,7 +700,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -707,7 +710,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft',
       birthYear: 1890,
@@ -738,7 +741,7 @@ const books = [
   {
     id: 1,
     name: 'The Chronicles of Ice and Fire',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'George R. R. Martin',
       birthYear: 1948
@@ -748,7 +751,7 @@ const books = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'J. R. R. Tolkien',
       birthYear: 1892,
@@ -778,7 +781,7 @@ const books = [
   {
     id: 5,
     name: 'The Thing',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'Stephen King',
       birthYear: 1947
@@ -788,7 +791,7 @@ const books = [
   {
     id: 6,
     name: 'The Call of Cthulhu',
-    genre: 'Terror',
+    genre: 'Horror',
     author: {
       name: 'H. P. Lovecraft',
       birthYear: 1890,
