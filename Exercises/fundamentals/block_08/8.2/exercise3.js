@@ -19,7 +19,7 @@ const books = [
     name: 'The Lord of the Rings',
     genre: 'Fantasy',
     author: {
-      name: 'J. R. R. Tolkien ',
+      name: 'J. R. R. Tolkien',
       birthYear: 1892,
     },
     releaseYear: 1954,
@@ -110,7 +110,7 @@ const expectedResult = [
 ]
 
 function fantasyOrScienceFiction() {
-  // write your code here
+  return books.filter( (book) => ( book.genre === 'Science Fiction' || book.genre === 'Fantasy' ) );
 }
 
 assert.deepStrictEqual(fantasyOrScienceFiction(), expectedResult);
