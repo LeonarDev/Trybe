@@ -76,3 +76,5 @@ function oldBooks() {
 }
 
 assert.deepStrictEqual(oldBooks(), expectedResult);
+
+// 6. Create an array with the name of all books with more than 60 years of publication.
