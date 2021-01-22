@@ -61,7 +61,7 @@
 - [x] (7.4) _[Project - JavaScript Unit Testing]()_
 <hr>
 
-#### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :heavy_check_mark:
+#### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :white_check_mark:
 - [x] (8.1) JavaScript ES6 - Higher Orders Functions - forEach, find, some, every, sort
 - [x] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [x] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
