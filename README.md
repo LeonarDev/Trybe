@@ -41,7 +41,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 ### MODULE 3
 | [BACK-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end) | Status
 | --- | :---: |
-| Block 20 [Introduction to SQL] | :hourglass_flowing_sand:
+| Block 20 [Introduction to SQL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20) | :triangular_flag_on_post:
 | Block 21 [SQL Functions, Joins and Subqueries]	| :hourglass_flowing_sand:
 | Block 22 [Database modeling and standardization] | :hourglass_flowing_sand:
 | Block 23 [Introduction to MongoDB]	| :hourglass_flowing_sand:
