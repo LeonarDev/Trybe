@@ -61,7 +61,7 @@
 - [x] (7.4) _[Project - JavaScript Unit Testing]()_
 <hr>
 
-#### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :triangular_flag_on_post:
+#### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :heavy_check_mark:
 - [x] (8.1) JavaScript ES6 - Higher Orders Functions - forEach, find, some, every, sort
 - [x] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [x] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
@@ -69,14 +69,14 @@
 - [ ] (8.5) _[Project - Zoo functions]()_
 <hr>
 
-#### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :hourglass_flowing_sand:
-- [ ] (9.1) Asynchronous JavaScript and Callbacks
+#### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :triangular_flag_on_post:
+- [x] (9.1) Asynchronous JavaScript and Callbacks
 - [ ] (9.2) JavaScript Promises
 - [ ] (9.3) _[Project - Shopping Cart]()_
 <hr>
 
-#### Block 10: [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) :hourglass_flowing_sand:
-- [ ] (10.1) Jest - First steps
+#### Block 10: [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) :triangular_flag_on_post:
+- [x] (10.1) Jest - First steps
 - [ ] (10.2) Jest - Testing Asynchronous
 - [ ] (10.3) Jest - Simulating behaviors
 - [ ] (10.4) _[Project - Asynchronous Jest and Mocking]()_
