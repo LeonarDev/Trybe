@@ -1,7 +1,7 @@
 # Back-end Development :construction:
 
-#### Block 20 - Introduction to SQL	:hourglass_flowing_sand:
-- [ ] (20.1) Back-end - Introduction
+#### Block 20 - [Introduction to Back-end](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	:hourglass_flowing_sand:
+- [ ] (20.1) SQL - Introduction
 - [ ] (20.1) Relational database - Introduction
 - [ ] (20.1) SQL database
 - [ ] (20.2) Finding data in a database
