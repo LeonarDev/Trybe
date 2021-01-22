@@ -1,6 +1,6 @@
 # Back-end Development :construction:
 
-#### Block 20: [Introduction to Back-end](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	:hourglass_flowing_sand:
+#### Block 20: [Introduction to Back-end](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	:triangular_flag_on_post:
 - [ ] (20.1) SQL - Introduction
 - [ ] (20.1) Relational database - Introduction
 - [ ] (20.1) SQL database
