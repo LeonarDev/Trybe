@@ -1,6 +1,6 @@
 # Introduction to Back-end | Relational Database | SQL Database
 
-> He who controls information controls the world - Stephen Franklin
+> He who controls information, controls the world - Stephen Franklin
 
 When we work with backend and database, in general, the flow works like this: 
 - The frontend makes the request for the backend, 
