@@ -4,7 +4,7 @@ const books = [
   {
     id: 1,
     name: 'The Chronicles of Ice and Fire',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'George R. R. Martin',
       birthYear: 1948
@@ -14,7 +14,7 @@ const books = [
   {
     id: 2,
     name: 'The Lord of the Rings',
-    genre: 'Fantasia',
+    genre: 'Fantasy',
     author: {
       name: 'J. R. R. Tolkien ',
       birthYear: 1892,
@@ -56,26 +56,29 @@ const books = [
     name: 'The Call of Cthulhu',
     genre: 'Horror',
     author: {
-      name: 'H. P. Lovecraft ',
+      name: 'H. P. Lovecraft',
       birthYear: 1890,
     },
     releaseYear: 1928,
   },
 ];
 
+// 3) Find the first book whose name is 30 characters long.
 const expectedResult = {
-  author: {
-    birthYear: 1948,
-    name: 'George R. R. Martin'
-  },
-  genre: 'Fantasia',
   id: 1,
   name: 'The Chronicles of Ice and Fire',
-  releaseYear: 1991
+  genre: 'Fantasy',
+  author: {
+    name: 'George R. R. Martin',
+    birthYear: 1948,
+  },
+  releaseYear: 1991,
 };
 
 function getNamedBook() {
   return books.find((book) => book.name.length === 30);
 }
 
-assert.deepStrictEqual( getNamedBook(), expectedResult );
+console.log(getNamedBook());
+
+assert.deepStrictEqual(getNamedBook(), expectedResult);
