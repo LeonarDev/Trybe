@@ -1,8 +1,8 @@
-// 6. Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
-  // Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
-  // Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case) .
-  // Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
-  // Exemplo: bishop -> diagonals
+// 6. Write a program that is named after a chess piece and returns the movements it makes.
+   // As a challenge, make the program work both if you receive the name of a part with uppercase letters and with lowercase letters, without increasing the number of conditionals.
+   // As a hint, you can search for a function that makes a string have all lowercase letters.
+   // If the part passed is invalid, the program should return an error message.
+   // Example: bishop -> diagonals
 
 let chessPiece = "quEEn";
 
