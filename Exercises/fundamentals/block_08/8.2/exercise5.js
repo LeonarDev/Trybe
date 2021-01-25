@@ -1,5 +1,3 @@
-// 5. Create an array in alphabetical order with only the names of all people who have written science fiction or fantasy.
-
 const assert = require('assert');
 
 const books = [
@@ -72,14 +70,15 @@ const expectedResult = [
   'J. R. R. Tolkien'
 ]
 
+// 5. Create an array in alphabetical order with only the names of all people who have written science fiction or fantasy.
 function fantasyOrScienceFictionAuthors() {
-  // write your code here
   const selectedGenres = ['Fantasy', 'Science Fiction'];
-
   return books
   .filter( (book) => selectedGenres.includes(book.genre) )
   .map( (book) => book.author.name )
   .sort();
 };
+
+console.log(fantasyOrScienceFictionAuthors());
 
 assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);

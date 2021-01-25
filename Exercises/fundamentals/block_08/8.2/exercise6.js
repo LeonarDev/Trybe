@@ -1,5 +1,3 @@
-// 6. Create an array with the name of all books with more than 60 years of publication.
-
 const assert = require('assert');
 
 const books = [
@@ -66,15 +64,20 @@ const books = [
 ];
 
 const expectedResult = [
-  'Lord of the Rings',
+  'The Lord of the Rings',
   'Foundation',
   'The Call of Cthulhu'
 ]
 
+// 6. Create an array with the name of all books with more than 60 years of publication.
 function oldBooks() {
-  // write your code here
+  const currentYear = new Date().getFullYear();
+
+  return books
+  .filter( (book) => (book.releaseYear <= currentYear - 60) )
+  .map((book) => book.name);
 }
 
-assert.deepStrictEqual(oldBooks(), expectedResult);
+console.log(oldBooks());
 
-// 6. Create an array with the name of all books with more than 60 years of publication.
+assert.deepStrictEqual(oldBooks(), expectedResult);
