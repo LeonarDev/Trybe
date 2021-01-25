@@ -1,6 +1,5 @@
-// 7. Find the name of the book written by the person whose registered name starts with three initials (ends with a period).
-
 const assert = require('assert');
+const { workerData } = require('worker_threads');
 
 const books = [
   {
@@ -67,8 +66,13 @@ const books = [
 
 const expectedResult = 'The Lord of the Rings';
 
+// 7. Find the name of the book written by the person whose registered name starts with three initials (ends with a period).
 function authorWith3DotsOnName() {
-  // write your code here
-}
+  return books.find((book) => (
+    book.author.name.split(' ').filter((authorName) => authorName.endsWith('.')).length === 3
+    )).name;
+};
+
+console.log(authorWith3DotsOnName());
 
 assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
