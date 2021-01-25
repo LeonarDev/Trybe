@@ -63,10 +63,17 @@ const books = [
   },
 ];
 
+// 7) Make a function that returns true, if no author was born in the same year, or false, otherwise.
 const expectedResult = false;
 
 function authorUnique() {
   // write your code here
+  return books.every((book) =>
+    !books.some((bookSome) => 
+      (bookSome.author.birthYear === book.author.birthYear) && (bookSome.author.name !== book.author.name)
+  ));
 }
 
-assert.strictEqual (authorUnique(), expectedResult);
+console.log(authorUnique());
+
+assert.strictEqual(authorUnique(), expectedResult);
