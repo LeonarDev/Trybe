@@ -1,6 +1,3 @@
-// 1. Create an array with strings in the format BOOK_NAME - BOOK_GENDER - BOOK_AUTHOR_NAME
-//  - Tip: Use the `map` function
-
 const assert = require('assert');
 
 const books = [
@@ -75,8 +72,11 @@ const expectedResult = [
   'The Call of Cthulhu - Horror - H. P. Lovecraft'
 ];
 
+// 1. Create an array with strings in the format BOOK_NAME - BOOK_GENDER - BOOK_AUTHOR_NAME
 function formatedBookNames() {
   return books.map((book) => `${book.name} - ${book.genre} - ${book.author.name}`);
 }
+
+console.log(formatedBookNames());
 
 assert.deepStrictEqual(formatedBookNames(), expectedResult);
