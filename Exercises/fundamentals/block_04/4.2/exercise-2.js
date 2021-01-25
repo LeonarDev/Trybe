@@ -1,4 +1,4 @@
-// Para o segundo exercício, você deve somar todos os valores contidos no array e imprimir o resultado;
+// 2. For the second exercise, you must add all the values contained in the array and print the result;
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let sum = 0;

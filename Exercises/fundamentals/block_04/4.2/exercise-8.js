@@ -1,4 +1,4 @@
-// Utilizando for, crie uma array que vá de 1 até 25 e imprima o resultado;
+// 8. Using for, create an array ranging from 1 to 25 and print the result;
 
 let arrayCreated = [];
 

@@ -1,5 +1,11 @@
 # (4.2) JavaScript - Array and loop For
 
+You will use this array in the exercises:
+```js
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+```
+
+
 1. In this first exercise, scroll through the array by printing all the values contained in it with the function console.log();
 
 2. For the second exercise, you must add all the values contained in the array and print the result;

@@ -1,4 +1,4 @@
-// Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
+// 9. Using the array created in the previous exercise, print the result of dividing each of the elements by 2.
 
 let arrayCreated = [];
 
@@ -10,5 +10,5 @@ console.log(arrayCreated.join(', '));
 console.log('');
 
 for (let index = 0; index < arrayCreated.length; index += 1) {
-  console.log(arrayCreated[index],'dividido por 2 =', (arrayCreated[index]/2));
+  console.log(arrayCreated[index],'divided by 2 =', (arrayCreated[index]/2));
 }
