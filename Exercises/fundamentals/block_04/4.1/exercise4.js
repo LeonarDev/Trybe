@@ -4,7 +4,7 @@ let value = -10;
 
 if (value > = 1) {
   console.log ("positive");
-} elseif (value < 0) {
+} else if (value < 0) {
   console.log ("negative");
 } else {
   console.log ("zero");
