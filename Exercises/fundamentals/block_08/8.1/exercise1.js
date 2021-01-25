@@ -1,3 +1,5 @@
+// 1) Find the name of the first author born in 1947.
+
 const assert = require('assert');
 
 const books = [
@@ -63,10 +65,12 @@ const books = [
   },
 ];
 
-// const authorBornIn1947 = (value) => value.author.birthYear === 1947;
-// const verifyAuthorName = books.find(authorBornIn1947).author.name;
+// 1) Find the name of the first author born in 1947.
+
 const authorBornIn1947 = () => {
   return books.find(book => book.author.birthYear === 1947).author.name;
 }
+
+console.log(authorBornIn1947());
 
 assert.strictEqual (authorBornIn1947(), 'Stephen King');

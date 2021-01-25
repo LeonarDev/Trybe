@@ -63,6 +63,8 @@ const books = [
   },
 ];
 
+// 2) Return the name of the book with the lowest name.
+
 function smallerName() {
   let nameBook;
   books.forEach((book) => {
@@ -73,5 +75,7 @@ function smallerName() {
 // variable nameBook that will receive the value of the smallest name;
 return nameBook;
 }
+
+console.log(smallerName());
 
 assert.strictEqual( smallerName(), 'Dune' );
