@@ -1,8 +1,8 @@
-// 1- Faça um programa que, dado um valor n qualquer, seja n > 1 , imprima na tela um quadrado feito de asteriscos de lado de tamanho n.
+// 1. Make a program that, given any value n, whether n > 1, print on the screen a square made of side asterisks of size n.
 
-let n = 5;
+let number = 5;
 let star = '*'
 
-for (let index = 0; index < n; index += 1) {
-  console.log(star.repeat(n));
+for (let index = 0; index < number; index += 1) {
+  console.log(star.repeat(number));
 }

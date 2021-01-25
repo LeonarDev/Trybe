@@ -1,9 +1,24 @@
-// 4- Depois, faça uma pirâmide com n asteriscos de base:
+// 4. Make a pyramid with n basic asterisks
 
-let n = 6
-let star = '*';
-let space = ' ';
+let number = 5;
+let lineColumn;
+let lineInput = '';
+let symbol = '*';
 
-for (let index = 1; index <= n; index += 1) {
-    console.log(star.repeat(n-(n-index)));
-}
+let midOfMatrix = (number + 1) / 2;
+let controlLeft = midOfMatrix;
+let controlRight= midOfMatrix;
+
+for (let lineIndex = 0; lineIndex <= midOfMatrix; lineIndex += 1) {
+  for (lineColumn = 1; lineColumn <= number; lineColumn += 1) {
+    if (lineColumn > controlRight && lineColumn < controlLeft) {
+      lineInput = lineInput + symbol;
+    } else {
+      lineInput = lineInput + ' ';
+    }
+  }
+  console.log(lineInput);
+  lineInput = '';
+  controlRight -= 1;
+  controlLeft += 1;
+};
