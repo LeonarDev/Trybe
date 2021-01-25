@@ -63,7 +63,7 @@ const books = [
   },
 ];
 
-// Make a function that returns true, if all authors were born in the 20th century, or false, otherwise.
+// 5) Make a function that returns true, if all authors were born in the 20th century, or false, otherwise.
 const expectedResult = false
 
 function everyoneWasBornOnSecXX() {
