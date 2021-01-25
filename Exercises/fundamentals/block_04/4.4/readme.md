@@ -3,7 +3,7 @@
 ### Part I - Objects and For/In
 
 Using the object below, do the following exercises:
-```
+```js
 let info = {
   character: "Margarida",
   origin: "Donald Duck",
@@ -18,7 +18,7 @@ let info = {
 2. Insert a new property in the object with the key name "recurring" and the value "Yes" and then print the object on the console.
    - Expected value on the console:
 
-```
+```js
   {
     character: 'Margarida',
     origin: 'Donald Duck',
@@ -30,7 +30,7 @@ let info = {
 3. Make a for/in that shows all the keys of the object.
    - Expected value on the console:
 
-```
+```js
   character
   source
   note
@@ -40,7 +40,7 @@ let info = {
 4. Make a new for/in, but now show all key values for the object.
    - Expected value on the console:
 
-```
+```js
   Daisy
   Donald Duck
   Main character girlfriend in Donald Duck comics
@@ -49,7 +49,7 @@ let info = {
 
 5. Now, define a second object with the same structure (the same keys) as the first and the following values: "Uncle Scrooge", "Christmas on Bear Mountain, Dell's Four Color Comics # 178", "The last MacPatinhas", "Yes" .
    - Expected value on the console:
-```
+```js
 Daisy and Scrooge
 Donald Duck and Christmas on Bear Mountain, Dell's Four Color Comics # 178
 Main character's girlfriend in Donald Duck and The Last Mac comic

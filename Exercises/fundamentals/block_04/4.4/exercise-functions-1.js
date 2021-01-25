@@ -1,23 +1,25 @@
-// 1. Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
-//   - Exemplo de palíndromo: arara .
-//   - verificaPalindrome("arara") ;
-//   - Retorno esperado: true
-//   - verificaPalindrome("desenvolvimento") ;
-//   - Retorno esperado: false
+// 1. Create a function that takes a string and returns true if it is a palindrome, or false, if it is not.
+// - Example of a palindrome: macaw.
+// - checkPalindrome ("arara");
+// - Expected return: true
 
-function isPalindrome(word){
+// - checksPalindrome ("development");
+// - Expected return: false
+
+function checkPalindrome(word){
   let inverseWord = word.split('').reverse().join('')
 
   if (inverseWord === word) {
-    isPalindrome = true;
-    console.log('true');
+    console.log('Word: '+ word);
+    console.log('Inversed word: '+ inverseWord);
+    return true;
   } else {
-    isPalindrome = false;
-    console.log('false');
+    console.log('Word: '+ word);
+    console.log('Inversed word: '+ inverseWord);
+    return false;
   }
-
-  console.log(word);
-  console.log(inverseWord);
 }
 
-isPalindrome('bota');
+console.log(checkPalindrome('arara'));
+console.log('');
+console.log(checkPalindrome('development'));

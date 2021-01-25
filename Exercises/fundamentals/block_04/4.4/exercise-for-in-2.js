@@ -1,11 +1,14 @@
-// Insira no objeto uma nova propriedade com o nome de chave "recorrente" e o valor "Sim" e, em seguida, imprima o objeto no console.
+// 2. Insert a new property in the object with the key name "recurring" and the value "Yes" and then print the object on the console.
 
 let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  character: 'Daisy',
+  origin: 'Donald Duck',
+  note: 'Girlfriend of the main character in the Donald Duck comics',
 };
 
-info.recorrente = 'Sim';
+// Two ways to solve the exercise
+info.recurrent = "Yes";
 
-console.log(info);
+info['recurrent'] = "Yes";
+
+console.log (info);

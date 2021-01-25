@@ -1,12 +1,12 @@
-// Faça um for/in que mostre todas as chaves do objeto.
+// 3. Make a for/in that shows all the keys of the object.
 
 let info = {
-  personagem: 'Margarida',
-  origem: 'Pato Donald',
-  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+  character: 'Daisy',
+  origin: 'Donald Duck',
+  note: 'Girlfriend of the main character in the Donald Duck comics',
 };
 
-info.recorrente = 'Sim';
+info.recurrent = 'Yes';
 
 for (key in info) {
   console.log(key);

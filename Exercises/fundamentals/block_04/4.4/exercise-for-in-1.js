@@ -1,9 +1,14 @@
-// Imprima no console uma mensagem de boas-vindas para a personagem, incluindo seu nome.
+// 1. Print a welcome message on the console to the character above, including her name.
+// - Expected value on the console: Welcome, Daisy
 
 let info = {
-  personagem: "Margarida",
-  origem: "Pato Donald",
-  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  character: 'Daisy',
+  origin: 'Donald Duck',
+  note: 'Girlfriend of the main character in the Donald Duck comics',
+  recurrent: 'Yes'
 };
 
-console.log('Bem-vinda,', info.personagem);
+// Two ways to solve the exercise
+console.log ('Welcome, ' + info.character);
+
+console.log ('Welcome, ' + info ['character']);
