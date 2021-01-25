@@ -1,8 +1,8 @@
-// 2- Imprima um triângulo retângulo com 5 asteriscos de base.
+// 2. do the same as before, but print a right triangle with 5 base asterisks.
 
-let n = 5;
+let number = 5;
 let star = '*';
 
-for (let index = 1; index <= n; index += 1) {
+for (let index = 1; index <= number; index += 1) {
   console.log(star.repeat(index));
 }

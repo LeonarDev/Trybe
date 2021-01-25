@@ -1,9 +1,9 @@
-// 3- Agora inverta o lado do triângulo.
+// 3. Now invert the side of the triangle.
 
-let n = 5;
+let number = 5;
 let star = '*';
 let space = ' ';
 
-for (let index = 1; index <= n; index += 1) {
-  console.log(space.repeat(n-index)+(star.repeat(index)));
+for (let index = 1; index <= number; index += 1) {
+  console.log(space.repeat(number-index)+(star.repeat(index)));
 }
