@@ -1,4 +1,4 @@
-// Com o mesmo código do exercício anterior, caso valor final seja maior que 20, imprima a mensagem: "valor maior que 20". Caso não seja, imprima a mensagem: "valor menor ou igual a 20"
+// 4. With the same code as in the previous exercise, if the final value is greater than 20, print the message: "value greater than 20". If not, print the message: "value less than or equal to 20"
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let sum = 0;
@@ -11,7 +11,7 @@ let arithmeticAverage = sum/numbers.length;
 
 
 if (arithmeticAverage > 20) {
-  console.log('Valor maior que 20');
+  console.log('Value greater than 20');
 } else {
-  console.log('Valor menor ou igual a 20');
+  console.log('Value less than or equal to 20');
 }
