@@ -1,5 +1,3 @@
-// 2. Create a string with the names of all authors.
-
 const assert = require('assert');
 
 const books = [
@@ -65,9 +63,12 @@ const books = [
   },
 ];
 
-
+// 2. Create a string with the names of all authors.
 function allNames() {
-  // write your code here
+  return books
+  .map((book) => book.author.name)
+  .reduce((previousValue, currentValue) => `${previousValue} ${currentValue},`, 'Names:')
+  .replace(/,$/, '.');
 }
 
 assert.deepStrictEqual(allNames(), "Names: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
