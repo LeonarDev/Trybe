@@ -1,5 +1,3 @@
-// 5. Given the array of names, return the number of times that the letter 'A' appears uppercase or lowercase.
-
 const assert = require('assert');
 
 const names = [
@@ -8,8 +6,13 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
+// 5. Given the array of names, return the number of times that the letter 'A' appears uppercase or lowercase.
 function containsA() {
-  // write your code here
+  return names.reduce((previousValue, currentValue) => 
+    previousValue + currentValue.split('').reduce((acumulator, currentSplited) => {
+      if (currentSplited === 'a' || currentSplited === 'A') return acumulator + 1;
+      return acumulator;
+    }, 0), 0);
 }
 
 assert.deepStrictEqual(containsA(), 20);
