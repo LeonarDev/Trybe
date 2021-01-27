@@ -12,7 +12,9 @@ const temperatureInFahrenheit = (temperature) => console.log(`It is currently ${
 const greet = (temperature) => console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
 // definition of sendMarsTemperature function ...
+const sendMarsTemperature = (callback) => {
+  setTimeout(() => callback(getMarsTemperature(), messageDelay()));
+}
 
-
-sendMarsTemperature(temperatureInFahrenheit); // prints "It is currently 47ºF at Mars", for example
-sendMarsTemperature(greet); // prints "Hi there! Curiosity here. Right now is 53ºC at Mars", for example
+sendMarsTemperature(temperatureInFahrenheit); // prints "It is currently 47ºF at Mars" (for example)
+sendMarsTemperature(greet); // prints "Hi there! Curiosity here. Right now is 53ºC at Mars" (for example)
