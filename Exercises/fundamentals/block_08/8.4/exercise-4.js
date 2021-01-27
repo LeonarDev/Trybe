@@ -1,6 +1,7 @@
 // 4) Write a `filterPeople` function that, given a list of people, returns all Australian people who were born in the 20th century:
 
 const assert = require('assert');
+const { monitorEventLoopDelay } = require('perf_hooks');
 
 const people = [
   {
@@ -31,6 +32,13 @@ const people = [
 ];
 
 // write filterPeople below
+const bornIn20Century = (year) => year >= 1901 && year <= 2000;
+
+const isAustralian = (nationality) => nationality === "Australian";
+
+const filterPeople = (people) => {
+  return people.filter(({ bornIn, nationality }) => bornIn20Century(bornIn) && isAustralian(nationality))
+};
 
 const filteredPeople = filterPeople(people);
 

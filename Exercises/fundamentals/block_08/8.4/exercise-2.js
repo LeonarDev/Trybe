@@ -2,7 +2,11 @@
 
 const assert = require('assert');
 
-// type sum below
+const sum = (...numbers) => {
+  let total = 0;
+  for (number of numbers) total += number;
+  return total;
+}
 
 assert.strictEqual(sum(), 0);
 assert.strictEqual(sum(1), 1);
