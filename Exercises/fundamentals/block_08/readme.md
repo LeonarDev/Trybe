@@ -3,7 +3,7 @@
  - (8.2) [JavaScript ES6 - Higher Orders Functions - map and filter](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08/8.2)
  - (8.3) [JavaScript ES6 - Higher Orders Functions - reduce](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08/8.3)
  - (8.4) [JavaScript ES6 - Spread operator, parâmetro rest, destructuring and more](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08/8.4)
- - (8.5) [Project - Zoo functions]
+ - (8.5) [Project - Zoo functions](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08/8.5)
 
 <br>
 
