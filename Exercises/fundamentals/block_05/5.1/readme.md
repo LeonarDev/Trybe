@@ -1,6 +1,6 @@
 # (5.1) JavaScript - DOM and selectors
-  - [How do HTML and JavaScript communicate?](#How-do-HTML-and-JavaScript-communicate?)
-  - [Which selector to use?](#Which-selector-to-use?)
+  - [How do HTML and JavaScript communicate?](#how-do-html-and-javascript-communicate?)
+  - [Which selector to use?](#which-selector-to-use?)
   - [Exercise](#exercises)
   - [Exercise 1](#exercise-1)
   - [Exercise 2](#exercise-2)
