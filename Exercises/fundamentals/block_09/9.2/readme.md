@@ -5,7 +5,7 @@
 - [Using Promises](#Using-Promises)
 - [Chaining Promises](#Chaining-Promises)
 - [Async and Await](#Async-and-Await)
-- [Application Programming Interface: API](#Application-Programming-Interface:-API)
+- [Application Programming Interface](#Application-Programming-Interface)
 - [Exercises](#Exercises)
   - [Exercise 1](#Exercise-1)
   - [Exercise 2](#Exercise-2)
@@ -252,7 +252,7 @@ Lastly we call our async function:
 
 <br>
 
-### Application Programming Interface: API
+### Application Programming Interface
 
 An **API** allows applications to communicate with each other, serving as a "bridge" for them. An API is not a database or a server, but the one responsible for controlling access points to them, through a set of routines and programming standards
 
