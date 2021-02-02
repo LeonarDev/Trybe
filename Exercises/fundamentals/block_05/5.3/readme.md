@@ -13,10 +13,249 @@
   - [Exercise 10](#exercise-10)
   - [Bonus exercise](#bonus-exercise)
 
+<br>
+
 # Exercises:
 
-## Tryber Calendar
-The purpose of these exercises is to put into practice the knowledge learned about <b> DOM, selectors, manipulation of HTML elements and Events in JavaScript </b>. Therefore, the exercises must be performed using only JavaScript code, which must be inserted in the "scripts.js" file.
+Before doing the exercises, create an HTML file in the exercises/5.3 folder and copy the code below:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Calendar</title>
+  </head>
+  <body>
+    <header class="month-container">
+      <ul>
+        <li id="month">December</li>
+        <li id="year">2020</li>
+      </ul>
+    </header>
+    <div class="week-days-container">
+      <ul class="week-days">
+      </ul>
+    </div>
+    <div class="days-container">
+      <ul id="days">
+      </ul>
+    </div>
+    <div class="buttons-container">
+    </div>
+    <section class="tasks-container">
+      <div class="my-tasks">
+        <h3>MY TASKS</h3>
+      </div>
+      <div class="input-container">
+        <h3>COMMITMENTS</h3>
+        <label for="task-input">New:</label>
+        <input type="text"
+          id="task-input"
+          placeholder="Write your appointment">
+        <button id="btn-add">Add</button>
+      </div>
+      <div class="task-list-container">
+        <ul class="task-list">
+        </ul>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+<br>
+
+Also create a CSS file and copy the code below to add style to the page. Feel free to unleash your creativity and change the file as you wish!
+
+```CSS
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #eee;
+}
+
+button {
+  margin: 20px;
+}
+
+#btn-add {
+  margin: 0;
+}
+
+.buttons-container {
+  background-color: #eee;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+#days {
+  margin: 0;
+}
+
+#days li {
+  color: #777;
+  display: inline-block;
+  font-size:20px;
+  margin: 5px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 13.6%;
+}
+
+.input-container {
+  width: 49%;
+  height: 100px;
+  display: inline-block;
+}
+
+input {
+  margin-top: 8px;
+}
+
+label {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
+.month-container {
+  background: green;
+  padding: 40px 25px;
+  text-align: center;
+}
+
+.month-container ul li {
+  color:white;
+  font-size: 20px;
+  letter-spacing: 3px;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.my-tasks {
+  clear: both;
+  float: left;
+  height: 100px;
+  vertical-align: middle;
+  width: 49%;
+}
+
+.my-tasks div {
+  border: 1px solid black;
+  border-radius: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  height: 35px;
+  margin-left: 10px;
+  vertical-align: middle;
+  width: 35px;
+}
+
+.my-tasks div:hover {
+  height: 45px;
+  width: 45px;
+}
+
+.my-tasks span {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+  vertical-align: middle;
+}
+
+.tasks-container {
+  height: 130px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.tasks-container h3 {
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  letter-spacing: 3px;
+}
+
+.task-list {
+  margin-top: 20px;
+}
+
+.task-list-container {
+  display: inline-block;
+}
+
+.task-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  vertical-align: middle;
+}
+
+.week-days-container {
+  margin-left: 35px;
+}
+
+.week-days li {
+  color: #666;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 13.6%;
+}
+
+.week-days {
+  font-size: 20px;
+  margin: 0px;
+  padding: 10px 0;
+}
+```
+<br>
+
+Finally, create a JavaScript file with the name "script.js" in the exercises / 5_3 folder and copy the code below:
+
+```js
+function createDaysOfTheWeek() {
+  const weekDays = ['Monday', 'Sunday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+  const weekDaysList = document.querySelector('.week-days');
+
+  for (let index = 0; index < weekDays.length; index += 1) {
+    const days = weekDays[index];
+    const dayListItem = document.createElement('li');
+    dayListItem.innerHTML = days;
+
+    weekDaysList.appendChild(dayListItem);
+  };
+};
+
+createDaysOfTheWeek();
+
+// Write your code below.
+```
+
+<br>
+
+<img src="https://course.betrybe.com//fundamentals/javascript/dom-manipulation/gif/calendario.gif">
+
+The purpose of these exercises is to put into practice the knowledge learned about <b> DOM, selectors, manipulation of HTML elements and Events in JavaScript </b>. Therefore, the exercises must be performed using only JavaScript code, which must be inserted in the **"scripts.js"** file.
 
 ### Exercise 1:
 The dezDaysList array contains the last two days of November and the days of the month of December. Develop a function that dynamically creates each day on the calendar and adds them as sons / daughters of the `<ul>` tag with ID `days`. Note that the 29th and 30th of November are in the array as they represent Monday and Tuesday respectively.
