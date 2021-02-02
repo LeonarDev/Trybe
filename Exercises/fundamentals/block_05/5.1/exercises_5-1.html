@@ -30,58 +30,58 @@
     </style>
   </head>
   <body>
-    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <h1 class="title">Exercíse 5.1 - JavaScript</h1>
     <div class="main-content">
       <div class="center-content">
-        <p>Texto padrão do nosso site</p>
+        <p>Standard text of our website/p>
         <p>-----</p>
         <p>Trybe</p>
       </div>
     </div>
     <script>
         /*
-        Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
+        Here you will modify the existing elements using only the functions:
         - document.getElementById()
         - document.getElementsByClassName()
         - document.getElementsByTagName()
         */
         
-        // 1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
+        // 1. Create a function that changes the text in the <p> tag for a description of how you see yourself in 2 years. (Don't spend time thinking about the text, but doing the exercise)
         function changeText() {
           let twoYearsFromNow = document.getElementsByTagName('p')[0];
           twoYearsFromNow.innerText = `2 years from now I'll see myself 2 years older`;
         }
         changeText();
 
-        // 2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+        // 2. Create a function that changes the color of the yellow square to Trybe's green (rgb(76,164,109)).
         function changeBackgroundColorToGreen() {
           let yellowSquare = document.getElementsByClassName('main-content')[0];
           yellowSquare.style.background = ('rgb(76,164,109)');
         }
         changeBackgroundColorToGreen();
 
-        // 3. Crie uma função que mude a cor do quadrado vermelho para branco.
+        // 3. Create a function that changes the color of the red square to white.
         function changeBackgroundColorToWhite() {
           let redSquare = document.getElementsByClassName('center-content')[0];
           redSquare.style.background = ('rgb(255,255,255)');
         }
         changeBackgroundColorToWhite();
 
-        // 4. Crie uma função que corrija o texto da tag <h1>.
+        // 4. Create a function that corrects the text of the <h1> tag.
         function titleCorrection() {
           let correctTitle = document.getElementsByClassName('title')[0];
           correctTitle.innerText = ('Exercício 5.1 - JavaScript');
         }
         titleCorrection();
 
-        // 5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+        // 5. Create a function that changes all text in the <p> tag to uppercase.
           function changeTextToUppercase() {
             let uppercaseText = document.getElementsByTagName('p')[0];
             uppercaseText.innerHTML = uppercaseText.innerHTML.toUpperCase();
           }
           changeTextToUppercase();
 
-        // 6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+        // 6. Create a function that displays the contents of all <p> tags on the console.
         function displayOnConsole() {
           let allParagraphTags = document.getElementsByTagName('p');
           for (let index = 0; index < allParagraphTags.length; index += 1) {
