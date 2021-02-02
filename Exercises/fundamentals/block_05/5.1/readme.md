@@ -25,6 +25,84 @@
 
 <br>
 
+The `GetElementById(id)` works differently than `querySelector('#id')`, but the result is the same. As stated in the video, the first has a better performance, but the second is more flexible.
+
+**Attention!** While `getElementsByClassName('ClassName')` and `getElementsByTagName('TagName')` return an **HTMLCollection**, `querySelectorAll('.ClassName')` and `querySelectorAll('TagName')` return a **NodeList**.
+
+Read about the difference between HTMLCollection and NodeList [here](https://teamtreehouse.com/community/understanding-the-difference-between-an-htmlcollection-and-a-nodelist).
+
+<br>
+
+# Exercises
+
+It's time to apply your knowledge in manipulating the elements of HTML!
+1. Next, you'll see a snippet of HTML and CSS code.
+2. Create an HTML file inside the exercises/5.1 directory and copy the following code.
+3. Read the instructions that are inside a comment in the `<script>` tag.
+4. Don't forget to commit each exercise!
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Exercíse 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercíse 5.1 - JavaScript </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Standard text of our website</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+        /*
+        Here you will modify the existing elements using only the functions:
+         - document.getElementById()
+         - document.getElementsByClassName()
+         - document.getElementsByTagName()
+        1. Create a function that changes the text in the <p> tag for a description of how you see yourself in 2 years. (Don't spend time thinking about the text, but doing the exercise)
+        2. Create a function that changes the color of the yellow square to Trybe's green (rgb(76,164,109)).
+        3. Create a function that changes the color of the red square to white.
+        4. Create a function that corrects the text of the <h1> tag.
+        5. Create a function that changes all text in the <p> tag to uppercase.
+        6. Create a function that displays the contents of all <p> tags on the console.
+        */
+    </script>
+  </body>
+</html>
+```
+
+<br>
+
+
 ### Exercise 1:
 Create a function that changes the text in the `<p>` tag for a description of how you see yourself in 2 years. (Don't spend time thinking about the text, but doing the exercise)
 
