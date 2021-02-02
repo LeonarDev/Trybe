@@ -257,6 +257,8 @@ createDaysOfTheWeek();
 
 The purpose of these exercises is to put into practice the knowledge learned about <b> DOM, selectors, manipulation of HTML elements and Events in JavaScript </b>. Therefore, the exercises must be performed using only JavaScript code, which must be inserted in the **"scripts.js"** file.
 
+<br>
+
 ### Exercise 1:
 The dezDaysList array contains the last two days of November and the days of the month of December. Develop a function that dynamically creates each day on the calendar and adds them as sons / daughters of the `<ul>` tag with ID `days`. Note that the 29th and 30th of November are in the array as they represent Monday and Tuesday respectively.
 The days must be contained in a `<li>` tag, and everyone must have the `day` class. Ex: `<li class ="day"> 3 </li>`
