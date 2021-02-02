@@ -66,12 +66,12 @@
 - [x] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [x] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
 - [x] (8.4) JavaScript ES6 - Spread operator, parâmetro rest, destructuring and more
-- [ ] (8.5) _[Project - Zoo functions]()_
+- [x] (8.5) _[Project - Zoo functions]()_
 <hr>
 
-#### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :triangular_flag_on_post:
+#### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :white_check_mark:
 - [x] (9.1) Asynchronous JavaScript and Callbacks
-- [ ] (9.2) JavaScript Promises
+- [x] (9.2) JavaScript Promises
 - [ ] (9.3) _[Project - Shopping Cart]()_
 <hr>
 
