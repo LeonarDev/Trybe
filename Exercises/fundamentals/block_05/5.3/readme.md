@@ -1,5 +1,20 @@
 # (5.3) JavaScript - Events
 
+- [Exercises:](#exercises)
+  - [Exercise 1](#exercise-1)
+  - [Exercise 2](#exercise-2)
+  - [Exercise 3](#exercise-3)
+  - [Exercise 4](#exercise-4)
+  - [Exercise 5](#exercise-5)
+  - [Exercise 6](#exercise-6)
+  - [Exercise 7](#exercise-7)
+  - [Exercise 8](#exercise-8)
+  - [Exercise 9](#exercise-9)
+  - [Exercise 10](#exercise-10)
+  - [Bonus exercise](#bonus-exercise)
+
+# Exercises:
+
 ## Tryber Calendar
 The purpose of these exercises is to put into practice the knowledge learned about <b> DOM, selectors, manipulation of HTML elements and Events in JavaScript </b>. Therefore, the exercises must be performed using only JavaScript code, which must be inserted in the "scripts.js" file.
 
@@ -11,46 +26,76 @@ The 4th, 11th, 18th and 25th are Friday. They must contain the `day` class and t
 
 ```const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 , 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];```
 
+<hr>
+<br>
+
 ### Exercise 2:
 Implement a function that takes the string "Holidays" as a parameter and dynamically creates a button with the name "Holidays".
 - Add to this button the ID `btn-holiday`.
 - Add this button as a child of the `<div>` tag with the class `buttons-container`.
 
+<hr>
+<br>
+
 ### Exercise 3:
 Implement a function that adds a "click" event to the "Holidays" button that changes the background color of days that have the class `holiday`.
 - It is interesting that this button also has the reverse logic. When clicked again it returns to the initial configuration with the color `rgb(238,238,238)`.
+
+<hr>
+<br>
 
 ### Exercise 4:
 Implement a function that takes the string "Friday" as a parameter and dynamically creates a button with the name "Friday".
 - Add the ID `btn-friday` to this button.
 - Add this button as a child of the `<div>` tag with the class `buttons-container`.
 
+<hr>
+<br>
+
 ### Exercise 5:
 Implement a function that adds a "click" event to the "Friday" button that changes the text displayed on Friday.
 - It is interesting that this button also has the reverse logic. When clicked again it returns to the initial configuration displaying the days.
+
+<hr>
+<br>
 
 ### Exercise 6:
 Implement two functions that create a "zoom" effect. When hovering the mouse pointer over a day of the month on the calendar, the text for that day should increase, and when the mouse pointer leaves the day, the text should return to its original size.
 - _[event.target - Ownership](https://developer.mozilla.org/en-US/docs/Web/API/Event/target)_
 
+<hr>
+<br>
+
 ### Exercise 7:
 Implement a function that adds a custom task to the calendar. The function must receive as a parameter the string with the task name (ex: "cook") and dynamically create an element with the tag `<span>` containing the task.
 - The created element must be added as a child of the `<div>` tag that has the class `my-tasks`.
+
+<hr>
+<br>
 
 ### Exercise 8:
 Implement a function that adds a colored caption to the task created in the previous exercise. This function should take as a parameter a string ("color") and dynamically create a tag element `<div>` with the class `task`.
 - The color parameter should be used as the background color of the `<div>` created.
 - The created element should be added as a child of the `<div>` tag that has the class `my-tasks`.
 
+<hr>
+<br>
+
 ### Exercise 9:
 Implement a function that adds an event that when clicking on the element with the tag `<div>` referring to the color of your task, assign this element the `task selected` class, that is, when your task has the `task selected` class it will be selected.
 - When you click on the element again, your class should return to being only `task`, that is, this task is no longer a selected task.
+
+<hr>
+<br>
 
 ### Exercise 10:
 Implement a function that adds an event that, when clicking on a day of the month in the calendar, assigns that day the color of the legend of your selected task.
 - When you click on the day again with the color of the legend, its color should return to the initial setting `rgb(119,119,119)`.
 
-Bonus:
+<hr>
+<br>
+
+### Bonus exercise:
 Are we going to add appointments to your calendar? Implement a function that, when typing an appointment in the "COMMITMENTS" text box, adds the item to the "MY COMMITMENTS" list by clicking on the "ADD" button.
 - If no character is entered in the `input` field, the function should return an` alert` with an error message when clicking on "ADD".
 - When pressing the "enter" key, the event must also be triggered.
