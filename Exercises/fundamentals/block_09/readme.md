@@ -1,8 +1,8 @@
 # Block 09 - Asynchronous JavaScript and Promises
 
 - (9.1) [Asynchronous JavaScript and Callbacks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09/9.1)
-- (9.2) [Promises]()
-- (9.3) [Project - Shopping Cart]()
+- (9.2) [Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09/9.2)
+- (9.3) [Project - Shopping Cart]
 
 <br>
 
