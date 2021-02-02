@@ -1,5 +1,7 @@
 # (5.1) JavaScript - DOM and selectors
-
+  - [How do HTML and JavaScript communicate?](#How-do-HTML-and-JavaScript-communicate?)
+  - [Which selector to use?](#Which-selector-to-use?)
+  - [Exercise](#exercises)
   - [Exercise 1](#exercise-1)
   - [Exercise 2](#exercise-2)
   - [Exercise 3](#exercise-3)
@@ -8,6 +10,11 @@
   - [Exercise 6](#exercise-6)
 
 <img src="https://course.betrybe.com//fundamentals/javascript/images/dom.jpg">
+
+### How do HTML and JavaScript communicate?
+The **DOM** (Document Object Model) is an interface that represents how HTML and XML are read by the browser. After reading the HTML document by the browser, the DOM creates an object that makes a representation of the document and defines ways in which this structure can be accessed, that way we can use JavaScript to manipulate the DOM and thus change the style and content of Our page.
+
+<br>
 
 `Window`: Represents a window that contains a DOM element, being possible to access the document that the window contains through Window;
 
@@ -24,6 +31,8 @@
 `attribute`: These are all the attributes that a specific node has, such as a class or id.
 
 <br>
+
+### Which selector to use?
 
 The `GetElementById(id)` works differently than `querySelector('#id')`, but the result is the same. As stated in the video, the first has a better performance, but the second is more flexible.
 
