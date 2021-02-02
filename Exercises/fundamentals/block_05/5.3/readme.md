@@ -273,12 +273,12 @@ The purpose of these exercises is to put into practice the knowledge learned abo
 <br>
 
 ### Exercise 1:
-The dezDaysList array contains the last two days of November and the days of the month of December. Develop a function that dynamically creates each day on the calendar and adds them as sons / daughters of the `<ul>` tag with ID `days`. Note that the 29th and 30th of November are in the array as they represent Monday and Tuesday respectively.
+The decemberDaysList array contains the last two days of November and the days of the month of December. Develop a function that dynamically creates each day on the calendar and adds them as sons / daughters of the `<ul>` tag with ID `days`. Note that the 29th and 30th of November are in the array as they represent Monday and Tuesday respectively.
 The days must be contained in a `<li>` tag, and everyone must have the `day` class. Ex: `<li class ="day"> 3 </li>`
 The 24th, 25th and 31st are holidays and, in addition to the `day` class, they must also contain the `holiday` class. Ex: `<li class ="day holiday"> 24 </li>`
 The 4th, 11th, 18th and 25th are Friday. They must contain the `day` class and the` friday` class. Ex: `<li class="day friday"> 4 </li>`
 
-```const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 , 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];```
+```const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 , 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];```
 
 <hr>
 <br>
