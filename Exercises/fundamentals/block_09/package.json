@@ -1,0 +1,15 @@
+{
+  "name": "block_09",
+  "version": "1.0.0",
+  "description": "- (9.1) [Asynchronous JavaScript and Callbacks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09/9.1) - (9.2) [Promises]() - (9.3) [Project - Shopping Cart]()",
+  "main": "exame-of-promise-with-fetch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
