@@ -3,7 +3,8 @@
 - [Asynchronous JavaScript](#Asynchronous-JavaScript)
 - [Callbacks](#Callbacks)
 - [Handling errors in asynchronous operations](#Handling-errors-in-asynchronous-operations)
-- [Fetch Api](#Fetch-Api)
+- [Introduction to Fetch Api](#Introduction-to-Fetch-Api)
+- [What is JSON and why do we use it?](#What-is-JSON-and-why-do-we-use-it)
 - [Exercises](#Exercises)
   - [Exercise 1](#Exercise-1)
   - [Exercise 2](#Exercise-2)
@@ -253,7 +254,7 @@ getCountry(countryCurrency, printErrorMessage);
 
 <br>
 
-### Fetch API
+### Introduction to Fetch API
 
 In the context of the **Front-end**, most cases where we need to use asynchronous functions are in requests. A good example is the `fetch()` function of the Fetch API!
 
@@ -270,6 +271,28 @@ The `fetch` function takes two parameters:
 The callback varies depending on the API used, not only in content, but also in format. As our main focus is JavaScript, we will mainly deal with responses in **JSON** format, or responses that can be reformatted to do so.
 
 <br>
+
+### What is JSON and why do we use it?
+
+**JSON** means **J**ava **S**cript **O**bject **N**otation and it's basically a way of representing data as Javascript objects:
+
+```js
+{
+  "user": [
+    {
+      "name": "Leonardo Majevski",
+      "github": "LeonarDev",
+      "status": "#goAhead"
+    }
+  ]
+}
+```
+
+**JSON** is always present in modern web applications, as it is simple, interpretable and still works very well in JavaScript applications. 
+
+In addition, it is compatible with several other languages, which can interpret it and generate code in the format, such as Python, Java, PHP, Ruby, among others.
+
+In this way, the APIs return data in JSON format, in order to maintain high scalability and independence.
 
 <br>
 
