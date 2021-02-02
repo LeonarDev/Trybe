@@ -1,5 +1,6 @@
 # (5.3) JavaScript - Events
 
+- [addEventListener](#addEventListener)
 - [Exercises:](#exercises)
   - [Exercise 1](#exercise-1)
   - [Exercise 2](#exercise-2)
@@ -12,6 +13,18 @@
   - [Exercise 9](#exercise-9)
   - [Exercise 10](#exercise-10)
   - [Bonus exercise](#bonus-exercise)
+
+<br>
+
+### addEventListener
+
+The most common code for creating an event listener on an element is through a native JavaScript function, called `addEventListener`.
+
+In its most common use, `addEventListener` takes two parameters:
+1. The event we are waiting to hear: Examples: `click`, `change`, `mouseover`, etc.
+2. The function (created by you) that will be executed when the event happens.
+
+To know more events, access this [link](https://www.w3schools.com/jsref/dom_obj_event.asp).
 
 <br>
 
