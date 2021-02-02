@@ -1,6 +1,6 @@
 # (5.1) JavaScript - DOM and selectors
-  - [How do HTML and JavaScript communicate?](#how-do-html-and-javascript-communicate?)
-  - [Which selector to use?](#which-selector-to-use?)
+  - [How do HTML and JavaScript communicate?](#how-do-html-and-javascript-communicate-?)
+  - [Which selector to use?](#which-selector-to-use-?)
   - [Exercise](#exercises)
   - [Exercise 1](#exercise-1)
   - [Exercise 2](#exercise-2)
@@ -8,8 +8,12 @@
   - [Exercise 4](#exercise-4)
   - [Exercise 5](#exercise-5)
   - [Exercise 6](#exercise-6)
+  
+<br>
 
 <img src="https://course.betrybe.com//fundamentals/javascript/images/dom.jpg">
+
+<br>
 
 ### How do HTML and JavaScript communicate?
 The **DOM** (Document Object Model) is an interface that represents how HTML and XML are read by the browser. After reading the HTML document by the browser, the DOM creates an object that makes a representation of the document and defines ways in which this structure can be accessed, that way we can use JavaScript to manipulate the DOM and thus change the style and content of Our page.
