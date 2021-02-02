@@ -1,5 +1,19 @@
 # 9.1 Asynchronous JavaScript and Callbacks
 
+- [Asynchronous JavaScript](#Asynchronous-JavaScript)
+- [Callbacks](#Callbacks)
+- [Handling errors in asynchronous operations](#Handling-errors-in-asynchronous-operations)
+- [Fetch Api](#Fetch-Api)
+- [Exercises](#Exercises)
+  - [Exercise 1](#Exercise-1)
+  - [Exercise 2](#Exercise-2)
+  - [Exercise 3](#Exercise-3)
+  - [Exercise 4](#Exercise-4)
+  - [Exercise 5](#Exercise-5)
+  - [Exercise 6](#Exercise-6)
+
+<br>
+
 ### Asynchronous JavaScript
 
 A concept that is very powerful and present in JavaScript: **asynchronicity**. 
@@ -41,11 +55,7 @@ pushNumber(numbers, 2);
 pushNumber(numbers, 3);
 
 assert.deepStrictEqual(numbers, [1, 2, 3]); // this validation fails
-```
-
-The test expects to receive the array `[1, 2, 3]`, but only receives the `[2, 3]`. This is because of the `setTimeout` function. 
-
-It is an **asynchronous function**, which waits a few **milliseconds** to execute the function passed to it as a parameter. In the code above, it waits *3000 milliseconds (3 seconds)* to execute `pushNumber(numbers, 1)`.
+```Callbacks 1)`.
 
 To pass the test, it is necessary to test the numbers after 3000 milliseconds:
 
@@ -265,7 +275,7 @@ The callback varies depending on the API used, not only in content, but also in 
 
 # Exercises
 
-1) Given the code below, what is the order in which the commented lines are finished?
+#### Exercise 1) Given the code below, what is the order in which the commented lines are finished?
 
 ```js
 const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
@@ -303,7 +313,7 @@ console.log(planetDistanceFromSun(jupiter)); // C
 <hr>
 <br>
 
-2) Now, given the code below, what is the order in which the lines commented are finished?
+#### Exercise 2) Now, given the code below, what is the order in which the lines commented are finished?
 
 ```js
 const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
@@ -341,7 +351,7 @@ setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
 <hr>
 <br>
 
-3) The `getPlanet` function below prints the planet Mars synchronously. Modify `getPlanet`, so that Mars is printed asynchronously, after 4 seconds.
+#### Exercise 3) The `getPlanet` function below prints the planet Mars synchronously. Modify `getPlanet`, so that Mars is printed asynchronously, after 4 seconds.
 
 ```js
 const getPlanet = () => {
@@ -361,7 +371,7 @@ getPlanet(); // prints Mars after 4 seconds
 <hr>
 <br>
 
-4) Suppose you need to simulate a message sent from Mars' [Curiosity](https://mars.nasa.gov/) robot to Earth. Curiosity sends the current temperature on Mars to Earth, spending a variable time of up to 5 seconds for it to finish sending. Create the `sendMarsTemperature` function, which prints the temperature on Mars.
+#### Exercise 4) Suppose you need to simulate a message sent from Mars' [Curiosity](https://mars.nasa.gov/) robot to Earth. Curiosity sends the current temperature on Mars to Earth, spending a variable time of up to 5 seconds for it to finish sending. Create the `sendMarsTemperature` function, which prints the temperature on Mars.
 
 ```js
 const messageDelay = () => Math.floor(Math.random() * 5000);
@@ -380,7 +390,7 @@ sendMarsTemperature(); // prints "Mars temperature is: 20 degree Celsius", for e
 <hr>
 <br>
 
-5) Now that you have done the function that sends the temperature of Mars, suppose that you are able to send to the Curiosity robot what you want to do, once you have successfully obtained the temperature on Mars. Then, add a `callback` in the `sendMarsTemperature` function that contains the actions to be taken over the temperature.
+#### Exercise 5) Now that you have done the function that sends the temperature of Mars, suppose that you are able to send to the Curiosity robot what you want to do, once you have successfully obtained the temperature on Mars. Then, add a `callback` in the `sendMarsTemperature` function that contains the actions to be taken over the temperature.
 
 ```js
 const messageDelay = () => Math.floor(Math.random() * 5000);
@@ -404,7 +414,7 @@ sendMarsTemperature(greet); // prints "Hi there! Curiosity here. Right now is 53
 <hr>
 <br>
 
-6) Finally, the Curiosity robot has a 60% message sending success rate due to the fact that the robot is already very busy with other operations. Then, add in the sendMarsTemperature function another callback that contains the actions to be taken in case of failure.
+#### Exercise 6) Finally, the Curiosity robot has a 60% message sending success rate due to the fact that the robot is already very busy with other operations. Then, add in the sendMarsTemperature function another callback that contains the actions to be taken in case of failure.
 
 ```js
 const messageDelay = () => Math.floor(Math.random() * 5000);
