@@ -5,7 +5,7 @@
 - [Using Promises](#Using-Promises)
 - [Chaining Promises](#Chaining-Promises)
 - [Async and Await](#Async-and-Await)
-- [Application Programming Interface: API](#Application-Programming:-API)
+- [Application Programming Interface: API](#Application-Programming-Interface:-API)
 - [Exercises](#Exercises)
   - [Exercise 1](#Exercise-1)
   - [Exercise 2](#Exercise-2)
