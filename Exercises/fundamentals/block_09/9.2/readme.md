@@ -1,4 +1,4 @@
-# 9.2 Promises and APIs
+# (9.2) Promises and APIs
 
 - [Promises](#Promises)
 - [Creating a Promise](#Creating-a-promise)
