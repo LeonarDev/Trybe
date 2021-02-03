@@ -12,10 +12,11 @@
   - [Exercise 4](#Exercise-4)
   - [Exercise 5](#Exercise-5)
   - [Exercise 6](#Exercise-6)
+<hr>
 
 <br>
 
-### Asynchronous JavaScript
+## Asynchronous JavaScript
 
 A concept that is very powerful and present in JavaScript: **asynchronicity**. 
 
@@ -83,11 +84,11 @@ This is because, as the function is asynchronous, the *code continues to run*, e
 
 To learn more about setTimeout, visit [this link](https://www.w3schools.com/jsref/met_win_settimeout.asp).
 
-<br>
+<hr>
 
 <br>
 
-### Callbacks
+## Callbacks
 
 Briefly, **callback** is a *function passed as a parameter to another function*. 
 
@@ -204,11 +205,11 @@ monthlyBudget(myIncome, myExpenses, handleExpenses);
 //     Balance: US$ 541
 ```
 
-<br>
+<hr>
 
 <br>
 
-### Handling errors in asynchronous operations
+## Handling errors in asynchronous operations
 
 Suppose you are getting user data via an API request. Can we guarantee that this request will always be successful? What if there is a connection failure? What if the API is not working at the time of the request? These cases are examples of external factors, over which we have no control, that need to be addressed.
 
@@ -250,11 +251,11 @@ getCountry(countryName, printErrorMessage);
 getCountry(countryCurrency, printErrorMessage);
 ```
 
-<br>
+<hr>
 
 <br>
 
-### Introduction to Fetch API
+## Introduction to Fetch API
 
 In the context of the **Front-end**, most cases where we need to use asynchronous functions are in requests. A good example is the `fetch()` function of the Fetch API!
 
@@ -269,10 +270,11 @@ The `fetch` function takes two parameters:
   2. An object containing some information about API request. This object contains keys with information specific to that call. These specifications are always present in the usage documentation for that specific API.
 
 The callback varies depending on the API used, not only in content, but also in format. As our main focus is JavaScript, we will mainly deal with responses in **JSON** format, or responses that can be reformatted to do so.
+<hr>
 
 <br>
 
-### What is JSON and why do we use it?
+## What is JSON and why do we use it?
 
 **JSON** means **J**ava **S**cript **O**bject **N**otation and it's basically a way of representing data as Javascript objects:
 
@@ -293,13 +295,16 @@ The callback varies depending on the API used, not only in content, but also in 
 In addition, it is compatible with several other languages, which can interpret it and generate code in the format, such as Python, Java, PHP, Ruby, among others.
 
 In this way, the APIs return data in JSON format, in order to maintain high scalability and independence.
+<hr>
 
 <br>
 
 # Exercises
 
-### Exercise 1) 
-#### Given the code below, what is the order in which the commented lines are finished?
+<br>
+
+## Exercise 1) 
+### Given the code below, what is the order in which the commented lines are finished?
 
 ```js
 const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
@@ -335,10 +340,11 @@ console.log(planetDistanceFromSun(jupiter)); // C
 ```
 
 <hr>
+
 <br>
 
-### Exercise 2) 
-#### Now, given the code below, what is the order in which the lines commented are finished?
+## Exercise 2) 
+### Now, given the code below, what is the order in which the lines commented are finished?
 
 ```js
 const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
@@ -372,12 +378,12 @@ console.log(planetDistanceFromSun(mars)); // A
 setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
 setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
 ```
-
 <hr>
+
 <br>
 
-### Exercise 3) 
-#### The `getPlanet` function below prints the planet Mars synchronously. Modify `getPlanet`, so that Mars is printed asynchronously, after 4 seconds.
+## Exercise 3) 
+### The `getPlanet` function below prints the planet Mars synchronously. Modify `getPlanet`, so that Mars is printed asynchronously, after 4 seconds.
 
 ```js
 const getPlanet = () => {
@@ -393,12 +399,12 @@ const getPlanet = () => {
 
 getPlanet(); // prints Mars after 4 seconds
 ```
-
 <hr>
+
 <br>
 
-### Exercise 4) 
-#### Suppose you need to simulate a message sent from Mars' [Curiosity](https://mars.nasa.gov/) robot to Earth. Curiosity sends the current temperature on Mars to Earth, spending a variable time of up to 5 seconds for it to finish sending. Create the `sendMarsTemperature` function, which prints the temperature on Mars.
+## Exercise 4) 
+### Suppose you need to simulate a message sent from Mars' [Curiosity](https://mars.nasa.gov/) robot to Earth. Curiosity sends the current temperature on Mars to Earth, spending a variable time of up to 5 seconds for it to finish sending. Create the `sendMarsTemperature` function, which prints the temperature on Mars.
 
 ```js
 const messageDelay = () => Math.floor(Math.random() * 5000);
@@ -417,8 +423,8 @@ sendMarsTemperature(); // prints "Mars temperature is: 20 degree Celsius", for e
 <hr>
 <br>
 
-### Exercise 5) 
-#### Now that you have done the function that sends the temperature of Mars, suppose that you are able to send to the Curiosity robot what you want to do, once you have successfully obtained the temperature on Mars. Then, add a `callback` in the `sendMarsTemperature` function that contains the actions to be taken over the temperature.
+## Exercise 5) 
+### Now that you have done the function that sends the temperature of Mars, suppose that you are able to send to the Curiosity robot what you want to do, once you have successfully obtained the temperature on Mars. Then, add a `callback` in the `sendMarsTemperature` function that contains the actions to be taken over the temperature.
 
 ```js
 const messageDelay = () => Math.floor(Math.random() * 5000);
@@ -438,12 +444,12 @@ const greet = (temperature) => console.log(`Hi there! Curiosity here. Right now 
 sendMarsTemperature(temperatureInFahrenheit); // prints "It is currently 47ºF at Mars", for example
 sendMarsTemperature(greet); // prints "Hi there! Curiosity here. Right now is 53ºC at Mars", for example
 ```
-
 <hr>
+
 <br>
 
-### Exercise 6) 
-#### Finally, the Curiosity robot has a 60% message sending success rate due to the fact that the robot is already very busy with other operations. Then, add in the sendMarsTemperature function another callback that contains the actions to be taken in case of failure.
+## Exercise 6) 
+### Finally, the Curiosity robot has a 60% message sending success rate due to the fact that the robot is already very busy with other operations. Then, add in the sendMarsTemperature function another callback that contains the actions to be taken in case of failure.
 
 ```js
 const messageDelay = () => Math.floor(Math.random() * 5000);
