@@ -32,6 +32,7 @@ Promises have three states:
 - **Rejected**: The operation did not complete; an error value is usually thrown
 
 <br>
+<hr>
 
 ### Creating a Promise
 
@@ -75,6 +76,7 @@ const date    = new Promise(function(resolve, reject) {
 If `weather` is `true`, resolve the promise returning the data `dateDetails`, else return an error object with data `Bad weather, so no Date`.
 
 <br>
+<hr>
 
 ### Using Promises
 
@@ -123,6 +125,7 @@ We are going on a date!
 >Note: **Promises are asynchronous**. Promises in functions are placed in a micro-task queue and run when other synchronous operations complete.
 
 <br>
+<hr>
 
 ### Chaining Promises
 
@@ -175,6 +178,7 @@ Get me an Uber ASAP to 55th Street, we are going on a date!
 Once the `orderUber` promise is chained with `.then`, subsequent `.then` utilizes data from the previous one.
 
 <br>
+<hr>
 
 ### Async and Await
 
@@ -245,6 +249,7 @@ Lastly we call our async function:
 ```
 
 <br>
+<hr>
 
 ### Application Programming Interface
 
@@ -259,9 +264,3 @@ An **API** allows applications to communicate with each other, serving as a "bri
 A standard website backend returns templates for the front end of a single application, through defined routes. For example, when you access a page on our platform, you are making a **request** to the server, which returns a template as a **response**.
 
 The APIs also have access routes that allow communication with the server, but they do not need to return templates. Generally, they return data in **JSON** format.
-
-<br>
-
-<br>
-
-
