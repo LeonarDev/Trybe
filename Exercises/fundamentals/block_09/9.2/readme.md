@@ -30,11 +30,12 @@ Promises have three states:
 - **Pending**: This is the initial state of the Promise before an operation begins
 - **Fulfilled**: This means the specified operation was completed
 - **Rejected**: The operation did not complete; an error value is usually thrown
-
-<br>
 <hr>
 
-### Creating a Promise
+<br>
+
+
+## Creating a Promise
 
 The Promise object is created using the new keyword and contains the `promise`; this is an executor function which has a **resolve** and a **reject** callback. 
 
@@ -74,11 +75,12 @@ const date    = new Promise(function(resolve, reject) {
 ```
 
 If `weather` is `true`, resolve the promise returning the data `dateDetails`, else return an error object with data `Bad weather, so no Date`.
-
-<br>
 <hr>
 
-### Using Promises
+<br>
+
+
+## Using Promises
 
 Using a promise that has been created is relatively straightforward; we chain `.then()` and `.catch()` to our **Promise** like so:
 
@@ -123,11 +125,12 @@ We are going on a date!
 `.then()` receives a function with an argument which is the **resolve** value of our promise. `.catch` returns the **reject** value of our promise.
 
 >Note: **Promises are asynchronous**. Promises in functions are placed in a micro-task queue and run when other synchronous operations complete.
-
-<br>
 <hr>
 
-### Chaining Promises
+<br>
+
+
+## Chaining Promises
 
 Sometimes we may *need to execute two or more asynchronous operations* based on the result of preceding promises. In this case, promises are chained. Still using our created promise, let’s order an uber if we are going on a date.
 
@@ -176,13 +179,14 @@ Get me an Uber ASAP to 55th Street, we are going on a date!
 ```
 
 Once the `orderUber` promise is chained with `.then`, subsequent `.then` utilizes data from the previous one.
-
-<br>
 <hr>
 
-### Async and Await
+<br>
 
-#### Async
+
+## Async and Await
+
+### Async
 
 An **async function** is a modification to the syntax used in writing promises. You can call it syntactic sugar over promises. It only makes writing promises easier.
 
@@ -220,7 +224,7 @@ async function() {
 
 <br>
 
-#### Await
+### Await
 
 The await keyword is used in an async function to ensure that all promises returned in the async function are synchronized, ie. they wait for each other. 
 
@@ -247,11 +251,12 @@ Lastly we call our async function:
   await myDate();
 })();
 ```
-
-<br>
 <hr>
 
-### Application Programming Interface
+<br>
+
+
+## Application Programming Interface
 
 An **API** allows applications to communicate with each other, serving as a "bridge" for them. An API is not a database or a server, but the one responsible for controlling access points to them, through a set of routines and programming standards
 
