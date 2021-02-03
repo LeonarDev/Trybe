@@ -5,7 +5,7 @@
   - [Exercise 5](#Exercise-5)
   - [Exercise bonus](#Exercise-bonus)
 
-# Exercises
+<br>
 
 ### Exercise 1)
 #### First, see the [API manual on the icanhazdadjoke.com website](https://icanhazdadjoke.com/api). He explains how to make requests for joke service. For now, just look around; now let's understand how this API works:
