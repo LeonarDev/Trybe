@@ -6,6 +6,7 @@
 - [Chaining Promises](#Chaining-Promises)
 - [Async and Await](#Async-and-Await)
 - [Application Programming Interface](#Application-Programming-Interface)
+- [Exercises](https://github.com/LeonarDev/Trybe/edit/main/Exercises/fundamentals/block_09/9.2/exercises)
 
 <br>
 
