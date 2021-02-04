@@ -16,29 +16,9 @@
   - [not](#not)
 - [The describe block](#The-describe-block)
 - [Exercises Part I](#Exercises-Part-1)
-  - [1.1](#1.1)
-  - [1.2](#1.2)
-  - [1.3](#1.3)
-  - [1.4](#1.4)
-  - [1.5](#1.5)
 - [Exercises Part II](#Exercises-Part-2)
-  - [2.1](#)
-  - [2.2](#)
-  - [2.3](#)
-  - [2.4](#)
-  - [2.5](#)
-  - [2.6](#)
-  - [2.7](#)
-  - [](#)
-  - [](#)
-  - [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
+
+
 
 <hr>
 <br>
@@ -462,24 +442,19 @@ function sum(a, b) {
 ```
 <br>
 
-## 1.1
-### Test that the sum (a, b) function returns the sum of parameter a and b.
+## 1.1 Test that the sum (a, b) function returns the sum of parameter a and b.
 <br>
 
-## 1.2
-### Test if the sum return (4, 5) is 9.
+## 1.2 Test if the sum return (4, 5) is 9.
 <br>
 
-## 1.3
-### Test if the return of sum (0, 0) is 0.
+## 1.3 Test if the return of sum (0, 0) is 0.
 <br>
 
-## 1.4
-### Test if the sum function throws an error when the parameters are 4 and "5" (string 5).
+## 1.4  Test if the sum function throws an error when the parameters are 4 and "5" (string 5).
 <br>
 
-## 1.5
-### Test if the error message is "parameters must be numbers" when making the sum call (4, "5").
+## 1.5 Test if the error message is "parameters must be numbers" when making the sum call (4, "5").
 <hr>
 <br>
 
