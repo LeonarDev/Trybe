@@ -442,19 +442,19 @@ function sum(a, b) {
 ```
 <br>
 
-### 1.1) Test that the sum (a, b) function returns the sum of parameter a and b.
+#### 1.1) Test that the sum (a, b) function returns the sum of parameter a and b.
 <br>
 
-### 1.2) Test if the sum return (4, 5) is 9.
+#### 1.2) Test if the sum return (4, 5) is 9.
 <br>
 
-### 1.3) Test if the return of sum (0, 0) is 0.
+#### 1.3) Test if the return of sum (0, 0) is 0.
 <br>
 
-### 1.4)  Test if the sum function throws an error when the parameters are 4 and "5" (string 5).
+#### 1.4)  Test if the sum function throws an error when the parameters are 4 and "5" (string 5).
 <br>
 
-### 1.5) Test if the error message is "parameters must be numbers" when making the sum call (4, "5").
+#### 1.5) Test if the error message is "parameters must be numbers" when making the sum call (4, "5").
 <hr>
 <br>
 
@@ -481,9 +481,9 @@ function encode(string) {
     }
   }
   return encodedString;
-```
+}
 
-```js
+
 function decode(string) {
   let decodedString = '';
   for (let index in string) {
@@ -506,3 +506,13 @@ function decode(string) {
 ```
 
 For the `encode` and `decode` functions, create the following tests:
+
+#### 2.1) Test if `encode` and `decode` are functions.
+
+#### 2.2) For the `encode` function, teste if the vowels a, e, i, o, u are converted to 1, 2, 3, 4 and 5, respectively;
+
+#### 2.3) For the `decode` function test if the numbers 1, 2, 3, 4 and 5 are converted to the vowels a, e, i, o, u, respectively;
+
+#### 2.4) Test if the other letters/numbers are not converted for each case;
+
+#### 2.5) Test if the `string` that is returned by the functions has the same number of characters as the `string` passed as a parameter.
