@@ -17,8 +17,7 @@
 - [The describe block](#The-describe-block)
 - [Exercises Part I](#Exercises-Part-1)
 - [Exercises Part II](#Exercises-Part-2)
-
-
+- [Exercises Part III](#Exercises-Part-3)
 
 <hr>
 <br>
@@ -516,3 +515,61 @@ For the `encode` and `decode` functions, create the following tests:
 #### 2.4) Test if the other letters/numbers are not converted for each case;
 
 #### 2.5) Test if the `string` that is returned by the functions has the same number of characters as the `string` passed as a parameter.
+<hr>
+<br>
+
+# Exercises Part 3
+
+The `techList` function takes as parameters an array containing a list of technologies and a string with a name. 
+For each technology in the array, the function creates, in alphabetical order, an object with the following structure:
+
+```js
+{
+  tech: 'technologyName',
+  name: name,
+}
+```
+
+#### 3.1) Implement the `techList` function from the tests below. 
+
+```js
+const techList = require('./techList.js');
+
+describe('Tests the techList function', () => {
+  it('Tests if `techList` is defined', () => {
+    expect(techList).toBeDefined();
+  });
+  it('Tests if `techList` is a function', () => {
+    expect(typeof techList).toBe('function');
+  });
+  it('A list of 5 technologies should return a list of ordered objects', () => {
+    expect(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas')).toEqual([
+      {
+        tech: 'CSS',
+        name: 'Lucas'
+      },
+      {
+        tech: 'HTML',
+        name: 'Lucas'
+      },
+      {
+        tech: 'JavaScript',
+        name: 'Lucas'
+      },
+      {
+        tech: 'Jest',
+        name: 'Lucas'
+      },
+      {
+        tech: 'React',
+        name: 'Lucas'
+      }
+    ]);
+  });
+  it('List of 0 technologies should return an error message: "Empty!"', () => {
+    expect(techList([], 'Lucas')).toBe('Empty!');
+  });
+});
+
+module.exports = techList;
+```
