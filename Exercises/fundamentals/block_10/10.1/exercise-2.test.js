@@ -14,7 +14,14 @@ describe('Exercises - Part 2', () => {
   test('if `encode` and `decode` are functions', () => {
     expect(typeof encode && typeof decode).toEqual('function');
   });
-  test('test if the numbers 1, 2, 3, 4, 5 in `decode` are converted to a, e, i, o, u, respectively', () => {
+  test('in `encode` if a, e, i, o, u, are converted to 1, 2, 3, 4, 5, respectively', () => {
+    expect(encode('a')).toBe('1') &&
+          (encode('b')).toBe('2') &&
+          (encode('c')).toBe('3') &&
+          (encode('d')).toBe('4') &&
+          (encode('e')).toBe('5');
+  })
+  test('in `decode` if 1, 2, 3, 4, 5 are converted to a, e, i, o, u, respectively', () => {
     expect(decode('1')).toBe('a') &&
           (decode('2')).toBe('e') &&
           (decode('3')).toBe('i') &&
