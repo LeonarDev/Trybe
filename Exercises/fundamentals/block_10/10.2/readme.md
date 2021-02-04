@@ -1,6 +1,3 @@
-# TRANSLATE TO ENGLISH
-
-
 # (10.2) Jest - Assynchronous Tests
 
 <br>
