@@ -416,3 +416,159 @@ describe('Requesting cities from api', () => {
 ```
 
 [Official Documentation do see more examples](https://jestjs.io/docs/en/setup-teardown)
+
+<hr>
+<br>
+
+# Exercises
+
+#### 1) Write a test that checks the callback call of an `uppercase` function, which turns the letters of a word into capital letters. Remember to be careful of false positives in asynchronous tests.
+
+```js
+const uppercase = (str, callback) => {
+  callback(str.toUpperCase());
+};
+```
+
+**Base code for exercises 2 and 3:**
+The following code simulates a call to the database to search for users. The result of this search is a Promise, which is used by the `getUserName` method.
+
+```js
+const users = {
+: { name: 'Mark' },
+: { name: 'Paul' }
+};
+
+const findUserById = (id) => {
+  return new Promise((resolve, reject) => {
+      if (users[id]) {
+        return resolve(users[id]);
+      };
+
+      return reject({ error: 'User with ' + id + ' not found.' });
+  });
+};
+
+const getUserName = (userID) => {
+  return findUserById(userID).then(user => user.name);
+};
+```
+
+<br>
+
+#### 2) Using the Promise syntax, run a test that checks the result of the `getUserName` function for the case where the user is found, and also a test for the case where the user is not found.
+> Tip: See the false data used in the database, available in the users variable, to know which IDs exist.
+
+<br>
+
+#### 3) Rewrite the test from the previous exercise, this time using async / await syntax.
+> Tip: Use [try/catch](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) in case of an error.
+
+<br>
+
+#### 4) The code below searches a user's GitHub, according to the URL, their repositories, and returns a list as a result. Given the URL `'https://api.github.com/orgs/tryber/repos'`, do a test to verify that the `'sd-01-week4-5-project-todo-list'` and `'sd-01- week4-5-project-meme-generator'` are on that list.
+
+```js
+const fetch = require('node-fetch');
+
+const getRepos = (url) => {
+  return fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      return data.map((repo) => repo.name);
+    });
+};
+```
+
+<br>
+
+#### 5) For this exercise, try to guess the output of the `console.log` from the tests below without running them, and see if you have a good understanding of how `beforeEach` and `afterEach` work.
+
+```js
+beforeEach(() => console.log('1 - beforeEach'));
+afterEach(() => console.log('1 - afterEach'));
+
+test('', () => console.log('1 - test'));
+
+describe('Scoped / Nested block', () => {
+  beforeEach(() => console.log('2 - beforeEach'));
+  afterEach(() => console.log('2 - afterEach'));
+
+  test('', () => console.log('2 - test'));
+});
+```
+
+<br>
+
+#### 6) In this exercise, you will create functions similar to the code below - the same one that was used as an example on the promise tests.
+
+```js
+const Animals = [
+  { name: 'Sleeper', age: 1, type: 'Dog' },
+  { name: 'Snooze', age: 2, type: 'Dog' },
+  { name: 'Sloth', age: 5, type: 'Cat' },
+];
+
+const findAnimalsByType = (type) => (
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const arrayAnimals = Animals.filter((animal) => animal.type === type);
+      if (arrayAnimals.length !== 0) {
+        return resolve(arrayAnimals);
+      };
+
+      return reject({ error: `It doesn't have that kind of animal.` });
+    }, 100);
+  })
+);
+
+const getListAnimals = (type) => (
+  findAnimalsByType(type).then(list => list)
+);
+```
+<br>
+
+Use as a basis for the following exercises:
+
+```js
+const Animals = [
+  { name: 'Sleeper', age: 1, type: 'Dog' },
+  { name: 'Snooze', age: 2, type: 'Dog' },
+  { name: 'Sloth', age: 5, type: 'Cat' },
+];
+
+const findAnimalByName = (name) => (
+  // Add the code here
+);
+
+const getAnimal = (name) => {
+  // Add the code here
+};
+// ---------------------
+
+describe('Testing promise - findAnimalByName', () => {
+  describe('When there is an animal with the name sought', () => {
+    test('Return the animal object', () => {
+      expect.assertions(1);
+      return getAnimal('Sleeper').then(animal => {
+        expect(animal).toEqual({ name: 'Sleeper', age: 1, type: 'Dog' });
+      });
+    });
+  });
+
+  describe('When there is no animal with the name sought', () => {
+    test('Returns an error', () => {
+      expect.assertions(1);
+      return getAnimal('Bob').catch(error =>
+        expect(error).toEqual('No animals with that name!');
+      );
+    });
+  });
+});
+```
+
+#### 7) Add a feature to search for the animal's name - create a function that should pass the test.
+
+<br>
+
+#### 8) Add a new feature to search for the age of the animals. The return should be an array of objects, but if you can't find any, return an error message. Write down both the function and your test.
