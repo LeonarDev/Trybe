@@ -1,6 +1,3 @@
-# TRANSLATE TO ENGLISH
-
-
 # (10.2) Jest - Assynchronous Tests
 
 <br>
@@ -9,10 +6,9 @@
   - [Callbacks](#Callbacks)
   - [Promises](#Promises)
   - [Async/Await](#Async/Await)
-- [Matcher .resolves / .rejects](#Matcher-.resolves-/-.rejects)
+- [Matcher resolves/rejects](#Matcher-resolves/rejects)
 - [Setup and Teardown](#Setup-and-Teardown)
-- []()
-- []()
+- [Exercises](#Exercises)
 
 
 <hr>
@@ -278,7 +274,7 @@ test('Testing with async/await, testing the reject', async () => {
 <hr>
 <br>
 
-## Matcher .resolves / .rejects
+## Matcher resolves/rejects
 In *Jest 20.0.0*, to further simplify testing, matchers `.resolves` and `.rejects` were added.
 
 `.Resolves` expects the promise to be resolved. If the promise is rejected, the test will automatically fail.
