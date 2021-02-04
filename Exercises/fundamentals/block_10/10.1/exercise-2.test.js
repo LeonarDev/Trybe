@@ -28,12 +28,12 @@ test('in `decode` if 1, 2, 3, 4, 5 are converted to a, e, i, o, u, respectively'
           (decode('4')).toBe('o') &&
           (decode('5')).toBe('u');
   });
-  test('if the other letters/numbers are not converted for each case', () => {
-      expect(encode('mensuration')).toEqual('m2ns5r1t34n') &&
-            (decode('1d2c3t45n')).not.toEqual('education');
+test('if the other letters/numbers are not converted for each case', () => {
+    expect(encode('mensuration')).toEqual('m2ns5r1t34n') &&
+          (decode('1d2c3t45n')).not.toEqual('education');
   });
-  test('if the `string` that is returned by the functions has the same number of characters as the `string` passed as a parameter', () => {
-      expect(encode('string').length).toEqual(6) &&
-            (decode('12345').length).toEqual(5);
+test('if the `string` that is returned by the functions has the same number of characters as the `string` passed as a parameter', () => {
+    expect(encode('string').length).toEqual(6) &&
+          (decode('12345').length).toEqual(5);
   })
 })
