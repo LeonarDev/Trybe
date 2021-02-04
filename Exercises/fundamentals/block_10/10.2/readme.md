@@ -5,8 +5,8 @@
 - [Testing asynchronous code](#Testing-asynchronous-code)
   - [Callbacks](#Callbacks)
   - [Promises](#Promises)
-  - [Async/Await](#Async/Await)
-- [Matcher resolves/rejects](#Matcher-resolves/rejects)
+  - [Async and Await](#Async-and-Await)
+- [Matcher .resolves and .rejects](#Matcher-.resolves-and-.rejects)
 - [Setup and Teardown](#Setup-and-Teardown)
 - [Exercises](#Exercises)
 
@@ -248,7 +248,7 @@ As the `Animals` array does not have any `Lion` (type inserted in the test), the
 <hr>
 <br>
 
-### Async/Await
+### Async and Await
 To test the `Async/Await` code, the same code as before, but with minor changes, will be used. Watch:
 
 ```js
@@ -274,7 +274,7 @@ test('Testing with async/await, testing the reject', async () => {
 <hr>
 <br>
 
-## Matcher resolves/rejects
+## Matcher .resolves and .rejects
 In *Jest 20.0.0*, to further simplify testing, matchers `.resolves` and `.rejects` were added.
 
 `.Resolves` expects the promise to be resolved. If the promise is rejected, the test will automatically fail.
