@@ -1,42 +1,30 @@
-// encode-decode.js
-const encode = string => {
-  let encodedString = '';
-  for (let index in string) {
-    if (string[index] === 'a') {
-      encodedString += '1';
-    } else if (string[index] === 'e') {
-      encodedString += '2';
-    } else if (string[index] === 'i') {
-      encodedString += '3';
-    } else if (string[index] === 'o') {
-      encodedString += '4';
-    } else if (string[index] === 'u') {
-      encodedString += '5';
-    } else {
-      encodedString += string[index];
-    }
-  }
-  return encodedString;
-}
-const decode = string => {
-  let decodedString = '';
-  for (let index in string) {
-    if (string[index] === '1') {
-      decodedString += 'a';
-    } else if (string[index] === '2') {
-      decodedString += 'e';
-    } else if (string[index] === '3') {
-      decodedString += 'i';
-    } else if (string[index] === '4') {
-      decodedString += 'o';
-    } else if (string[index] === '5') {
-      decodedString += 'u';
-    } else {
-      decodedString += string[index];
-    }
-  }
-  return decodedString;
-}
+const encode = (string) => {
+  const splitString = string.split('');
+
+  const encodeString = splitString.map((character, index) => {
+    if (character === 'a') return splitString[index] = 1;
+    if (character === 'e') return splitString[index] = 2;
+    if (character === 'i') return splitString[index] = 3;
+    if (character === 'o') return splitString[index] = 4;
+    if (character === 'u') return splitString[index] = 5;
+    else return character;
+  });
+  return encodeString.join('');
+};
+
+const decode = (string) => {
+  const splitString = string.split('');
+
+  const decodeString = splitString.map((number, index) => {
+    if (number === '1') return splitString[index] = 'a';
+    if (number === '2') return splitString[index] = 'e';
+    if (number === '3') return splitString[index] = 'i';
+    if (number === '4') return splitString[index] = 'o';
+    if (number === '5') return splitString[index] = 'u';
+    else return number;
+  });
+  return decodeString.join('');
+};
 
 const functions = { encode, decode };
 
