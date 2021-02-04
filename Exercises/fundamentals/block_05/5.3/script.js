@@ -46,6 +46,7 @@ function createDaysOfTheMonth() {
 };
 createDaysOfTheMonth();
 
+
 // Exercise 2) Implement a function that takes the string "Holidays" as a parameter and dynamically creates a button with the name "Holidays".
 // - Add to this button the ID `btn-holiday`.
 // - Add this button as a child of the `<div>` tag with the class `buttons-container`.
@@ -59,6 +60,7 @@ function createButton(buttonName) {
   buttonContainer.appendChild(newButton);
 };
 createButton('Holidays');
+
 
 // Exercise 3) Implement a function that adds a "click" event to the "Holidays" button that changes the background color of days that have the class `holiday`.
 // - It is interesting that this button also has the reverse logic. When clicked again it returns to the initial configuration with the color `rgb(238,238,238)`.
@@ -80,10 +82,10 @@ function changeColorOfHolidays() {
 }
 changeColorOfHolidays();
 
+
 // Exercise 4) Implement a function that takes the string "Friday" as a parameter and dynamically creates a button with the name "Friday".
 // - Add the ID `btn-friday` to this button.
 // - Add this button as a child of the `<div>` tag with the class `buttons-container`.
-
 function createFridayButton(buttonName) {
   let buttonContainer = document.querySelector('.buttons-container');
   let newButton = document.createElement('button');
@@ -95,9 +97,9 @@ function createFridayButton(buttonName) {
 }
 createFridayButton('Friday');
 
+
 // Exercise 5) Implement a function that adds a "click" event to the "Friday" button that changes the text displayed on Friday.
 // - It is interesting that this button also has the reverse logic. When clicked again it returns to the initial configuration displaying the days.
-
 function changesTextOfFriday(fridaysArray) {
   let getFridayButton = document.querySelector('#btn-friday');
   let getFridays = document.querySelectorAll('.friday-day');
@@ -114,6 +116,7 @@ function changesTextOfFriday(fridaysArray) {
   })
 }
 changesTextOfFriday(decemberDaysList);
+
 
 // Exercise 6) Implement two functions that create a "zoom" effect. When hovering the mouse pointer over a day of the month on the calendar, the text for that day should increase, and when the mouse pointer leaves the day, the text should return to its original size
 function dayMouseOver() {
@@ -137,6 +140,34 @@ function dayMouseOut() {
 dayMouseOver();
 dayMouseOut();
 
+
 // Exercise 7:
 // Implement a function that adds a custom task to the calendar. The function must receive as a parameter the string with the task name (ex: "cook") and dynamically create an element with the tag `<span>` containing the task.
 // - The created element must be added as a child of the `<div>` tag that has the class `my-tasks`.
+const getTaskContainer = document.querySelector('.my-tasks');
+
+const newTaskSpan = task => {
+  let createSpanToTaskName = document.createElement('span');
+
+  createSpanToTaskName.innerHTML = task;
+  getTaskContainer.appendChild(createSpanToTaskName);
+}
+newTaskSpan('Project:');
+
+
+// // Exercise 8:
+// Implement a function that adds a colored caption to the task created in the previous exercise. This function should take as a parameter a string ("color") and dynamically create an element of tag <div> with the task class.
+// The color parameter should be used as the background color of the <div> created.
+// The created element must be added as a child of the <div> tag that has the class "my-tasks".
+const newTaskDiv = color => {
+  let createNewTask = document.createElement('div');
+  createNewTask.className = 'task';
+  createNewTask.style.backgroundColor = color;
+  getTaskContainer.appendChild(createNewTask);
+}
+newTaskDiv('green');
+
+
+// Exercise 9:
+// Implement a function that adds an event that when clicking on the element with the <div> tag referring to the color of your task, assign this element the task selected class, that is, when your task has the task selected class it will be selected.
+// When you click on the element again, your class should return to being just task, that is, this task is no longer a selected task.
