@@ -6,7 +6,7 @@
   - [Callbacks](#Callbacks)
   - [Promises](#Promises)
   - [Async and Await](#Async-and-Await)
-- [Matcher .resolves and .rejects](#Matcher-.resolves-and-.rejects)
+- [Matcher .resolves and .rejects](#matcher)
 - [Setup and Teardown](#Setup-and-Teardown)
 - [Exercises](#Exercises)
 
@@ -274,7 +274,7 @@ test('Testing with async/await, testing the reject', async () => {
 <hr>
 <br>
 
-## Matcher .resolves and .rejects
+## <a name=matcher><a/>Matcher .resolves and .rejects
 In *Jest 20.0.0*, to further simplify testing, matchers `.resolves` and `.rejects` were added.
 
 `.Resolves` expects the promise to be resolved. If the promise is rejected, the test will automatically fail.
