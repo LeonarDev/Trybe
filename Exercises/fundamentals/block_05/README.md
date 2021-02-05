@@ -13,21 +13,6 @@
 
 <hr>
 
-### Events
-
-`GetElementById(id)` works differently than `querySelector('#id')`, but the result is the same. The first has a better performance, but the second is more flexible.
-
-Attention! While `getElementsByClassName('ClassName')` and `getElementsByTagName('TagName')` return an HTMLCollection, `querySelectorAll('.ClassName')` and `querySelectorAll('TagName')` return a NodeList.
-
-Read about the difference between HTMLCollection and NodeList [here](https://teamtreehouse.com/community/understanding-the-difference-between-an-htmlcollection-and-a-nodelist).
-
-Another point is the form of the response, which can be different between selectors (HTMLCollection and NodeList). 
-The way to search the data stored in these structures, in some cases, can change, so a little care when making functions that use the result of the selectors can save those who have headaches about why an apparently correct function does not work.
-
-- [How to compare dates in Javascript](https://pt.stackoverflow.com/questions/217881/comparar-data-atual-com-javascript?rq=1) (PT-BR)
-
-<hr>
-
 ### Web Storage
 
 Web Storage provides mechanisms for web applications to save data in people's browsers.
