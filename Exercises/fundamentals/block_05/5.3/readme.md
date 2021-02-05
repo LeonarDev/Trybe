@@ -1,20 +1,26 @@
 # (5.3) JavaScript - Events
 
+- [Events](#Events)
 - [addEventListener](#addEventListener)
 - [Exercises:](#exercises)
-  - [Exercise 1](#exercise-1)
-  - [Exercise 2](#exercise-2)
-  - [Exercise 3](#exercise-3)
-  - [Exercise 4](#exercise-4)
-  - [Exercise 5](#exercise-5)
-  - [Exercise 6](#exercise-6)
-  - [Exercise 7](#exercise-7)
-  - [Exercise 8](#exercise-8)
-  - [Exercise 9](#exercise-9)
-  - [Exercise 10](#exercise-10)
-  - [Bonus exercise](#bonus-exercise)
+
 
 <br>
+
+### Events
+
+`GetElementById(id)` works differently than `querySelector('#id')`, but the result is the same. The first has a better performance, but the second is more flexible.
+
+Attention! While `getElementsByClassName('ClassName')` and `getElementsByTagName('TagName')` return an HTMLCollection, `querySelectorAll('.ClassName')` and `querySelectorAll('TagName')` return a NodeList.
+
+Read about the difference between HTMLCollection and NodeList [here](https://teamtreehouse.com/community/understanding-the-difference-between-an-htmlcollection-and-a-nodelist).
+
+Another point is the form of the response, which can be different between selectors (HTMLCollection and NodeList). 
+The way to search the data stored in these structures, in some cases, can change, so a little care when making functions that use the result of the selectors can save those who have headaches about why an apparently correct function does not work.
+
+- [How to compare dates in Javascript](https://pt.stackoverflow.com/questions/217881/comparar-data-atual-com-javascript?rq=1) (PT-BR)
+
+<hr>
 
 ### addEventListener
 
