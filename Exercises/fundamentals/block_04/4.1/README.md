@@ -1,12 +1,12 @@
 # (4.1) JavaScript - Introduction
 
-- [Declaring JavaScript Variables](#)
-- [Using Variables](#)
-- [var](#)
-- [let](#)
-- [const](#)
-- [Scope](#)
-- [Hoisting](#)
+- [Declaring JavaScript Variables](#Declaring-JavaScript-Variables)
+- [Using Variables](#Using-Variables)
+    - [var](#var)
+    - [let](#let)
+    - [const](#const)
+- [Scope](#scope)
+- [Hoisting](#hoisting)
 - [Exercises](#Exercises)
 
 <hr>
