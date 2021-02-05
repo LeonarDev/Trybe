@@ -7,12 +7,11 @@
 - (1.4) Unix & Bash - Part 2
  
  <hr>
+ <br>
 
-<img src="https://course.betrybe.com//fundamentals/unix/images/comandos_part1.png">
 
-<br>
+<img src="https://i.pinimg.com/originals/38/39/21/383921b2a01fc37ba816034a5aa9094b.jpg">
 
-<img src="https://course.betrybe.com//fundamentals/unix/images/comandos_part2.png">
 
 <br>
 
