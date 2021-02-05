@@ -289,6 +289,8 @@ console.log(x); // ReferenceError
 ## Exercises
 
 In today's exercises, you will be doing fifteen small programs. All work with conditional logic (`if / else` and` switch`), arithmetic operators (+, -, *, /,%) and logical operators (>, <, &&, ||). For you to be able to run your codes we recommend that you use the Code Runner extension, you can see more about it in the content we did about using VS Code.
+
+<hr>
 <br>
 
 **1**. Make five programs, one for each basic arithmetic operation. Your program must have two variables, a and b, defined at the beginning with the values to be operated. Make programs for:
@@ -297,19 +299,28 @@ In today's exercises, you will be doing fifteen small programs. All work with co
     * Multiplication
     * Division
     * Module
+<hr>
 <br>
 
 **2**. Make a program that returns the greater of two numbers. Define two variables at the beginning of the program with the values to be compared.
+
+<hr>
 <br>
 
 **3**. Make a program that returns the largest of three numbers. Define three variables at the beginning of the program with the values to be compared.
+
+<hr>
 <br>
 
 **4**. Make a program that, given a value defined in a variable, returns "positive" if that value is positive, "negative" if it is negative and "zero" otherwise.
+
+<hr>
 <br>
 
 **5**. Make a program that defines three variables with the values of the three internal angles of a triangle. Return true if the angles represent the angles of a triangle and false otherwise.
     * For the angles to be a valid triangle, the sum of the three must be 180 degrees. If the angles are invalid, the program should return an error message.
+
+<hr>
 <br>
 
 **6**. Write a program that is named after a chess piece and returns the movements it makes.
@@ -317,6 +328,8 @@ In today's exercises, you will be doing fifteen small programs. All work with co
     * As a tip, you can search for a function that makes a string stay with all lower case letters.
     * If the part passed is invalid, the program should return an error message.
     * Example: bishop -> diagonals
+
+<hr>
 <br>
 
 **7**. Write a program that converts a grade given in percentage (from 0 to 100) into concepts from A to F. Follow these rules:
@@ -327,14 +340,20 @@ In today's exercises, you will be doing fifteen small programs. All work with co
     * Percentage> = 50 -> E
     * Percentage <50 -> F
     * The program should return an error message and end if the grade passed is less than 0 or greater than 100.
+
+<hr>
 <br>
 
 **8**. Write a program that defines three numbers in variables at the beginning and returns true if at least one of the three is even. Otherwise, it returns false.
     * Bonus: use only an `if`.
+
+<hr>
 <br>
 
 **9**. Write a program that defines three numbers in variables at the beginning and returns true if at least one of the three is odd. Otherwise, it returns `false`.
     * Bonus: use only an `if`.
+
+<hr>
 <br>
 
 **10**. Write a program that starts with two values in two different variables: the cost of a product and its sales value. From the values, calculate how much profit (sales value less the cost of the product) the company will have when selling 1,000 of these products.
@@ -343,6 +362,8 @@ In today's exercises, you will be doing fifteen small programs. All work with co
     * The profit of a product is the result of subtracting the sale value from the cost of the product, and the 20% tax is also part of the cost value.
       * TotalCostValue = CostValue + TaxAboutCost
       * profit = salesValue - TotalCost (profit of a product)
+
+<hr>
 <br>
 
 **11**. A person who works with a formal contract in Brazil has the INSS and the IR deducted from his gross salary. Make a program that, given a gross salary, calculates the net to be received.
