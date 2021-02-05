@@ -1,8 +1,8 @@
 # (2.2) Git & GitHub - Understanding commands
 
-<img src="https://imgur.com/CEURQsS">
+<img src="https://i.imgur.com/CEURQsS.jpg">
 
-<img src="https://imgur.com/NumaJ0F">
+<img src="https://i.imgur.com/NumaJ0F.png">
 
 ### Pull Request GitHub
 Read carefully this tutorial that explains how to create a Pull Request on GitHub:
