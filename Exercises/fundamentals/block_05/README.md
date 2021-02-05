@@ -13,27 +13,6 @@
 
 <hr>
 
-<img src="https://course.betrybe.com//fundamentals/javascript/images/dom.jpg">
-
-
-### DOM
-
-`Window`: Represents a window that contains a DOM element, being possible to access the document that the window contains through Window;
-
-`location`: Represents the location of the object to which it is associated, that is, the current document;
-
-`document`: Represents any web page loaded in the browser and serves as an entry point for the content on the web page, so the document contains all HTML documents;
-
-`history`: Allows the manipulation of the browser session history, that is, the pages visited on the tab or frame where the current page is loaded;
-
-`element`: It is the most general base class from which all objects in a Document inherit, that is, they are all tags that are in HTML files and become elements of the DOM tree;
-
-`text`: Text that goes between the elements, is the entire content of the tags;
-
-`attribute`: These are all the attributes that a specific node has, such as a class or id.
-
-<hr>
-
 ### Events
 
 `GetElementById(id)` works differently than `querySelector('#id')`, but the result is the same. The first has a better performance, but the second is more flexible.
