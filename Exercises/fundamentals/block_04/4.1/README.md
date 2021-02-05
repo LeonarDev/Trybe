@@ -142,6 +142,9 @@ let x = 50;
 console.log(x); // SyntaxError: identifier "x" has already been declared.
 ```
 
+<hr>
+<br>
+
 ## const
 `const`, is a variable type (not really, but you’ll find out now) assigned to data whose **value cannot and will not be changed** throughout the script. Now, this is more strict. `const` is also limited to the scope which it operates. `const` is declared like `var` and `let`.
 
