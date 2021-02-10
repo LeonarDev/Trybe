@@ -19,14 +19,14 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 07 [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) | :heavy_check_mark:
 | Block 08 [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) | :heavy_check_mark:
 | Block 09 [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) | :white_check_mark:
-| Block 10 [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) | :triangular_flag_on_post:
+| Block 10 [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) | :white_check_mark:
 
 <br>
 
 ### MODULE 2
 | [FRONT-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end) | Status
 | --- | :---: |
-| Block 11 [Introduction to React] | :hourglass_flowing_sand:
+| Block 11 [Introduction to React] | :triangular_flag_on_post:
 | Block 12 [React: Components with Status, Events and Forms]	| :hourglass_flowing_sand:
 | Block 13 [Component Life Cycle and React Router] | :hourglass_flowing_sand:
 | Block 14 [Agile Methodologies]	| :hourglass_flowing_sand:
