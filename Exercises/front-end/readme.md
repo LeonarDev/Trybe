@@ -1,6 +1,6 @@
 ## Front-end Development :hourglass_flowing_sand:
 
-#### Block 11: Introduction to React :hourglass_flowing_sand:
+#### Block 11: Introduction to React :triangular_flag_on_post:
 - [ ] (11.1) Front-end - Introduction
 - [ ] (11.1) React - Introduction
 - [ ] (11.1) React 'Hello, world!'
