@@ -1,4 +1,4 @@
-## Front-end Development :hourglass_flowing_sand:
+## Front-end Development :triangular_flag_on_post:
 
 #### Block 11: Introduction to React :triangular_flag_on_post:
 - [ ] (11.1) Front-end - Introduction
