@@ -5,11 +5,7 @@
 - [JSX](#JSX)
 - [ReactDOM.render](#ReactDOM.render)
 - [CSS and Import](#CSS-and-Import)
-- [Classes and React](#Classes-and-React)
-- []()
-- []()
-- []()
-- []()
+- [Exercises](#Exercises)
 
 <hr>
 <br>
@@ -100,9 +96,34 @@ export default App;
 <hr>
 <br>
 
-## Classes and React
+# Exercises
 
 <hr>
 <br>
 
-##
+### 1. Create a new project using `npx create-react-app name-app` and access the `name-app` folder
+  - ⚠️ Replace the `app-name` with whatever you want for your app ⚠️
+
+<br>
+
+### 2. Create a list of simple tasks by following the steps below:
+- Insert the following function above your App:
+
+```js
+const task = (value) => {
+  return (
+    <li>{value}</li>
+  );
+}
+```
+
+  - Now, call the function within your `App` component (don't forget the JSX syntax!). Enter the value you want, save the page and start it by running the `npm start` command.
+  - Finally, create an array of appointments and use the map function so that each item in the array appears, as a list item, in your `App` component.
+
+<br>
+
+### 3. Access [this link](https://www.freecodecamp.org/learn/front-end-libraries/react/) and do each of the exercises in order, the last one being "Create a Component with Composition"
+
+<br>
+
+### 4. Bonuses) Finally, understand how the code for [this link](https://codepen.io/nathansebhastian/pen/qgOJKe) works. Add two more `cards` with description and link of your choice.
