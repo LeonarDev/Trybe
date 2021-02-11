@@ -2,10 +2,10 @@
 
 <br>
 
-- [JSX]()
-- [ReactDOM.render]()
-- []()
-- []()
+- [JSX](#JSX)
+- [ReactDOM.render](#ReactDOM.render)
+- [CSS and Import](#CSS-and-Import)
+- [Classes and React](#Classes-and-React)
 - []()
 - []()
 - []()
@@ -67,12 +67,40 @@ In this example, we are calling the `tick` function that calls `ReactDOM.render`
 <hr>
 <br>
 
-##
+## CSS and Import
+But what about CSS in this context?
 
+It is nothing very different from what we do. Just like in HTML, we must create a file to keep all the CSS and then import it where we want to use it, placing the created `classes` and `ids` in the elements of the page.
+
+To facilitate understanding, see the example below:
+
+```js
+/* App.css */
+.App {
+  background-color: #282c34;
+  text-align: center;
+}
+```
+
+```js
+// App.js
+import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <div className='App'>
+      <h1>APP</h1>
+    </div>
+  );
+}
+
+export default App;
+```
 <hr>
 <br>
 
-## 
+## Classes and React
 
 <hr>
 <br>
