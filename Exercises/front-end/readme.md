@@ -1,8 +1,8 @@
 ## Front-end Development :construction:
 
-#### Block 11: Introduction to React :triangular_flag_on_post:
+#### Block 11: [Introduction to React]((https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11) :triangular_flag_on_post:
 - [x] (11.1) React 'Hello, world!'
-- [ ] (11.2) React components
+- [x] (11.2) React components
 - [ ] (11.3) _[Project - Movie Cards Library]()_
 <hr>
 
