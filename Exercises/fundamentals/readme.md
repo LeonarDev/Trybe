@@ -36,12 +36,12 @@
 - [x] (5.2) JavaScript - Working with Elements
 - [x] (5.3) JavaScript - Events
 - [x] (5.4) JavaScript - Web Storage
-- [x] (5.5) Fundamentals - JavaScript - Projetcs
-- [x] (5.5) _[Project - Pixels Art]()_
-- [x] (5.6) _[Project - To-Do List]()_
-- [ ] (5.7) _[Project - Meme Generator]()_
-- [ ] (5.8) _[Project - Color Guessing Game]()_
-- [ ] (5.8) _[Project - Mysterious Card]()_
+- [x] (5.5) Projects:
+  - [x] (5.5.1) _[Project - Pixels Art]()_
+  - [x] (5.5.2) _[Project - To-Do List]()_
+  - [ ] (5.5.3) _[Project - Meme Generator]()_
+  - [ ] (5.5.4) _[Project - Color Guessing Game]()_
+  - [ ] (5.5.5) _[Project - Mysterious Card]()_
 <hr>
 
 #### Block 06: [HTML and CSS: Forms, Flexbox and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :heavy_check_mark:
