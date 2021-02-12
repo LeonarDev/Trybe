@@ -1,9 +1,7 @@
 ## Front-end Development :construction:
 
 #### Block 11: Introduction to React :triangular_flag_on_post:
-- [ ] (11.1) Front-end - Introduction
-- [ ] (11.1) React - Introduction
-- [ ] (11.1) React 'Hello, world!'
+- [x] (11.1) React 'Hello, world!'
 - [ ] (11.2) React components
 - [ ] (11.3) _[Project - Movie Cards Library]()_
 <hr>
