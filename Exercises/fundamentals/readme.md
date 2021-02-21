@@ -51,7 +51,7 @@
 - [x] (6.3) CSS Flexbox - Part 1
 - [x] (6.4) CSS Flexbox - Part 2
 - [x] (6.5) Responsive CSS - Mobile First
-- [x] (6.6) _[Project - Facebook Homepage]((https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/old-facebook-homepage))_
+- [x] (6.6) _[Project - Facebook Homepage](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/old-facebook-homepage)_
 <hr>
 
 #### Block 07: [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) :heavy_check_mark:
