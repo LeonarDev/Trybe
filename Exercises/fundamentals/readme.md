@@ -1,4 +1,4 @@
-# Fundamentals of Web Development :construction:
+# Fundamentals of Web Development
 
 #### Block 01: [Unix, Bash and Shell Script](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_01) :heavy_check_mark:
 - [x] (1.3) Setup
@@ -19,7 +19,7 @@
 - [x] (3.2) HTML & CSS - Getting Started with CSS 
 - [x] (3.3) HTML & CSS - Selectors and positioning
 - [x] (3.4) Semantic HTML
-- [x] (3.5) _[Project - Lessons Learned]()_
+- [x] (3.5) _[Project - Lessons Learned]_
 <hr>
 
 #### Block 04: [Introduction to JavaScript and Programming Logic](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04) :heavy_check_mark:
@@ -28,7 +28,7 @@
 - [x] (4.2) JavaScript - Array and loop For
 - [x] (4.3) JavaScript - Programming Logic and Algorithms
 - [x] (4.4) JavaScript - Objects and Functions
-- [x] (4.5) _[Project - Playground Functions]()_
+- [x] (4.5) _[Project - Playground Functions]_
 <hr>
 
 #### Block 05: [JavaScript: DOM, Events and Web Storage](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05) :white_check_mark:
@@ -37,11 +37,11 @@
 - [x] (5.3) JavaScript - Events
 - [x] (5.4) JavaScript - Web Storage
 - [x] (5.5) Projects:
-  - [x] (5.5.1) _[Project - Pixels Art]()_
-  - [x] (5.5.2) _[Project - To-Do List]()_
-  - [ ] (5.5.3) _[Project - Meme Generator]()_
-  - [ ] (5.5.4) _[Project - Color Guessing Game]()_
-  - [ ] (5.5.5) _[Project - Mysterious Card]()_
+  - [x] (5.5.1) _[Project - Pixels Art](https://leonardev.github.io/projects/pixel-art/)_
+  - [x] (5.5.2) _[Project - To-Do List](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/to-do-list)_
+  - [ ] (5.5.3) _[Project - Meme Generator]_
+  - [ ] (5.5.4) _[Project - Color Guessing Game]_
+  - [ ] (5.5.5) _[Project - Mysterious Card]_
 <hr>
 
 #### Block 06: [HTML and CSS: Forms, Flexbox and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :heavy_check_mark:
@@ -51,14 +51,14 @@
 - [x] (6.3) CSS Flexbox - Part 1
 - [x] (6.4) CSS Flexbox - Part 2
 - [x] (6.5) Responsive CSS - Mobile First
-- [x] (6.6) _[Project - Facebook Homepage]()_
+- [x] (6.6) _[Project - Facebook Homepage]((https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/old-facebook-homepage))_
 <hr>
 
 #### Block 07: [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) :heavy_check_mark:
 - [x] (7.1) JavaScript ES6 - let, const, arrow functions e template literals
 - [x] (7.2) JavaScript ES6 - Objects
 - [x] (7.3) Unit Testing in JavaScript
-- [x] (7.4) _[Project - JavaScript Unit Testing]()_
+- [x] (7.4) _[Project - JavaScript Unit Testing]_
 <hr>
 
 #### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :heavy_check_mark:
@@ -66,18 +66,18 @@
 - [x] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [x] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
 - [x] (8.4) JavaScript ES6 - Spread operator, parâmetro rest, destructuring and more
-- [x] (8.5) _[Project - Zoo functions]()_
+- [x] (8.5) _[Project - Zoo functions]_
 <hr>
 
-#### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :white_check_mark:
+#### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :heavy_check_mark:
 - [x] (9.1) Asynchronous JavaScript and Callbacks
 - [x] (9.2) JavaScript Promises
-- [ ] (9.3) _[Project - Shopping Cart]()_
+- [x] (9.3) _[Project - Shopping Cart](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/shopping-cart)_
 <hr>
 
 #### Block 10: [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) :white_check_mark:
 - [x] (10.1) Jest - First steps
 - [x] (10.2) Jest - Testing Asynchronous
 - [x] (10.3) Jest - Simulating behaviors
-- [ ] (10.4) _[Project - Asynchronous Jest and Mocking]()_
+- [ ] (10.4) _[Project - Asynchronous Jest and Mocking]_
 <hr>
