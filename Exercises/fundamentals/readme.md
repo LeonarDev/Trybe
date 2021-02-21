@@ -39,9 +39,9 @@
 - [x] (5.5) Projects:
   - [x] (5.5.1) _[Project - Pixels Art](https://leonardev.github.io/projects/pixel-art/)_
   - [x] (5.5.2) _[Project - To-Do List](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/to-do-list)_
-  - [ ] (5.5.3) _[Project - Meme Generator]_
-  - [ ] (5.5.4) _[Project - Color Guessing Game]_
-  - [ ] (5.5.5) _[Project - Mysterious Card]_
+  - [ ] (5.5.3) _[Project - Meme Generator]_ :construction:
+  - [ ] (5.5.4) _[Project - Color Guessing Game]_ :construction:
+  - [ ] (5.5.5) _[Project - Mysterious Card]_ :construction:
 <hr>
 
 #### Block 06: [HTML and CSS: Forms, Flexbox and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06) :heavy_check_mark:
@@ -58,7 +58,7 @@
 - [x] (7.1) JavaScript ES6 - let, const, arrow functions e template literals
 - [x] (7.2) JavaScript ES6 - Objects
 - [x] (7.3) Unit Testing in JavaScript
-- [x] (7.4) _[Project - JavaScript Unit Testing]_
+- [x] (7.4) _[Project - JavaScript Unit Testing]_ :construction:
 <hr>
 
 #### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :heavy_check_mark:
@@ -66,7 +66,7 @@
 - [x] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [x] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
 - [x] (8.4) JavaScript ES6 - Spread operator, parâmetro rest, destructuring and more
-- [x] (8.5) _[Project - Zoo functions]_
+- [x] (8.5) _[Project - Zoo functions]_ :construction:
 <hr>
 
 #### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :heavy_check_mark:
@@ -79,5 +79,5 @@
 - [x] (10.1) Jest - First steps
 - [x] (10.2) Jest - Testing Asynchronous
 - [x] (10.3) Jest - Simulating behaviors
-- [ ] (10.4) _[Project - Asynchronous Jest and Mocking]_
+- [ ] (10.4) _[Project - Asynchronous Jest and Mocking]_ :construction:
 <hr>
