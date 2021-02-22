@@ -18,7 +18,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 06 [HTML and CSS: Forms and Responsive Web Design](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_06)	| :heavy_check_mark:
 | Block 07 [Introduction to JavaScript ES 6 and Unit Testing](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_07) | :heavy_check_mark:
 | Block 08 [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) | :heavy_check_mark:
-| Block 09 [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) | :white_check_mark:
+| Block 09 [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) | :heavy_check_mark:
 | Block 10 [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) | :white_check_mark:
 
 <br>
