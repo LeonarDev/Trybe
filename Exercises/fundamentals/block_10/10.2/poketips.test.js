@@ -1,9 +1,9 @@
 const pokeTips = require('./poketips');
 
 // Falso positivo aqui, cuidado!
-test('passando uma string', (done) => {
+test('Passing a string', (done) => {
   const callback = (data) => {
-    expect(data).toBe('Bulbasaur é o melhor pokémon para começar.');
+    expect(data).toBe('Charmander is the best pokémon to start.');
     done();
   };
   pokeTips(callback);
