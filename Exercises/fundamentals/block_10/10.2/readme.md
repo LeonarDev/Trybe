@@ -426,6 +426,7 @@ const uppercase = (str, callback) => {
 };
 ```
 
+<br>
 **Base code for exercises 2 and 3:**
 The following code simulates a call to the database to search for users. The result of this search is a Promise, which is used by the `getUserName` method.
 
