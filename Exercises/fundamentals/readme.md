@@ -75,9 +75,9 @@
 - [x] (9.3) _[Project - Shopping Cart](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/shopping-cart)_
 <hr>
 
-#### Block 10: [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) :white_check_mark:
+#### Block 10: [Automated testing with Jest](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_10) :heavy_check_mark:
 - [x] (10.1) Jest - First steps
 - [x] (10.2) Jest - Testing Asynchronous
 - [x] (10.3) Jest - Simulating behaviors
-- [ ] (10.4) _[Project - Asynchronous Jest and Mocking]_ :construction:
+- [x] (10.4) _[Project - Asynchronous Jest and Mocking](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/jest)_ :construction:
 <hr>
