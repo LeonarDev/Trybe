@@ -5,10 +5,10 @@
 - [Mock](#)
 - [Mockando funções](#Mockando-funções)
 - [Mockando módulos](#Mockando-módulos)
+<!-- - [](#)
 - [](#)
 - [](#)
-- [](#)
-- [](#)
+- [](#) -->
 - [Exercises](#Exercises)
 
 <hr>
