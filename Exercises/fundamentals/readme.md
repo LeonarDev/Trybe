@@ -79,5 +79,5 @@
 - [x] (10.1) Jest - First steps
 - [x] (10.2) Jest - Testing Asynchronous
 - [x] (10.3) Jest - Simulating behaviors
-- [x] (10.4) _[Project - Asynchronous Jest and Mocking](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/jest)_ :construction:
+- [x] (10.4) _[Project - Asynchronous Jest and Mocking](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/jest)_ 
 <hr>
