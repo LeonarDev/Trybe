@@ -524,6 +524,8 @@ const getListAnimals = (type) => (
 );
 ```
 <br>
+<hr>
+<br>
 
 Use as a basis for the following exercises:
 
