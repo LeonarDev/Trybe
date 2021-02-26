@@ -4,6 +4,9 @@
 - (11.2) [React Components](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11/11.2)
 - (11.3) [Project: Movie Cards Library]()
 
+<hr>
+<br>
+
 - [Summary and Tips](#Summary-and-Tips)
   - [](#)
   - [](#)
@@ -11,6 +14,7 @@
   - [](#)
   - [](#)
 
+<hr>
 <br>
 
 ## Content Links
