@@ -7,6 +7,17 @@
 <hr>
 <br>
 
+## Important Links
+- [w3s: Styling React Using CSS](https://www.w3schools.com/react/react_css.asp)
+- [MDN: import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [MDN: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+- [Medium: Creating a Simple App With React.js](https://medium.com/better-programming/creating-a-simple-app-with-react-js-f6aa88998952)
+- [Tableless: O Guia Completo do React e o seu Ecossistema](https://tableless.com.br/guia-completo-react-ecossistema/)
+- [Stack Overflow: Most Loved, Dreaded, and Wanted Web Frameworks](https://insights.stackoverflow.com/survey/2019#technology-_-most-loved-dreaded-and-wanted-web-frameworks)
+
+<hr>
+<br>
+
 ### React Content
 - [Create a Simple JSX Element](#)
 - [Create a Complex JSX Element](#)
@@ -22,17 +33,6 @@
 - [](#)
 - [](#)
 - [](#)
-
-<hr>
-<br>
-
-## Content Links
-- [w3s: Styling React Using CSS](https://www.w3schools.com/react/react_css.asp)
-- [MDN: import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-- [MDN: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Medium: Creating a Simple App With React.js](https://medium.com/better-programming/creating-a-simple-app-with-react-js-f6aa88998952)
-- [Tableless: O Guia Completo do React e o seu Ecossistema](https://tableless.com.br/guia-completo-react-ecossistema/)
-- [Stack Overflow: Most Loved, Dreaded, and Wanted Web Frameworks](https://insights.stackoverflow.com/survey/2019#technology-_-most-loved-dreaded-and-wanted-web-frameworks)
 
 <hr>
 <br>
