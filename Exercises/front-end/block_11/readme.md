@@ -18,7 +18,7 @@
 <hr>
 <br>
 
-### React Content
+## React Content
 - [Create a Simple JSX Element](#)
 - [Create a Complex JSX Element](#)
 - [Add Comments in JSX](#)
