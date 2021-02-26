@@ -26,7 +26,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 ### MODULE 2
 | [FRONT-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end) | Status
 | --- | :---: |
-| Block 11 [Introduction to React](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11) | :white_check_mark:
+| Block 11 [Introduction to React](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11) | :heavy_check_mark:
 | Block 12 [React: Components with Status, Events and Forms](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_12)	| :white_check_mark:
 | Block 13 [Component Life Cycle and React Router] | :triangular_flag_on_post:
 | Block 14 [Agile Methodologies]	| :hourglass_flowing_sand:
