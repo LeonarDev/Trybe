@@ -3,7 +3,7 @@
 #### Block 11: [Introduction to React](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11) :triangular_flag_on_post:
 - [x] (11.1) React 'Hello, world!'
 - [x] (11.2) React components
-- [ ] (11.3) _[Project - Movie Cards Library]()_
+- [x] (11.3) _[Project - Movie Cards Library]()_
 <hr>
 
 #### Block 12: React: Components with Status, Events and Forms :hourglass_flowing_sand:
