@@ -8,7 +8,7 @@
 
 #### Block 12: React: Components with Status, Events and Forms :hourglass_flowing_sand:
 - [x] (12.1) Stateful components and events
-- [ ] (12.2) React Forms
+- [x] (12.2) React Forms
 - [ ] (12.3) _[Project - Movie Cards Library Stateful]()_
 <hr>
 
