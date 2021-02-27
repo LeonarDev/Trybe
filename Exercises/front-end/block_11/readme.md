@@ -306,20 +306,57 @@ class TypesOfFood extends React.Component {
 
 ```
 
-(https://github.com/[leonardev]/[reponame]/blob/[branch]/image.jpg?raw=true)
-
-(images/example-rendering-nested-components.png?raw=true "Output")
+![OUTPUT](images/example-rendering-nested-components.png?raw=true "OUTPUT")
 
 <hr>
 <br>
 
-### 
+### Compose React Components
+As the challenges continue to use more complex compositions with React components and JSX, there is one important point to note:
 
+Rendering ES6 style class components within other components is no different than rendering the simple components you used in the last few challenges.
+
+You can render JSX elements, stateless functional components, and ES6 class components within other components.
+
+```js
+class Fruits extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h2>Fruits:</h2>
+          <NonCitrus />
+          <Citrus />
+      </div>
+    );
+  }
+};
+
+class TypesOfFood extends React.Component {
+  constructor(props) {
+     super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Types of Food:</h1>
+          <Fruits />
+        <Vegetables />
+      </div>
+    );
+  }
+};
+```
+
+![OUTPUT](images/img-02.png?raw=true "OUTPUT")
 
 <hr>
 <br>
 
-### 
+### Render a Class Component to the DOM
+
 
 
 <hr>
