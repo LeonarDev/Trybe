@@ -19,7 +19,7 @@
 - [x] (3.2) HTML & CSS - Getting Started with CSS 
 - [x] (3.3) HTML & CSS - Selectors and positioning
 - [x] (3.4) Semantic HTML
-- [x] (3.5) _[Project - Lessons Learned]_
+- [x] (3.5) _[Project - Lessons Learned]https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/lessons-learned
 <hr>
 
 #### Block 04: [Introduction to JavaScript and Programming Logic](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_04) :heavy_check_mark:
@@ -58,7 +58,7 @@
 - [x] (7.1) JavaScript ES6 - let, const, arrow functions e template literals
 - [x] (7.2) JavaScript ES6 - Objects
 - [x] (7.3) Unit Testing in JavaScript
-- [x] (7.4) _[Project - JavaScript Unit Testing](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/es6-and-unit-tests)_ :heavy_check_mark:
+- [x] (7.4) _[Project - JavaScript Unit Testing](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/es6-and-unit-tests)_
 <hr>
 
 #### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :heavy_check_mark:
@@ -66,7 +66,7 @@
 - [x] (8.2) JavaScript ES6 - Higher Orders Functions - map and filter
 - [x] (8.3) JavaScript ES6 - Higher Orders Functions - reduce
 - [x] (8.4) JavaScript ES6 - Spread operator, parâmetro rest, destructuring and more
-- [x] (8.5) _[Project - Zoo functions]_ :construction:
+- [x] (8.5) _[Project - Zoo functions](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/zoo-functions)_
 <hr>
 
 #### Block 09: [Asynchronous Javascript and Promises](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_09) :heavy_check_mark:
