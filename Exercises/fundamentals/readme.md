@@ -58,7 +58,7 @@
 - [x] (7.1) JavaScript ES6 - let, const, arrow functions e template literals
 - [x] (7.2) JavaScript ES6 - Objects
 - [x] (7.3) Unit Testing in JavaScript
-- [x] (7.4) _[Project - JavaScript Unit Testing]_ :construction:
+- [x] (7.4) _[Project - JavaScript Unit Testing](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/es6-and-unit-tests)_ :heavy_check_mark:
 <hr>
 
 #### Block 08: [Higher Order Functions JavaScript ES6](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_08) :heavy_check_mark:
