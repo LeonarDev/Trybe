@@ -1,12 +1,12 @@
 ## Front-end Development :construction:
 
-#### Block 11: [Introduction to React](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11) :triangular_flag_on_post:
+#### Block 11: [Introduction to React](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11) :heavy_check_mark:
 - [x] (11.1) React 'Hello, world!'
 - [x] (11.2) React components
 - [x] (11.3) _[Project - Movie Cards Library](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/movie-cards-library-stateless)_
 <hr>
 
-#### Block 12: React: Components with Status, Events and Forms :hourglass_flowing_sand:
+#### Block 12: React: Components with Status, Events and Forms :triangular_flag_on_post:
 - [x] (12.1) Stateful components and events
 - [x] (12.2) React Forms
 - [ ] (12.3) _[Project - Movie Cards Library Stateful]()_
