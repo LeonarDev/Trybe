@@ -15,12 +15,13 @@ class Counter extends React.Component {
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate');
+    console.log('shouldComponentUpdate', this.state, nextState);
+    // if (nextProps.value % 3 !== 0) return false;
     return true;
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate');
+    console.log('componentDidUpdate', this.state, prevState);
   }
 
   render() {
@@ -38,7 +39,7 @@ class Counter extends React.Component {
         <button onClick={ () => this.setState((state) => ({ counter: state.counter = 0 })) }>
           Reset
         </button>
-        <p>{this.state.counter}</p>
+        <p>counter: {this.state.counter}</p>
       </div>
     )
   }
