@@ -28,8 +28,8 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | --- | :---: |
 | Block 11 [Introduction to React](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_11) | :heavy_check_mark:
 | Block 12 [React: Components with Status, Events and Forms](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_12)	| :white_check_mark:
-| Block 13 [Component Life Cycle and React Router](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_13) | :triangular_flag_on_post:
-| Block 14 [Agile Methodologies]	| :hourglass_flowing_sand:
+| Block 13 [Component Life Cycle and React Router](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_13) | :white_check_mark:
+| Block 14 [Agile Methodologies]	| :triangular_flag_on_post:
 | Block 15 [Automated testing with React Testing Library]	| :hourglass_flowing_sand:
 | Block 16 [State management with Redux]	| :hourglass_flowing_sand:
 | Block 17 [Project: Trivia Game] | :hourglass_flowing_sand:
