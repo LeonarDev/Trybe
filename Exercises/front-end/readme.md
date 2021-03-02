@@ -6,15 +6,15 @@
 - [x] (11.3) _[Project - Movie Cards Library](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/movie-cards-library-stateless)_
 <hr>
 
-#### Block 12: React: Components with Status, Events and Forms :triangular_flag_on_post:
+#### Block 12: React: Components with Status, Events and Forms :white_check_mark:
 - [x] (12.1) Stateful components and events
 - [x] (12.2) React Forms
 - [ ] (12.3) _[Project - Movie Cards Library Stateful]()_
 <hr>
 
-#### Block 13: Component Life Cycle and React Router :hourglass_flowing_sand:
-- [ ] (13.1) Component Lifecycle
-- [ ] (13.2) React Router
+#### Block 13: Component Life Cycle and React Router :triangular_flag_on_post:
+- [x] (13.1) Component Lifecycle
+- [x] (13.2) React Router
 - [ ] (13.3) _[Project - Movie Cards Library CRUD]()_
 <hr>
 
