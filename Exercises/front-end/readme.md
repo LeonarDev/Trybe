@@ -9,7 +9,7 @@
 #### Block 12: React: Components with Status, Events and Forms :heavy_check_mark:
 - [x] (12.1) Stateful components and events
 - [x] (12.2) React Forms
-- [ ] (12.3) _[Project - Movie Cards Library Stateful]()_
+- [x] (12.3) _[Project - Movie Cards Library Stateful]()_
 <hr>
 
 #### Block 13: Component Life Cycle and React Router :white_check_mark:
@@ -19,7 +19,7 @@
 <hr>
 
 #### Block 14: Agile Methodologies :triangular_flag_on_post:
-- [ ] (14.1) Agile Methodologies
+- [x] (14.1) Agile Methodologies
 - [ ] (14.2) _[Project - Frontend Online Store]()_
 <hr>
 
