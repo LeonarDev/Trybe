@@ -6,7 +6,7 @@
 - [x] (11.3) _[Project - Movie Cards Library](https://github.com/LeonarDev/leonardev.github.io/tree/main/projects/movie-cards-library-stateless)_
 <hr>
 
-#### Block 12: React: Components with Status, Events and Forms :white_check_mark:
+#### Block 12: React: Components with Status, Events and Forms :heavy_check_mark:
 - [x] (12.1) Stateful components and events
 - [x] (12.2) React Forms
 - [ ] (12.3) _[Project - Movie Cards Library Stateful]()_
