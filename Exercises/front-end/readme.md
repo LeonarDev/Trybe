@@ -12,13 +12,13 @@
 - [ ] (12.3) _[Project - Movie Cards Library Stateful]()_
 <hr>
 
-#### Block 13: Component Life Cycle and React Router :triangular_flag_on_post:
+#### Block 13: Component Life Cycle and React Router :white_check_mark:
 - [x] (13.1) Component Lifecycle
 - [x] (13.2) React Router
 - [ ] (13.3) _[Project - Movie Cards Library CRUD]()_
 <hr>
 
-#### Block 14: Agile Methodologies :hourglass_flowing_sand:
+#### Block 14: Agile Methodologies :triangular_flag_on_post:
 - [ ] (14.1) Agile Methodologies
 - [ ] (14.2) _[Project - Frontend Online Store]()_
 <hr>
