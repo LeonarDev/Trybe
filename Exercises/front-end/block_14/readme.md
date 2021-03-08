@@ -1,6 +1,6 @@
 # Block 14 - Agile methodologies
 
-- (14.1) [Agile Manifesto, Scrum, Kanban](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_14/14.1)
+- (14.1) [Agile Manifesto, Scrum, Kanban]()
 - (14.2) [Project: Frontend Online Store]()
 
 <hr>
