@@ -18,7 +18,7 @@ git config --global user.email seuemail@exemplo.br
 
 ```
 git config --global user.name "LeonarDev"
-git config --global user.email leonardo.majevski@gmail.com.br
+git config --global user.email leonardo.majevski@gmail.com
 ```
 
 <br> 
