@@ -18,20 +18,20 @@
 - [ ] (13.3) _[Project - Movie Cards Library CRUD]()_
 <hr>
 
-#### Block 14: Agile Methodologies :triangular_flag_on_post:
+#### Block 14: Agile Methodologies :white_check_mark:
 - [x] (14.1) Agile Methodologies
-- [ ] (14.2) _[Project - Frontend Online Store]()_
+- [x] (14.2) _[Project - Frontend Online Store]()_
 <hr>
 
-#### Block 15: Automated testing with React Testing Library :hourglass_flowing_sand:
-- [ ] (15.1) RTL - First steps
-- [ ] (15.2) RTL - Mocks and Inputs
-- [ ] (15.3) RTL - Testing React Router
+#### Block 15: Automated testing with React Testing Library :white_check_mark:
+- [x] (15.1) RTL - First steps
+- [x] (15.2) RTL - Mocks and Inputs
+- [x] (15.3) RTL - Testing React Router
 - [ ] (15.4) _[Project - React Test]()_
 <hr>
 
-#### Block 16: State management with Redux :hourglass_flowing_sand:
-- [ ] (16.1) Introduction to Redux - The global state of the application
+#### Block 16: State management with Redux :triangular_flag_on_post:
+- [x] (16.1) Introduction to Redux - The global state of the application
 - [ ] (16.2) Using Redux in React
 - [ ] (16.3) Using Redux in React - Practice
 - [ ] (16.4) Using Redux in React - Asynchronous Actions
