@@ -29,10 +29,7 @@
 - [Create a React Component](#Create a React Component)
 - [Create a Component with Composition](#Create-a-Component-with-Composition)
 - [Use React to Render Nested Components](#Use-React-to-Render-Nested-Components)
-- [](#)
-- [](#)
-- [](#)
-- [](#)
+
 
 <hr>
 <br>
