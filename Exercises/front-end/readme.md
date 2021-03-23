@@ -32,7 +32,7 @@
 
 #### Block 16: State management with Redux :triangular_flag_on_post:
 - [x] (16.1) Introduction to Redux - The global state of the application
-- [ ] (16.2) Using Redux in React
+- [x] (16.2) Using Redux in React
 - [ ] (16.3) Using Redux in React - Practice
 - [ ] (16.4) Using Redux in React - Asynchronous Actions
 - [ ] (16.5) React-Redux tests
