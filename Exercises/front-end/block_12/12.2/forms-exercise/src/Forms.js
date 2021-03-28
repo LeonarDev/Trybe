@@ -1,4 +1,6 @@
 import React from 'react';
+import InputText from './InputText';
+import InputNumber from './InputNumber';
 
 export default class Forms extends React.Component {
   constructor(props) {
@@ -41,19 +43,9 @@ export default class Forms extends React.Component {
         </label>
 
 
-        <input 
-          type="text" 
-          name="inputText" 
-          value={ this.state.inputText }
-          onChange={ this.handleChange } 
-          placeholder="name" />
+        <InputText handleChange={ this.handleChange } />
         
-        <input 
-          type="number" 
-          name="inputNumber" 
-          value={ this.state.inputNumber }
-          onChange={ this.handleChange } 
-          placeholder="number" />
+        <InputNumber handleChange={ this.handleChange } />
         
         <textarea 
           name="controled" 
@@ -73,7 +65,7 @@ export default class Forms extends React.Component {
             onChange={ this.handleChange }
           />
         </label>
-        
+
       </div>
     )
   }
