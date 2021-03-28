@@ -29,6 +29,8 @@
 ![Lifecycle](lifecycle.png?raw=true "Lifecycle")
 https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
+In addition to the methods mentioned, there are also others that React itself calls Rarely Used Methods, such as `getDerivedStateFromProps` and `getSnapshotBeforeUpdate`, and which will not be the focus of this class. If you are interested, you can learn about them at [this link](https://pt-br.reactjs.org/docs/react-component.html#static-getderivedstatefromprops).
+
 <hr>
 <br>
 
