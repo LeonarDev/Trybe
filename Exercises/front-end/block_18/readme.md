@@ -5,7 +5,6 @@
 - (18.3) [React Hooks - useEffect and custom Hooks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_18/18.3)
 - (18.4) [Project: StarWars Datatable]()
 
-<hr>
 <br>
 
 ## Important Links
