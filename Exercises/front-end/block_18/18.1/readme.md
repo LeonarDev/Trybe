@@ -8,6 +8,10 @@
 <hr>
 <br>
 
+![Context API](react_context_api.png?raw=true "Context API" https://medium.com/reactbrasil/entendendo-a-context-api-do-react-criando-um-componente-de-loading-a84f84007dc7)
+
+<br>
+
 ## Summary
 Context API provides a way to pass data through the component tree without having to manually pass props at each level. To create a context, use React's `createContext` method.
 
@@ -17,7 +21,11 @@ import React, { createContext } from 'react';
 const MyContext = createContext(defaultValue);
 ```
 
-`createContext` returns an object that has two components as properties: `Provider` and `Consumer`. The value passed as a parameter to `createContext` will be used as the default value of the context, if no value is specified when using the `Provider`.
+<br>
+
+
+`createContext` returns an object that has two components as properties: `Provider` and `Consumer`. 
+The value passed as a parameter to `createContext` will be used as the default value of the context, if no value is specified when using the `Provider`.
 
 `Provider` is responsible for "providing" the data for the components that are at the levels below it in the component tree. It accepts a mandatory value prop with the data to be shared. This value can be any JavaScript value, such as a number, string, array, or object.
 
@@ -30,6 +38,9 @@ const MyContext = createContext(defaultValue);
   <MyComponent>
 </MyContext.Provider>
 ```
+
+<br>
+
 
 `Consumer` is used whenever a component needs to "consume" the context value.
 ```js
@@ -44,7 +55,13 @@ function MyComponent() {
 }
 ```
 
+<br>
+
+
 As a rule, the context is used in several different files, either as a provider or as a consumer. Thus, it is usual to create and export it in a separate file and import it whenever necessary.
+
+<br>
+
 
 `MyContext.js`
 ```js
@@ -54,6 +71,9 @@ const MyContext = createContext();
 
 export default MyContext;
 ```
+
+<br>
+
 
 `MyComponent.js`
 ```js
@@ -71,6 +91,9 @@ function MyComponent() {
 
 export default MyComponent;
 ```
+
+<br>
+
 
 `MyOtherComponent.js`
 ```js
@@ -90,12 +113,6 @@ function MyOtherComponent() {
 
 export default MyOtherComponent;
 ```
-
-<br>
-
-![Context API](react_context_api.png?raw=true "Context API")
-https://medium.com/reactbrasil/entendendo-a-context-api-do-react-criando-um-componente-de-loading-a84f84007dc7
-
 
 <hr>
 <br>
