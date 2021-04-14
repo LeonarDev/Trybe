@@ -107,3 +107,8 @@ https://medium.com/reactbrasil/entendendo-a-context-api-do-react-criando-um-comp
 <br>
 
 **[Exercise 2]** Refactor the exercise in the [exercise-contextAPI-refactoring](https://github.com/tryber/exercise-contextAPI-refactoring/tree/master) repository. As in the previous exercise, change the branch to `exercise-two`, the application structure will be ready. Modify the application to use Context API to manage state instead of Redux.
+
+<hr>
+<br>
+
+**[Exercise 3]** Refactor the exercise about Reddit which is in the `exercise-three` branch of the [exercise-contextAPI-refactoring](https://github.com/tryber/exercise-contextAPI-refactoring/tree/master) repository by changing the application to use Context API to manage the state instead of Redux.
