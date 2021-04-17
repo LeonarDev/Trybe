@@ -16,12 +16,9 @@
 Context API provides a way to pass data through the component tree without having to manually pass props at each level. To create a context, use React's `createContext` method.
 
 ```js
-// "./src/context/MyContext.js"
-
 import React, { createContext } from 'react';
 
 const MyContext = createContext(defaultValue);
-
 ```
 
 <br>
