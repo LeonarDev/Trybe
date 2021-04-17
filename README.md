@@ -32,7 +32,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 14 [Agile Methodologies](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_14)	| :heavy_check_mark:
 | Block 15 [Automated testing with React Testing Library](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15)	| :triangular_flag_on_post:
 | Block 16 [State management with Redux](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16)	| :triangular_flag_on_post:
-| Block 17 [Project: Trivia Game] | :triangular_flag_on_post:
+| Block 17 [Project: Trivia Game] | :heavy_check_mark:
 | Block 18 [Context API and React Hooks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_18) | :triangular_flag_on_post:
 | Block 19 [Project: Recipes App] | :hourglass_flowing_sand:
 
