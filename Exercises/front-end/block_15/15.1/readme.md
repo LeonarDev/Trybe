@@ -2,151 +2,87 @@
 
 <br>
 
-- **[Summary](#Summary)**
-- **[Exercises](#Exercises)**
+#### [To Do List - Exercises](https://github.com/LeonarDev/exercise-todo-list)
+
+**[Exercise 1]** Implemente os testes:
+
+- Necessário um botão para adicionar a tarefa.
+- Botão precisa conter o texto "Adicionar".
+- Ao ser clicado a tarefa digitada pelo o usuário precisa ser salva.
+
+Pode adicionar mais testes que achar relevantes para verificar a funcionalidade desse botão.
 
 <hr>
 <br>
 
-<!--
 
-<br>
+**[Exercise 2]** Teste a aplicação. Atenção ao que o teste orienta:
 
-## Summary
-
-[How to use Redux in ReactJS with real-life examples](https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/)
-
-[Official Doc - Getting started with Redux](https://redux.js.org/introduction/getting-started)
-
-
-### store
-
-```js
-import { createStore, combineReducers } from 'redux';
-import rootReducer from '../reducers';
-
-export default store = createStore(rootReducer);
-```
-
-<br>
-
-### store with Redux Devtools
-```js
-import { createStore, combineReducers } from 'redux';
-import rootReducer from '../reducers';
-
-export default store = createStore(
-  rootReducer,
-  window.devToolsExtension() || ((f) => f),
-);
-```
-
-<br>
-
-### reducer and rootReducer
-```js
-// './src/reducers/myReducer.js'
-const INITIAL_STATE = {
-  state: '',
-};
-
-export default function myReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case 'NEW_ACTION':
-      return { state: action.state };
-    default:
-      return state;
-  }
-}
-```
-
-<br>
-
-```js
-// './src/reducers/index.js'
-import { combineReducers } from 'redux';
-import myReducer from './myReducer';
-
-export default rootReducer = combineReducers({ myReducer });
-```
-
-<br>
-
-### actions
-```js
-export const newAction = (state) => ({ type: 'NEW_ACTION', state });
-```
-
-<br>
-
-### provider
-```js
-// src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import './index.css';
-import App from './App';
-import store from './store';
-
-ReactDOM.render(
-  <Provider store={ store }>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
-```
-
-<br>
-
-### 
-```js
-
-```
-
-<br>
-
-### 
-```js
-
-```
-
-<br>
-
-### 
-```js
-
-```
-
-
-
-
-
-
-
-
-
-Example of a simple counter using only JavaScript and Redux
-![Counter](/counter.png)
-
+- Use o array já disponibilizado no código para realizar os testes. Cada elemento do array será uma tarefa. Simule a adição de todas e depois verifique se elas estão aparecendo.
+- Teste apenas o componente Item. Ao passar uma string para ele ela precisa aparecer na tela.
 
 <hr>
 <br>
 
-## Exercises
-**[Exercise 1]** Make a field that receives a value and that will be the value applied to the increment button.
+
+**[Exercise 3]** Diferente dos outros, os testes já estão prontos, sendo necessário criar apenas as funcionalidades que eles testam.
+
+- Adicionar funcionalidade de selecionar uma task.
+- Adicionar botão para apagar a task selecionada.
+
+Observe bem como os teste estão escritos, todos devem passar quando terminar de implementar a funcionalidade.
 
 <hr>
 <br>
 
-**[Exercise 2]** Make a field that receives a value and that will be the value applied to the decrement button.
+
+#### [Tic Tac Toe - Exercises](https://github.com/LeonarDev/exercise-tic-tac-toe)
 
 <hr>
 <br>
 
-**[Exercise 3]** Store another value in the state, called clickCount. This field will count the number of times that any button on the screen was clicked.
+
+**[Exercise 1]** Escreva os testes para as configurações iniciais do jogo:
+
+- Campos vazios;
+- Sem mensagem de Fim de jogo;
+- 9 Casas renderizadas.
+
+Fique livre para adicionar novos testes. Após escrever os testes, crie as funcionalidades testadas para que os testes passem.
 
 <hr>
 <br>
 
-**[Exercise 3]** Store an array in the state that stores the individual value that was added to each click on any of the three buttons.
+**[Exercise 2]** Agora, além de realizar alguns testes, será necessário implementar algumas funcionalidades. O arquivo TicTacToe.js possuí algumas informações de como o jogo deve funcionar.
+
+
+- Dois jogadores jogam o jogo;
+- A cada clique em uma casa o jogador deve ser mudado;
+- Cada jogador deverá possuir uma marcação (as imagens que estão no repositório, x.png, o.svg);
+- Ao clicar na casa escolhida, a casa deve ser modificada para possuir a marcação do jogador, X ou O;
+- Ao clicar em uma casa já marcada, nada deve acontecer;
+- AS casas marcadas não podem ser modificadas;
+
+Teste o comportamento de cada casa, alguns exemplos:
+- O símbolo mudar quando clica em uma e depois em outra, mostrando a troca do jogador;
+- Casa não pode ser mudada depois de clicada em por algum jogador;
+
+
+Caso tenha dúvida volte no conteúdo ou olhe na documentação, lembre que abordamos apenas algumas querys, tem outras que podem ser utilizadas.
+
+<hr>
+<br>
+
+**[Exercise 3]** Agora você fará uma funcionalidade de acordo com o teste já criado para ela. Fique atento às instruções passadas.
+
+Precisamos saber quando que o jogo acaba! Os testes já foram implementados, mas se roda-los verá que nenhum passa. Essa funcionalidade ainda não está pronta e precisa ser criada.
+
+Crie a aplicação observando os teste, eles te guiarão.
+
+<br>
+
+Nossos testes não cobrem caso de empate ou quem foi o ganhador.
+
+- Crie uma mensagem para ver quem é o vencedor ou quando acontecer o empate.
+- Crie os teste para essa nova funcionalidade.
+- Adicione um botão para recomeçar o jogo. Crie os teste para ele.
