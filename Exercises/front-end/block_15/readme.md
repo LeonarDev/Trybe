@@ -2,9 +2,9 @@
 
 ![RTL](/rtl.png)
 
-- (15.1) [First steps with RTL]()
-- (15.2) [Mocks and Inputs]()
-- (15.3) [Testing React Router]()
+- (15.1) [First steps with RTL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15/15.1)
+- (15.2) [Mocks and Inputs](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15/15.2)
+- (15.3) [Testing React Router](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15/15.3)
 - (15.4) [Project - Tests in React]()
 
 <hr>
