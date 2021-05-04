@@ -30,11 +30,11 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 12 [React: Components with Status, Events and Forms](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_12)	| :heavy_check_mark:
 | Block 13 [Component Life Cycle and React Router](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_13) | :heavy_check_mark:
 | Block 14 [Agile Methodologies](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_14)	| :heavy_check_mark:
-| Block 15 [Automated testing with React Testing Library](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15)	| :triangular_flag_on_post:
-| Block 16 [State management with Redux](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16)	| :triangular_flag_on_post:
+| Block 15 [Automated testing with React Testing Library](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15)	| :white_check_mark:
+| Block 16 [State management with Redux](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16)	| :white_check_mark:
 | Block 17 [Project: Trivia Game] | :heavy_check_mark:
-| Block 18 [Context API and React Hooks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_18) | :triangular_flag_on_post:
-| Block 19 [Project: Recipes App] | :hourglass_flowing_sand:
+| Block 18 [Context API and Reack Hooks] | :heavy_check_mark:
+| Block 19 [Project: Recipes App] | :heavy_check_mark:
 
 <br>
 
@@ -42,9 +42,9 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | [BACK-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end) | Status
 | --- | :---: |
 | Block 20 [Introduction to SQL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20) | :triangular_flag_on_post:
-| Block 21 [SQL Functions, Joins and Subqueries]	| :hourglass_flowing_sand:
-| Block 22 [Database modeling and standardization] | :hourglass_flowing_sand:
-| Block 23 [Introduction to MongoDB]	| :hourglass_flowing_sand:
+| Block 21 [SQL Functions, Joins and Subqueries]	| :triangular_flag_on_post:
+| Block 22 [Database modeling and standardization] | :triangular_flag_on_post:
+| Block 23 [Introduction to MongoDB]	| :triangular_flag_on_post:
 | Block 24 [MongoDB: Simple and complex updates]	| :hourglass_flowing_sand:
 | Block 25 [MongoDB: Aggregation Framework]	| :hourglass_flowing_sand:
 | Block 26 [Introduction to web development with NodeJS | :hourglass_flowing_sand:

@@ -1,4 +1,4 @@
-# (15.1) RTL - First steps
+# (15.3) Testing React Router
 
 <br>
 
@@ -9,6 +9,8 @@
 <br>
 
 <!--
+
+![Redux with React](/redux-react.jpeg)
 
 <br>
 
