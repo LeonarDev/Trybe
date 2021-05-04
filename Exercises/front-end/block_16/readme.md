@@ -1,10 +1,10 @@
 # Block 16 - State management with Redux
 
-- (16.1) [Redux - The global state of the application]()
-- (16.2) [Using Redux in React]()
-- (16.3) [Using Redux in React - Practices]()
-- (16.4) [Using Redux in React - Asynchronous Actions]()
-- (16.5) [Tests with React-Redux]()
+- (16.1) [Redux - The global state of the application](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16/16.1)
+- (16.2) [Using Redux in React](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16/16.2)
+- (16.3) [Using Redux in React - Practices](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16/16.3)
+- (16.4) [Using Redux in React - Asynchronous Actions](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16/16.4)
+- (16.5) [Tests with React-Redux](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16/16.5)
 - (16.6) [Project: Trybe Wallet]()
 
 <hr>
