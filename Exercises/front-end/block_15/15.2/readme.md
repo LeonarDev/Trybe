@@ -2,13 +2,12 @@
 
 <br>
 
-- **[Summary](#Summary)**
-- **[Exercises](#Exercises)**
+- **[Exercicios](#Exercicios)**
 
 <hr>
 <br>
 
-## Summary
+## Resumo
 
 #### Explicando teste adicionado em ./mocking-tests/src/App-3.test.js:
 
