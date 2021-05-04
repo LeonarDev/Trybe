@@ -1,6 +1,6 @@
 # Block 15 - React Testing Library
 
-![RTL](/rtl.png)
+![RTL](rtl.png)
 
 - (15.1) [First steps with RTL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15/15.1)
 - (15.2) [Mocks and Inputs](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15/15.2)
