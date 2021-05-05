@@ -9,7 +9,7 @@
 
 ## Resumo
 
-#### Explicando teste adicionado em ./mocking-tests/src/App-3.test.js:
+#### Explicando teste adicionado em _*./mocking-tests/src/App-3.test.js*_:
 
 ```js
 // App.test.js
@@ -18,6 +18,7 @@ import { render } from '@testing-library/react'
 import App from './App';
 
 afterEach(() => jest.clearAllMocks());
+
 it('fetch joke', async () => {
   const joke = {
     id: '7h3oGtrOfxc',
@@ -29,13 +30,12 @@ it('fetch joke', async () => {
   global.fetch.mockResolvedValue({
     json: jest.fn().mockResolvedValue(joke),
   });
+
   const { findByText } = render(<App />);
   await findByText('Whiteboards ... are remarkable.');
+
   expect(global.fetch).toBeCalledTimes(1);
-  expect(global.fetch).toBeCalledWith(
-    'https://icanhazdadjoke.com/',
-    {"headers": {"Accept": "application/json"}}
-  );
+  expect(global.fetch).toBeCalledWith('https://icanhazdadjoke.com/', {"headers": {"Accept": "application/json"}});
 });
 ```
 
@@ -110,7 +110,9 @@ Mockar a chamada à API evita esse tipo de problema. Outro ponto é que seus tes
 
 Este repositório contém uma aplicação funcional, ela utiliza a **[Digimon API](https://digimon-api.herokuapp.com/)**.
 
-É uma aplicação simples que pesquisa digimons pelo nome, seu objetivo nesse exercício é utilizar todos os aprendizados sobre testes até o momento para alcançar 100% de cobertura de testes, você pode verificar essa cobertura utilizando o comando `npm run test-coverage`, ele te retorna um relatório como o abaixo:
+É uma aplicação simples que pesquisa digimons pelo nome.
+O objetivo nesse exercício é utilizar todos os aprendizados sobre testes até o momento para alcançar 100% de cobertura de testes.
+Você pode verificar essa cobertura utilizando o comando `npm run test-coverage`, ele te retorna um relatório como o abaixo:
 
 ![Test Coverage](relatorio.png)
 
