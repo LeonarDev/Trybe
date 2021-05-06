@@ -1,0 +1,14 @@
+#personal-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+#personal-info img {
+  border-radius: 100%;
+}
+
+#personal-info p {
+  margin: 5px;
+}
