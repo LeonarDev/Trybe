@@ -2,153 +2,49 @@
 
 <br>
 
-- **[Summary](#Summary)**
-- **[Exercises](#Exercises)**
+<!-- - **[Summary](#Summary)** -->
+- **[Exercicios](#Exercicios)**
 
 <hr>
 <br>
 
-<!--
+#### COMEÇANDO OS EXERCÍCIOS
+À primeira vista, pode parecer uma tarefa gigante construir o próprio Portfólio com React e testes. Então, para ajudar, vamos sugerir uma sequência do que fazer, passo a passo, para que você possa seguir com mais confiança:
 
-![Redux with React](/redux-react.jpeg)
+- Comece construindo as rotas com React Router e os componentes base (que são componentes sem as funcionalidades completas, apenas com um texto pequeno dentro para renderizarem na tela), e após isso teste tudo. Exemplos de rotas para seu portfólio seriam: `Início`, `Projetos`, `Sobre mim` e `Contato`.
+  - Teste que o clique em cada rota renderiza os textos esperados na tela.
+  - Teste com o histórico que as urls corretas são acessadas após cada clique.
+  - Teste que, ao clicar num componente, o texto do componente que estava renderizado some da tela!
+  
+- Daqui em diante, para cada um dos itens abaixo, você deve escrever os testes antes de ir para o próximo. **É muito importante testar a sua aplicação aos poucos, ao longo do desenvolvimento**. Você pode fazer a funcionalidade dos itens primeiro e depois testar. Ou, você pode, também, fazer TDD, escrevendo os testes primeiro e depois a funcionalidade do item, que é necessária para passar nos testes. A escolha é sua, ok?
 
-<br>
+#### Escolha três itens para incluir no seu portfólio, e inclua os demais como bônus:
 
-## Summary
+- Seu nome completo e uma foto atual sua, onde o texto alternativo deve ser a descrição da foto que você está exibindo;
+  - Teste o nome normalmente e, na imagem, não esqueça de verificar o `src` e o `alt`.
 
-[How to use Redux in ReactJS with real-life examples](https://www.freecodecamp.org/news/how-to-use-redux-in-reactjs-with-real-life-examples-687ab4441b85/)
+- Uma breve descrição sobre você, destacando algumas informações como nacionalidade e a cidade/estado onde mora;
 
-[Official Doc - Getting started with Redux](https://redux.js.org/introduction/getting-started)
+- Uma lista de habilidades que você possui e destacar a que você mais se orgulha;
+  - Para testar o destaque, você poderá usar a classe dele ou o tipo de tag que usou. Caso existam mais elementos com a mesma `classe` ou `tag`, você poderá usar o `datatest-id` para certificar que o elemento é o correto.
 
+- Um link externo para o seu github, que abra em uma nova aba;
+  - Teste se o link realmente direciona para a sua página do github. Importante buscar elementos na página que alteram pouco, como o seu próprio nome ou apelido.
+  - Utilize mocks para testes em links externos.
 
-### store
+- Um índice com links internos para as diferentes seções do seu portfólio, agora separadas por páginas, utilizando React Router.
+  - Teste cada um separadamente, não se esqueça de usar o `history` para reiniciar o estado de cada teste.
 
-```js
-import { createStore, combineReducers } from 'redux';
-import rootReducer from '../reducers';
-
-export default store = createStore(rootReducer);
-```
-
-<br>
-
-### store with Redux Devtools
-```js
-import { createStore, combineReducers } from 'redux';
-import rootReducer from '../reducers';
-
-export default store = createStore(
-  rootReducer,
-  window.devToolsExtension() || ((f) => f),
-);
-```
+- Um formulário com campo de e-mail e mensagem para que as pessoas possam entrar em contato com você EmailJS.
+  - Utilize mocks para garantir o funcionamento desse teste, uma vez que essa aplicação comporta-se como uma API e é um link externo.
 
 <br>
 
-### reducer and rootReducer
-```js
-// './src/reducers/myReducer.js'
-const INITIAL_STATE = {
-  state: '',
-};
+#### Dicas gerais para os testes:
+- Comece seus testes por algum elemento fixo e bem previsível na tela inicial, um título por exemplo é o ideal, pois assim você já verifica se seus testes estão funcionando devidamente.
 
-export default function myReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case 'NEW_ACTION':
-      return { state: action.state };
-    default:
-      return state;
-  }
-}
-```
+- Verifique antes de tudo se o elemento a ser testado existe, depois verifique seu conteúdo e por fim, verifique suas funcionalidades (caso existam).
 
-<br>
+- Faça um describe para organizar o conjunto de testes e mantenha os nomes dos `its` ou `tests` sempre coerente sobre o que está sendo testado.
 
-```js
-// './src/reducers/index.js'
-import { combineReducers } from 'redux';
-import myReducer from './myReducer';
-
-export default rootReducer = combineReducers({ myReducer });
-```
-
-<br>
-
-### actions
-```js
-export const newAction = (state) => ({ type: 'NEW_ACTION', state });
-```
-
-<br>
-
-### provider
-```js
-// src/index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import './index.css';
-import App from './App';
-import store from './store';
-
-ReactDOM.render(
-  <Provider store={ store }>
-    <App />
-  </Provider>,
-  document.getElementById('root'),
-);
-```
-
-<br>
-
-### 
-```js
-
-```
-
-<br>
-
-### 
-```js
-
-```
-
-<br>
-
-### 
-```js
-
-```
-
-
-
-
-
-
-
-
-
-Example of a simple counter using only JavaScript and Redux
-![Counter](/counter.png)
-
-
-<hr>
-<br>
-
-## Exercises
-**[Exercise 1]** Make a field that receives a value and that will be the value applied to the increment button.
-
-<hr>
-<br>
-
-**[Exercise 2]** Make a field that receives a value and that will be the value applied to the decrement button.
-
-<hr>
-<br>
-
-**[Exercise 3]** Store another value in the state, called clickCount. This field will count the number of times that any button on the screen was clicked.
-
-<hr>
-<br>
-
-**[Exercise 3]** Store an array in the state that stores the individual value that was added to each click on any of the three buttons.
+- Use mocks para o envio de e-mail, testes de rotas e de formulários.
