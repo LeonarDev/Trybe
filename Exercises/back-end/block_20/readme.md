@@ -1,8 +1,6 @@
 # Block 20: Introduction to Back-end
 - (20.1) [SQL - Introduction](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20/20.1)
-- (20.1) Relational database - Introduction
-- (20.1) SQL database
-- (20.2) Finding data in a database
+- (20.2) [Finding data in a database](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20/20.2)
 - (20.3) Filtering data in a specific way
 - (20.4) Manipulating tables
 - (20.5) _[Project - All For One]()_
