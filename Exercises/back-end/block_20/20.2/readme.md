@@ -32,339 +32,171 @@
 
 # EXERCICIOS
 
-[Part 1]
-- 1. Monte uma query que exiba seu nome na tela;
-- 2. Monte uma query que exiba seu nome, sobrenome, cidade natal e idade na tela;
-- 3. Monte uma query que, além de exibir todas as informações já mencionadas, identifique cada coluna usando o `AS`, que é chamado de `alias` na linguagem **SQL** (**alias** é como um apelido no português);
-- 4. Qual é o resultado de 13 * 8 ? Descubra usando apenas o `SELECT`;
-- 5. Monte uma query que exiba a data e hora atuais. Dê a essa coluna o nome "Data Atual".
+[Part 1] `SELECT`
+1. Monte uma query que exiba seu nome na tela;
+2. Monte uma query que exiba seu nome, sobrenome, cidade natal e idade na tela;
+3. Monte uma query que, além de exibir todas as informações já mencionadas, identifique cada coluna usando o `AS`, que é chamado de `alias` na linguagem **SQL** (**alias** é como um apelido no português);
+4. Qual é o resultado de 13 * 8 ? Descubra usando apenas o `SELECT`;
+5. Monte uma query que exiba a data e hora atuais. Dê a essa coluna o nome "Data Atual".
 
 <br>
 
-[Part 2]
+[Part 2] `SELECT`
 Vamos agora entrar no banco de dados `sakila` e encontrar as seguintes informações, montando uma query para cada uma:
-- 1. Escreva uma query que selecione todas as colunas da tabela `city` ;
-- 2. Escreva uma query que exiba apenas as colunas `first_name` e `last_name` da tabela `customer`;
-- 3. Escreva uma query que exiba todas as colunas da tabela `rental`;
-- 4. Escreva uma query que exiba o **título**, a **descrição** e a **data de lançamento** dos filmes registrados na tabela `film`;
-- 5. Utilize o `SELECT` para explorar todas as tabelas do banco de dados.
+1. Escreva uma query que selecione todas as colunas da tabela `city` ;
+2. Escreva uma query que exiba apenas as colunas `first_name` e `last_name` da tabela `customer`;
+3. Escreva uma query que exiba todas as colunas da tabela `rental`;
+4. Escreva uma query que exiba o **título**, a **descrição** e a **data de lançamento** dos filmes registrados na tabela `film`;
+5. Utilize o `SELECT` para explorar todas as tabelas do banco de dados.
 
 <br>
 
-[Part 3]
+[Part 3] `CONCAT`
 Na tabela `sakila.film`:
-- 1. Monte uma query que exiba o **título** e o **ano de lançamento** dos filmes em uma coluna e dê a ela o nome *Lançamento do Filme*.
-- 2. Crie uma query que exiba o **título** do filme e sua **classificação** indicativa (PG, G, NC-17) em apenas uma coluna. Dê a ela o nome *Classificação*. (Não se esqueça de deixar um espaço entre as palavras para que fiquem legíveis);
+1. Monte uma query que exiba o **título** e o **ano de lançamento** dos filmes em uma coluna e dê a ela o nome *Lançamento do Filme*.
+2. Crie uma query que exiba o **título** do filme e sua **classificação** indicativa (PG, G, NC-17) em apenas uma coluna. Dê a ela o nome *Classificação*. (Não se esqueça de deixar um espaço entre as palavras para que fiquem legíveis);
 
 Na tabela `sakila.address`:
-- 3.  Monte uma query que exiba a **rua** e o **distrito** de cada registro em uma coluna apenas, e dê a essa coluna o nome *Endereço*.
+3.  Monte uma query que exiba a **rua** e o **distrito** de cada registro em uma coluna apenas, e dê a essa coluna o nome *Endereço*.
 
 <br>
 
-[Part 4]
-- 1. Crie um novo banco de dados chamado `Escola`;
-- 2. Crie uma nova tabela chamada `Alunos`:
-  - a) Adicione um atributo `Nome`, limite-o com apenas 7 caracteres e configure para o formato UTF8;
-  - b) Adicione um atributo `Idade` como inteiro;
-- 3. Insira 6 linhas na tabela criada:
-  - a) Nome: Rafael, Idade: 25 anos
-  - b) Nome: Amanda, Idade: 30 anos
-  - c) Nome: Roberto, Idade: 45 anos
-  - d) Nome: Carol, Idade: 19 anos
-  - e) Nome: Amanda, Idade: 25 anos
-  - f) Nome: Carol, Idade: 30 anos
-- 4. Monte uma query para encontrar pares únicos de **nomes** e **idades**. *Quantas linhas você encontraria nesta query?*
-- 5. Monte uma query para encontrar somente os **nomes** únicos. *Quantas linhas você encontraria nesta query?*
-- 6. Monte uma query para encontrar somente as **idades** únicas. *Quantas linhas você encontraria nesta query?*
+[Part 4] `DISTINCT`
+1. Crie um novo banco de dados chamado `Escola`;
+2. Crie uma nova tabela chamada `Alunos`:
+  a) Adicione um atributo `Nome`, limite-o com apenas 7 caracteres e configure para o formato UTF8;
+  b) Adicione um atributo `Idade` como inteiro;
+3. Insira 6 linhas na tabela criada:
+  a) Nome: Rafael, Idade: 25 anos
+  b) Nome: Amanda, Idade: 30 anos
+  c) Nome: Roberto, Idade: 45 anos
+  d) Nome: Carol, Idade: 19 anos
+  e) Nome: Amanda, Idade: 25 anos
+  f) Nome: Carol, Idade: 30 anos
+4. Monte uma query para encontrar pares únicos de **nomes** e **idades**. *Quantas linhas você encontraria nesta query?*
+5. Monte uma query para encontrar somente os **nomes** únicos. *Quantas linhas você encontraria nesta query?*
+6. Monte uma query para encontrar somente as **idades** únicas. *Quantas linhas você encontraria nesta query?*
 
 <br>
 
-[Part 5]
+[Part 5] `COUNT`
 Na tabela `sakila.staff`:
-- 1. Monte uma query para encontrar a quantidade de **senhas** cadastradas;
-- 2. Monte uma query para encontrar a quantidade de **pessoas** trabalhando;
-- 3. Monte uma query para encontrar a quantidade de **emails** cadastrados
+1. Monte uma query para encontrar a quantidade de **senhas** cadastradas;
+2. Monte uma query para encontrar a quantidade de **pessoas** trabalhando;
+3. Monte uma query para encontrar a quantidade de **emails** cadastrados
 
 <br>
 
-[Part 6]
-
-
-<!--
-> He who controls information, controls the world - Stephen Franklin
-
-When we work with backend and database, in general, the flow works like this: 
-- The frontend makes the request for the backend, 
-- The backend makes the connection and queries the database. 
-- Then the db returns some information to the backend, 
-- Then the API (Application Programming Interface) enters, 
-
-*The API is responsible for processing this information, receiving requests, sending responses and, in turn, feeding the frontend.*
+[Part 6] `LIMIT` e `OFFSET`
+1. Monte uma query para limitar o resultado da seleção da tabela `rental` em 10 linhas;
+2. Monta uma query para limitir o resultado da seleção da tabela `rental` em 10 linhas, porém pule as 3 primeiras;
 
 <br>
 
-### How is this information (tables) stored?
-
-All searches performed within a database are done in tables. Tables have rows and columns. Lines represent an example, or instance, of what you want to represent, whereas columns describe some aspect of the represented entity.
-
-<img src="http://4.bp.blogspot.com/-5MzMOvds7ks/Vk1LfGkD7OI/AAAAAAAABCI/Hcl6kHgxRNQ/s1600/Difference-between-Column-based-and-Row-based-Tables.png">
-
-<br>
-
-### SQL Database
-
-One of the great advantages of storing your data in a database is that it is possible to create rules and constraints (constraints), which dictate exactly how the data can or cannot be inserted into your tables.
-
-*To manually verify that the MySQL service is running correctly on your computer, enter the following code on the command line (Linux):*
-
-```Linux
-sudo systemctl status mysql
-
-```
+[Part 7] Misturando tudo com ORDER BY
+1. Escreva uma query que exiba todos os filmes cadastrados no banco de dados.
+2. Escreva uma query que exiba apenas o nome dos filmes, seu ano de lançamento e sua classificação .
+3. Escreva uma query que exiba apenas os sobrenomes únicos cadastrados na tabela actor .
+Crie queries para descobrir o seguinte:
+4. Quantos **filmes** temos cadastrados?
+5. Quantos **clientes** temos registrados?
+6. Quantos **sobrenomes únicos** temos na tabela `actor`;
+7. Quantas **categorias** de filmes o banco `sakila` possui?
+8. Quantos países são atendidos pela `sakila`?
+9. Vá até a tabela `language` do `sakila` e crie uma pesquisa que mostre os **5 idiomas cadastrados**, mas não mostre o idioma `english`.
+10. Vá até a tabela `film` e selecione **todos** os dados da tabela. Pronto, fez isso?
+11. Agora vamos tentar fazer o seguinte: Crie uma query para encontrar os **20 primeiros filmes**, incluindo o **título**, o **ano de lançamento**, a **duração**, a **classificação indicativa** e o **custo de substituição**. **Ordene** os resultados pelos filmes com a *maior duração* e depois pelo *menor custo de substituição*.
 
 <br>
 
-*If the service is stopped, you can use the following command to start it:*
-
-```
-systemctl start mysql
-```
-
-<br>
-
-*To stop the **MySQL** service, you can use the stop command:*
-
-```
-systemctl stop mysql
-```
-
-<br>
-
-### Configuring the MYSQL server startup and password
-
-By default, after installation, your server will be configured to start with the system. If you do not want this to happen, to save RAM, you can disable automatic start using the command:
-
-```
-sudo systemctl disable mysql
-```
-
-A primeira vez que for utilizar após iniciar o computador, será necessário iniciar o servidor com o comando:
-
-```
-sudo systemctl start mysql
-```
-
-If you want to enable it to start again at the computer, just use the command:
-
-```
-sudo systemctl enable mysql
-```
-<br>
-
-### Set a password for accessing the database
-
-Both for **security and for use in the workbench** (soon), you will need to enter the password you define. Note that we are talking about your **mysql server password** here, not your superuser password (root). To do this, you will run the following command:
-
-```
-mysql -u root -p
-```
-
-Since there is no password set yet, no password must be entered. Keep hitting 'Enter'.
-Here, you are browsing the **MySQL monitor** which is the **standard mysql interface on the terminal**. And from here, you already have mysql installed on your computer and can execute the course commands on that interface.
-
-<img src="https://course.betrybe.com//back-end/sql/images/mysqlinstallation9.png">
-
-<br>
-
-Run the command, paying attention to the `'your_password'` part, which must be changed to the password you define (it can also be empty `''`, assuming a testing and development environment):
-
-```
- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_password'; flush privileges;
- -- EX: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234'; flush privileges;
-```
-
-### Uninstalling MySQL Server
-
-First remove all installed packages:
-
-```
-sudo apt-get remove mysql-server mysql-client mysql-common
-```
-
-Now remove the dependency files that are no longer needed and then remove the old versions of the package files.
-
-```
-sudo apt-get autoremove
-```
-
-```
-sudo apt-get autoclean
-```
-
-Next, remove the mysql files that may have been left behind.
-
-```
-sudo rm -rf /var/lib/mysql
-```
-
-```
-sudo rm -rf /etc/mysql
-```
-
-If the uninstallation is completed successfully, the `mysql --version` command should not return your mysql version.
-
-<br>
-
-### MySQL on the command line
-
-After following the previous steps, you can now access your server from the command line. To see which databases are available, you must use the command:
-
-```
-mysql -u root -p
-```
-<br>
-
-You can see all the databases that are currently installed by typing the following command (don't forget the semicolon):
-
-```
-SHOW DATABASES;
-```
-
-<br>
-
-### Most common commands
-
-By convention, we use the SQL keywords in capital letters to differentiate from the indications of tables and columns.
-
-1. The `USE` command is used to define the **database reference used in queries**:
-
-```
-USE name_of_database_you_want_to_connect;
--- EX: USE information_schema;
-```
-
-- Another way to refer to the bank, without having to run `SE` is in the format `database_blablabla.table`:
-
-```
-SELECT * FROM database_blablabla.table;
--- EX: SELECT * FROM information_schema.statistics;
-```
-
-<br>
-
-2. To return all tables initialized on your server:
+[Part 8] Para realizar os próximos exercícios, restaure o seguinte banco de dados:
 
 ```sql
-SHOW TABLES;
+DROP SCHEMA IF EXISTS Scientists;
+CREATE SCHEMA Scientists;
+USE Scientists;
+
+CREATE TABLE Scientists (
+  SSN INT,
+  Name CHAR(30) NOT NULL,
+  PRIMARY KEY (SSN)
+);
+
+CREATE TABLE Projects (
+  Code CHAR(4),
+  Name CHAR(50) NOT NULL,
+  Hours INT,
+  PRIMARY KEY (Code)
+);
+
+CREATE TABLE AssignedTo (
+  Scientist INT NOT NULL,
+  Project CHAR(4) NOT NULL,
+  PRIMARY KEY (Scientist, Project),
+  FOREIGN KEY (Scientist) REFERENCES Scientists (SSN),
+  FOREIGN KEY (Project) REFERENCES Projects (Code)
+);
+
+INSERT INTO Scientists(SSN,Name)
+  VALUES(123234877, 'Michael Rogers'),
+    (152934485, 'Anand Manikutty'),
+    (222364883, 'Carol Smith'),
+    (326587417, 'Joe Stevens'),
+    (332154719, 'Mary-Anne Foster'),
+    (332569843, 'George ODonnell'),
+    (546523478, 'John Doe'),
+    (631231482, 'David Smith'),
+    (654873219, 'Zacary Efron'),
+    (745685214, 'Eric Goldsmith'),
+    (845657245, 'Elizabeth Doe'),
+    (845657246, 'Kumar Swamy');
+
+ INSERT INTO Projects (Code, Name, Hours)
+  VALUES ('AeH1' ,'Winds: Studying Bernoullis Principle', 156),
+    ('AeH2', 'Aerodynamics and Bridge Design', 189),
+    ('AeH3', 'Aerodynamics and Gas Mileage', 256),
+    ('AeH4', 'Aerodynamics and Ice Hockey', 789),
+    ('AeH5', 'Aerodynamics of a Football', 98),
+    ('AeH6', 'Aerodynamics of Air Hockey', 89),
+    ('Ast1', 'A Matter of Time', 112),
+    ('Ast2', 'A Puzzling Parallax', 299),
+    ('Ast3', 'Build Your Own Telescope', 6546),
+    ('Bte1', 'Juicy: Extracting Apple Juice with Pectinase', 321),
+    ('Bte2', 'A Magnetic Primer Designer', 9684),
+    ('Bte3', 'Bacterial Transformation Efficiency', 321),
+    ('Che1', 'A Silver-Cleaning Battery', 545),
+    ('Che2', 'A Soluble Separation Solution', 778);
+
+ INSERT INTO AssignedTo (Scientist, Project)
+  VALUES (123234877, 'AeH1'),
+    (152934485, 'AeH3'),
+    (222364883, 'Ast3'),
+    (326587417, 'Ast3'),
+    (332154719, 'Bte1'),
+    (546523478, 'Che1'),
+    (631231482, 'Ast3'),
+    (654873219, 'Che1'),
+    (745685214, 'AeH3'),
+    (845657245, 'Ast1'),
+    (845657246, 'Ast2'),
+    (332569843, 'AeH4');
 ```
+Esse banco de dados é de uso livre, sendo licenciado de acordo com os termos deste [link](https://creativecommons.org/licenses/by-sa/3.0/).
 
-<br>
-
-3. View structure of a table:
-
-```
-DESCRIBE name_of_table;
--- EX: DESCRIBE statistics;
-```
-
-<br>
-
-4. Create a database:
-
-```
-CREATE DATABASE my_database;
-```
-
-<br>
-
-### Installing a graphical interface (MySQL Workbench)
-
-<img src="https://course.betrybe.com//back-end/sql/images/mysqlinstallation8.gif">
-
-<br>
-
-### Application launch
-
-Okay, now open **MySQL Workbench** through your application menu. After opening it, you will be at the home screen, in which you must select the server you want to enter.
-
-In general, the workbench identifies your installed server, returning a "Local instance" for it, in our case here, because we only have one server installed, it returns a "Local instance" on standard port 3306.
-
-Clicking on the instance will ask for a password. You must enter your server password, previously defined, check the option *Save password in keychain* so you don't have to repeat your password again every time you connect.
-
-<img src="https://course.betrybe.com//back-end/sql/images/mysqlinstallation16.gif">
-
-<br>
-
-### What is an entity?
-When talking about entities in a database, we are usually talking about a table that represents some real-world concept that you want to describe (person, events, events) and their properties (height, time of the event, name of the event). The **person** entity, for example, can have the properties of height, weight and age. A **party** entity can have the event time, target audience and party date properties. Finally, a **selling** entity may own the properties sale value, day of sale, product sold, etc.
-
-In some of these cases, the entities are individual and do not relate to each other, but sometimes they are linked with each other through relationships.
-
-### How is the data linked?
-There are four types of relationships in a database.
-
-#### One to One
-A **row in Table A** should only have one corresponding **row in Table B** or vice versa.
-
-*This type of relationship is normally used when you want to split information from a larger table into smaller tables for performance reasons, in order to avoid tables with dozens of columns, or for various other business-specific issues.*
-
-#### One to Many or Many to One
-This is one of the most common types of relationships. In such scenarios, a **row in table A** can have several corresponding **rows in table B**, but a **row in table B** can only have one corresponding **row in table A**.
+1. Escreva uma query para exibir a string "This is SQL Exercise, Practice and Solution".
+2. Escreva uma query para exibir três números em três colunas.
+3. Escreva uma query para exibir a soma dos números 10 e 15.
+4. Escreva uma query para exibir o resultado de uma expressão aritmética qualquer.
+5. Escreva uma query para exibir todas as informações de todos os cientistas.
+6. Escreva uma query para exibir o nome como "Nome do Projeto" e as horas como "Tempo de Trabalho" de cada projeto.
+7. Escreva uma query para exibir o nome dos cientistas em ordem alfabética.
+8. Escreva uma query para exibir o nome dos Projetos em ordem alfabética descendente.
+9. Escreva uma query que exiba a string "O projeto Name precisou de Hours horas para ser concluído." para cada projeto.
+10. Escreva uma query para exibir o nome e as horas dos três projetos com a maior quantidade de horas.
+11. Escreva uma query para exibir o código de todos os projetos da tabela AssignedTo sem que haja repetições.
+12. Escreva uma query para exibir o nome do projeto com maior quantidade de horas.
+13. Escreva uma query para exibir o nome do segundo projeto com menor quantidade de horas.
+14. Escreva uma query para exibir todas as informações dos cinco projetos com a menor quantidade de horas.
+15. Escreva uma query que exiba a string "Existem Number cientistas na tabela Scientists.", em que Number se refira a quantidade de cientistas.
 
 
-#### Many to Many
-The many-to-many relationship type happens when a **row in table A** can have many corresponding **rows in table B** and vice versa.
-
-The many-to-many relationship can also be seen as two one-to-many relationships linked by an intermediate table.
-
-We can call this intermediate table a join table. It is used to store information about how the tables relate to each other.
-
-
-<br>
-
-### Restoring the sakila practice database
-After installing the **MySQL Workbench**, download the backup file [here](https://course.betrybe.com//back-end/sakila.sql).
-
-1. Now open the file on MySQL Workbench.
-
-
-<img src="https://course.betrybe.com//back-end/sql/images/workbench1.png">
-
-2. Run the SQL script by clicking the following button:
-
-<img src="https://course.betrybe.com//back-end/sql/images/workbench3.png">
-
-3. Click the following button to verify that the bank has been restored correctly:
-
-<img src="https://course.betrybe.com//back-end/sql/images/workbench4.png">
-
-4. If you see the following structure, then everything went correctly:
-
-<img src="https://course.betrybe.com//back-end/sql/images/workbench5.png">
-
-<br>
-
-# Exercises
-
-Now we are going to open the Workbench and do a practical analysis of the sakila database, which must already be installed, in case you have installed MySql Workbench by default. If the sakila database is not available, go back to the section Restoring the sakila practice database and follow the instructions listed. With this bench available in your Workbench installation, your mission now is to try to complete the following exercises!
-
-**Exercise 1**: Find out how to do a search on any table without using a line of code using **MySql Workbench**.
-
-**Exercise 2**: Discover how you can create a table without using **SQL** code using **MySql Workbench**.
-
-**Exercise 3**: Once this is done, create a table with the following restrictions:
-Table name: `Movie`
-
-Columns:
-- **FilmeId** - primary key, type int, increments by 1 each time a value is automatically inserted;
-- **Description** - does not allow nulls, text type (varchar (100);
-- **AnoLancamento** - does not allow nulls, type int;
-- **Note** - allows nulls, type int;
-
-**Exercise 4**: Analyze the `city` table and find the table that the `country_id` column refers to.
-
-**Exercise 5**: After solving the previous exercise, answer: what kind of relationship does the `city` table have with the `country` table?
-
-**Exercise 6**: What kind of relationship does the `country` table have with the city table?
-
-**Exercise 7**: Open table by table from the `sakila` database and find at least 3 examples of a 1:N or N: 1 relationship.
