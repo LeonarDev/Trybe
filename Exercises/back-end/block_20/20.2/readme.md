@@ -28,6 +28,68 @@
 - `SAVEPOINT`: define pontos para os quais uma transação pode voltar. É uma maneira de voltar para pontos específicos de sua query
 - `TRANSACTION`: comandos que definem onde, como e em que escopo suas transações são executadas
 
+<br>
+
+# EXERCICIOS
+
+[Part 1]
+- 1. Monte uma query que exiba seu nome na tela;
+- 2. Monte uma query que exiba seu nome, sobrenome, cidade natal e idade na tela;
+- 3. Monte uma query que, além de exibir todas as informações já mencionadas, identifique cada coluna usando o `AS`, que é chamado de `alias` na linguagem **SQL** (**alias** é como um apelido no português);
+- 4. Qual é o resultado de 13 * 8 ? Descubra usando apenas o `SELECT`;
+- 5. Monte uma query que exiba a data e hora atuais. Dê a essa coluna o nome "Data Atual".
+
+<br>
+
+[Part 2]
+Vamos agora entrar no banco de dados `sakila` e encontrar as seguintes informações, montando uma query para cada uma:
+- 1. Escreva uma query que selecione todas as colunas da tabela `city` ;
+- 2. Escreva uma query que exiba apenas as colunas `first_name` e `last_name` da tabela `customer`;
+- 3. Escreva uma query que exiba todas as colunas da tabela `rental`;
+- 4. Escreva uma query que exiba o **título**, a **descrição** e a **data de lançamento** dos filmes registrados na tabela `film`;
+- 5. Utilize o `SELECT` para explorar todas as tabelas do banco de dados.
+
+<br>
+
+[Part 3]
+Na tabela `sakila.film`:
+- 1. Monte uma query que exiba o **título** e o **ano de lançamento** dos filmes em uma coluna e dê a ela o nome *Lançamento do Filme*.
+- 2. Crie uma query que exiba o **título** do filme e sua **classificação** indicativa (PG, G, NC-17) em apenas uma coluna. Dê a ela o nome *Classificação*. (Não se esqueça de deixar um espaço entre as palavras para que fiquem legíveis);
+
+Na tabela `sakila.address`:
+- 3.  Monte uma query que exiba a **rua** e o **distrito** de cada registro em uma coluna apenas, e dê a essa coluna o nome *Endereço*.
+
+<br>
+
+[Part 4]
+- 1. Crie um novo banco de dados chamado `Escola`;
+- 2. Crie uma nova tabela chamada `Alunos`:
+  - a) Adicione um atributo `Nome`, limite-o com apenas 7 caracteres e configure para o formato UTF8;
+  - b) Adicione um atributo `Idade` como inteiro;
+- 3. Insira 6 linhas na tabela criada:
+  - a) Nome: Rafael, Idade: 25 anos
+  - b) Nome: Amanda, Idade: 30 anos
+  - c) Nome: Roberto, Idade: 45 anos
+  - d) Nome: Carol, Idade: 19 anos
+  - e) Nome: Amanda, Idade: 25 anos
+  - f) Nome: Carol, Idade: 30 anos
+- 4. Monte uma query para encontrar pares únicos de **nomes** e **idades**. *Quantas linhas você encontraria nesta query?*
+- 5. Monte uma query para encontrar somente os **nomes** únicos. *Quantas linhas você encontraria nesta query?*
+- 6. Monte uma query para encontrar somente as **idades** únicas. *Quantas linhas você encontraria nesta query?*
+
+<br>
+
+[Part 5]
+Na tabela `sakila.staff`:
+- 1. Monte uma query para encontrar a quantidade de **senhas** cadastradas;
+- 2. Monte uma query para encontrar a quantidade de **pessoas** trabalhando;
+- 3. Monte uma query para encontrar a quantidade de **emails** cadastrados
+
+<br>
+
+[Part 6]
+
+
 <!--
 > He who controls information, controls the world - Stephen Franklin
 
