@@ -32,16 +32,16 @@
 
 # EXERCICIOS
 
-[Part 1] `SELECT`
+#### [Part 1] `SELECT`
 1. Monte uma query que exiba seu nome na tela;
 2. Monte uma query que exiba seu nome, sobrenome, cidade natal e idade na tela;
-3. Monte uma query que, além de exibir todas as informações já mencionadas, identifique cada coluna usando o `AS`, que é chamado de `alias` na linguagem **SQL** (**alias** é como um apelido no português);
+3. Monte uma query que, além de **exibir** todas as informações já mencionadas, identifique cada coluna usando o `AS`, que é chamado de `alias` na linguagem **SQL** (**alias** é como um apelido no português);
 4. Qual é o resultado de 13 * 8 ? Descubra usando apenas o `SELECT`;
 5. Monte uma query que exiba a data e hora atuais. Dê a essa coluna o nome "Data Atual".
 
 <br>
 
-[Part 2] `SELECT`
+#### [Part 2] `SELECT`
 Vamos agora entrar no banco de dados `sakila` e encontrar as seguintes informações, montando uma query para cada uma:
 1. Escreva uma query que selecione todas as colunas da tabela `city` ;
 2. Escreva uma query que exiba apenas as colunas `first_name` e `last_name` da tabela `customer`;
@@ -51,7 +51,7 @@ Vamos agora entrar no banco de dados `sakila` e encontrar as seguintes informaç
 
 <br>
 
-[Part 3] `CONCAT`
+#### [Part 3] `CONCAT`
 Na tabela `sakila.film`:
 1. Monte uma query que exiba o **título** e o **ano de lançamento** dos filmes em uma coluna e dê a ela o nome *Lançamento do Filme*.
 2. Crie uma query que exiba o **título** do filme e sua **classificação** indicativa (PG, G, NC-17) em apenas uma coluna. Dê a ela o nome *Classificação*. (Não se esqueça de deixar um espaço entre as palavras para que fiquem legíveis);
@@ -61,7 +61,7 @@ Na tabela `sakila.address`:
 
 <br>
 
-[Part 4] `DISTINCT`
+#### [Part 4] `DISTINCT`
 1. Crie um novo banco de dados chamado `Escola`;
 2. Crie uma nova tabela chamada `Alunos`:
   a) Adicione um atributo `Nome`, limite-o com apenas 7 caracteres e configure para o formato UTF8;
@@ -79,7 +79,7 @@ Na tabela `sakila.address`:
 
 <br>
 
-[Part 5] `COUNT`
+#### [Part 5] `COUNT`
 Na tabela `sakila.staff`:
 1. Monte uma query para encontrar a quantidade de **senhas** cadastradas;
 2. Monte uma query para encontrar a quantidade de **pessoas** trabalhando;
@@ -87,13 +87,13 @@ Na tabela `sakila.staff`:
 
 <br>
 
-[Part 6] `LIMIT` e `OFFSET`
+#### [Part 6] `LIMIT` e `OFFSET`
 1. Monte uma query para limitar o resultado da seleção da tabela `rental` em 10 linhas;
 2. Monta uma query para limitir o resultado da seleção da tabela `rental` em 10 linhas, porém pule as 3 primeiras;
 
 <br>
 
-[Part 7] Misturando tudo com ORDER BY
+#### [Part 7] Misturando tudo com ORDER BY
 1. Escreva uma query que exiba todos os filmes cadastrados no banco de dados.
 2. Escreva uma query que exiba apenas o nome dos filmes, seu ano de lançamento e sua classificação .
 3. Escreva uma query que exiba apenas os sobrenomes únicos cadastrados na tabela actor .
@@ -109,7 +109,7 @@ Crie queries para descobrir o seguinte:
 
 <br>
 
-[Part 8] Para realizar os próximos exercícios, restaure o seguinte banco de dados:
+#### [Part 8] Para realizar os próximos exercícios, restaure o seguinte banco de dados:
 
 ```sql
 DROP SCHEMA IF EXISTS Scientists;
@@ -181,22 +181,20 @@ INSERT INTO Scientists(SSN,Name)
     (845657246, 'Ast2'),
     (332569843, 'AeH4');
 ```
-Esse banco de dados é de uso livre, sendo licenciado de acordo com os termos deste [link](https://creativecommons.org/licenses/by-sa/3.0/).
+>Esse banco de dados é de uso livre, sendo licenciado de acordo com os termos deste [link](https://creativecommons.org/licenses/by-sa/3.0/).
 
-1. Escreva uma query para exibir a string "This is SQL Exercise, Practice and Solution".
-2. Escreva uma query para exibir três números em três colunas.
-3. Escreva uma query para exibir a soma dos números 10 e 15.
-4. Escreva uma query para exibir o resultado de uma expressão aritmética qualquer.
-5. Escreva uma query para exibir todas as informações de todos os cientistas.
-6. Escreva uma query para exibir o nome como "Nome do Projeto" e as horas como "Tempo de Trabalho" de cada projeto.
-7. Escreva uma query para exibir o nome dos cientistas em ordem alfabética.
-8. Escreva uma query para exibir o nome dos Projetos em ordem alfabética descendente.
+1. Escreva uma query para ****exibir**** a string **"This is SQL Exercise, Practice and Solution"**.
+2. Escreva uma query para ****exibir**** três números em três colunas.
+3. Escreva uma query para **exibir** a soma dos números 10 e 15.
+4. Escreva uma query para **exibir** o resultado de uma expressão aritmética qualquer.
+5. Escreva uma query para **exibir** todas as informações de todos os **cientistas**.
+6. Escreva uma query para **exibir** o **nome** como "Nome do Projeto" e as **horas** como "Tempo de Trabalho" de cada projeto.
+7. Escreva uma query para **exibir** o **nome** dos cientistas em **ordem alfabética**.
+8. Escreva uma query para **exibir** o **nome** dos **Projetos** em **ordem alfabética descendente**.
 9. Escreva uma query que exiba a string "O projeto Name precisou de Hours horas para ser concluído." para cada projeto.
-10. Escreva uma query para exibir o nome e as horas dos três projetos com a maior quantidade de horas.
-11. Escreva uma query para exibir o código de todos os projetos da tabela AssignedTo sem que haja repetições.
-12. Escreva uma query para exibir o nome do projeto com maior quantidade de horas.
-13. Escreva uma query para exibir o nome do segundo projeto com menor quantidade de horas.
-14. Escreva uma query para exibir todas as informações dos cinco projetos com a menor quantidade de horas.
-15. Escreva uma query que exiba a string "Existem Number cientistas na tabela Scientists.", em que Number se refira a quantidade de cientistas.
-
-
+10. Escreva uma query para **exibir** o **nome** e as **horas** dos três **projetos** com a maior quantidade de horas.
+11. Escreva uma query para **exibir** o **código** de todos os projetos da tabela `AssignedTo` sem que haja repetições.
+12. Escreva uma query para **exibir** o **nome** do **projeto** com maior quantidade de horas.
+13. Escreva uma query para **exibir** o **nome** do segundo **projeto** com menor quantidade de horas.
+14. Escreva uma query para **exibir** todas as informações dos cinco **projetos** com a menor quantidade de horas.
+15. Escreva uma query que exiba a string **"Existem Number cientistas na tabela Scientists."**, em que `Number` se refira a quantidade de **cientistas**.
