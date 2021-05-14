@@ -198,3 +198,65 @@ INSERT INTO Scientists(SSN,Name)
 13. Escreva uma query para **exibir** o **nome** do segundo **projeto** com menor quantidade de horas.
 14. Escreva uma query para **exibir** todas as informações dos cinco **projetos** com a menor quantidade de horas.
 15. Escreva uma query que exiba a string **"Existem Number cientistas na tabela Scientists."**, em que `Number` se refira a quantidade de **cientistas**.
+
+<br>
+
+#### [Part 9] Para realizar os próximos exercícios, restaure o seguinte banco de dados:
+
+```sql
+DROP SCHEMA IF EXISTS PiecesProviders;
+CREATE SCHEMA PiecesProviders;
+USE PiecesProviders;
+
+CREATE TABLE Pieces (
+  Code INTEGER PRIMARY KEY NOT NULL,
+  Name TEXT NOT NULL
+);
+
+CREATE TABLE Providers (
+  Code VARCHAR(40) PRIMARY KEY NOT NULL,
+  Name TEXT NOT NULL
+);
+
+CREATE TABLE Provides (
+  Piece INTEGER,
+  FOREIGN KEY (Piece) REFERENCES Pieces (Code),
+  Provider VARCHAR(40),
+  FOREIGN KEY (Provider) REFERENCES Providers (Code),
+  Price INTEGER NOT NULL,
+  PRIMARY KEY (Piece , Provider)
+);
+
+INSERT INTO Providers(Code, Name)
+  VALUES ('HAL', 'Clarke Enterprises'),
+    ('RBT', 'Susan Calvin Corp.'),
+    ('TNBC', 'Skellington Supplies');
+
+INSERT INTO Pieces(Code, Name)
+  VALUES (1, 'Sprocket'),
+    (2, 'Screw'),
+    (3, 'Nut'),
+    (4, 'Bolt');
+
+INSERT INTO Provides(Piece, Provider, Price)
+  VALUES (1, 'HAL', 10),
+    (1, 'RBT', 15),
+    (2, 'HAL', 20),
+    (2, 'RBT', 25),
+    (2, 'TNBC', 14),
+    (3, 'RBT', 50),
+    (3, 'TNBC', 45),
+    (4, 'HAL', 5),
+    (4, 'RBT', 7);
+```
+
+>Esse banco de dados é de uso livre, sendo licenciado de acordo com os termos deste [link](https://creativecommons.org/licenses/by-sa/3.0/).
+
+1. Escreva uma query para **ordenar** o **nome** das empresas de forma alfabética descendente e que retorne somente o código e o nome da primeira empresa.
+
+2. Escreve uma query para **exibir** todas as informações das cinco peças com os maiores preços.
+
+3. Escreva uma query para **exibir** o **nome** das empresas e **preço** das peças, começando a lista a partir do 3º item, e exibindo o preço das quatro peças mais caras.
+
+4. Escreva uma query para **exibir** a string **"A peça mais cara é a: *Piece* , provida pela empresa *Provider* e custa *Price* reais."**, essa query deve retornar somene uma única string, sendo que Price se refere ao maior preço.
+
