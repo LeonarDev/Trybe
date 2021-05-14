@@ -1,0 +1,5 @@
+USE sakila;
+
+SELECT * FROM rental LIMIT 10;
+
+SELECT * FROM rental LIMIT 10 OFFSET 3;
