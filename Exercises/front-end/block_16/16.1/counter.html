@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Redux basic example</title>
+      <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script> <!-- armazena a biblioteca do redux -->
+   </head>
+   <body>
+      <div>
+        Clicked: <span id="clicksValue">0</span> times
+        <div>
+          Increment <input id="incrementInputValue" value="1" type="number" style="width: 35px"> times
+          <button id="increment">+</button>
+        </div>
+        <div>
+          Decrement <input id="decrementInputValue" value="1" type="number" style="width: 35px"> times
+          <button id="decrement">-</button>
+        </div>
+        <div>
+          Result: <span id="resultValue">0</span>
+        </div>
+      </div>
+      <script>
+        // Padrão da action
+        // const action = {
+        //   type: 'MULTIPLY',
+        //   payload: {
+        //     amount: 1,
+        //   }
+        // }
+        const INCREMENT = 'INCREMENT';
+        const DECREMENT = 'DECREMENT';
+
+        let incrementInputValue = document.getElementById('incrementInputValue');
+        let decrementInputValue = document.getElementById('decrementInputValue');
+
+        // Criação do reducer
+        function counterReducer(state = { result: 0, clickCount: 0 }, action) {
+          switch (action.type) {
+            case INCREMENT:
+              return {
+                ...state,
+                result: state.result + action.payload.amount,
+                clickCount: state.clickCount + 1
+              };
+            case DECREMENT:
+              return {
+                ...state,
+                result: state.result - action.payload.amount,
+                clickCount: state.clickCount + 1
+              };
+            default:
+              return state;
+          }
+        }
+
+        // Configurar a store
+        const store = Redux.createStore(
+          counterReducer,
+          window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+        );
+
+        // Adicionar o disparo das actions no click dos botões
+        document.getElementById('increment').addEventListener('click', () => {
+          store.dispatch({
+            type: INCREMENT,
+            payload: {
+              amount: parseInt(incrementInputValue.value),
+            }
+          });
+        });
+
+        document.getElementById('decrement').addEventListener('click', () => {
+          store.dispatch({
+            type: DECREMENT,
+            payload: {
+              amount: parseInt(decrementInputValue.value),
+            }
+          });
+        });
+
+        // Ler o dado do store global
+        store.subscribe(() => {
+          document.getElementById('resultValue').innerHTML = store.getState().result;
+          document.getElementById('clicksValue').innerHTML = store.getState().clickCount;
+        });
+
+      </script>
+   </body>
+</html>

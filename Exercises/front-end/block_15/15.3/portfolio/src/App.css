@@ -1,0 +1,26 @@
+header {
+  background-color: #272121;
+  height: 70px;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  font-size: 20px;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0px;
+}
+
+nav ul li {
+  margin: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}

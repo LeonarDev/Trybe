@@ -1,0 +1,28 @@
+#projects {
+  display: flex;
+  justify-content: center;
+}
+
+#projects ul {
+  list-style-type: none;
+  max-width: 1000px;
+}
+
+#projects li {
+  padding: 10px;
+}
+
+#projects li:hover {
+  background: #DDD;
+  cursor: pointer;
+}
+
+#projects li img {
+  float: left;
+  margin-right: 15px;
+}
+
+#projects li p {
+  font-family: serif;
+  font-size: 12px;
+}

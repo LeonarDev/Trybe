@@ -1,0 +1,10 @@
+#form-errors {
+  padding: 0;
+}
+
+#form-errors .error-message {
+  background-color: #F2DEDE;
+  border: 1px solid #EBCCD1;
+  color: #A94442;
+  padding: 6px 12px;
+}
