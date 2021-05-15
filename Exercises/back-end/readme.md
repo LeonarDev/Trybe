@@ -1,32 +1,32 @@
 # Back-end Development :construction:
 
 #### Block 20: [Introduction to Back-end](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	:triangular_flag_on_post:
-- [ ] (20.1) SQL - Introduction
-- [ ] (20.1) Relational database - Introduction
-- [ ] (20.1) SQL database
-- [ ] (20.2) Finding data in a database
-- [ ] (20.3) Filtering data in a specific way
-- [ ] (20.4) Manipulating tables
+- [x] (20.1) SQL - Introduction
+- [x] (20.1) Relational database - Introduction
+- [x] (20.1) SQL database
+- [x] (20.2) Finding data in a database
+- [x] (20.3) Filtering data in a specific way
+- [x] (20.4) Manipulating tables
 - [ ] (20.5) _[Project - All For One]()_
 <hr>
 
-#### Block 21: [SQL Functions, Joins and Subqueries]	:hourglass_flowing_sand:
-- [ ] (21.1) Most used functions in SQL
-- [ ] (21.2) Uncomplicating JOINs and UNIONs
-- [ ] (21.3) Stored Routines & Subqueries
+#### Block 21: [SQL Functions, Joins and Subqueries]	:triangular_flag_on_post:
+- [x] (21.1) Most used functions in SQL
+- [x] (21.2) Uncomplicating JOINs and UNIONs
+- [x] (21.3) Stored Routines & Subqueries
 - [ ] (21.4) _[Project - Vocabulary Booster]()_
 <hr>
 
-#### Block 22: [Database modeling and standardization]	:hourglass_flowing_sand:
-- [ ] (22.1) Transforming ideas into a database model - Part 1
-- [ ] (22.2) Normalization, Normal Forms and Duḿps
-- [ ] (22.3) Transforming ideas into a database model - Part 2
+#### Block 22: [Database modeling and standardization]	:triangular_flag_on_post:
+- [x] (22.1) Transforming ideas into a database model - Part 1
+- [x] (22.2) Normalization, Normal Forms and Duḿps
+- [x] (22.3) Transforming ideas into a database model - Part 2
 - [ ] (22.4) _[Project - One For All]()_
 <hr>
 
-#### Block 23: [Introduction to MongoDB]	:hourglass_flowing_sand:
-- [ ] (23.1) NoSQL - Introduction
-- [ ] (23.1) MongoDB - Introduction
+#### Block 23: [Introduction to MongoDB]	:triangular_flag_on_post:
+- [x] (23.1) NoSQL - Introduction
+- [x] (23.1) MongoDB - Introduction
 - [ ] (23.2) Filter Operators
 - [ ] (23.3) _[Project - Data Flights]()_
 <hr>
@@ -44,8 +44,8 @@
 - [ ] (25.3) _[Projeto - Aggregations]()_
 <hr>
 
-#### Block 26: [Introduction to web development with NodeJS] :hourglass_flowing_sand:
-- [ ] (26.1) NodeJS - Introduction
+#### Block 26: [Introduction to web development with NodeJS] :triangular_flag_on_post:
+- [x] (26.1) NodeJS - Introduction
 - [ ] (26.2) NodeJS - Asynchronous Flow
 - [ ] (26.3) NodeJS - Architecture
 - [ ] (26.4) Express: HTTP with NodeJS
