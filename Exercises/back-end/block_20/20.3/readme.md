@@ -47,6 +47,7 @@ Você está tentando se lembrar do nome de um filme a que já assistiu, mas só 
 SELECT * FROM sakila.film
 WHERE title LIKE '%don';
 ```
+
 <img src='./like.png'>
 
 O `LIKE` é usado para buscar por meio de uma sequência específica de caracteres, como no exemplo acima. Além disso, dois "**coringas**", ou *modificadores*, são normalmente usados com o `LIKE`:
@@ -87,13 +88,15 @@ WHERE title LIKE 'E__%';
 ```
 
 <br>
-# EXERCICIOS
+
+# EXERCÍCIOS
 
 #### [Part 1] Entre no banco de dados `sakila` e siga as instruções:
 
 Guia de como a **classificação indicativa** é usada no banco de dados `sakila`. Consulte-a ao fazer os desafios propostos.
+
  | CLASSIFICAÇÃO | LEGENDA | 
- |:-------------:||:-------------:|
+ |:-------------:|:-------------:|
  | **G** | permitido para todos | 
  | **PG** | permitido para crianças menores de 13 anos | 
  | **PG-13** | permitido para pessoas com mais de 13 anos | 
