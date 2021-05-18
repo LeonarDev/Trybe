@@ -1,81 +1,88 @@
-# Finding data in a Database
+# Filtrando dados de forma específica
 
 ### TRADUÇÃO PRO INGLÊS EM CONSTRUÇÃO :construction:
 
-*O que é uma query e quais são os principais tipos de queries*
+- Filtrar resultados de consultas com o `WHERE`.
+- Utilizar operadores booleanos e relacionais em consultas.
+- Criar consultas mais dinâmicas e maleáveis com `LIKE`.
+- Fazer consultas que englobam uma faixa de resultados com `IN` e `BETWEEN`.
+- Encontrar e separar resultados que incluem datas.
 
->Inquirir, ou query , em inglês, é o nome dado aos comandos que você digita dentro de uma janela ou linha de comando com a intenção de interagir de alguma maneira com uma base de dados. No mundo de banco de dados, você pode tanto trazer dados quanto alterá-los, atribuir permissões de acesso e manipulação e muito mais. Vamos dar um olhada nos principais tipos de queries a seguir:
+Precedência dos operadores no `WHERE`:
+<img src='./precedencia.png'>
 
-**DDL** : Data Definition Language - todos os comandos que lidam com o esquema, a descrição e o modo como os dados devem existir em um banco de dados:
-- `CREATE`: Para criar bancos de dados, tabelas, índices, views, procedures, functions e triggers
-- `ALTER`: Para alterar a estrutura de qualquer objeto
-- `DROP`: Permite deletar objetos
-- `TRUNCATE`: Apenas esvazia os dados dentro de uma tabela, mas a mantém no banco de dados
+Sendo assim, quando se faz a seguinte query:
 
-**DML**: Data Manipulation Language - Comandos que são usados para manipular dados. São utilizados para armazenar, modificar, buscar e excluir dados em um banco de dados. Os comandos e usos mais comuns nesta categoria são:
-- `SELECT`: usado para buscar dados em um banco de dados
-- `INSERT`: insere dados em uma tabela
-- `UPDATE`: altera dados dentro de uma tabela
-- `DELETE`: exclui dados de uma tabela
+```sql
+SELECT * FROM sakila.payment
+WHERE amount = 0.99 OR amount = 2.99 AND staff_id = 2;
+```
+Como o operador `AND` tem preferência sobre o operador `OR`, ele é avaliado primeiro. 
 
-**DCL**: Data Control Language - Focado mais nos comandos que concedem direitos, permissões e outros tipos de controle ao sistema de banco de dados.
-- `GRANT`: concede acesso a um usuário
-- `REVOKE`: remove acessos concedidos através do comando GRANT
+Então os registros buscados são aqueles nos quais `amount = 2.99` e `staff_id = 2`. Na sequência, são buscados os registros nos quais `amount = 0.99`, independente do valor de `staff_id`. 
 
-**TCL**: Transactional Control Language - Lida com as transações dentro de suas pesquisas.
-- `COMMIT`: muda suas alterações de temporárias para permanentes no seu banco de dados
-- `ROLLBACK`: desfaz todo o impacto realizado por um comando
-- `SAVEPOINT`: define pontos para os quais uma transação pode voltar. É uma maneira de voltar para pontos específicos de sua query
-- `TRANSACTION`: comandos que definem onde, como e em que escopo suas transações são executadas
+Os valores retornados serão os resultados dessas duas buscas. Ou seja, a query é executada como se tivesse os seguintes parênteses: `amount = 0.99 OR (amount = 2.99 AND staff_id = 2)`.
+
+<br>
+
+Agora, quando executar a seguinte query:
+
+```sql
+SELECT * FROM sakila.payment
+WHERE (amount = 0.99 OR amount = 2.99) AND staff_id = 2;
+
+```
+
+Primeiramente, a expressão dentro dos parênteses é avaliada, e todos os resultados que satisfazem a condição `amount = 0.99 OR amount = 2.99` são retornados. 
+
+Na sequência, a expressão do lado direito do `AND` é avaliada, e todos os resultados que satisfazem a condição `staff = 2` são retornados. O `AND` então compara o resultado de ambos os lados e faz com que somente os resultados que satisfazem ambas as condições sejam retornados.
 
 <br>
 
 # EXERCICIOS
 
-#### [Part 1] `SELECT`
-1. Monte uma query que exiba seu nome na tela;
-2. Monte uma query que exiba seu nome, sobrenome, cidade natal e idade na tela;
-3. Monte uma query que, além de **exibir** todas as informações já mencionadas, identifique cada coluna usando o `AS`, que é chamado de `alias` na linguagem **SQL** (**alias** é como um apelido no português);
-4. Qual é o resultado de 13 * 8 ? Descubra usando apenas o `SELECT`;
-5. Monte uma query que exiba a data e hora atuais. Dê a essa coluna o nome "Data Atual".
+#### [Part 1] Entre no banco de dados `sakila` e siga as instruções (e guarde as queries para conferir posteriormente):
+
+Guia de como a **classificação indicativa** é usada no banco de dados `sakila`. Consulte-a ao fazer os desafios propostos.
+
+**G** = permitido para todos
+**PG** = permitido para crianças menores de 13 anos
+**PG-13** = permitido para pessoas com mais de 13 anos
+**R** = permitido para pessoas com mais de 17 anos
+**NC-17** = permitido apenas para adultos
+
+1. Precisamos identificar os dados do cliente com o e-mail `LEONARD.SCHOFIELD@sakilacustomer.org`.
+2. Precisamos de um relatório dos nomes dos clientes, em **ordem alfabética**, que não estão mais ativos no nosso sistema e pertencem à loja com o `id = 2`, e não inclua o cliente `KENNETH` no resultado.
+3. O setor financeiro quer saber título, descrição, ano de lançamento e valor do custo de substituição ( replacement_cost ), dos 100 filmes com o maior custo de substituição, do valor mais alto ao mais baixo, entre os filmes feitos para menores de idade e que têm o custo mínimo de substituição de $18,00 dólares. Em caso de empate, ordene em **ordem alfabética** pelo título.
+4. Quantos clientes estão **ativos** na loja `1`?
+5. Mostre todos os detalhes dos clientes que **não** estão ativos na loja `1`.
+6. Precisamos descobrir quais são os 50 filmes feitos apenas para adultos com a **menor** taxa de aluguel, para que possamos fazer uma divulgação melhor desses filmes. Em caso de empate, ordene em **ordem alfabética** pelo título.
 
 <br>
 
-#### [Part 2] `SELECT`
-Vamos agora entrar no banco de dados `sakila` e encontrar as seguintes informações, montando uma query para cada uma:
-1. Escreva uma query que selecione todas as colunas da tabela `city` ;
-2. Escreva uma query que exiba apenas as colunas `first_name` e `last_name` da tabela `customer`;
-3. Escreva uma query que exiba todas as colunas da tabela `rental`;
-4. Escreva uma query que exiba o **título**, a **descrição** e a **data de lançamento** dos filmes registrados na tabela `film`;
-5. Utilize o `SELECT` para explorar todas as tabelas do banco de dados.
+#### [Part 2] 
+1. 
+2. 
+3. 
+4. 
+5. 
 
 <br>
 
-#### [Part 3] `CONCAT`
-Na tabela `sakila.film`:
-1. Monte uma query que exiba o **título** e o **ano de lançamento** dos filmes em uma coluna e dê a ela o nome *Lançamento do Filme*.
-2. Crie uma query que exiba o **título** do filme e sua **classificação** indicativa (PG, G, NC-17) em apenas uma coluna. Dê a ela o nome *Classificação*. (Não se esqueça de deixar um espaço entre as palavras para que fiquem legíveis);
-
-Na tabela `sakila.address`:
-3.  Monte uma query que exiba a **rua** e o **distrito** de cada registro em uma coluna apenas, e dê a essa coluna o nome *Endereço*.
+#### [Part 3] 
+1. 
+2. 
+3. 
 
 <br>
 
-#### [Part 4] `DISTINCT`
-1. Crie um novo banco de dados chamado `Escola`;
-2. Crie uma nova tabela chamada `Alunos`:
-  a) Adicione um atributo `Nome`, limite-o com apenas 7 caracteres e configure para o formato UTF8;
-  b) Adicione um atributo `Idade` como inteiro;
-3. Insira 6 linhas na tabela criada:
-  a) Nome: Rafael, Idade: 25 anos
-  b) Nome: Amanda, Idade: 30 anos
-  c) Nome: Roberto, Idade: 45 anos
-  d) Nome: Carol, Idade: 19 anos
-  e) Nome: Amanda, Idade: 25 anos
-  f) Nome: Carol, Idade: 30 anos
-4. Monte uma query para encontrar pares únicos de **nomes** e **idades**. *Quantas linhas você encontraria nesta query?*
-5. Monte uma query para encontrar somente os **nomes** únicos. *Quantas linhas você encontraria nesta query?*
-6. Monte uma query para encontrar somente as **idades** únicas. *Quantas linhas você encontraria nesta query?*
+#### [Part 4]
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
 
 <br>
 
