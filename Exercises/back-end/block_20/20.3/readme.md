@@ -9,7 +9,7 @@
 - Encontrar e separar resultados que incluem datas.
 
 Precedência dos operadores no `WHERE`:
-<img src='./precedencia.png'>
+<img src='./img/precedencia.png'>
 
 Sendo assim, quando se faz a seguinte query:
 
@@ -50,7 +50,7 @@ WHERE title LIKE '%don';
 
 <br>
 
-<img src='./like.png'>
+<img src='./img/like.png'>
 
 <br>
 
@@ -114,7 +114,7 @@ WHERE first_name
   IN ('PENELOPE','NICK','ED','JENNIFER');
 ```
 
-<img src='./where_in.png'>
+<img src='./img/where_in.png'>
 
 <br>
 
@@ -124,7 +124,7 @@ SELECT * FROM sakila.customer
 WHERE customer_id in (1, 2, 3, 4, 5);
 ```
 
-<img src='./where_in-2.png'>
+<img src='./img/where_in-2.png'>
 
 
 <br>
@@ -162,7 +162,7 @@ WHERE length
   BETWEEN 50 AND 120;
 ```
 
-<img src='./between.png'>
+<img src='./img/between.png'>
 
 <br>
 
@@ -188,7 +188,7 @@ WHERE rental_date
   BETWEEN '2005-05-27' AND '2005-07-17';
 ```
 
-<img src='./between-2.png'>
+<img src='./img/between-2.png'>
 
 <br>
 
@@ -206,7 +206,7 @@ Se você pesquisar agora no banco `sakila` usando a seguinte *query*:
 SELECT * FROM sakila.payment;
 ```
 
-<img src='./select_date.jpg'>
+<img src='./img/select_date.jpg'>
 
 
 É possível confirmar que a coluna `payment_date` é exibida no formato `YYYY-MM-DD HH:MM:SS`. Assim, para fazer pesquisas e filtrar dados baseados em datas, temos que ter sempre isso em mente: quando você pensar no dia de **25 de dezembro de 2020**, para o banco dados, esse dia será **2020-12-25**.
