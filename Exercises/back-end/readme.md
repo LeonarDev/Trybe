@@ -1,13 +1,13 @@
 # Back-end Development :construction:
 
-#### Block 20: [Introduction to Back-end](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	:triangular_flag_on_post:
+#### Block 20: [Introduction to Back-end](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	✔️
 - [x] (20.1) SQL - Introduction
 - [x] (20.1) Relational database - Introduction
 - [x] (20.1) SQL database
 - [x] (20.2) Finding data in a database
 - [x] (20.3) Filtering data in a specific way
 - [x] (20.4) Manipulating tables
-- [ ] (20.5) _[Project - All For One]()_
+- [x] (20.5) _[Project - All For One]()_
 <hr>
 
 #### Block 21: [SQL Functions, Joins and Subqueries]	:triangular_flag_on_post:
