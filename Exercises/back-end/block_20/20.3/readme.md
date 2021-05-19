@@ -1,6 +1,6 @@
 # Filtrando dados de forma específica
 
-## TRADUÇÃO PRO INGLÊS EM CONSTRUÇÃO :construction:
+> :warning: Translation to **English** under construction :construction:
 
 - Filtrar resultados de consultas com o `WHERE`.
 - Utilizar operadores booleanos e relacionais em consultas.
@@ -15,7 +15,9 @@ Sendo assim, quando se faz a seguinte query:
 
 ```sql
 SELECT * FROM sakila.payment
-WHERE amount = 0.99 OR amount = 2.99 AND staff_id = 2;
+WHERE amount = 0.99 
+  OR amount = 2.99 
+  AND staff_id = 2;
 ```
 Como o operador `AND` tem preferência sobre o operador `OR`, ele é avaliado primeiro. 
 
@@ -29,7 +31,8 @@ Agora, quando executar a seguinte query:
 
 ```sql
 SELECT * FROM sakila.payment
-WHERE (amount = 0.99 OR amount = 2.99) AND staff_id = 2;
+WHERE (amount = 0.99 OR amount = 2.99) 
+  AND staff_id = 2;
 
 ```
 
@@ -121,7 +124,8 @@ WHERE first_name
 Podemos fazer esse mesmo processo para números também:
 ```sql
 SELECT * FROM sakila.customer
-WHERE customer_id in (1, 2, 3, 4, 5);
+WHERE customer_id 
+  IN (1, 2, 3, 4, 5);
 ```
 
 <img src='./img/where_in-2.png'>
