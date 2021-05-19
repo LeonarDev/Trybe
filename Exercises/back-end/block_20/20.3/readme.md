@@ -9,7 +9,8 @@
 - Encontrar e separar resultados que incluem datas.
 
 Precedência dos operadores no `WHERE`:
-<img src='./img/precedencia.png'>
+
+<img src='./img/precedencia.png' width="250" height="350">
 
 Sendo assim, quando se faz a seguinte query:
 
