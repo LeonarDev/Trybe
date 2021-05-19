@@ -45,10 +45,10 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 21 [SQL Functions, Joins and Subqueries]	| :triangular_flag_on_post:
 | Block 22 [Database modeling and standardization] | :triangular_flag_on_post:
 | Block 23 [Introduction to MongoDB]	| :triangular_flag_on_post:
-| Block 24 [MongoDB: Simple and complex updates]	| :hourglass_flowing_sand:
-| Block 25 [MongoDB: Aggregation Framework]	| :hourglass_flowing_sand:
+| Block 24 [MongoDB: Simple and complex updates]	| :triangular_flag_on_post:
+| Block 25 [MongoDB: Aggregation Framework]	| :triangular_flag_on_post:
 | Block 26 [Introduction to web development with NodeJS | :triangular_flag_on_post:
-| Block 27 [NodeJS: Service layer, Rest & Restful Architectures] | :hourglass_flowing_sand:
+| Block 27 [NodeJS: Service layer, Rest & Restful Architectures] | :triangular_flag_on_post:
 | Block 28 [Authentication and File Upload] | :hourglass_flowing_sand:
 | Block 29 [Deployment] | :hourglass_flowing_sand:
 | Block 30 [Project: Tryber] | :hourglass_flowing_sand:
