@@ -316,17 +316,23 @@ FROM sakila.film
 GROUP by rating;
 ```
 
-Média de duração dos filmes por classificação indicativa
 <img src='./img/3.png'>
+Média de duração dos filmes por classificação indicativa
 
-Valores mínimos de substituição dos filmes por classificação indicativa
+<br>
+
 <img src='./img/4.png'>
+Valores mínimos de substituição dos filmes por classificação indicativa
 
-Valores máximos de substituição dos filmes por classificação indicativa
+<br>
+
 <img src='./img/5.png'>
+Valores máximos de substituição dos filmes por classificação indicativa
 
-Soma total do custo de substituição dos filmes por classificação indicativa
+<br>
+
 <img src='./img/6.png'>
+Soma total do custo de substituição dos filmes por classificação indicativa
 
 <br>
 
