@@ -317,23 +317,31 @@ GROUP by rating;
 ```
 
 <img src='./img/3.png'>
+
 Média de duração dos filmes por classificação indicativa
 
 <br>
+<br>
 
 <img src='./img/4.png'>
+
 Valores mínimos de substituição dos filmes por classificação indicativa
 
 <br>
+<br>
 
 <img src='./img/5.png'>
+
 Valores máximos de substituição dos filmes por classificação indicativa
 
 <br>
+<br>
 
 <img src='./img/6.png'>
+
 Soma total do custo de substituição dos filmes por classificação indicativa
 
+<br>
 <br>
 
 ## Filtrando Resultados do `GROUP BY` com `HAVING`
