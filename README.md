@@ -33,7 +33,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 15 [Automated testing with React Testing Library](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_15)	| :heavy_check_mark:
 | Block 16 [State management with Redux](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16)	| :heavy_check_mark:
 | Block 17 [Project: Trivia Game] | :heavy_check_mark:
-| Block 18 [Context API and Reack Hooks] | :heavy_check_mark:
+| Block 18 [Context API and Reack Hooks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_18) | :heavy_check_mark:
 | Block 19 [Project: Recipes App] | :heavy_check_mark:
 
 <br>
@@ -42,7 +42,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | [BACK-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end) | Status
 | --- | :---: |
 | Block 20 [Introduction to SQL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20) | :heavy_check_mark:
-| Block 21 [SQL Functions, Joins and Subqueries]	| :triangular_flag_on_post:
+| Block 21 [SQL Functions, Joins and Subqueries](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_21)	| :triangular_flag_on_post:
 | Block 22 [Database modeling and standardization] | :triangular_flag_on_post:
 | Block 23 [Introduction to MongoDB]	| :triangular_flag_on_post:
 | Block 24 [MongoDB: Simple and complex updates]	| :triangular_flag_on_post:
