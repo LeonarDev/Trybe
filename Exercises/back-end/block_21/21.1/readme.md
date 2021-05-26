@@ -316,17 +316,17 @@ FROM sakila.film
 GROUP by rating;
 ```
 
-<img src='./img/3.png'>
 Média de duração dos filmes por classificação indicativa
+<img src='./img/3.png'>
 
-<img src='./img/4.png'>
 Valores mínimos de substituição dos filmes por classificação indicativa
+<img src='./img/4.png'>
 
-<img src='./img/5.png'>
 Valores máximos de substituição dos filmes por classificação indicativa
+<img src='./img/5.png'>
 
-<img src='./img/6.png'>
 Soma total do custo de substituição dos filmes por classificação indicativa
+<img src='./img/6.png'>
 
 <br>
 
@@ -468,6 +468,8 @@ HAVING 'nomes cadastrados' > 2;
     FROM sakila.film
     GROUP by rating;
 ```
+
+<br>
 
 ### [Part 9] Todas as funções deste bloco
 Para realizar os exercícios propostos para o dia, faremos uso da tabela `employees` do banco de dados `hr`. O banco de dados deve ser gerado e restaurado usando este [arquivo SQL](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/sql/hr-cebf8bc2a5bb252bc470ae28943604c6.sql).
