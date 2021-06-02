@@ -1,268 +1,448 @@
-<!--
-# Filtrando dados de forma específica
+# Stored Routines & Stored Functions
+
 
 > :warning: Translation to **English** under construction :construction:
 
-- Filtrar resultados de consultas com o `WHERE`.
-- Utilizar operadores booleanos e relacionais em consultas.
-- Criar consultas mais dinâmicas e maleáveis com `LIKE`.
-- Fazer consultas que englobam uma faixa de resultados com `IN` e `BETWEEN`.
-- Encontrar e separar resultados que incluem datas.
+- Criar blocos de código SQL reutilizáveis com `STORED PROCEDURES` e `STORED FUNCTIONS`;
+- Criar reações dinâmicas com `TRIGGERS`.
 
-Precedência dos operadores no `WHERE`:
-<img src='./img/precedencia.png'>
+As `STORED PROCEDURES` e `STORED FUNCTIONS` podem te ajudar a seguir um conceito de programação chamado [DRY](https://pt.wikipedia.org/wiki/Don%27t_repeat_yourself), que preza pela redução de código repetido, quando possível.
 
-Sendo assim, quando se faz a seguinte query:
-
-```sql
-SELECT * FROM sakila.payment
-WHERE amount = 0.99 
-  OR amount = 2.99 
-  AND staff_id = 2;
-```
-Como o operador `AND` tem preferência sobre o operador `OR`, ele é avaliado primeiro. 
-
-Então os registros buscados são aqueles nos quais `amount = 2.99` e `staff_id = 2`. Na sequência, são buscados os registros nos quais `amount = 0.99`, independente do valor de `staff_id`. 
-
-Os valores retornados serão os resultados dessas duas buscas. Ou seja, a query é executada como se tivesse os seguintes parênteses: `amount = 0.99 OR (amount = 2.99 AND staff_id = 2)`.
+Isso é viabilizado pelo fato de esses comandos te permitirem criar blocos de código SQL reutilizáveis, que podem se comunicar com outros frameworks e linguagens de programação, como Node.js, C#, Python, Java e PHP, entre outras.
 
 <br>
 
-Agora, quando executar a seguinte query:
+# Estrutura padrão de uma stored procedure
 
 ```sql
-SELECT * FROM sakila.payment
-WHERE (amount = 0.99 OR amount = 2.99) 
-  AND staff_id = 2;
+USE banco_de_dados; -- obrigatório para criar a procedure no banco correto
+DELIMITER $$ -- definindo delimitador
 
+CREATE PROCEDURE nome_da_procedure(@parametro1, @parametro2, ..., @parametroN) -- parâmetros
+BEGIN -- delimitando o início do código SQL
+
+END $$ -- delimitando o final do código SQL
+
+DELIMITER ; -- muda o delimitador de volta para ; - o espaço entre DELIMITER e o ';' é necessário
 ```
 
-Primeiramente, a expressão dentro dos parênteses é avaliada, e todos os resultados que satisfazem a condição `amount = 0.99 OR amount = 2.99` são retornados. 
+**Procedure sem parâmetros:**
 
-Na sequência, a expressão do lado direito do `AND` é avaliada, e todos os resultados que satisfazem a condição `staff = 2` são retornados. O `AND` então compara o resultado de ambos os lados e faz com que somente os resultados que satisfazem ambas as condições sejam retornados.
+Normalmente é utilizada para realizar queries mais simples.
+
+**Exemplo:** Aqui estamos apenas executando uma busca na tabela actor e exibindo os resultados.
+
+```sql
+USE sakila;
+DELIMITER $$
+
+CREATE PROCEDURE ShowAllActors()
+BEGIN
+    SELECT * FROM sakila.actor;
+END $$
+
+DELIMITER ;
+
+-- Como usar:
+CALL ShowAllActors();
+```
+
+<img src="./img/1.png">
 
 <br>
 
-## Como criar pesquisas mais dinâmicas e maleáveis usando o `LIKE`
+# Elementos das Stored Procedures
 
-Você está tentando se lembrar do nome de um filme a que já assistiu, mas só se lembra de que ele terminava com don no nome. Como seria possível usar o LIKE para te ajudar a encontrá-lo?
+Verifique os elementos de uma stored procedures no passo a passo a seguir:
+1 - Delimiter
+A palavra-chave DELIMITER é usada para definir qual símbolo representa o final da procedure declarada. Aqui estamos usando $$ , porém é permitido usar outros símbolos como // ou até mesmo ; para retornar ao DELIMITER como padrão default. Atenção, não é permitido usar \ , pois é um caractere especial do MySQL.
+O DELIMITER precisa ser usado para que o MySQL não interprete o primeiro ponto e vírgula encontrado como o final da declaração na sua procedure.
+2 - Variáveis
+O MySQL possui a funcionalidade de criar e usar variáveis, assim como em outras linguagens de programação. Essas variáveis também podem ser usadas em procedures .
+No MySQL existem três principais tipos de variáveis, sendo elas:
+User-defined variables;
+Local Variables;
+Server System Variables.
+Não abordaremos todas elas, mas se quiser aprofundar em alguma delas consulte nossos recursos adicionais.
+A forma mais comum é por meio da User-defined variables que para criar variáveis e atribuir valores a elas, você pode fazer da seguinte maneira:
+
 
 ```sql
-SELECT * FROM sakila.film
-WHERE title LIKE '%don';
+SET @my_school = 'BeTrybe';
+
+SELECT @my_school;
+```
+
+3 - Tipos de dados
+Existem vários tipos de dados no MySQL que vão além de apenas numéricos e strings. É relevante que você tenha uma noção básica, sabendo que esses tipos no MySQL são determinados por meio de algumas características:
+- Tipo de valor que representa;
+- O espaço ocupado e se possui comprimento fixo ou variável;
+- Se os valores podem ser indexados ou não;
+- Comparação de valores de um tipo de dado específico pelo MySQL .
+
+Os principais tipos de dados do MySQL são:
+**Tipos de String**
+- VARCHAR : Uma string não binária de comprimento variável;
+- CHAR : Uma string não binária (caractere) de comprimento fixo;
+- TEXT : Uma pequena string não binária.
+
+**Tipos Numéricos**
+- TYNINT : Um número inteiro muito pequeno;
+- INT : Um inteiro padrão;
+- BIGINT : Um grande número inteiro;
+- DECIMAL : Um número de ponto fixo.
+
+<br>
+
+# Construindo sua primeira stored procedure
+
+Vamos criar nossas primeiras stored procedures . Temos os seguintes tipos:
+- Procedure sem parâmetros;
+- Procedure com parâmetros de entrada (IN) ;
+- Procedure com parâmetros de saída (OUT) ;
+- Procedure com parâmetros de entrada e saída (IN-OUT) .
+
+**Procedure com parâmetros de entrada (IN):**
+Para criar procedures com funcionalidades mais elaboradas, podemos passar parâmetros de entrada. Ao definir um parâmetro do tipo IN , podemos usá-lo e modificá-lo dentro da nossa procedure.
+
+**Exemplo:** Foi criada uma procedure que recebe como parâmetro uma sílaba (syllable) e busca na tabela actor todos atores quem contêm aquela sílaba no nome.
+
+```sql
+USE sakila;
+DELIMITER $$
+
+CREATE PROCEDURE ShowActorsWithSyllable(IN syllable VARCHAR(100))
+BEGIN
+    SELECT *
+    FROM sakila.actor
+    WHERE first_name LIKE CONCAT('%', syllable, '%');
+END $$
+
+DELIMITER ;
+
+-- Como usar:
+CALL ShowActorsWithSyllable('lope');
+```
+
+<img src="./img/2.png">
+
+<br>
+
+
+**Procedure com parâmetros de saida (OUT):**
+O parâmetro `OUT` é útil quando você precisa que algo seja avaliado ou encontrado dentro de uma query e te retorne esse valor para que algo adicional possa ser feito com ele.
+
+**Exemplo:** Estamos recebendo aqui o título de um filme como valor de entrada e depois buscando dentro da procedure a duração média de um empréstimo daquele filme. Feito isso, ele é inserido em uma variável que pode ser usada posteriormente.
+
+```sql
+USE sakila;
+DELIMITER $$
+
+CREATE PROCEDURE ShowAverageRentalDurationOfMovie(
+    IN film_name VARCHAR(300),
+    OUT media_aluguel_em_dias DOUBLE
+)
+BEGIN
+    SELECT AVG(rental_duration) INTO media_aluguel_em_dias
+    FROM sakila.film
+    WHERE title = film_name;
+END $$
+
+DELIMITER ;
+
+-- Como usar:
+
+CALL ShowAverageRentalDurationOfMovie('ACADEMY DINOSAUR', @media_de_dias);
+SELECT @media_de_dias;
+```
+
+<img src="./img/3.png">
+
+<br>
+
+**Procedure com parâmetros de entrada-saida (IN-OUT):**
+O `IN-OUT` deve ser usado quando é necessário que um parâmetro possa ser modificado tanto antes como durante a execução de uma procedure.
+
+**Exemplo:** Estamos gerando um novo nome para um filme, usando como base a variável film_name , que deve ser criada e passada como parâmetro para a procedure. O parâmetro sofrerá alterações dentro da procedure, podendo ser usado posteriormente com o novo nome.
+
+```sql
+USE sakila;
+DELIMITER $$
+
+CREATE PROCEDURE NameGenerator(INOUT film_name VARCHAR(300))
+BEGIN
+    SELECT CONCAT('ULTRA ', film_name, ' THE BEST MOVIE OF THE CENTURY')
+    INTO film_name;
+END $$
+
+DELIMITER ;
+
+-- Como usar:
+SELECT 'ACE GOLDFINGER' INTO @movie_title;
+CALL NameGenerator(@movie_title);
+SELECT @movie_title;
+```
+
+<img src="./img/4.png">
+
+<br>
+
+# Stored Functions
+Na área de programação, temos uma boa prática chamada [DRY (Don't Repeat Yourself)](http://www.macoratti.net/16/04/net_dry1.htm) que, em resumo, sugere que você não se repita ou reescreva o mesmo código várias vezes.
+
+Nesse ponto, temos uma das principais ferramentas para combater esse problema no SQL: as `stored functions`.
+
+Através delas, podemos encapsular nossas queries usadas mais frequentemente dentro de um bloco de código nomeado e parametrizável.
+
+**Sua primeira stored function**
+Stored functions podem ser executadas com o comando SELECT . Ao criá-las, temos que definir o tipo de retorno que sua função possui.
+
+**Tipos de retorno comuns:**
+- `DETERMINISTIC` - Sempre retorna o mesmo valor ao receber os mesmos dados de entrada;
+- `READS SQL DATA` - Indica para o MySQL que sua função somente lerá dados.
+
+Em muitas situações, sua function estará apenas lendo e retornando dados. Nesses casos, a opção READS SQL DATA deve ser usada. No entanto, sempre avalie o tipo mais adequado à sua função.
+
+**Estrutura padrão de uma stored function**
+```sql
+USE banco_de_dados; -- obrigatório para criar a função no banco correto
+DELIMITER $$
+
+CREATE FUNCTION nome_da_function(parametro1, parametro2, ..., parametroN)
+RETURNS tipo_de_dado tipo_de_retorno
+BEGIN
+    query_sql
+    RETURN resultado_a_ser_retornado;
+END $$
+
+DELIMITER ;
+```
+
+**Exemplo:** Uma stored function que exibe a quantidade de filmes em que um determinado ator ou atriz atuou:
+
+```sql
+USE sakila;
+DELIMITER $$
+
+CREATE FUNCTION MoviesWithActor(actor_id int)
+RETURNS INT READS SQL DATA
+BEGIN
+    DECLARE movie_total INT;
+    SELECT COUNT(*)
+    FROM sakila.film_actor
+    WHERE sakila.film_actor.actor_id = actor_id INTO movie_total;
+    RETURN movie_total;
+END $$
+
+DELIMITER ;
+
+-- Como usar:
+
+SELECT MoviesWithActor(1);
+```
+
+<img src="./img/5.png">
+
+
+```sql
+USE sakila;
+DELIMITER $$
+
+CREATE FUNCTION GetFullName(id INT)
+RETURNS VARCHAR(200) READS SQL DATA
+BEGIN
+    DECLARE full_name VARCHAR(200);
+    SELECT concat(first_name, ' ', last_name)
+    FROM sakila.actor
+    WHERE actor_id = id
+    LIMIT 1
+    INTO full_name ;
+    RETURN full_name;
+END $$
+
+DELIMITER ;
+
+SELECT GetFullName(51);
+```
+
+<img src="./img/6.png">
+
+Assim como no caso das fuções de agregação AVG , MIN , MAX e SUM , entre outras, as stored functions são extremamente úteis e devem ser criadas sempre que percebermos que o mesmo tipo de código está sendo repetido em vários lugares diferentes.
+
+Isso ajuda a reduzir a quantidade de duplicação de código em seu servidor de banco de dados e deixa seu código mais legível e limpo, além de contribuir para uma melhor experiência para outras pessoas desenvolvedoras que possam ter que dar manutenção no seu código.
+
+<br>
+
+# Stored Functions VS Store Procedures
+
+<img src="./img/7.png">
+
+- Stored Procedures podem ser chamadas através do comando `CALL`, e o retorno de um valor é opcional;
+- Já as Stored Functions são executadas com o comando `SELECT` e obrigatoriamente retornam algum valor;
+- A Stored Functions não pode ser utilizada para alterar o estado global da base dados. (Ex. Por meio das instruções `INSERT`, `UPDATE` e `DELETE`);
+- Stored Procedures permite alterar o estado global.
+- Stored Procedures permitem realizar o tratamento de excepções, via try/catch.
+
+<br>
+
+# Criando reações dinâmicas com `Triggers`
+
+Triggers são blocos de código SQL que são disparados em reação a alguma atividade que ocorre no banco de dados. Eles podem ser disparados em dois momentos distintos, e é possível definir condições para esse disparo.
+
+Momentos em que um trigger pode ser disparado
+- BEFORE : antes que alguma ação seja executada;
+- AFTER : após alguma ação já ter sido executada.
+
+O que pode ativar um Trigger?
+- INSERT ;
+- UPDATE ;
+- DELETE .
+
+O que pode ser acessado dentro de um trigger?
+- O valor OLD de uma coluna: valor presente em uma coluna antes de uma operação;
+- O valor NEW de uma coluna: valor presente em uma coluna após uma operação.
+
+### Em quais operações os valores OLD e NEW estão disponíveis?
+
+| Operação |  OLD  |  NEW  |
+| -------- |:-----:| -----:|
+|  INSERT  | `Não` |  Sim  |
+|  UPDATE  |  Sim  |  Sim  |
+|  DEDLETE |  Sim  | `Não` |
+
+<br>
+
+**Sintaxe**
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER nome_do_trigger
+[BEFORE | AFTER] [INSERT | UPDATE | DELETE] ON tabela
+FOR EACH ROW
+BEGIN
+    -- o código SQL entra aqui
+END
+
+DELIMITER $$ ;
+```
+
+## Exemplos das três operações
+
+Para os próximos exemplos, considere as seguintes tabelas e banco de dados:
+```sql
+CREATE DATABASE IF NOT EXISTS rede_social;
+
+USE rede_social;
+
+CREATE TABLE perfil(
+    perfil_id INT PRIMARY KEY auto_increment,
+    saldo DECIMAL(10, 2) NOT NULL DEFAULT 0,
+    ultima_atualizacao DATETIME,
+    acao VARCHAR(50),
+    ativo BOOLEAN DEFAULT 1
+) engine = InnoDB;
+
+CREATE TABLE log_perfil(
+    acao_id INT PRIMARY KEY AUTO_INCREMENT,
+    acao VARCHAR(300),
+    data_acao DATE
+) engine = InnoDB;
+```
+
+### Exemplo de trigger para o `INSERT`:
+
+Considerando a tabela perfil , hora de montar um Trigger que define a data de inserção e o tipo de operação, quando um novo registro é inserido.
+```sql
+USE rede_social;
+
+DELIMITER $$
+CREATE TRIGGER trigger_perfil_insert
+    BEFORE INSERT ON perfil
+    FOR EACH ROW
+BEGIN
+    SET NEW.ultima_atualizacao = NOW(),
+        NEW.acao = 'INSERT';
+END $$
+DELIMITER ;
+```
+
+No `trigger` acima, o valor da coluna `ultima_atualizacao` está sendo definido para a data atual com o comando `NOW()` e, na sequência, definindo o valor da coluna acao para "INSERT". A palavra-chave `NEW` é utilizada para acessar e modificar as propriedades da tabela.
+
+Para ver o resultado do uso do `Trigger` na prática, execute o exemplo abaixo:
+```sql
+INSERT INTO perfil(saldo) VALUES (2500);
+
+SELECT * FROM perfil;
+```
+
+<img src="./img/8.png">
+
+<br>
+
+### Exemplo de trigger para o `UPDATE`:
+Considerando a tabela perfil, hora de montar um Trigger que define a data de atualização e o tipo de operação, quando algum registro for modificado.
+```sql
+USE rede_social;
+
+DELIMITER $$
+CREATE TRIGGER trigger_perfil_update
+    BEFORE UPDATE ON perfil
+    FOR EACH ROW
+BEGIN
+    SET NEW.ultima_atualizacao = NOW(),
+        NEW.acao = 'UPDATE';
+END $$
+DELIMITER ;
+```
+
+No Trigger acima, o valor da coluna ultima_atualizacao está sendo atualizado para a data atual com o comando NOW() e, na sequência, definindo o valor da coluna acao para "UPDATE". Novamente, a palavra-chave NEW é utilizada para acessar e modificar as propriedades da tabela.
+
+Para ver o resultado do uso do Trigger na prática, execute o exemplo abaixo:
+```sql
+UPDATE perfil
+SET saldo = 3000
+WHERE perfil_id = 1;
+
+SELECT * FROM perfil;
 ```
 
 <br>
 
-<img src='./img/like.png'>
-
-<br>
-
-O `LIKE` é usado para buscar por meio de uma sequência específica de caracteres, como no exemplo acima. Além disso, dois "**coringas**", ou *modificadores*, são normalmente usados com o `LIKE`:
-
-**%** - O sinal de percentual, que pode representar zero, um ou múltiplos caracteres
-**_** - O underscore (às vezes chamado de underline, no Brasil), que representa um único caractere
-
-Vamos ver abaixo como usá-los (todos podem ser verificados no banco `sakila`)
-
+### Exemplo de trigger para o `DELETE`:
+Considerando a tabela log_perfil , hora de criar um trigger que envia informações para essa tabela quando um registro da tabela perfil é excluído.
 ```sql
--- Encontra qualquer resultado finalizando com "don"
-SELECT * FROM sakila.film
-WHERE title LIKE '%don';
+USE rede_social;
 
--- Encontra qualquer resultado iniciando com "plu"
-SELECT * FROM sakila.film
-WHERE title LIKE 'plu%';
-
--- Encontra qualquer resultado que contém "plu"
-SELECT * FROM sakila.film
-WHERE title LIKE '%plu%';
-
--- Encontra qualquer resultado que inicia com "p" e finaliza com "r"
-SELECT * FROM sakila.film
-WHERE title LIKE 'p%r';
-
--- Encontra qualquer resultado em que o segundo caractere da frase é "C"
-SELECT * FROM sakila.film
-WHERE title LIKE '_C%';
-
--- Encontra qualquer resultado em que o título possui exatamente 8 caracteres
-SELECT * FROM sakila.film
-WHERE title LIKE '________';
-
--- Encontra todas as palavras com no mínimo 3 caracteres e que iniciam com E
-SELECT * FROM sakila.film
-WHERE title LIKE 'E__%';
+DELIMITER $$
+CREATE TRIGGER trigger_perfil_delete
+    AFTER DELETE ON perfil
+    FOR EACH ROW
+BEGIN
+    INSERT INTO log_perfil(acao, data_acao)
+    VALUES ('exclusão', NOW());
+END $$
+DELIMITER ;
 ```
 
-<br>
+O trigger acima envia informações para a tabela log_perfil , dizendo qual foi o tipo da operação e o horário do ocorrido.
 
-## Englobando uma faixa de resultados com `IN` e `BETWEEN`
-
-### Operador `IN`
-É possível juntar várias condições nas suas *queries* usando os operadores **AND** e **OR**. 
-No entanto, você ainda terá que digitar cada condição separadamente, como no exemplo a seguir:
+Pode-se confirmar o seu funcionamento excluindo um registro do banco de dados e depois fazendo uma pesquisa na tabela log_perfil . Veja o exemplo abaixo:
 
 ```sql
-SELECT * FROM sakila.actor
-WHERE first_name = 'PENELOPE'
-  OR first_name = 'NICK'
-  OR first_name = 'ED'
-  OR first_name = 'JENNIFER';
+DELETE FROM perfil WHERE perfil_id = 1;
+
+SELECT * FROM log_perfil;
 ```
 
-Uma forma melhor de fazer essa mesma pesquisa seria usando o `IN`:
-```sql
-SELECT * FROM sakila.actor
-WHERE first_name 
-  IN ('PENELOPE','NICK','ED','JENNIFER');
-```
-
-<img src='./img/where_in.png'>
-
-<br>
-
-Podemos fazer esse mesmo processo para números também:
-```sql
-SELECT * FROM sakila.customer
-WHERE customer_id 
-  IN (1, 2, 3, 4, 5);
-```
-
-<img src='./img/where_in-2.png'>
+<img src="./img/9.png">
 
 
-<br>
-
-Para realizar pesquisas utilizando o `IN`, a sintaxe a ser usada é a seguinte:
+<!--
 
 ```sql
-SELECT * FROM banco_de_dados
-WHERE coluna 
-  IN (valor1, valor2, valor3, valor4, ..., valorN);
-
--- ou também
-SELECT * FROM banco_de_dados
-WHERE coluna 
-  IN (expressão);
 ```
 
-<br>
-
-### Operador `BETWEEN`
-Uma outra opção quando queremos trabalhar com faixas de resultados é o `BETWEEN`, que torna possível fazer pesquisas dentro de uma faixa inicial e final.
-
-```sql
-expressão BETWEEN valor1 AND valor2;
--- a expressão é a sua query
--- e valor1 e valor2 delimitam o resultado
-```
-
-Então, quando você faz uma *query* como essa, você terá o resultado da imagem a seguir:
-
-```sql
--- Note que o MySQL inclui o valor inicial e o final nos resultados
-SELECT title, length FROM sakila.film
-WHERE length 
-  BETWEEN 50 AND 120;
-```
-
-<img src='./img/between.png'>
-
-<br>
-
-### Usando o `BETWEEN` com strings
-Para encontrar uma faixa de valores em que os valores são strings, podemos digitar a palavra por completo para encontrar os valores. 
-Exemplo:
-
-```sql
-SELECT * FROM sakila.language
-WHERE name 
-  BETWEEN 'Italian' AND 'Mandarin'
-ORDER BY name;
-```
-
-<br>
-
-### Usando o `BETWEEN` com datas
-Para usar o **BETWEEN** com datas, basta que você digite o valor no formato padrão da data, que é **YYYY-MM-DD HH:MM:SS** , sendo os valores de horas, minutos e segundos opcionais. No exemplo abaixo, estamos filtrando os resultados para exibir o `rental_id` e `rental_date` apenas entre o mês 05 e o mês 07:
-
-```sql
-SELECT rental_id, rental_date FROM sakila.rental
-WHERE rental_date
-  BETWEEN '2005-05-27' AND '2005-07-17';
-```
-
-<img src='./img/between-2.png'>
-
-<br>
-
-### Encontrando e separando resultados que incluem datas
-No MySQL, o tipo `DATE` faz parte dos [tipos de dados](https://www.mysqltutorial.org/mysql-data-types.aspx) temporais, os quais vamos ver com mais detalhes no decorrer do curso. 
-
-O MySQL, por padrão, usa o formato **YYYY-MM-DD** (ano/mês/dia) ao armazenar os valores de uma data. Você é obrigado, pelo banco de dados, a salvar nesse formato, e não é possível alterá-lo. Temos também o tipo `DATETIME`, que inclui informações de tempo. Vamos ver dois tipos comuns a seguir:
-
-- `DATE` - Possui apenas data, no formato `YYYY-MM-DD` na faixa de 1001-01-01 até 9999-12-31
-
-- `DATETIME` - Possui data e tempo, no formato `YYYY-MM-DD HH:MM:SS` com a faixa de **1000-01-01 00:00:00** até **9999-12-31 23:59:59**.
-
-Se você pesquisar agora no banco `sakila` usando a seguinte *query*:
-```sql
-SELECT * FROM sakila.payment;
-```
-
-<img src='./img/select_date.jpg'>
-
-
-É possível confirmar que a coluna `payment_date` é exibida no formato `YYYY-MM-DD HH:MM:SS`. Assim, para fazer pesquisas e filtrar dados baseados em datas, temos que ter sempre isso em mente: quando você pensar no dia de **25 de dezembro de 2020**, para o banco dados, esse dia será **2020-12-25**.
-
-<br>
-
-### Maneiras de encontrar dados por data
-Vamos dizer que queremos encontrar pagamentos realizados na data 2005-07-31 na tabela sakila.payment . Há várias formas de fazer isso.
-
-#### Usando a função `DATE(coluna_do_tipo_date)`:
-
-```sql
--- Encontra todos os pagamentos deste dia, ignorando horas, minutos e segundos
-SELECT * FROM sakila.payment
-WHERE DATE(payment_date) = '2005-07-31';
-```
-
-#### Usando `LIKE` para valores aproximados:
-```sql
--- Encontra todos pagamentos deste dia, ignorando horas, minutos e segundos
-SELECT * FROM sakila.payment
-WHERE payment_date 
-  LIKE '2005-07-31%';
-
--- Encontra um pagamento com dia e hora exatos
-SELECT * FROM sakila.payment
-WHERE payment_date 
-  LIKE '2005-08-20 00:30:52';
-```
-
-#### Usando `BETWEEN`:
-```sql
--- Encontra pagamentos especificando um valor mínimo e um valor máximo para a data
-SELECT * FROM sakila.payment
-WHERE payment_date 
-  BETWEEN '2005-05-26 00:00:00' AND '2005-05-27 23:59:59';
-```
-
-### Selecionando apenas partes de uma data
-Às vezes você está interessado em apenas uma parte de uma data, como o ano ou as horas. MySQL possui funções que retornam partes específicas de uma data ou hora.
-
-```sql
--- Teste cada um dos comandos a seguir:
-SELECT DATE(payment_date) FROM sakila.payment; -- YYYY-MM-DD
-SELECT YEAR(payment_date) FROM sakila.payment; -- Ano
-SELECT MONTH(payment_date) FROM sakila.payment; -- Mês
-SELECT DAY(payment_date) FROM sakila.payment; -- Dia
-SELECT HOUR(payment_date) FROM sakila.payment; -- Hora
-SELECT MINUTE(payment_date) FROM sakila.payment; -- Minuto
-SELECT SECOND(payment_date) FROM sakila.payment; -- Segundo
-```
 
 <br>
 
