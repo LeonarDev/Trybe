@@ -2,7 +2,7 @@
 - (21.1) Most used functions in SQL
 - (21.2) Uncomplicating JOINs and UNIONs
 - (21.3) Stored Routines & Subqueries
-- (21.4) Project - Vocabulary Booster
+- (21.4) [Project - Vocabulary Booster](https://github.com/tryber/sd-09-mysql-vocabulary-booster/pull/102)
 
 <br>
 
