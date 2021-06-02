@@ -10,11 +10,11 @@
 - [x] (20.5) _[Project - All For One]()_
 <hr>
 
-#### Block 21: [SQL Functions, Joins and Subqueries]	:triangular_flag_on_post:
+#### Block 21: [SQL Functions, Joins and Subqueries]	✔️
 - [x] (21.1) Most used functions in SQL
 - [x] (21.2) Uncomplicating JOINs and UNIONs
 - [x] (21.3) Stored Routines & Subqueries
-- [ ] (21.4) _[Project - Vocabulary Booster]()_
+- [x] (21.4) _[Project - Vocabulary Booster](https://github.com/tryber/sd-09-mysql-vocabulary-booster/pull/102)_
 <hr>
 
 #### Block 22: [Database modeling and standardization]	:triangular_flag_on_post:
