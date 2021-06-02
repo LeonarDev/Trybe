@@ -1,7 +1,7 @@
 # Block 21: SQL Functions, Joins and Subqueries
-- (21.1) Most used functions in SQL
-- (21.2) Uncomplicating JOINs and UNIONs
-- (21.3) Stored Routines & Subqueries
+- (21.1) [Most used functions in SQL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_21/21.1)
+- (21.2) [Uncomplicating JOINs and UNIONs](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_21/21.2)
+- (21.3) [Stored Routines & Subqueries](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_21/21.3)
 - (21.4) [Project - Vocabulary Booster](https://github.com/tryber/sd-09-mysql-vocabulary-booster/pull/102)
 
 <br>
