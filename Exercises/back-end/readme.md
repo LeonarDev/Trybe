@@ -7,7 +7,7 @@
 - [x] (20.2) Finding data in a database
 - [x] (20.3) Filtering data in a specific way
 - [x] (20.4) Manipulating tables
-- [x] (20.5) _[Project - All For One]()_
+- [x] (20.5) _[Project - All For One](https://github.com/tryber/sd-09-mysql-all-for-one/pull/97)_
 <hr>
 
 #### Block 21: [SQL Functions, Joins and Subqueries]	✔️
