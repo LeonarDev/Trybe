@@ -7,7 +7,7 @@
 -- 4. Escreva uma query que exiba a quantidade de dinheiro necessária para realizar o pagamento de todas as pessoas funcionárias.
 
 /* 5. Escreva uma query que exiba quatro informações: o maior salário, o menor salário, a soma de todos os salários e a média dos salários.
-Todos os valores devem ser formatados para ter apenas duas casas decimais. */
+      Todos os valores devem ser formatados para ter apenas duas casas decimais. */
 
 -- 6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras ( IT_PROG ).
 
