@@ -8,18 +8,223 @@
 - Alterar tabelas existentes;
 - Deletar uma tabela;
 - Usar um `INDEX`.
+
 <br>
 
-<!--
 
-## 
+### Clonar tabelas existentes
 
 ```sql
+
+-- Sintaxe:
+CREATE TABLE nome_para_nova_tabela LIKE tabela_a_ser_clonada;
+
+-- Exemplo:
+CREATE TABLE actor_clone LIKE sakila.actor;
+
+```
+
+- Esse comando não copia os dados, apenas a estrutura;
+- Caso não especifique qual banco de dados utilizar, a nova tabela será inserida no banco que estiver ativo no momento da execução. Sendo assim, sempre especifique o banco de dados antes.
+
+```sql
+
+USE nome_do_banco_de_dados;
+
+CREATE TABLE nome_para_nova_tabela LIKE tabela_a_ser_clonada;
+
 ```
 
 <br>
 
-## 
+### Anatomia de uma `VIEW`
+
+```sql
+
+-- Defina em qual banco a view será criada
+USE nome_do_banco_de_dados;
+
+-- Comando para criar a view
+CREATE VIEW nome_da_view AS query;
+
+```
+
+#### Exemplo de uso
+
+Suponha que a gerência quer ter uma maneira simples para sempre saber quem são os top 10 clientes que mais compram com a empresa. Pode-se criar uma view para resolver isso!
+
+```sql
+
+CREATE VIEW top_10_customers AS
+  SELECT c.customer_id, c.first_name, SUM(p.amount) AS total_amount_spent
+  FROM sakila.payment p
+    INNER JOIN 
+      sakila.customer c ON p.customer_id = c.customer_id
+  GROUP BY customer_id
+  ORDER BY total_amount_spent DESC
+  LIMIT 10;
+
+```
+
+
+Agora, caso alguém precise ter acesso a essa informação, você pode consultar a tabela temporária (`VIEW`) diretamente, sem a necessidade de montar uma nova query:
+
+```sql
+
+SELECT * FROM top_10_customers;
+
+```
+
+<img src='./img/1.png'>
+
+<br>
+
+Para excluir uma `VIEW`, use o seguinte comando: 
+
+```sql
+
+DROP VIEW nome_da_view;
+
+```
+
+<br>
+
+### Tudo que você deve saber sobre o `ALTER TABLE`
+Algo extremamente comum durante o ciclo de desenvolvimento de software é a necessidade constante de fazer melhorias na estrutura do banco de dados. As tabelas são uma dessas estruturas que podem sofrer alterações.
+
+Ao executar o bloco de código abaixo, a tabela `noticia` será criada. Essa tabela será utilizada como exemplo para testar modificações em sua estrutura.
+
+```sql
+
+USE sakila;
+CREATE TABLE noticia(
+    noticia_id INT PRIMARY KEY,
+    titulo VARCHAR(100),
+    historia VARCHAR(300)
+) engine = InnoDB;
+
+```
+
+Abaixo, algumas das alterações que podem ser feitas em uma tabela.
+
+```sql
+
+-- Adicionar uma nova coluna
+ALTER TABLE noticia ADD COLUMN data_postagem date NOT NULL;
+
+-- Modificar o tipo e propriedades de uma coluna
+ALTER TABLE noticia MODIFY noticia_id BIGINT;
+
+-- Adicionar incremento automático a uma coluna
+-- (especifique o tipo da coluna + auto_increment)
+ALTER TABLE noticia MODIFY noticia_id BIGINT auto_increment;
+
+-- Alterar o tipo e nome de uma coluna
+ALTER TABLE noticia CHANGE historia conteudo_postagem VARCHAR(1000) NOT NULL;
+
+-- Dropar/Excluir uma coluna
+ALTER TABLE noticia DROP COLUMN data_postagem;
+
+-- Adicionar uma nova coluna após outra
+ALTER TABLE noticia ADD COLUMN data_postagem DATETIME NOT NULL AFTER titulo;
+
+```
+
+Com os comandos acima, foram cobertas as operações mais comuns que você deve saber para alterar uma tabela. Para confirmar se a estrutura da sua tabela foi alterada corretamente, você pode usar o comando `SHOW COLUMNS FROM nome_da_tabela`. 
+Veja o exemplo abaixo:
+
+```sql
+
+SHOW COLUMNS FROM sakila.noticia;
+
+
+```
+
+<img src='./img/2.png'>
+
+<br>
+
+### `INDEX`
+
+#### Pontos positivos:
+- Acelera as queries (SELECT);
+- Permite tornar uma coluna com valores únicos (UNIQUE);
+- Permite buscar em grandes pedaços de textos (FULLTEXT INDEX);
+- Aceleram as operações de update que usam WHERE.
+
+#### Pontos negativos:
+- Ocupam espaço em disco;
+- Tornam lentas as operações de INSERT, UPDATE E DELETE, porque cada índice precisa ser atualizado junto com os dados.
+
+
+#### 1. Criando um index após ter criado uma tabela:
+
+
+```sql
+
+--VALORES NUMÉRICOS
+CREATE INDEX nome_index ON tabela(coluna);
+
+
+--VALORES GRANDES
+CREATE FULLTEXT INDEX nome_index ON tabela(coluna);
+
+```
+<br>
+
+#### 2. Criando um index junto com a criação da tabela:
+
+```sql
+
+CREATE DATABASE IF NOT EXISTS pizzaria;
+
+USE pizarria;
+
+CREATE TABLE pizzas(
+  pizza_id INT PRIMARY KEY,
+  sabor VARCHAR(100),
+  preco DECIMAL(5,2),
+  INDEX sabor_index(sabor)
+) ENGINE=InnoDB;
+
+```
+
+<br>
+
+#### 3. Criando um index alterando uma tabela:
+
+```sql
+
+ALTER TABLE nome_tabela
+ADD INDEX nome_index(nome_coluna);
+
+```
+
+<br>
+
+#### Resumo de opções:
+
+```sql
+
+-- Criando um índice em uma coluna
+CREATE [INDEX | FULLTEXT INDEX | UNIQUE INDEX] nome_indice
+ON tabela (coluna);
+
+-- Criando um índice composto, em duas ou mais colunas
+CREATE [INDEX | FULLTEXT INDEX | UNIQUE INDEX] nome_indice
+ON tabela (coluna1, coluna2);
+
+-- Excluindo índices
+DROP INDEX nome_do_indice ON tabela;
+
+```
+
+<br>
+
+
+
+<!--
+
 
 ```sql
 ```
