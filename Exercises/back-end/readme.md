@@ -17,21 +17,21 @@
 - [x] (21.4) _[Project - Vocabulary Booster](https://github.com/tryber/sd-09-mysql-vocabulary-booster/pull/102)_
 <hr>
 
-#### Block 22: [Database modeling and standardization]	:triangular_flag_on_post:
+#### Block 22: [Database modeling and standardization]	✔️
 - [x] (22.1) Transforming ideas into a database model - Part 1
 - [x] (22.2) Normalization, Normal Forms and Duḿps
 - [x] (22.3) Transforming ideas into a database model - Part 2
-- [ ] (22.4) _[Project - One For All]()_
+- [x] (22.4) _[Project - One For All]()_
 <hr>
 
-#### Block 23: [Introduction to MongoDB]	:triangular_flag_on_post:
+#### Block 23: [Introduction to MongoDB]	✔️
 - [x] (23.1) NoSQL - Introduction
 - [x] (23.1) MongoDB - Introduction
-- [ ] (23.2) Filter Operators
+- [x] (23.2) Filter Operators
 - [ ] (23.3) _[Project - Data Flights]()_
 <hr>
 
-#### Block 24: [MongoDB: Simple and complex updates] :hourglass_flowing_sand:
+#### Block 24: [MongoDB: Simple and complex updates] :triangular_flag_on_post:
 - [ ] (24.1) Simple updates
 - [ ] (24.2) Complex updates - Arrays - Part 1
 - [ ] (24.3) Complex updates - Arrays - Part 2
