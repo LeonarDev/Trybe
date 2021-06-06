@@ -42,9 +42,9 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | [BACK-END DEVELOPMENT](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end) | Status
 | --- | :---: |
 | Block 20 [Introduction to SQL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20) | :heavy_check_mark:
-| Block 21 [SQL Functions, Joins and Subqueries](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_21)	| :triangular_flag_on_post:
-| Block 22 [Database modeling and standardization] | :triangular_flag_on_post:
-| Block 23 [Introduction to MongoDB]	| :triangular_flag_on_post:
+| Block 21 [SQL Functions, Joins and Subqueries](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_21)	| :heavy_check_mark:
+| Block 22 [Database modeling and standardization] | :heavy_check_mark:
+| Block 23 [Introduction to MongoDB]	| :heavy_check_mark:
 | Block 24 [MongoDB: Simple and complex updates]	| :triangular_flag_on_post:
 | Block 25 [MongoDB: Aggregation Framework]	| :triangular_flag_on_post:
 | Block 26 [Introduction to web development with NodeJS | :triangular_flag_on_post:
