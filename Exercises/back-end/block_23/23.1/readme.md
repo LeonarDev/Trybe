@@ -15,6 +15,10 @@
 
 <br>
 
+- [Exercícios](#exercícios)
+
+<br>
+
 ### Funcionamento do MongoDB
 
 Assim como nos sistemas gerenciadores de bancos de dados relacionais, dentro de uma mesma instância do MongoDB você pode ter um ou vários bancos de dados. Uma grande diferença, é que não temos a formalidade de criar um banco de dados antes de fazer uma operação nele.
@@ -529,24 +533,199 @@ O **MongoDB** possui diversas ferramentas como, por exemplo: **mongo**, **mongos
 
 **Exercício 1**: Retorne o documento com o `_id` igual a `8`.
 
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+db.bios.find( {_id: 8} );
+```
+
+</details>
+
+<hr>
+<br>
+
 **Exercício 2**: Retorne o documento com o `_id` igual a `8`, mas só exiba os atributos: `_id` e `name`.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+db.bios.find( {_id: 8}, {name: 1} );
+```
+
+</details>
+
+<hr>
+<br>
 
 **Exercício 3**: Retorne apenas os atributos `name` e `birth` do documento com o `_id` igual a `8`.
 
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.bios.find( {_id: 8}, {_id: 0, name: 1, birth: 1} );
+```
+> 
+
+</details>
+
+<hr>
+<br>
+
 **Exercício 4**: Retorne **todos os documentos** em que o atributo `name.first` seja igual a `John`, utilizando o método `pretty()`.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.bios.find( {}, {'name.first': 'John'} ).pretty();
+```
+> 
+
+</details>
+
+<hr>
+<br>
 
 **Exercício 5**: Retorne os **3 primeiros documentos** da coleção [bios](https://docs.mongodb.com/manual/reference/bios-example-collection/) utilizando o método `pretty()`.
 
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.bios.find({}).limit(3).pretty();
+```
+> 
+
+</details>
+
+<hr>
+<br>
+
 **Exercício 6**: Retorne **2 documentos** da coleção bios **pulando os 5 primeiros documentos**.
 
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.bios.find().limit(2).skip(5);
+```
+> 
+
+</details>
+
+<hr>
 <br>
 
 >Utilizando o [mongoimport](https://docs.mongodb.com/database-tools/mongoimport/#examples), importe o arquivo [books.json](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/books-48d15e4d8924badc2308cc4a62eb3ea4.json) para a sua instância local do MongoDB e utilize a coleção `books` para construir as seguintes consultas:
 
+```shell
+<<TERMINAL:
+mongoimport --db=class --collection=books --file=books.json
+```
+
 **Exercício 7**: Retorne a quantidade de documentos da coleção `books`.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.books.count();
+```
+> 
+
+</details>
+
+<hr>
+<br>
 
 **Exercício 8**: Conte quantos livros existem com o `status = "PUBLISH"` .
 
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.books.count(
+  { 'status': 'PUBLISH' }
+);
+```
+> 
+
+</details>
+
+<hr>
+<br>
+
 **Exercício 9**: Exiba os atributos `title`, `isbn` e `pageCount` dos **3 primeiros livros**. *NÃO retorne o atributo _id*.
 
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.books.find( 
+  {},
+  {
+    _id: 0,
+    title: 1,
+    isbn: 1,
+    pageCount: 1
+  }
+).limit(3);
+```
+> 
+
+</details>
+
+<hr>
+<br>
+
 **Exercício 10**: **Pule 5 documentos** e exiba os atributos `_id`, `title`, `authors` e `status` dos livros com o `status = "MEAP"`, **limitando-se a 10 documentos**.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+> 
+```js
+db.books.find(
+  {
+    status: 'MEAP'
+  },
+  {
+    title: 1,
+    authors: 1,
+    status: 1
+  }
+).skip(5).limit(10);
+```
+> 
+
+</details>
