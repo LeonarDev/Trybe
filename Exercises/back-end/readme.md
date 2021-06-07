@@ -10,21 +10,21 @@
 - [x] (20.5) _[Project - All For One](https://github.com/tryber/sd-09-mysql-all-for-one/pull/97)_
 <hr>
 
-#### Block 21: [SQL Functions, Joins and Subqueries]	✔️
+#### Block 21: [SQL Functions, Joins and Subqueries](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_21)	✔️
 - [x] (21.1) Most used functions in SQL
 - [x] (21.2) Uncomplicating JOINs and UNIONs
 - [x] (21.3) Stored Routines & Subqueries
 - [x] (21.4) _[Project - Vocabulary Booster](https://github.com/tryber/sd-09-mysql-vocabulary-booster/pull/102)_
 <hr>
 
-#### Block 22: [Database modeling and standardization]	✔️
+#### Block 22: [Database modeling and standardization](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_22)	✔️
 - [x] (22.1) Transforming ideas into a database model - Part 1
 - [x] (22.2) Normalization, Normal Forms and Duḿps
 - [x] (22.3) Transforming ideas into a database model - Part 2
 - [x] (22.4) _[Project - One For All]()_
 <hr>
 
-#### Block 23: [Introduction to MongoDB]	✔️
+#### Block 23: [Introduction to MongoDB](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_23)	✔️
 - [x] (23.1) NoSQL - Introduction
 - [x] (23.1) MongoDB - Introduction
 - [x] (23.2) Filter Operators
