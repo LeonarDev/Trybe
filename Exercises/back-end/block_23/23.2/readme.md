@@ -664,7 +664,7 @@ db.restaurants.count(
 ```js
 
 db.restaurants.count({
-  and: [
+  $and: [
     { $or: [{ rating: { $gte: 6, $lt: 10 } }] },
     { $or: [{ borough: 'Brooklyn' }, { cuisine: { $ne: 'Delicatessen' } }] },
     ],
@@ -777,7 +777,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.find();
 
 ```
 
@@ -796,6 +796,10 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
+db.superheroes.find(
+  { 'aspects.height': {$gt: 180} },
+  {_id: 0, name: 1, 'aspects.height': 1}
+);
 
 
 ```
@@ -815,6 +819,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
+db.superheroes.count( { 'aspects.height': { $lt: 180 } });
 
 
 ```
@@ -834,6 +839,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
+db.superheroes.count( { 'aspects.height': { $lte: 180 } });
 
 
 ```
@@ -853,7 +859,10 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.find(
+  { 'aspects.height': {$gte: 200} },
+  {_id: 0, name: 1, 'aspects.height': 1}
+);
 
 ```
 
@@ -872,7 +881,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.count( { 'aspects.height': { $gte: 200 } });
 
 ```
 
@@ -891,7 +900,10 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.find(
+  { 'aspects.eyeColor': 'green' },
+  {_id: 0, name: 1, 'aspects.eyeColor': 1}
+);
 
 ```
 
@@ -910,7 +922,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.count( { 'aspects.eyeColor': 'blue' });
 
 ```
 
@@ -929,7 +941,10 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.find(
+  { 'aspects.hairColor': { $in: ['Black', 'No Hair'] } },
+  {_id: 0, name: 1, 'aspects.hairColor': 1}
+);
 
 ```
 
@@ -948,7 +963,8 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.count( { 'aspects.hairColor': { $in: ['Black', 'No Hair'] } }
+);
 
 ```
 
@@ -967,7 +983,11 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.count(
+  { $nor: [
+    { 'aspects.hairColor': {$in: ['Black', 'No Hair']} }
+  ] }
+);
 
 ```
 
@@ -986,7 +1006,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.count( { 'aspects.height': { $not: { $gt: 180} } });
 
 ```
 
@@ -1005,7 +1025,11 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.find(
+  { $nor: 
+    [ { race: 'Human' }, { 'aspects.height': { $gt: 180 } } ]
+  }
+);
 
 ```
 
@@ -1024,7 +1048,13 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.find({
+  $and: 
+    [
+      { $or: [{ 'aspects.height': 180 }, { 'aspects.height': 200 }] },
+      { publisher: 'Marvel Comics' }
+    ]
+});
 
 ```
 
@@ -1043,7 +1073,14 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.find({
+  $and:
+    [
+      { 'aspects.weight': { $gte: 80, $lte: 100} },
+      { $or: [{race: 'Human'}, {race: 'Mutant'}] },
+      { publisher: {$not: {$eq: 'DC Comics'}} }
+    ]
+});
 
 ```
 
@@ -1053,7 +1090,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 30**: Retorne o total de documentos que não contêm o campo race .
+**Exercício 30**: Retorne o total de documentos que não contêm o campo race.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1062,7 +1099,9 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.count({
+  race: { $exists: false }
+});
 
 ```
 
@@ -1081,7 +1120,9 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.count({
+  'aspects.hairColor': { $exists: true }
+});
 
 ```
 
@@ -1100,7 +1141,9 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.deleteOne({
+  publisher: 'Sony Pictures'
+});
 
 ```
 
@@ -1119,7 +1162,9 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
+db.superheroes.deleteMany({
+  publisher: 'George Lucas'
+});
 
 ```
 
