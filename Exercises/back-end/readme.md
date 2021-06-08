@@ -28,12 +28,12 @@
 - [x] (23.1) NoSQL - Introduction
 - [x] (23.1) MongoDB - Introduction
 - [x] (23.2) Filter Operators
-- [ ] (23.3) _[Project - Data Flights]()_
+- [x] (23.3) _[Project - Data Flights]()_
 <hr>
 
 #### Block 24: [MongoDB: Simple and complex updates] :triangular_flag_on_post:
-- [ ] (24.1) Simple updates
-- [ ] (24.2) Complex updates - Arrays - Part 1
+- [x] (24.1) Simple updates
+- [x] (24.2) Complex updates - Arrays - Part 1
 - [ ] (24.3) Complex updates - Arrays - Part 2
 - [ ] (24.4) _[Project - Commerce]()_
 <hr>
