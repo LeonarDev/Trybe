@@ -19,6 +19,77 @@
 
 <br>
 
+## Tipos de instalação
+
+O **MongoDB** disponibiliza três tipos de instalação:
+- 01. **Standalone**
+  - Apenas indicado para ambientes de desenvolvimento
+  - Não exige nenhum tipo de configuração relativa à segurança;
+
+- 02. **Replica Set**
+  - É o mínimo indicado para ambientes de produção.
+  - Neste tipo, os dados são replicados em cada um dos servidores do cluster e temos apenas um ponto de escrita.
+  - Em alguns casos, podemos utilizar os demais servidores para escalar a leitura.
+
+- 03. **Shard**
+  - Esse é um tipo de instalação no qual podemos escalar a escrita de informações no banco.
+  - Os dados são divididos no cluster através de chaves de partição que chamamos de shard keys .
+  - A shard key pode ser composta por um ou mais atributos do documento, e sua escolha pode afetar a performance, eficiência e escalabilidade do banco.
+  - Escalar a escrita significa dar mais capacidade para que o banco de dados processe mais operações, aumentando a performance.
+
+<br>
+
+## Instalando o MongoDB Community Edition
+
+Vamos instalar uma instância do tipo **standalone** na nossa máquina com SO [Ubuntu](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/).
+
+### 1. Importando a chave pública utilizada pelo gerenciamento de pacotes
+Abra o terminal e utilize o comando abaixo para importar chave pública GPG do MongoDB .
+
+```js
+wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+```
+
+Este comando deve retornar um OK .
+Porém, se você receber um erro indicando que gnupg não está instalado, faça como abaixo:
+
+1.1. Instalar o gnupg e as bibliotecas necessárias através do comando:
+
+```js
+sudo apt-get install gnupg
+```
+
+1.2. Após a instalação, tente importar a chave outra vez:
+
+
+```js
+wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+```
+
+### 2. Crie o arquivo de lista ( list file ) para o MongoDB
+Crie o arquivo /etc/apt/sources.list.d/mongodb-org-4.4.list para o Ubuntu 20.04 (Focal):
+
+```js
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+```
+
+
+### 3. Atualize o banco de dados local de pacotes
+```js
+sudo apt-get update
+```
+
+### 4. Instale os pacotes do MongoDB
+Você pode instalar a última versão estável do **MongoDB , ou uma versão específica.
+Para instalar a última versão estável, utilize o comando abaixo:
+
+```js
+sudo apt-get install -y mongodb-org
+```
+
+Pronto! Agora você já tem a última versão estável do **MongoDB** instalada e pronta para ser executada na sua máquina. Mas antes, vamos dar uma olhada nos pacotes que foram instalados.
+
+<br>
 ### Funcionamento do MongoDB
 
 Assim como nos sistemas gerenciadores de bancos de dados relacionais, dentro de uma mesma instância do MongoDB você pode ter um ou vários bancos de dados. Uma grande diferença, é que não temos a formalidade de criar um banco de dados antes de fazer uma operação nele.
