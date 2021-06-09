@@ -1,6 +1,6 @@
 # Block 23: Introduction to MongoDB
-- (23.1) NoSQL and MongoDB
-- (23.2) Filter Operators
+- (23.1) [NoSQL and MongoDB](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_23/23.1)
+- (23.2) [Filter Operators](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_23/23.2)
 - (23.3) Project - Data Flights
 
 <br>
