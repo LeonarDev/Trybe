@@ -28,10 +28,10 @@
 - [x] (4.2) JavaScript - Array and loop For
 - [x] (4.3) JavaScript - Programming Logic and Algorithms
 - [x] (4.4) JavaScript - Objects and Functions
-- [x] (4.5) _[Project - Playground Functions]_
+- [x] (4.5) _[Project - Playground Functions](https://github.com/tryber/sd-09-project-playground-functions/tree/leonardev-project-playground-functions)_
 <hr>
 
-#### Block 05: [JavaScript: DOM, Events and Web Storage](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05) :white_check_mark:
+#### Block 05: [JavaScript: DOM, Events and Web Storage](https://github.com/LeonarDev/Trybe/tree/main/Exercises/fundamentals/block_05) :heavy_check_mark:
 - [x] (5.1) JavaScript - DOM and Selectors
 - [x] (5.2) JavaScript - Working with Elements
 - [x] (5.3) JavaScript - Events
