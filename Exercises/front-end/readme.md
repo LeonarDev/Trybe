@@ -40,7 +40,7 @@
 <hr>
 
 #### Block 17: Project: Trivia Game ✔️
-- [x] (17.1) _[Project - Trivia Game]()_ **(To do: *add remote repository and refactor*)**
+- [x] (17.1) _[Project - Trivia Game](https://github.com/tryber/sd-09-project-trivia-react-redux/tree/main-group-26)_ **(To do: *refactor*)**
 <hr>
 
 #### Block 18: [Context API and Reack Hooks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_18) ✔️
@@ -51,5 +51,5 @@
 <hr>
 
 #### Block 19: Project: Recipes App ✔️
-- [x] (19.1) _[Project - Recipes App]()_
+- [x] (19.1) _[Project - Recipes App](https://github.com/tryber/sd-09-project-recipes-app/tree/main-group-31)_
 <hr>
