@@ -1,774 +1,721 @@
-# 23.2 Filter Operators
+# 24.2 Complex updates I
 
 > ### :warning: Translation to **English** under construction :construction:
 
 ### Habilidades desenvolvidas:
-- Utilizar os operadores de comparação
-  - $lt ( less than , menor que, <)
-  - $lte ( less than or equal , menor ou igual a, <=)
-  - $gt ( greater than , maior que, >)
-  - $gte ( greater than or equal , maior ou igual a, >=)
-  - $eq ( equal , igual a, =)
-  - $ne ( not equal , diferente de, !=, <>)
-  - $in ( in , dentro de)
-  - $nin ( not in , não está dentro de)
-
-- Utilizar os operadores lógicos
-  - $and ( and , se todas as condições forem verdadeiras retorna true )
-  - $or ( or , se apenas uma condição for verdadeira retorna true )
-
-- Compor filtros avançados com
-  - $not ( not , inverte o resultado da expressão)
-  - $nor ( not or , semelhante ao or , porém trabalha com a condição false )
-
-- Utilizar o operador
-  - $exists ( exists , verifica a existência de um atributo)
-
-- Utilizar o método
-  - sort() ( sort , ordenar)
-
-- Remover documentos
-
-<br>
-
+- Incorporar dados aos documentos através de arrays;
+- Utilizar os operadores $pop, $pull e $push;
+- Utilizar o operador $addToSet;
+- Utilizar os operadores $each, $slice e $sort.
 
 - [Exercícios](#exercícios)
 
 <br>
 
-### Operadores de Comparação
+Os `arrays` são uma estrutura muito importante no contexto da modelagem de dados do MongoDB. Além de enriquecer os dados, essas estruturas também são responsáveis pelo "**relacionamento**" entre os dados. Aqui a palavra **relacionamento** aparece entre aspas porque, mesmo o MongoDB sendo um banco de dados não relacional, você sempre terá algum tipo de relação entre seus dados.
 
-Os operadores de comparação servem para que você execute consultas comparando os valores de atributos dos documentos de uma coleção.
-
-Esses operadores são utilizados como parte do filtro de alguns métodos para leitura de documentos do MongoDB . Por exemplo, o find() e o count() , que vimos no dia anterior, ou o update() e o distinct() , que veremos mais adiante, aceitam filtros de comparação.
-
-Vale lembrar que, para comparações de BSON types diferentes, você deve entender a ordem de [comparação](https://docs.mongodb.com/manual/reference/bson-type-comparison-order/#bson-types-comparison-order).
-
-Os operadores seguem uma sintaxe padrão que é composta por um subdocumento, como no exemplo abaixo.
-
-```js
-{ <campo>: { <operador>: <valor> } }
-```
-
-Além disso, os operadores são identificados pelo prefixo $ .
+Com os arrays, você pode criar estruturas que simulam o **relacionamento** 1:N (um pra muitos), e o MongoDB oferece um conjunto muito bom de operadores para que o trabalho com arrays fique mais simples e preciso!
 
 <br>
 
-#### Operador $lt
-O operador $lt seleciona os documentos em que o valor do atributo filtrado é menor do que (<) o valor especificado.
+## Operador $push
 
-Veja o exemplo abaixo:
+O operador $push adiciona um valor a um array . Se o campo não existir no documento, um novo array com o valor em um elemento será adicionado.
 
 ```js
-db.inventory.find({ qty: { $lt: 20 } })
+{ $push: { <campo1>: <valor1>, ... } }
 ```
 
-Essa consulta selecionará todos os documentos na coleção inventory cujo valor do atributo qty é menor do que 20 .
+Em conjunto com o $push , você pode utilizar o que chamamos de modificadores . Cada um desses modificadores tem funções específicas que você verá melhor com exemplos. São eles:
+- $each : Adiciona múltiplos valores a um array ;
+- $slice : Limita o número de elementos do array . Requer o uso do modificador - $each ;
+- $sort : Ordena os elementos do array . Requer o uso do modificador $each ;
+- $position : Especifica a posição do elemento que está sendo inserido no array. Também requer o modificador $each . Sem o modificador $position , o operador $push adiciona o elemento no final do array .
 
-<br>
+Quando você utiliza um modificador, o processo de push ocorre na seguinte ordem, independentemente da ordem em que os modificadores aparecem:
+- Altera o array para adicionar os elementos na posição correta;
+- Aplica a ordenação ( $sort ), se especificada;
+- Limita o array ( $slice ), se especificado;
+- Armazena o array .
 
-#### Operador $lte
+Veja alguns exemplos.
 
-O operador $lte seleciona os documentos em que o valor do atributo filtrado é menor ou igual (<=) ao valor especificado.
+### Adicionando um valor a um array
+Considere a coleção supplies , uma coleção vazia. A operação abaixo adiciona um objeto que tem as informações da compra de um produto ao array items do documento em que o _id seja igual a 1 na coleção supplies :
 
-Veja o exemplo abaixo:
+Para não precisarmos escrever uma query só para fazer o insert do documento, vamos usar a opção upsert: true para já adicionar o elemento ao mesmo tempo que usamos o operador $push . É importante ficar nítido que a condição upsert não influencia a forma como o $push funciona.
 
 ```js
-db.inventory.find({ qty: { $lte: 20 } })
+use sales;
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      items: {
+        "name": "notepad",
+        "price":  35.29,
+        "quantity": 2,
+      },
+    },
+  },
+  { upsert: true },
+);
 ```
 
-Essa query selecionará todos os documentos na coleção inventory cujo valor do atributo qty é menor ou igual a 20 .
-
-<br>
-
-#### Operador $gt
-O operador $gt seleciona os documentos em que o valor do atributo filtrado é maior do que (>) o valor especificado.
-
-Veja o exemplo abaixo:
+Veja, o método updateOne() é o mesmo que você já utilizou nos exemplos anteriores. A única diferença é a inclusão do operador $push . O resultado dessa operação é um documento com o seguinte schema :
 
 ```js
-db.inventory.find({ qty: { $gt: 20 } })
-```
-
-Essa query selecionará todos os documentos na coleção inventory cujo valor do atributo qty é maior do que 20 .
-
-<br>
-
-#### 
-
-Operador $gte
-O operador $gte seleciona os documentos em que o valor do atributo filtrado é maior ou igual (>=) ao valor especificado.
-
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $gte: 20 } })
-```
-
-Essa query selecionará todos os documentos na coleção inventory cujo valor do atributo qty é maior ou igual a 20 .
-
-
-<br>
-
-#### Operador $eq
-O operador $eq seleciona os documentos em que o valor do atributo filtrado é igual ao valor especificado. Esse operador é equivalente ao filtro { campo: <valor> } e não tem nenhuma diferença de performance.
-
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $eq: 20 } })
-```
-
-A operação acima é exatamente equivalente a:
-
-```js
-db.inventory.find({ qty: 20 })
-```
-
-Durante a aula você verá mais exemplos que mostrarão que o $eq é apenas uma maneira de explicitar o operador.
-
-<br>
-
-#### Operador $ne
-Esse operador é o contrário do anterior. Ao utilizar o $ne , o MongoDB seleciona os documentos em que o valor do atributo filtrado não é igual ao valor especificado.
-
-```js
-db.inventory.find({ qty: { $ne: 20 } })
-```
-
-A query acima retorna os documentos da coleção inventory cujo valor do atributo qty é diferente de 20 , incluindo os documentos em que o atributo qty não existe.
-
-<br>
-
-#### Operador $in
-A consulta abaixo retorna todos os documentos da coleção inventory em que o valor do atributo qty é 5 ou 15 . E embora você também possa executar essa consulta utilizando o operador $or , que você verá mais à frente no conteúdo, escolha o operador $in para executar comparações de igualdade com mais de um valor no mesmo atributo.
-
-```js
-db.inventory.find({ qty: { $in: [ 5, 15 ] } })
-```
-
-<br>
-
-#### Operador $nin
-O operador $nin seleciona os documentos em que o valor do atributo filtrado não é igual ao especificado no array , ou o campo não existe.
-
-```js
-db.inventory.find( { qty: { $nin: [ 5, 15 ] } } )
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo qty é diferente de 5 e 15 . Esse resultado também inclui os documentos em que o atributo qty não existe.
-
-<br>
-<br>
-
-### Operadores Lógicos
-
-Assim como os operadores de comparação, os operadores lógicos também podem ser utilizados nos mesmos métodos para leitura e atualização de documentos do MongoDB . Eles também ajudam a elaborar consultas mais complexas, juntando cláusulas para retornar documentos que satisfaçam os filtros.
-
-<br>
-
-#### Operador $not
-Sintaxe:
-
-```js
-{ campo: { $not: { <operador ou expressão> } } }
-```
-
-O operador $not executa uma operação lógica de NEGAÇÃO no < operador ou expressão > especificado e seleciona os documentos que não correspondam ao < operador ou expressão > . Isso também inclui os documentos que não contêm o atributo .
-
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ price: { $not: { $gt: 1.99 } } })
-```
-
-Essa consulta seleciona todos os documentos na coleção inventory em que o valor do atributo price é menor ou igual a 1.99 (em outras palavras, não é maior que 1.99), ou em que o atributo price não exista.
-
-É importante destacar que a expressão { $not: { $gt: 1.99 } } retorna um resultado diferente do operador $lte . Ao utilizar { $lte: 1.99 } , os documentos retornados serão somente aqueles em que o campo price existe e cujo valor é menor ou igual a 1.99.
-
-<br>
-
-#### Operador $or
-O operador $or executa a operação lógica OU em um array de uma ou mais expressões e seleciona os documentos que satisfaçam ao menos uma das expressões.
-
-Sintaxe:
-
-```js
-{ $or: [{ <expression1> }, { <expression2> }, ... , { <expressionN> }] }
-```
-
-Considere o exemplo a seguir:
-
-
-```js
-db.inventory.find({ $or: [{ qty: { $lt: 20 } }, { price: 10 }] })
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo qty é menor do que 20 ou o valor do atributo price é igual a 10 .
-
-<br>
-
-#### Operador $nor
-
-O operador $nor também executa uma operação lógica de NEGAÇÃO , porém, em um array de uma ou mais expressões, e seleciona os documentos em que todas essas expressões falhem , ou seja, seleciona os documentos em que todas as expressões desse array sejam falsas.
-
-Sintaxe:
-
-```js
-{ $nor: [ { <expressão1> }, { <expressão2> }, ...  { <expressãoN> } ] }
-```
-
-Veja o exemplo abaixo:
-
-
-```js
-db.inventory.find({ $nor: [{ price: 1.99 }, { sale: true }] })
-```
-
-Essa query retorna todos os documentos da coleção inventory que:
-- Contêm o atributo price com o valor diferente de 1.99 e o atributo sale com o valor diferente de true;
-- Ou contêm o atributo price com valor diferente de 1.99 e não contêm o atributo sale;
-- Ou não contêm o atributo price e contêm o atributo sale com valor diferente de true;
-- Ou não contêm o atributo price e nem o atributo sale .
-
-Pode parecer complexo, mas você fará mais exercícios para praticar esse operador.
-
-<br>
-
-#### Operador $and
-O operador $and executa a operação lógica E num array de uma ou mais expressões e seleciona os documentos que satisfaçam todas as expressões no array. O operador $and usa o que chamamos de avaliação em curto-circuito ( short-circuit evaluation). Se alguma expressão for avaliada como falsa, o MongoDB não avaliará as expressões restantes, pois o resultado final sempre será falso independentemente do resultado delas.
-
-Sintaxe:
-
-
-```js
-{ $and: [{ <expressão1> }, { <expressão2> } , ... , { <expressãoN> }] }
-```
-
-<br>
-
-#### Múltiplas expressões especificando o mesmo atributo
-
-Considere o exemplo abaixo:
-
-
-```js
-db.inventory.find({
-  and: [
-    { price: { $ne: 1.99 } },
-    { price: { $exists: true } }
-  ]
-})
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo price é diferente de 1.99 e o atributo price existe.
-
-<br>
-
-#### Múltiplas expressões especificando o mesmo operador
-
-Considere o exemplo abaixo:
-
-```js
-db.inventory.find({
-  and: [
-        { price: { $gt: 0.99, $lt: 1.99 } },
-        {
-          or: [
-            { sale : true },
-            { qty : { $lt : 20 } }
-          ]
-        }
-  ]
-})
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do campo price é maior que 0.99 e menor que 1.99 , E o valor do atributo sale é igual a true , OU o valor do atributo qty é menor do que 20 . Ou seja, essa expressão é equivalente a (price > 0.99 E price < 1.99) (onde o E está implícito na vírgula aqui { $gt: 0.99, $lt: 1.99 } ) E (sale = true OU qty < 20) .
-
-<br>
-
-### Operador $exists
-
-
-```js
-{ campo: { $exists: <boolean> } }
-```
-
-Quando o <boolean> é verdadeiro ( true ), o operador $exists encontra os documentos que contêm o atributo , incluindo os documentos em que o valor do atributo é igual a null . Se o <boolean> é falso ( false ), a consulta retorna somente os documentos que não contêm o atributo.
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $exists: true } })
-```
-
-Essa consulta retorna todos os documentos da coleção inventory em que o atributo qty existe.
-Você também pode combinar operadores, como no exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $exists: true, $nin: [ 5, 15 ] } })
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o atributo qty existe E seu valor é diferente de 5 e 15 .
-
-<br>
-
-### Método sort()
-
-
-```js
-db.colecao.find().sort({ "campo": "1 ou -1"})
-```
-
-Quando existe a necessidade de ordenar os documentos por algum atributo, o método sort() se mostra muito útil. Usando um valor positivo ( 1 ) como valor do atributo, os documentos da consultas são ordenados de forma crescente ou alfabética (também ordena por campos com strings ). Em complemento, usando um valor negativo ( -1 ), os documentos de saída estarão em ordem decrescente ou contra alfabética.
-Ele pode ser combinado com o método find() :
-
-```js
-db.example.find({}, { value, name }).sort({ value: -1 }, { name: 1 })
-```
-
-O sort() só pode ser usado se tiver algum resultado de busca antes:
-
-
-```js
-db.colecao.find().sort({ nomeDoAtributo: 1 }) // certo
-db.colecao.sort({ nomeDoAtributo: 1 }) // errado
-```
-
-Vamos ver um exemplo?
-
-
-```js
-db.example.insertMany([
-    { "name": "Mandioquinha Frita", "price": 14 },
-    { "name": "Litrão", "price": 8 },
-    { "name": "Torresmo", "price": 16 }
-])
-```
-
-
-```js
-db.example.find().sort({ "price": 1 }).pretty()
-
-```
-
-
-```js
-// Resultado esperado:
 {
-        "_id" : ObjectId("5f7dd0582e2738debae74d6c"),
-        "name" : "Litrão",
-        "price" : 8
-}
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6b"),
-        "name" : "Mandioquinha Frita",
-        "price" : 14
-}
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6d"),
-        "name" : "Torresmo",
-        "price" : 16
+  _id : 1,
+  items : [
+      {
+        "name" : "notepad",
+        "price" : 35.29,
+        "quantity" : 2,
+      },
+  ],
 }
 ```
 
+### Adicionando múltiplos valores a um array
+Se você quiser adicionar múltiplos valores a um array , isso também é possível utilizando o operador $push , mas dessa vez será necessário adicionar o modificador $each.
+
+A operação abaixo adicionará mais dois produtos ao array items do primeiro documento na coleção supplies :
 
 ```js
-db.example.find().sort({ "price": -1 }, { "name" : 1 }).pretty()
+db.supplies.updateOne(
+  {},
+  {
+    $push: {
+      items: {
+        $each: [
+          {
+            "name": "pens",
+            "price": 56.12,
+            "quantity": 5,
+          },
+          {
+            "name": "envelopes",
+            "price": 19.95,
+            "quantity": 8,
+          },
+        ],
+      },
+    },
+  },
+  { upsert: true },
+);
 ```
 
+O documento ficará assim:
 
 ```js
-// Resultado esperado:
 {
-        "_id" : ObjectId("5f7dd0582e2738debae74d6d"),
-        "name" : "Torresmo",
-        "price" : 16
+  _id : 1,
+  items : [
+      {
+          "name" : "notepad",
+          "price" : 35.29,
+          "quantity" : 2,
+      },
+      {
+          "name" : "pens",
+          "price" : 56.12,
+          "quantity" : 5,
+      },
+      {
+          "name" : "envelopes",
+          "price" : 19.95,
+          "quantity" : 8,
+      },
+  ],
 }
+```
+
+### Múltiplos modificadores
+O $push pode ser utilizado com múltiplos modificadores, fazendo várias operações ao mesmo tempo em um array .
+
+Desconsidere as últimas alterações com $push (se quiser acompanhar, você pode utilizar db.dropDatabase() para remover as alterações anteriores) e veja a realização dele abaixo, com ainda mais opções!
+
+```js
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      items: {
+        $each: [
+          {
+            "name" : "notepad",
+            "price" : 35.29,
+            "quantity" : 2,
+          },
+          {
+            "name": "envelopes",
+            "price": 19.95,
+            "quantity": 8,
+          },
+          {
+            "name": "pens",
+            "price": 56.12,
+            "quantity": 5,
+          },
+        ],
+        $sort: { quantity: -1 },
+        $slice: 2,
+      },
+    },
+  },
+  { upsert: true },
+);
+
+```
+Essa operação utiliza os seguintes modificadores:
+- O modificador $each para adicionar múltiplos documentos ao array items;
+- O modificador $sort para ordenar todos os elementos alterados no array items pelo campo quantity em ordem descendente;
+- E o modificador $slice para manter apenas os dois primeiros elementos ordenados no array items.
+
+Em resumo, essa operação mantém no array items apenas os dois documentos com a quantidade (campo quantity ) mais alto. Veja o resultado logo abaixo:
+
+```js
 {
-        "_id" : ObjectId("5f7dd0582e2738debae74d6b"),
-        "name" : "Mandioquinha Frita",
-        "price" : 14
-}
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6c"),
-        "name" : "Litrão",
-        "price" : 8
+  _id : 1,
+  items : [
+    {
+      "name" : "envelopes",
+      "price" : 19.95,
+      "quantity" : 8,
+    },
+    {
+      "name" : "pens",
+      "price" : 56.12,
+      "quantity" : 5,
+    },
+  ],
 }
 ```
 
 <br>
 
-### Removendo documentos
+## Operador $pop
 
-Para remover documentos de uma coleção temos dois métodos que são utilizados para níveis de remoção diferentes: o deleteOne() e o deleteMany(). Os dois métodos aceitam um documento como parâmetro, que pode conter um filtro simples ou até mesmo um conjunto de expressões para atender aos critérios de seleção.
+Uma maneira simples de remover o primeiro ou o último elemento de um array é utilizar o operador $pop . Passando o valor -1 ao operador $pop você removerá o primeiro elemento. Já se passar o valor 1 , você removerá o último elemento do array . Simples, não é?!
+
+Dado o seguinte documento na coleção supplies :
+
+
+```js
+{
+  _id: 1,
+  items: [
+    {
+      "name" : "notepad",
+      "price" : 35.29,
+      "quantity" : 2,
+    },
+    {
+      "name": "envelopes",
+      "price": 19.95,
+      "quantity": 8,
+    },
+    {
+      "name": "pens",
+      "price": 56.12,
+      "quantity": 5,
+    },
+  ],
+}
+```
+
+### Removendo o primeiro item de um array
+
+Para remover o primeiro elemento do array items , utilize a seguinte operação:
+
+```js
+db.supplies.updateOne({ _id: 1 }, { $pop: { items: -1 } });
+
+```
+
+O documento será alterado, e o primeiro elemento será removido do array items :
+
+```js
+{
+  _id: 1,
+  items: [
+    {
+      "name": "envelopes",
+      "price": 19.95,
+      "quantity": 8,
+    },
+    {
+      "name": "pens",
+      "price": 56.12,
+      "quantity": 5,
+    },
+  ],
+}
+```
+
+### Removendo o último item de um array
+
+Para remover o último elemento do array items , utilize a seguinte operação:
+
+```js
+db.supplies.updateOne({ _id: 1 }, { $pop: { items: 1 } });
+
+```
+
+Executando essa operação, é removido o último elemento do array items , e o documento ficará assim:
+
+
+```js
+{
+  _id: 1,
+  items: [
+    {
+      "name" : "notepad",
+      "price" : 35.29,
+      "quantity" : 2,
+    },
+    {
+      "name": "envelopes",
+      "price": 19.95,
+      "quantity": 8,
+    },
+  ],
+}
+```
+
 
 <br>
 
-#### deleteOne()
-Esse método remove apenas um documento, que deve satisfazer o critério de seleção, mesmo que muitos outros documentos também se enquadrem no critério de seleção. Se nenhum valor for passado como parâmetro, a operação removerá o primeiro documento da coleção.
+## Operador $pull
 
-O exemplo abaixo remove o primeiro documento da coleção inventory em que o atributo status é igual a D:
+O operador $pull remove de um array existente todos os elementos com um ou mais valores que atendam à condição especificada.
+
+### Removendo todos os itens iguais a um valor especificado
+
+Vamos considerar os seguintes documentos na coleção supplies :
 
 ```js
-db.inventory.deleteOne({ status: "D" })
+{
+  _id: 1,
+  items: [
+    {
+      "name" : "notepad",
+      "price" : 35.29,
+      "quantity" : 2,
+    },
+    {
+      "name": "envelopes",
+      "price": 19.95,
+      "quantity": 8,
+    },
+    {
+      "name": "pens",
+      "price": 56.12,
+      "quantity": 5,
+    },
+  ],
+},
+{
+  _id: 2,
+  items: [
+    {
+      "name" : "pencil",
+      "price" : 5.29,
+      "quantity" : 2,
+    },
+    {
+      "name": "envelopes",
+      "price": 19.95,
+      "quantity": 8,
+    },
+    {
+      "name": "backpack",
+      "price": 80.12,
+      "quantity": 1,
+    },
+    {
+      "name": "pens",
+      "price": 56.12,
+      "quantity": 5,
+    },
+  ],
+}
+```
+
+Digamos que você queira remover do array items os elementos pens e envelopes :
+
+```js
+db.supplies.updateMany(
+  {},
+  {
+    $pull: {
+      items: {
+        name: { $in: ["pens", "envelopes"] },
+      },
+    },
+  },
+);
+```
+
+Na atualização acima, foi utilizado o operador $pull combinado com o operador $in para alterar o array items :
+
+```js
+{
+  _id : 1,
+  items : [
+    {
+      "name" : "notepad",
+      "price" : 35.29,
+      "quantity" : 2,
+    },
+  ],
+},
+{
+  _id : 2,
+  items : [
+    {
+      "name" : "pencil",
+      "price" : 5.29,
+      "quantity" : 2,
+    },
+    {
+      "name" : "backpack",
+      "price" : 80.12,
+      "quantity" : 1,
+    },
+  ],
+}
+```
+
+### Removendo todos os itens que atendem a uma condição diretamente no $pull
+
+Você pode especificar uma condição de remoção diretamente no $pull . Essa condição pode ser, por exemplo, um operador de comparação.
+Tendo o seguinte documento na coleção profiles :
+
+```js
+{ _id: 1, votes: [3, 5, 6, 7, 7, 8] }
+
+```
+
+Você pode remover todos os elementos do array votes que sejam maiores ou iguais a ( $gte ) 6 . Por exemplo:
+
+```js
+db.profiles.updateOne(
+  { _id: 1 },
+  {
+    $pull: {
+      votes: { $gte: 6 },
+    },
+  },
+);
+```
+
+Depois dessa operação, o documento ficará apenas com valores menores do que 6 no array votes :
+
+```js
+{ _id: 1, votes: [3,  5] }
+
+```
+
+### Removendo itens em um array de Documentos
+
+Veja a coleção survey com os seguintes documentos:
+
+```js
+{
+  _id: 1,
+  results: [
+    { item: "A", score: 5 },
+    { item: "B", score: 8, comment: "Strongly agree" },
+  ],
+},
+{
+  _id: 2,
+  results: [
+    { item: "C", score: 8, comment: "Strongly agree" },
+    { item: "B", score: 4 },
+  ],
+}
+```
+
+Os documentos têm um array chamado results que armazena documentos.
+
+Com a operação abaixo, você consegue remover do array results todos os elementos que contenham o campo score igual a 8 e o campo item igual a "B". Ou seja, o documento deve atender a ambas as condições.
+
+```js
+db.survey.updateMany(
+  {},
+  {
+    $pull: {
+      results: { score: 8 , item: "B" },
+    },
+  },
+);
+```
+
+A expressão do operador $pull aplica as condições a cada elemento do array results como se estivesse no primeiro nível, isso porque os documentos dentro do array results não contêm outros campos com mais arrays . Se isso acontecer, você deve utilizar uma outra abordagem, que será detalhada mais à frente.
+Após essa operação, os documentos ficarão assim:
+
+```js
+{
+  _id: 1,
+  results: [ { "item": "A", "score": 5 } ],
+},
+{
+  _id: 2,
+  results: [
+    { "item": "C", "score": 8, "comment": "Strongly agree" },
+    { "item": "B", "score": 4 },
+  ],
+}
 ```
 
 <br>
 
-#### deleteMany()
-Esse método remove todos os documentos que satisfaçam o critério de seleção.
-O exemplo abaixo remove todos os documentos da coleção inventory em que o atributo status é igual a A:
+## Operador $addToSet
+
+O operador $addToSet é utilizado quando você precisa garantir que os valores de um array não sejam duplicados. Ou seja, ele garante que apenas valores únicos estejam presentes no array , tratando o array como se fosse um conjunto (uma vez que conjuntos, na matemática, não podem conter elementos duplicados).
+
+Você precisa ter em mente três aspectos sobre o $addToSet :
+- Se você utilizá-lo em um campo que não existe no documento alterado, ele criará um campo do tipo array com o valor especificado na operação;
+- Se você utilizá-lo em um campo já existente no documento, mas esse campo não for um array , a operação não funcionará;
+- Se o valor passado for um documento, o MongoDB o considerará como duplicado se um documento existente no array for exatamente igual ao documento a ser adicionado, ou seja, possui os mesmos campos com os mesmos valores, e esses campos estão na mesma ordem.
+
+Veja alguns exemplos considerando o documento abaixo na coleção inventory :
+
+
 
 ```js
-db.inventory.deleteMany({ status : "A" })
+{
+  _id: 1,
+  item: "polarizing_filter",
+  tags: ["electronics", "camera"],
+}
 ```
 
-Para remover todos os documentos da coleção, basta não passar nenhum parâmetro para o método deleteMany() :
+### Adicionando ao array
+
+A operação abaixo adiciona o elemento "accessories" ao array tags desde que "accessories" não exista no array :
+
 
 ```js
-db.inventory.deleteMany({})
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "accessories" } },
+);
+```
+
+O array tags agora tem mais um elemento:
+
+
+```js
+{
+  _id: 1,
+  item: "polarizing_filter",
+  tags: [
+    "electronics",
+    "camera",
+    "accessories",
+  ],
+}
+```
+
+### Se o valor existir
+
+A operação abaixo tenta adicionar o elemento "camera" ao array tags . Porém, esse elemento já existe, e a operação não surtirá efeito:
+
+
+```js
+db.inventory.updateOne(
+  { _id: 1 },
+  { $addToSet: { tags: "camera"  } },
+);
+```
+
+Como resultado dessa operação, é retornada uma mensagem dizendo que o MongoDB encontrou um documento com o _id igual a 1 , mas não fez nenhuma alteração:
+
+```js
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 0 }
 
 ```
+
+### Com o modificador $each
+
+Você pode utilizar o operador $addToSet combinado com o modificador $each . Esse modificador permite que você adicione múltiplos valores a um array .
+Veja o seguinte documento da coleção inventory :
+
+```js
+{ _id: 2, item: "cable", tags: ["electronics", "supplies"] }
+
+```
+
+A operação abaixo utiliza o operador $addToSet e o modificador $each para adicionar alguns elementos a mais no array tags :
+
+
+```js
+db.inventory.updateOne(
+  { _id: 2 },
+  {
+    $addToSet: {
+      tags: {
+        $each: ["camera", "electronics", "accessories"],
+      },
+    },
+  },
+);
+```
+
+Como resultado, a operação adicionará ao array tags somente os elementos "camera" e "accessories" , uma vez que o elemento "electronics" já existia no array . Veja abaixo:
+
+```js
+{
+  _id: 2,
+  item: "cable",
+  tags: ["electronics", "supplies", "camera", "accessories"],
+}
+```
+
+
+
 
 <br>
 
-### Removendo um banco de dados
+## Array Filters
+
+Agora, imagine que você precisa de documentos que tenham apenas um valor que está dentro de um array de objetos, estranho, não é? Mas vamos ver um exemplo:
 
 ```js
-used <nome_do_banco>
-db.dropDatabase()
+db.recipes.insertMany([
+  {
+    title: "Panqueca Simples",
+    ingredients: [
+      { name: "Farinha", quantity: 2},
+      { name: "Oleo", quantity: 4 },
+      { name: "Leite", quantity: 1 },
+    ],
+  },
+  {
+    title: "Bolo de Cenoura",
+    ingredients: [
+      { name: "Farinha", quantity: 2},
+      { name: "Oleo", quantity: 1, unit: "xícara" },
+      { name: "Ovo", quantity: 3},
+      { name: "Cenoura", quantity: 3},
+      { name: "Fermento", quantity: 1},
+    ],
+  },
+]);
+```
+
+Caso você saiba o index exato do elemento em que deseja-se alterar alguma propriedade, pode-se fazer algo como:
+
+
+
+```js
+db.recipes.updateOne( { title: "Panqueca Simples" }, { $set: { "ingredients.1.unit": "xícara" } } );
 
 ```
 
-### 
-### 
+Mas, e se você não soubesse qual posição do array que gostaria de alterar um objeto? Ou melhor, e se quisesse alterar dinamicamente todas as receitas que usam farinha, para usarem farinha integral e que a unit seja xícara? Vamos incrementando alguns exemplos até responder esta última suposição usando o Array Filters .
+
 
 ```js
-
+db.recipes.updateOne(
+  { title: "Panqueca Simples" },
+  {
+    $set : {
+      "ingredients.$[elemento].name": "Farinha Integral",
+    },
+  },
+  { arrayFilters: [ { "elemento.name": "Farinha" } ] },
+);
 ```
+
+Achamos um documento com title igual a "Panqueca Simples" e atualizamos o objeto com propriedade name igual a "Farinha" do array ingredients . Agora, vamos adicionar "xícara" ao campo unit do objeto com name igual a "Farinha Integral" !
+
+```js
+db.recipes.updateOne(
+  { title: "Panqueca Simples" },
+  {
+    $set : {
+      "ingredients.$[elemento].unit": "xícara",
+    },
+  },
+  { arrayFilters: [ { "elemento.name": "Farinha Integral" } ] },
+);
+```
+
+Precisamos mudar o arrayFilter de "Farinha" para "Farinha Integral" , pois na query anterior alteramos o name desse ingrediente.
+
+Se quiséssemos trocar todos os ingredientes da coleção que são "Farinha" por "Farinha Integral" e colocar "xícara" como valor de unit , poderíamos seguir o seguinte exemplo:
+
+```js
+db.recipes.updateMany( // Passamos de updateOne para updateMany.
+  {}, // Retiramos a restrição do título.
+  {
+    $set : {
+      "ingredients.$[elemento].unit": "xícara", // Setamos `unit` como "xícara",
+      "ingredients.$[elemento].name": "Farinha Integral", // `name` como "Farinha Integral".
+    },
+  },
+  { arrayFilters: [ { "elemento.name": "Farinha" } ] }, // Filtramos os arrays que o valor da propriedade `name` seja "Farinha".
+);
+```
+
 
 <br>
 
 # EXERCÍCIOS
 
->Utilizando a coleção [restaurants](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/exercise-filter-operators-e8e55183a5af1418a8f0d355ad895d13.js), do banco business, construa queries para retornar os seguintes itens:
-
-<br>
-
-**Exercício 1**: Selecione e faça a contagem dos restaurantes presentes nos bairros Queens, Staten Island e Bronx. (utilizando o atributo borough).
+>Você continuará utilizando o mesmo dataset de filmes do dia anterior. Se você fez todos os exercícios corretamente, apenas siga para o primeiro exercício de hoje. Caso contrário, conecte-se à sua instância e utilize o trecho de código abaixo para inserir os documentos e ficar na mesma página!:
 
 <details>
-<summary>Mostrar resposta</summary>
+<summary>Mostrar query contendo o banco</summary>
 
 <br>
 
 ```js
-db.restaurants.count(
-  { 
-    borough: 
-      { 
-        $in: ['Queens', 'Staten Island', 'Bronx'] 
-      } 
-  } 
-);
 
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 2**: Selecione e faça a contagem dos restaurantes que não possuem culinária do tipo American. (utilizando o atributo cuisine).
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
+db.movies.drop();
+db.movies.insertMany([
   {
-    cuisine: { $ne: 'American' }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 3**: Selecione e faça a contagem dos restaurantes que possuem avaliação maior ou igual a 8. (utilizando o atributo rating).
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
-  {
-    rating: { $gte: 8 }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 4**: Selecione e faça a contagem dos restaurantes que possuem avaliação menor que 4.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
-  {
-    rating: { $lt: 4 }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 5**: Selecione e faça a contagem dos restaurantes que não possuem as avaliações 5, 6 e 7.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
-  {
-    rating: { $nin: [5, 6, 7] }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 6**: Selecione e faça a contagem dos restaurantes que não possuem avaliação menor ou igual a 5, essa consulta também deve retornar restaurantes que não possuem o campo avaliação.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.count(
-  { rating: { $not: { $lte: 5 } } }
-);
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 7**: Selecione e faça a contagem dos restaurantes em que a avaliação seja maior ou igual a 6, ou restaurantes localizados no bairro Brooklyn.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.find({
-  $or: [
-    {rating: { $gte: 6 } },
-    { borough: 'Brooklyn' }
-  ]
-}).count();
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 8**: Selecione e faça a contagem dos restaurantes localizados nos bairros Queens, Staten Island e Brooklyn e possuem avaliação maior que 4.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.find({ 
-  $and: [
-    { borough: { $in: ['Queens', 'Staten Island', 'Brooklyn'] } }, 
-    { rating: { $gt: 4 } },
-  ],
-}).count();
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 9**: Selecione e faça a contagem dos restaurantes onde nem o campo avaliação seja igual a 1, nem o campo culinária seja do tipo American.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.count(
-  { 
-    $nor: [
-      { rating: 1 }, 
-      { cuisine: 'American' }
-    ] 
-  }
-);
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 10**: Selecione e faça a contagem dos resturantes em que a avaliação seja maior que 6 ou menor que 10, E esteja localizado no bairro Brooklyn, OU não possuem culinária do tipo Delicatessen.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.count({
-  and: [
-    { $or: [{ rating: { $gte: 6, $lt: 10 } }] },
-    { $or: [{ borough: 'Brooklyn' }, { cuisine: { $ne: 'Delicatessen' } }] },
+    title: "Batman",
+    category: [
+      "action",
+      "adventure",
     ],
-});
+    imdbRating: 7.7,
+    budget: 35,
+  },
+  {
+    title: "Godzilla",
+    category: [
+      "action",
+      "adventure",
+      "sci-fi",
+    ],
+    imdbRating: 6.6,
+    budget: 1,
+  },
+  {
+    title: "Home Alone",
+    category: [
+      "family",
+      "comedy",
+    ],
+    imdbRating: 7.4,
+  },
+]);
 
 ```
 
 </details>
 
-
-<hr>
 <br>
 
-**Exercício 11**: Ordene alfabeticamente os restaurantes pelo nome (atributo name).
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.find({}, { _id: 0, name: 1 }).sort({ name: 1 });
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 12**: Ordene os restaurantes de forma descrescente baseado nas avaliações.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.find({}, { _id: 0, name: 1, rating: 1 }).sort({ rating: -1 });
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 13**: Remova o primeiro restaurante que possua culinária do tipo Ice Cream, Gelato, Yogurt, Ices.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.deleteOne({ cuisine: "Ice Cream, Gelato, Yogurt, Ices" });
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 14**: Remova todos os restaurantes que possuem culinária do tipo American
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.deleteMany({ cuisine: 'American'});
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-> Para os exercícios a seguir, utilizaremos um banco de dados de super-heróis. Faça o download do arquivo JSON [aqui](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/superheroes-957c961ea234d06d7cfdae73c87d47a6.json).
-
-Após fazer o download do arquivo, importe-o para o MongoDB através da ferramenta `mongoimport`: 
-No seu terminal, utilize o seguinte comando (lembre-se de substituir <caminho do arquivo> pelo caminho do arquivo na sua máquina):
-
-```js
-mongoimport --db class --collection superheroes <caminho_do_arquivo>
-```
-
-Pronto! Você já tem uma base de dados com 734 super-heróis.
-
-<br>
-
-**Exercício 15**: Inspecione um documento para que você se familiarize com a estrutura. Entenda os atributos e os níveis existentes.
+**Exercício 1**: Adicione a categoria "superhero" ao filme Batman .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -778,16 +725,78 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 ```js
 
 
+```
+
+</details>
+
+<hr>
+<br>
+
+**Exercício 2**: Utilizando o modificador $each , adicione as categorias "villain" e "comic-based" ao filme Batman.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
 
 ```
 
 </details>
 
+<hr>
+<br>
+
+**Exercício 3**: Remova a categoria "action" do filme Batman .
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+
+```
+
+</details>
 
 <hr>
 <br>
 
-**Exercício 16**: Selecione todos os super-heróis com menos de 1.80m de altura. Lembre-se de que essa informação está em centímetros.
+**Exercício 4**: Remova o primeiro elemento do array category do filme Batman.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+
+```
+
+</details>
+
+<hr>
+<br>
+
+**Exercício 5**: Remova o último elemento do array category do filme Batman.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+
+```
+
+</details>
+
+<hr>
+<br>
+
+**Exercício 6**: Adicione o elemento "action" ao array category do filme Batman , garantindo que esse valor não se duplique.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -797,6 +806,24 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 ```js
 
 
+```
+
+</details>
+
+
+<hr>
+<br>
+
+**Exercício 7**: Adicione a categoria "90's" aos filmes Batman e Home Alone.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+
+ 
 
 ```
 
@@ -806,7 +833,95 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 17**: Retorne o total de super-heróis menores que 1.80m.
+**Exercício 8**: Crie um array de documentos chamado cast para o filme Home Alone com os seguintes dados:
+
+```js
+{
+  "actor": "Macaulay Culkin",
+  "character": "Kevin"
+},
+{
+  "actor": "Joe Pesci",
+  "character": "Harry"
+},
+{
+  "actor": "Daniel Stern"
+}
+```
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+
+ 
+
+```
+
+</details>
+
+
+<hr>
+<br>
+
+**Exercício 9**: Adicione o campo character com o valor Marv ao array de cast em que o campo actor seja igual a Daniel Stern no filme Home Alone.
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+
+ 
+
+```
+
+</details>
+
+
+<hr>
+<br>
+
+**Exercício 10**: Crie um array de documentos chamado cast para o filme Batman com os seguintes dados:
+
+```js
+{
+  "character": "Batman"
+},
+{
+  "character": "Alfred"
+},
+{
+  "character": "Coringa"
+}
+```
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
+
+ 
+
+```
+
+</details>
+
+
+<hr>
+<br>
+
+**Exercício 11**: OProduza três querys para o filme Batman:
+- Adicione o campo actor , que deve ser um array com o valor Christian Bale , ao array de cast em que o campo character seja igual a Batman;
+- Adicione o campo actor , que deve ser um array com o valor Michael Caine , ao array de cast em que o campo character seja igual a Alfred;
+- Adicione o campo actor , que deve ser um array com o valor Heath Ledger , ao array de cast em que o campo character seja igual a Coringa.
+
+**Dica**: Para isso, [leia aqui](https://docs.mongodb.com/manual/reference/operator/update/positional/) sobre o operador `$`.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -816,7 +931,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 ```js
 
 
-
 ```
 
 </details>
@@ -825,121 +939,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 18**: Retorne o total de super-heróis com até 1.80m.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 19**: Selecione um super-herói com 2.00m ou mais de altura.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 20**: Retorne o total de super-heróis com 2.00m ou mais.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 21**: Selecione todos os super-heróis que têm olhos verdes.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 22**: Retorne o total de super-heróis com olhos azuis.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 23**: Utilizando o operador $in , selecione todos os super-heróis com cabelos pretos ou carecas ( "No Hair" ).
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 24**: Retorne o total de super-heróis com cabelos pretos ou carecas ( "No Hair" ).
+**Exercício 12**: Adicione aos atores de cast do character Batman do filme Batman os valores "Michael Keaton" , "Val Kilmer" e "George Clooney" , e deixe o array em ordem alfabética.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -950,181 +950,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 
 
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 25**: Retorne o total de super-heróis que não tenham cabelos pretos ou não sejam carecas.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
 
 ```
 
 </details>
-
-
-<hr>
-<br>
-
-**Exercício 26**: Utilizando o operador $not , retorne o total de super-heróis que não tenham mais de 1.80m de altura.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 27**: Selecione todos os super-heróis que não sejam humanos ou que não sejam maiores do que 1.80m.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 28**: Selecione todos os super-heróis com 1.80m ou 2.00m de altura e que sejam publicados pela Marvel Comics.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 29**: Selecione todos os super-heróis que pesem entre 80kg e 100kg , sejam Humanos ou Mutantes e não sejam publicados pela DC Comics.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 30**: Retorne o total de documentos que não contêm o campo race .
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 31**: Retorne o total de documentos que contêm o campo hairColor.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 32**: Remova apenas um documento publicado pela Sony Pictures.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 33**: Remova todos os documentos publicados pelo George Lucas.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
