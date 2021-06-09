@@ -34,7 +34,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 16 [State management with Redux](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_16)	| :heavy_check_mark:
 | Block 17 [Project: Trivia Game](https://github.com/tryber/sd-09-project-trivia-react-redux/tree/main-group-26) | :heavy_check_mark:
 | Block 18 [Context API and Reack Hooks](https://github.com/LeonarDev/Trybe/tree/main/Exercises/front-end/block_18) | :heavy_check_mark:
-| Block 19 [Project: Recipes App] | :heavy_check_mark:
+| Block 19 [Project: Recipes App](https://github.com/tryber/sd-09-project-recipes-app/tree/main-group-31) | :heavy_check_mark:
 
 <br>
 
