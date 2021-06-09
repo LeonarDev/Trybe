@@ -1,684 +1,425 @@
-# 23.2 Filter Operators
+# 24.3 Complex updates II
 
 > ### :warning: Translation to **English** under construction :construction:
 
 ### Habilidades desenvolvidas:
-- Utilizar os operadores de comparação
-  - $lt ( less than , menor que, <)
-  - $lte ( less than or equal , menor ou igual a, <=)
-  - $gt ( greater than , maior que, >)
-  - $gte ( greater than or equal , maior ou igual a, >=)
-  - $eq ( equal , igual a, =)
-  - $ne ( not equal , diferente de, !=, <>)
-  - $in ( in , dentro de)
-  - $nin ( not in , não está dentro de)
-
-- Utilizar os operadores lógicos
-  - $and ( and , se todas as condições forem verdadeiras retorna true )
-  - $or ( or , se apenas uma condição for verdadeira retorna true )
-
-- Compor filtros avançados com
-  - $not ( not , inverte o resultado da expressão)
-  - $nor ( not or , semelhante ao or , porém trabalha com a condição false )
-
-- Utilizar o operador
-  - $exists ( exists , verifica a existência de um atributo)
-
-- Utilizar o método
-  - sort() ( sort , ordenar)
-
-- Remover documentos
-
-<br>
-
+- Utilizar o operador `$all` para filtrar documentos;
+- Utilizar o operador `$elemMatch` para filtrar documentos;
+- Utilizar o operador `$size` para filtrar documentos pelo tamanho de arrays;
+- Utilizar o operador `$expr` para criar expressões de agregação;
+- Utilizar expressões regulares e o operador `$regex` para buscar documentos;
+- Utilizar o índice textual e o operador `$text`;
+- Utilizar o operador `$mod`.
 
 - [Exercícios](#exercícios)
 
 <br>
 
-### Operadores de Comparação
+## Operador $all
 
-Os operadores de comparação servem para que você execute consultas comparando os valores de atributos dos documentos de uma coleção.
-
-Esses operadores são utilizados como parte do filtro de alguns métodos para leitura de documentos do MongoDB . Por exemplo, o find() e o count() , que vimos no dia anterior, ou o update() e o distinct() , que veremos mais adiante, aceitam filtros de comparação.
-
-Vale lembrar que, para comparações de BSON types diferentes, você deve entender a ordem de [comparação](https://docs.mongodb.com/manual/reference/bson-type-comparison-order/#bson-types-comparison-order).
-
-Os operadores seguem uma sintaxe padrão que é composta por um subdocumento, como no exemplo abaixo.
+O operador $all seleciona todos os documentos em que o valor do campo é um array que contenha todos os elementos especificados. Em se tratando-se de array , esse operador é equivalente ao operador $and , pois fará a comparação de todos os valores especificados.
+Utiliza-se $all sempre que é preciso passar mais de um valor de comparação, e é irrelevante tanto a existência de mais elementos no array quanto a ordem em que esses elementos estão.
+Entenda essa diferença com estas duas queries :
 
 ```js
-{ <campo>: { <operador>: <valor> } }
+db.inventory.find({ tags: ["red", "blank"] });
+
+db.inventory.find({ tags: { $all: ["red", "blank"] } });
 ```
 
-Além disso, os operadores são identificados pelo prefixo $ .
-
-<br>
-
-#### Operador $lt
-O operador $lt seleciona os documentos em que o valor do atributo filtrado é menor do que (<) o valor especificado.
-
-Veja o exemplo abaixo:
+A primeira query retornará somente os documentos em que o array tags seja exatamente igual ao passado como parâmetro no filtro, ou seja, contenha apenas esses dois elementos, na mesma ordem.
+Já a segunda analisará o mesmo array , independentemente da existência de outros valores ou a ordem em que os elementos estejam.
+Utilizar o $all poupa um pouco de código. Veja um exemplo utilizando o $all :
 
 ```js
-db.inventory.find({ qty: { $lt: 20 } })
+db.inventory.find(
+  { tags: { $all: [ "ssl", "security" ] } }
+);
 ```
 
-Essa consulta selecionará todos os documentos na coleção inventory cujo valor do atributo qty é menor do que 20 .
+E seu equivalente, utilizando o $and :
 
-<br>
-
-#### Operador $lte
-
-O operador $lte seleciona os documentos em que o valor do atributo filtrado é menor ou igual (<=) ao valor especificado.
-
-Veja o exemplo abaixo:
 
 ```js
-db.inventory.find({ qty: { $lte: 20 } })
-```
-
-Essa query selecionará todos os documentos na coleção inventory cujo valor do atributo qty é menor ou igual a 20 .
-
-<br>
-
-#### Operador $gt
-O operador $gt seleciona os documentos em que o valor do atributo filtrado é maior do que (>) o valor especificado.
-
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $gt: 20 } })
-```
-
-Essa query selecionará todos os documentos na coleção inventory cujo valor do atributo qty é maior do que 20 .
-
-<br>
-
-#### 
-
-Operador $gte
-O operador $gte seleciona os documentos em que o valor do atributo filtrado é maior ou igual (>=) ao valor especificado.
-
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $gte: 20 } })
-```
-
-Essa query selecionará todos os documentos na coleção inventory cujo valor do atributo qty é maior ou igual a 20 .
-
-
-<br>
-
-#### Operador $eq
-O operador $eq seleciona os documentos em que o valor do atributo filtrado é igual ao valor especificado. Esse operador é equivalente ao filtro { campo: <valor> } e não tem nenhuma diferença de performance.
-
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $eq: 20 } })
-```
-
-A operação acima é exatamente equivalente a:
-
-```js
-db.inventory.find({ qty: 20 })
-```
-
-Durante a aula você verá mais exemplos que mostrarão que o $eq é apenas uma maneira de explicitar o operador.
-
-<br>
-
-#### Operador $ne
-Esse operador é o contrário do anterior. Ao utilizar o $ne , o MongoDB seleciona os documentos em que o valor do atributo filtrado não é igual ao valor especificado.
-
-```js
-db.inventory.find({ qty: { $ne: 20 } })
-```
-
-A query acima retorna os documentos da coleção inventory cujo valor do atributo qty é diferente de 20 , incluindo os documentos em que o atributo qty não existe.
-
-<br>
-
-#### Operador $in
-A consulta abaixo retorna todos os documentos da coleção inventory em que o valor do atributo qty é 5 ou 15 . E embora você também possa executar essa consulta utilizando o operador $or , que você verá mais à frente no conteúdo, escolha o operador $in para executar comparações de igualdade com mais de um valor no mesmo atributo.
-
-```js
-db.inventory.find({ qty: { $in: [ 5, 15 ] } })
+db.inventory.find(
+  {
+    $and: [
+      { tags: "ssl" },
+      { tags: "security" }
+    ]
+  }
+);
 ```
 
 <br>
 
-#### Operador $nin
-O operador $nin seleciona os documentos em que o valor do atributo filtrado não é igual ao especificado no array , ou o campo não existe.
+## Operador $elemMatch
+
+O operador $elemMatch seleciona os documentos que contêm um campo do tipo array com pelo menos um elemento que satisfaça todos os critérios de seleção especificados. Ou seja, com esse operador você pode especificar várias queries para um mesmo array.
+
+Veja um exemplo considerando a coleção scores com os seguintes documentos:
+
 
 ```js
-db.inventory.find( { qty: { $nin: [ 5, 15 ] } } )
+{ _id: 1, results: [82, 85, 88] },
+{ _id: 2, results: [75, 88, 89] }
 ```
 
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo qty é diferente de 5 e 15 . Esse resultado também inclui os documentos em que o atributo qty não existe.
-
-<br>
-<br>
-
-### Operadores Lógicos
-
-Assim como os operadores de comparação, os operadores lógicos também podem ser utilizados nos mesmos métodos para leitura e atualização de documentos do MongoDB . Eles também ajudam a elaborar consultas mais complexas, juntando cláusulas para retornar documentos que satisfaçam os filtros.
-
-<br>
-
-#### Operador $not
-Sintaxe:
+A query abaixo seleciona somente os documentos em que o array results contém ao menos um elemento que seja maior ou igual a 80 e menor que 85 :
 
 ```js
-{ campo: { $not: { <operador ou expressão> } } }
+db.scores.find(
+  { results: { $elemMatch: { $gte: 80, $lt: 85 } } }
+);
 ```
 
-O operador $not executa uma operação lógica de NEGAÇÃO no < operador ou expressão > especificado e seleciona os documentos que não correspondam ao < operador ou expressão > . Isso também inclui os documentos que não contêm o atributo .
-
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ price: { $not: { $gt: 1.99 } } })
-```
-
-Essa consulta seleciona todos os documentos na coleção inventory em que o valor do atributo price é menor ou igual a 1.99 (em outras palavras, não é maior que 1.99), ou em que o atributo price não exista.
-
-É importante destacar que a expressão { $not: { $gt: 1.99 } } retorna um resultado diferente do operador $lte . Ao utilizar { $lte: 1.99 } , os documentos retornados serão somente aqueles em que o campo price existe e cujo valor é menor ou igual a 1.99.
-
-<br>
-
-#### Operador $or
-O operador $or executa a operação lógica OU em um array de uma ou mais expressões e seleciona os documentos que satisfaçam ao menos uma das expressões.
-
-Sintaxe:
+Como resultado, apenas o documento com o _id igual a 1 será retornado.
+Você pode utilizar o operador $elemMatch em arrays que contenham subdocumentos e especificar vários campos desses subdocumentos como filtro. Veja os seguintes documentos na coleção survey :
 
 ```js
-{ $or: [{ <expression1> }, { <expression2> }, ... , { <expressionN> }] }
-```
-
-Considere o exemplo a seguir:
-
-
-```js
-db.inventory.find({ $or: [{ qty: { $lt: 20 } }, { price: 10 }] })
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo qty é menor do que 20 ou o valor do atributo price é igual a 10 .
-
-<br>
-
-#### Operador $nor
-
-O operador $nor também executa uma operação lógica de NEGAÇÃO , porém, em um array de uma ou mais expressões, e seleciona os documentos em que todas essas expressões falhem , ou seja, seleciona os documentos em que todas as expressões desse array sejam falsas.
-
-Sintaxe:
-
-```js
-{ $nor: [ { <expressão1> }, { <expressão2> }, ...  { <expressãoN> } ] }
-```
-
-Veja o exemplo abaixo:
-
-
-```js
-db.inventory.find({ $nor: [{ price: 1.99 }, { sale: true }] })
-```
-
-Essa query retorna todos os documentos da coleção inventory que:
-- Contêm o atributo price com o valor diferente de 1.99 e o atributo sale com o valor diferente de true;
-- Ou contêm o atributo price com valor diferente de 1.99 e não contêm o atributo sale;
-- Ou não contêm o atributo price e contêm o atributo sale com valor diferente de true;
-- Ou não contêm o atributo price e nem o atributo sale .
-
-Pode parecer complexo, mas você fará mais exercícios para praticar esse operador.
-
-<br>
-
-#### Operador $and
-O operador $and executa a operação lógica E num array de uma ou mais expressões e seleciona os documentos que satisfaçam todas as expressões no array. O operador $and usa o que chamamos de avaliação em curto-circuito ( short-circuit evaluation). Se alguma expressão for avaliada como falsa, o MongoDB não avaliará as expressões restantes, pois o resultado final sempre será falso independentemente do resultado delas.
-
-Sintaxe:
-
-
-```js
-{ $and: [{ <expressão1> }, { <expressão2> } , ... , { <expressãoN> }] }
-```
-
-<br>
-
-#### Múltiplas expressões especificando o mesmo atributo
-
-Considere o exemplo abaixo:
-
-
-```js
-db.inventory.find({
-  and: [
-    { price: { $ne: 1.99 } },
-    { price: { $exists: true } }
+{
+  _id: 1,
+  results: [
+    { product: "abc", score: 10 },
+    { product: "xyz", score: 5 }
   ]
-})
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do atributo price é diferente de 1.99 e o atributo price existe.
-
-<br>
-
-#### Múltiplas expressões especificando o mesmo operador
-
-Considere o exemplo abaixo:
-
-```js
-db.inventory.find({
-  and: [
-        { price: { $gt: 0.99, $lt: 1.99 } },
-        {
-          or: [
-            { sale : true },
-            { qty : { $lt : 20 } }
-          ]
-        }
+},
+{
+  _id: 2,
+  results: [
+    { product: "abc", score: 8 },
+    { product: "xyz", score: 7 }
   ]
-})
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o valor do campo price é maior que 0.99 e menor que 1.99 , E o valor do atributo sale é igual a true , OU o valor do atributo qty é menor do que 20 . Ou seja, essa expressão é equivalente a (price > 0.99 E price < 1.99) (onde o E está implícito na vírgula aqui { $gt: 0.99, $lt: 1.99 } ) E (sale = true OU qty < 20) .
-
-<br>
-
-### Operador $exists
-
-
-```js
-{ campo: { $exists: <boolean> } }
-```
-
-Quando o <boolean> é verdadeiro ( true ), o operador $exists encontra os documentos que contêm o atributo , incluindo os documentos em que o valor do atributo é igual a null . Se o <boolean> é falso ( false ), a consulta retorna somente os documentos que não contêm o atributo.
-Veja o exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $exists: true } })
-```
-
-Essa consulta retorna todos os documentos da coleção inventory em que o atributo qty existe.
-Você também pode combinar operadores, como no exemplo abaixo:
-
-```js
-db.inventory.find({ qty: { $exists: true, $nin: [ 5, 15 ] } })
-```
-
-Essa consulta seleciona todos os documentos da coleção inventory em que o atributo qty existe E seu valor é diferente de 5 e 15 .
-
-<br>
-
-### Método sort()
-
-
-```js
-db.colecao.find().sort({ "campo": "1 ou -1"})
-```
-
-Quando existe a necessidade de ordenar os documentos por algum atributo, o método sort() se mostra muito útil. Usando um valor positivo ( 1 ) como valor do atributo, os documentos da consultas são ordenados de forma crescente ou alfabética (também ordena por campos com strings ). Em complemento, usando um valor negativo ( -1 ), os documentos de saída estarão em ordem decrescente ou contra alfabética.
-Ele pode ser combinado com o método find() :
-
-```js
-db.example.find({}, { value, name }).sort({ value: -1 }, { name: 1 })
-```
-
-O sort() só pode ser usado se tiver algum resultado de busca antes:
-
-
-```js
-db.colecao.find().sort({ nomeDoAtributo: 1 }) // certo
-db.colecao.sort({ nomeDoAtributo: 1 }) // errado
-```
-
-Vamos ver um exemplo?
-
-
-```js
-db.example.insertMany([
-    { "name": "Mandioquinha Frita", "price": 14 },
-    { "name": "Litrão", "price": 8 },
-    { "name": "Torresmo", "price": 16 }
-])
-```
-
-
-```js
-db.example.find().sort({ "price": 1 }).pretty()
-
-```
-
-
-```js
-// Resultado esperado:
+},
 {
-        "_id" : ObjectId("5f7dd0582e2738debae74d6c"),
-        "name" : "Litrão",
-        "price" : 8
-}
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6b"),
-        "name" : "Mandioquinha Frita",
-        "price" : 14
-}
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6d"),
-        "name" : "Torresmo",
-        "price" : 16
+  _id: 3,
+  results: [
+    { product: "abc", score: 7 },
+    { product: "xyz", score: 8 }
+  ]
 }
 ```
 
+A query abaixo selecionará apenas os documentos em que o array results contenha ao menos um elemento subdocumento com o campo product igual a xyz e o campo score maior ou igual a 8 :
 
 ```js
-db.example.find().sort({ "price": -1 }, { "name" : 1 }).pretty()
+db.survey.find(
+  { results: { $elemMatch: { product: "xyz", score: { $gte: 8 } } } }
+);
 ```
 
+Será retornado apenas o documento com o _id igual a 3 .
+Você não precisa utilizar o operador $elemMatch se estiver utilizando uma condição para apenas um campo do documento embedado . Veja:
 
 ```js
-// Resultado esperado:
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6d"),
-        "name" : "Torresmo",
-        "price" : 16
-}
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6b"),
-        "name" : "Mandioquinha Frita",
-        "price" : 14
-}
-{
-        "_id" : ObjectId("5f7dd0582e2738debae74d6c"),
-        "name" : "Litrão",
-        "price" : 8
-}
+db.survey.find(
+  { results: { $elemMatch: { product: "xyz" } } }
+);
+```
+
+Como a operação acima só tem uma condição, o operador $elemMatch não se faz necessário e você pode utilizar a query abaixo:
+
+
+```js
+db.survey.find(
+  { "results.product": "xyz" }
+);
 ```
 
 <br>
 
-### Removendo documentos
+## Operador $size
 
-Para remover documentos de uma coleção temos dois métodos que são utilizados para níveis de remoção diferentes: o deleteOne() e o deleteMany(). Os dois métodos aceitam um documento como parâmetro, que pode conter um filtro simples ou até mesmo um conjunto de expressões para atender aos critérios de seleção.
+O operador $size seleciona documentos em que um array contenha um número de elementos especificado.
+Considere a coleção products a seguir, contendo documentos em que o campo tags pode ser um array :
+
+```js
+{ _id: 1, tags: ["red", "green"] },
+{ _id: 2, tags: ["apple", "lime"] },
+{ _id: 3, tags: "fruit" },
+{ _id: 4, tags: ["orange", "lemon", "grapefruit"] }
+```
+
+Ao executar a query abaixo, apenas os documentos com o _id igual 1 e 2 serão retornados, pois seus campos tags são arrays e contêm exatamente 2 elementos :
+
+```js
+db.products.find(
+  { tags: { $size: 2 } }
+);
+```
+
+É importante saber que o operador $size não aceita ranges de valores. Se você precisar selecionar documentos com base em valores diferentes, a solução é criar um campo que se incremente quando elementos forem adicionados ao array .
 
 <br>
 
-#### deleteOne()
-Esse método remove apenas um documento, que deve satisfazer o critério de seleção, mesmo que muitos outros documentos também se enquadrem no critério de seleção. Se nenhum valor for passado como parâmetro, a operação removerá o primeiro documento da coleção.
+## Operador $where
 
-O exemplo abaixo remove o primeiro documento da coleção inventory em que o atributo status é igual a D:
+O operador $where pode ser utilizado para passar uma string contendo uma expressão ou função JavaScript . Esse operador é muito flexível, mas requer que o banco de dados processe a expressão ou função passada para cada documento na coleção. O documento é referenciado na expressão ou função usando this ou obj .
 
-```js
-db.inventory.deleteOne({ status: "D" })
-```
+O operador $where não será explorado porque, na versão 3.6 do MongoDB , um outro operador, $expr , que será visto a seguir, passou a suportar expressões de agregação. O operador $expr é mais rápido do que o $where porque não executa JavaScript . Você deve preferir utilizá-lo sempre que possível!
 
-<br>
-
-#### deleteMany()
-Esse método remove todos os documentos que satisfaçam o critério de seleção.
-O exemplo abaixo remove todos os documentos da coleção inventory em que o atributo status é igual a A:
-
-```js
-db.inventory.deleteMany({ status : "A" })
-```
-
-Para remover todos os documentos da coleção, basta não passar nenhum parâmetro para o método deleteMany() :
-
-```js
-db.inventory.deleteMany({})
-
-```
+Para saber um pouco mais sobre o operador $where , [clique aqui](https://docs.mongodb.com/manual/reference/operator/query/where/index.html).
 
 <br>
 
-### Removendo um banco de dados
+
+## Operador $expr
+
+O operador $expr permite que você utilize [expressões de agregação](https://docs.mongodb.com/manual/meta/aggregation-quick-reference/#aggregation-expressions) e construa queries que comparem campos no mesmo documento.
+
+Considere os documentos abaixo na coleção monthlyBudget :
 
 ```js
-used <nome_do_banco>
-db.dropDatabase()
+{ _id: 1, category: "food", budget: 400, spent: 450 },
+{ _id: 2, category: "drinks", budget: 100, spent: 150 },
+{ _id: 3, category: "clothes", budget: 100, spent: 50 },
+{ _id: 4, category: "misc", budget: 500, spent: 300 },
+{ _id: 5, category: "travel", budget: 200, spent: 650 }
+```
+
+A query abaixo utiliza o operador $expr para buscar os documentos em que o valor de spent exceda o valor de budget :
+
+
+```js
+db.monthlyBudget.find(
+  {
+    $expr: { $gt: [ "$spent", "$budget" ] }
+  }
+);
+```
+
+Apenas os seguintes documentos serão retornados:
+
+
+```js
+{ "_id" : 1, "category" : "food", "budget" : 400, "spent" : 450 }
+{ "_id" : 2, "category" : "drinks", "budget" : 100, "spent" : 150 }
+{ "_id" : 5, "category" : "travel", "budget" : 200, "spent" : 650 }
+```
+
+Note que, na query , nenhum valor foi especificado explicitamente. O que acontece é que o operador $expr entende que deve comparar os valores dos dois campos. Por isso o $ é utilizado, indicando que a string entre aspas referencia um campo.
+
+Mais à frente no curso, você verá muito mais aplicações para o operador $expr dentro do tópico sobre Aggregation Framework , e verá que suas queries ficarão muito mais poderosas!
+
+<br>
+
+## Operador $regex
+
+O operador $regex fornece os "poderes" das expressões regulares ( regular expressions ) para seleção de strings . MongoDB utiliza expressões regulares compatíveis com Perl ( PCRE ), versão 8.42, e com suporte a UTF-8 .
+Um uso muito comum para o operador $regex é fazer consultas como o LIKE do SQL . Considere os seguintes documentos na coleção products :
+
+
+```js
+{ _id: 100, sku: "abc123", description: "Single line description." },
+{ _id: 101, sku: "abc789", description: "First line\nSecond line" },
+{ _id: 102, sku: "xyz456", description: "Many spaces before     line" },
+{ _id: 103, sku: "xyz789", description: "Multiple\nline description" }
+```
+
+A query abaixo seleciona todos os documentos em que o campo sku termine com "789" :
+
+
+```js
+db.products.find({ sku: { $regex: /789$/ } });
 
 ```
 
-### 
-### 
+O exemplo acima equivale ao comando LIKE do SQL :
+
 
 ```js
+SELECT * FROM products WHERE sku LIKE "%789";
 
+```
+
+Você pode especificar opções na regex. Por exemplo, você pode especificar a opção case-insensitive , fazendo com que o MongoDB ignore letras maiúsculas ou minúsculas. Veja:
+
+
+```js
+db.products.find({ sku: { $regex: /^ABC/i } });
+
+```
+
+O caractere i ao lado da expressão indica a opção case-insensitive . Dessa forma, apenas os documentos que contenham ABC no campo sku serão retornados, sem se importar se está em maiúsculo ou minúsculo:
+
+```js
+{ "_id" : 100, "sku" : "abc123", "description" : "Single line description." }
+{ "_id" : 101, "sku" : "abc789", "description" : "First line\nSecond line" }
+```
+
+Basicamente, tudo o que você pode construir com expressões regulares em outras linguagens de programação funcionará também em suas queries no MongoDB . Saiba mais sobre o operador $regex clicando [aqui](https://docs.mongodb.com/manual/reference/operator/query/regex/index.html).
+
+<br>
+
+## Operador $text
+
+O operador $text faz uma busca "textual" em um campo indexado por um text index. A expressão para utilizar o $text tem a seguinte sintaxe:
+
+
+```js
+{
+  $text:
+    {
+      $search: <string>,
+      $language: <string>,
+      $caseSensitive: <boolean>,
+      $diacriticSensitive: <boolean>
+    }
+}
+```
+
+Em que:
+  - $search : Uma string com os termos que o MongoDB utilizará para fazer o parse e utilizará como filtro. Internamente, o MongoDB faz uma busca lógica ( OR ) sobre os termos, a menos que seja especificado como uma frase inteira;
+  - $language : Opcional. Esse campo determina a lista de stop words que será utilizada na tokenização da busca. Veja a [lista de idiomas suportados](https://docs.mongodb.com/manual/reference/text-search-languages/#text-search-languages). Se você passar o valor none , a busca utilizará uma tokenização simples sem utilizar nenhuma lista de stop words ;
+  >Stop word: Também conhecido como palavra vazia , é uma palavra que é removida antes ou após o processamento de um texto em linguagem natural.
+  - $caseSensitive : Opcional. Recebe um valor booleano para habilitar ou desabilitar buscas case sensitive . O valor default é false , o que faz com que as buscas sejam case-insensitive . Veja mais informações sobre case-insensitive [aqui](https://docs.mongodb.com/manual/reference/operator/query/text/index.html#text-operator-case-sensitivity);
+  - $diacriticSensitive : Opcional. Recebe um valor booleano para habilitar ou desabilitar busca [diacritic sensitive](https://docs.mongodb.com/manual/reference/operator/query/text/index.html#text-operator-diacritic-sensitivity) . O valor default também é false .
+
+O operador $text , por padrão, não retorna os resultados ordenados pelas pontuações ( score ). Veja mais informações sobre ordenação por scores [aqui](https://docs.mongodb.com/manual/reference/operator/query/text/index.html#text-operator-text-score).
+
+O score é atribuído a cada documento que contenha o termo procurado no campo. Esse score representa a relevância do documento para a busca textual aplicada. O score pode ser parte do método sort() ou parte de uma projeção .
+
+Hora de ver alguns exemplos considerando a coleção articles e um índice textual no campo subject .
+
+Primeiro, o comando para criar o índice do tipo text :
+
+```js
+db.articles.createIndex({ subject: "text" });
+
+```
+
+Tendo os seguintes documentos na coleção articles :
+
+
+```js
+{ _id: 1, subject: "coffee", author: "xyz", views: 50 },
+{ _id: 2, subject: "Coffee Shopping", author: "efg", views: 5 },
+{ _id: 3, subject: "Baking a cake", author: "abc", views: 90  },
+{ _id: 4, subject: "baking", author: "xyz", views: 100 },
+{ _id: 5, subject: "Café Com Leite", author: "abc", views: 200 },
+{ _id: 6, subject: "Сырники", author: "jkl", views: 80 },
+{ _id: 7, subject: "coffee and cream", author: "efg", views: 10 },
+{ _id: 8, subject: "Cafe com Leite", author: "xyz", views: 10 }
+```
+
+### Exemplo 1: Procurando um único termo
+
+A query abaixo utiliza os operadores $text e $search para buscar todos os documentos que contenham o termo coffee :
+
+
+```js
+db.articles.find({ $text: { $search: "coffee" } });
+
+```
+
+### Exemplo 2: Procurando qualquer um dos termos especificados
+
+Você pode procurar por vários termos passando uma string delimitada por espaços . O operador $text fará uma busca lógica OR por cada um desses termos, retornando os documentos que contenham qualquer um deles.
+
+A query abaixo especifica três termos ( "bake coffee cake" ) para a string $search :
+
+```js
+db.articles.find({ $text: { $search: "bake coffee cake" } });
+
+```
+
+### Exemplo 3: Procurando por uma frase
+
+Procurar por frases também é possível. A query abaixo procura pela frase "coffee shop" :
+
+
+```js
+db.articles.find({ $text: { $search: "\"coffee shop\"" } });
+
+```
+
+Você verá mais exemplos e utilizações para o $text nos exercícios. Verá também como esse operador se comporta muito bem com o Português do Brasil !
+
+
+<br>
+
+## Operador $mod
+
+Saindo um pouco dos operadores textuais, existe o operador $mod , que seleciona todos os documentos em que o valor do campo dividido por um divisor seja igual ao valor especificado (ou seja, executa a operação matemática módulo).
+
+>Operação módulo: encontra o resto da divisão de um número por outro.
+
+Considere os seguintes documentos na coleção inventory :
+
+
+```js
+{ _id: 1, item: "abc123", qty: 0 },
+{ _id: 2, item: "xyz123", qty: 5 },
+{ _id: 3, item: "ijk123", qty: 12 }
+```
+
+A query a seguir seleciona todos os documentos da coleção em que o valor do campo qty módulo 4 seja 0 :
+
+
+```js
+db.inventory.find({ qty: { $mod: [4, 0] } });
+
+```
+
+Então, apenas os seguintes documentos serão retornados:
+
+
+```js
+{ "_id" : 1, "item" : "abc123", "qty" : 0 }
+{ "_id" : 3, "item" : "ijk123", "qty" : 12 }
 ```
 
 <br>
 
 # EXERCÍCIOS
-
->Utilizando a coleção [restaurants](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/exercise-filter-operators-e8e55183a5af1418a8f0d355ad895d13.js), do banco business, construa queries para retornar os seguintes itens:
-
-<br>
-
-**Exercício 1**: Selecione e faça a contagem dos restaurantes presentes nos bairros Queens, Staten Island e Bronx. (utilizando o atributo borough).
+>Você continuará utilizando o mesmo dataset de filmes do dia anterior. Se você fez todos os exercícios corretamente, apenas siga para o primeiro exercício de hoje. Caso contrário, conecte-se à sua instância e utilize o trecho de código abaixo para inserir os documentos e ficar na mesma página!:
 
 <details>
-<summary>Mostrar resposta</summary>
+<summary>Mostrar query contendo o banco</summary>
 
 <br>
 
 ```js
-db.restaurants.count(
-  { 
-    borough: 
-      { 
-        $in: ['Queens', 'Staten Island', 'Bronx'] 
-      } 
-  } 
-);
 
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 2**: Selecione e faça a contagem dos restaurantes que não possuem culinária do tipo American. (utilizando o atributo cuisine).
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
+db.movies.drop();
+db.movies.insertMany([
   {
-    cuisine: { $ne: 'American' }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 3**: Selecione e faça a contagem dos restaurantes que possuem avaliação maior ou igual a 8. (utilizando o atributo rating).
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
-  {
-    rating: { $gte: 8 }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 4**: Selecione e faça a contagem dos restaurantes que possuem avaliação menor que 4.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
-  {
-    rating: { $lt: 4 }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 5**: Selecione e faça a contagem dos restaurantes que não possuem as avaliações 5, 6 e 7.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-db.restaurants.count(
-  {
-    rating: { $nin: [5, 6, 7] }
-  }
-);
-```
-
-</details>
-
-<hr>
-<br>
-
-**Exercício 6**: Selecione e faça a contagem dos restaurantes que não possuem avaliação menor ou igual a 5, essa consulta também deve retornar restaurantes que não possuem o campo avaliação.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.count(
-  { rating: { $not: { $lte: 5 } } }
-);
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 7**: Selecione e faça a contagem dos restaurantes em que a avaliação seja maior ou igual a 6, ou restaurantes localizados no bairro Brooklyn.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.find({
-  $or: [
-    {rating: { $gte: 6 } },
-    { borough: 'Brooklyn' }
-  ]
-}).count();
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 8**: Selecione e faça a contagem dos restaurantes localizados nos bairros Queens, Staten Island e Brooklyn e possuem avaliação maior que 4.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.find({ 
-  $and: [
-    { borough: { $in: ['Queens', 'Staten Island', 'Brooklyn'] } }, 
-    { rating: { $gt: 4 } },
-  ],
-}).count();
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 9**: Selecione e faça a contagem dos restaurantes onde nem o campo avaliação seja igual a 1, nem o campo culinária seja do tipo American.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.count(
-  { 
-    $nor: [
-      { rating: 1 }, 
-      { cuisine: 'American' }
-    ] 
-  }
-);
-
-```
-
-</details>
-
-
-<hr>
-<br>
-
-**Exercício 10**: Selecione e faça a contagem dos resturantes em que a avaliação seja maior que 6 ou menor que 10, E esteja localizado no bairro Brooklyn, OU não possuem culinária do tipo Delicatessen.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-db.restaurants.count({
-  and: [
-    { $or: [{ rating: { $gte: 6, $lt: 10 } }] },
-    { $or: [{ borough: 'Brooklyn' }, { cuisine: { $ne: 'Delicatessen' } }] },
+    title: "Batman",
+    category: [
+      "action",
+      "adventure",
     ],
-});
+    imdbRating: 7.7,
+    budget: 35,
+  },
+  {
+    title: "Godzilla",
+    category: [
+      "action",
+      "adventure",
+      "sci-fi",
+    ],
+    imdbRating: 6.6,
+    budget: 1,
+  },
+  {
+    title: "Home Alone",
+    category: [
+      "family",
+      "comedy",
+    ],
+    imdbRating: 7.4,
+  },
+]);
 
 ```
 
 </details>
 
-
-<hr>
 <br>
 
-**Exercício 11**: Ordene alfabeticamente os restaurantes pelo nome (atributo name).
+
+**Exercício 1**: Utilizando o operador $all , retorne todos os filmes que contenham action e adventure no array category .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -687,17 +428,14 @@ db.restaurants.count({
 
 ```js
 
-db.restaurants.find({}, { _id: 0, name: 1 }).sort({ name: 1 });
-
 ```
 
 </details>
 
-
 <hr>
 <br>
 
-**Exercício 12**: Ordene os restaurantes de forma descrescente baseado nas avaliações.
+**Exercício 2**: Agora retorne os filmes que contenham action no array category e possuem nota do IMDB maior do que 7 .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -706,18 +444,14 @@ db.restaurants.find({}, { _id: 0, name: 1 }).sort({ name: 1 });
 
 ```js
 
-db.restaurants.find({}, { _id: 0, name: 1, rating: 1 }).sort({ rating: -1 });
-
-
 ```
 
 </details>
 
-
 <hr>
 <br>
 
-**Exercício 13**: Remova o primeiro restaurante que possua culinária do tipo Ice Cream, Gelato, Yogurt, Ices.
+**Exercício 3**: Adicione um array chamado ratings ao filme Batman com os seguintes valores: [85, 100, 102, 105] . Dica: lembre-se do operador $each visto no dia anterior.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -726,17 +460,14 @@ db.restaurants.find({}, { _id: 0, name: 1, rating: 1 }).sort({ rating: -1 });
 
 ```js
 
-db.restaurants.deleteOne({ cuisine: "Ice Cream, Gelato, Yogurt, Ices" });
-
 ```
 
 </details>
 
-
 <hr>
 <br>
 
-**Exercício 14**: Remova todos os restaurantes que possuem culinária do tipo American
+**Exercício 4**: Adicione um array chamado ratings ao filme Godzilla com os seguintes valores: [78, 52, 95, 102] .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -745,30 +476,14 @@ db.restaurants.deleteOne({ cuisine: "Ice Cream, Gelato, Yogurt, Ices" });
 
 ```js
 
-db.restaurants.deleteMany({ cuisine: 'American'});
-
 ```
 
 </details>
 
-
 <hr>
 <br>
 
-> Para os exercícios a seguir, utilizaremos um banco de dados de super-heróis. Faça o download do arquivo JSON [aqui](https://s3.us-east-2.amazonaws.com/assets.app.betrybe.com/back-end/mongodb/superheroes-957c961ea234d06d7cfdae73c87d47a6.json).
-
-Após fazer o download do arquivo, importe-o para o MongoDB através da ferramenta `mongoimport`: 
-No seu terminal, utilize o seguinte comando (lembre-se de substituir <caminho do arquivo> pelo caminho do arquivo na sua máquina):
-
-```js
-mongoimport --db class --collection superheroes <caminho_do_arquivo>
-```
-
-Pronto! Você já tem uma base de dados com 734 super-heróis.
-
-<br>
-
-**Exercício 15**: Inspecione um documento para que você se familiarize com a estrutura. Entenda os atributos e os níveis existentes.
+**Exercício 5**: Adicione um array chamado ratings ao filme Home Alone com os seguintes valores: [200, 99, 65] .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -777,17 +492,14 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
 
-
 <hr>
 <br>
 
-**Exercício 16**: Selecione todos os super-heróis com menos de 1.80m de altura. Lembre-se de que essa informação está em centímetros.
+**Exercício 6**: Retorne todos os filmes com ratings maior do que 103 , exibindo apenas os campos title e ratings .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -796,8 +508,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -806,7 +516,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 17**: Retorne o total de super-heróis menores que 1.80m.
+**Exercício 7**: Retorne todos os filmes com ratings entre 100 e 105 , exibindo apenas os campos title e ratings .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -815,8 +525,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -825,7 +533,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 18**: Retorne o total de super-heróis com até 1.80m.
+**Exercício 8**: Retorne todos os filmes com ratings entre 64 e 105 e divisíveis por 9 , exibindo apenas os campos title e ratings .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -834,8 +542,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -844,7 +550,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 19**: Selecione um super-herói com 2.00m ou mais de altura.
+**Exercício 9**: Retorne os filmes da categoria adventure e com ratings maior do que 103 , exibindo apenas os campos title , ratings e category .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -853,8 +559,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -863,7 +567,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 20**: Retorne o total de super-heróis com 2.00m ou mais.
+**Exercício 10**: Retorne somente o título de todos os filmes com dois elementos no array category .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -872,8 +576,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -882,7 +584,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 21**: Selecione todos os super-heróis que têm olhos verdes.
+**Exercício 11**: Retorne somente o título de todos os filmes com quatro elementos no array ratings .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -891,8 +593,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -901,7 +601,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 22**: Retorne o total de super-heróis com olhos azuis.
+**Exercício 12**: Busque os filmes em que o módulo 5 do campo budget seja 0 e que o array category tenha tamanho 2 .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -910,8 +610,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -920,7 +618,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 23**: Utilizando o operador $in , selecione todos os super-heróis com cabelos pretos ou carecas ( "No Hair" ).
+**Exercício 13**: Retorne os filmes da categoria "sci-fi" ou que possua o ratings maior do que 199 , exibindo apenas os campos title , ratings e category .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -929,8 +627,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -939,7 +635,8 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 24**: Retorne o total de super-heróis com cabelos pretos ou carecas ( "No Hair" ).
+**Exercício 14**: Retorne os filmes em que o ratings possua tamanho 4 e que seja da category "adventure" ou "family" , mas que não tenha o imdbRating menor que 7.
+
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -948,8 +645,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -958,7 +653,8 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 25**: Retorne o total de super-heróis que não tenham cabelos pretos ou não sejam carecas.
+
+**Exercício 15**: Adicione o campo description no filme Batman com o seguinte valor: "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker." .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -967,8 +663,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -977,7 +671,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 26**: Utilizando o operador $not , retorne o total de super-heróis que não tenham mais de 1.80m de altura.
+**Exercício 16**: Adicione o campo description no filme Godzilla com o seguinte valor: "The world is beset by the appearance of monstrous creatures, but one of them may be the only one who can save humanity." .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -986,8 +680,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -996,7 +688,8 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 27**: Selecione todos os super-heróis que não sejam humanos ou que não sejam maiores do que 1.80m.
+**Exercício 17**: Adicione o campo description no filme Home Alone com o seguinte valor: "An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation." .
+
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1005,8 +698,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -1015,7 +706,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 28**: Selecione todos os super-heróis com 1.80m ou 2.00m de altura e que sejam publicados pela Marvel Comics.
+**Exercício 18**: Utilizando o operador $regex , retorne todos os filmes em que a descrição comece com a palavra "The" .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1024,8 +715,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -1034,7 +723,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 29**: Selecione todos os super-heróis que pesem entre 80kg e 100kg , sejam Humanos ou Mutantes e não sejam publicados pela DC Comics.
+**Exercício 19**: Utilizando o operador $regex , retorne todos os filmes em que a descrição termine com a palavra "humanity." .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1043,8 +732,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -1053,7 +740,8 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 30**: Retorne o total de documentos que não contêm o campo race .
+**Exercício 20**: Crie um índice do tipo text no campo description .
+
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1062,8 +750,6 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
-
-
 ```
 
 </details>
@@ -1072,7 +758,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 31**: Retorne o total de documentos que contêm o campo hairColor.
+**Exercício 21**: Utilizando o operador $text , busque por filmes que contenham o termo "vacation" .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1081,7 +767,22 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 
 ```js
 
+```
 
+</details>
+
+
+<hr>
+<br>
+
+**Exercício 22**: Utilizando o operador $text , busque por filmes que contenham os termos "monstrous" e "criminal" .
+
+<details>
+<summary>Mostrar resposta</summary>
+
+<br>
+
+```js
 
 ```
 
@@ -1091,7 +792,7 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 <hr>
 <br>
 
-**Exercício 32**: Remova apenas um documento publicado pela Sony Pictures.
+**Exercício 23**: Utilizando o operador $text , busque por filmes que contenham a frase "when he is accidentally" .
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1105,26 +806,3 @@ Pronto! Você já tem uma base de dados com 734 super-heróis.
 ```
 
 </details>
-
-
-<hr>
-<br>
-
-**Exercício 33**: Remova todos os documentos publicados pelo George Lucas.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-
-```
-
-</details>
-
-
-<hr>
-<br>
