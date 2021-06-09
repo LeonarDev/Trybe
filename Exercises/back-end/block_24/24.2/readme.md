@@ -723,7 +723,12 @@ db.movies.insertMany([
 <br>
 
 ```js
-
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: { category: "superhero" },
+  },
+);
 
 ```
 
@@ -732,7 +737,7 @@ db.movies.insertMany([
 <hr>
 <br>
 
-**Exercício 2**: Utilizando o modificador $each , adicione as categorias "villain" e "comic-based" ao filme Batman.
+**Exercício 2**: Utilizando o modificador $each, adicione as categorias "villain" e "comic-based" ao filme Batman.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -740,6 +745,17 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: {
+      category: {
+        $each: ["villain", "comic-based"],
+      },
+    },
+  },
+);
 
 ```
 
@@ -757,6 +773,13 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $pull: { category: "action" },
+  },
+);
+
 ```
 
 </details>
@@ -773,6 +796,13 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $pop: { category: -1 },
+  },
+);
+
 ```
 
 </details>
@@ -788,7 +818,12 @@ db.movies.insertMany([
 <br>
 
 ```js
-
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $pop: { category: 1 },
+  },
+);
 ```
 
 </details>
@@ -804,7 +839,12 @@ db.movies.insertMany([
 <br>
 
 ```js
-
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $addToSet: { category: "action" },
+  },
+);
 
 ```
 
@@ -822,7 +862,16 @@ db.movies.insertMany([
 <br>
 
 ```js
-
+db.movies.updateMany(
+  {
+    title: {
+      $in: ["Batman", "Home Alone"],
+    },
+  },
+  {
+    $push: { category: "90's" },
+  },
+);
  
 
 ```
@@ -856,7 +905,28 @@ db.movies.insertMany([
 
 ```js
 
- 
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $push: {
+      cast: {
+        $each: [
+          {
+            "actor": "Macaulay Culkin",
+            "character": "Kevin",
+          },
+          {
+            "actor": "Joe Pesci",
+            "character": "Harry",
+          },
+          {
+            "actor": "Daniel Stern",
+          },
+        ],
+      },
+    },
+  },
+); 
 
 ```
 
@@ -875,7 +945,15 @@ db.movies.insertMany([
 
 ```js
 
- 
+ db.movies.updateOne(
+  {
+    title: "Home Alone",
+    "cast.actor": "Daniel Stern",
+  },
+  {
+    $set: { "cast.$.character": "Marv" },
+  },
+);
 
 ```
 
@@ -905,7 +983,26 @@ db.movies.insertMany([
 <br>
 
 ```js
-
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: {
+      cast: {
+        $each: [
+          {
+            "character": "Batman",
+          },
+          {
+            "character": "Alfred",
+          },
+          {
+            "character": "Coringa",
+          },
+        ],
+      },
+    },
+  },
+);
  
 
 ```
@@ -916,7 +1013,7 @@ db.movies.insertMany([
 <hr>
 <br>
 
-**Exercício 11**: OProduza três querys para o filme Batman:
+**Exercício 11**: Produza três querys para o filme Batman:
 - Adicione o campo actor , que deve ser um array com o valor Christian Bale , ao array de cast em que o campo character seja igual a Batman;
 - Adicione o campo actor , que deve ser um array com o valor Michael Caine , ao array de cast em que o campo character seja igual a Alfred;
 - Adicione o campo actor , que deve ser um array com o valor Heath Ledger , ao array de cast em que o campo character seja igual a Coringa.
@@ -929,7 +1026,45 @@ db.movies.insertMany([
 <br>
 
 ```js
+db.movies.updateOne(
+  {
+    title: "Batman",
+    "cast.character": "Batman",
+  },
+  {
+    $push: { "cast.$.actor": "Christian Bale" },
+  },
+);
 
+```
+
+<hr>
+
+```js
+db.movies.updateOne(
+  {
+    title: "Batman",
+    "cast.character": "Alfred",
+  },
+  {
+    $push: { "cast.$.actor": "Michael Caine" },
+  },
+);
+
+```
+
+<hr>
+
+```js
+db.movies.updateOne(
+  {
+    title: "Batman",
+    "cast.character": "Coringa",
+  },
+  {
+    $push: { "cast.$.actor": "Heath Ledger" },
+  },
+);
 
 ```
 
@@ -948,7 +1083,20 @@ db.movies.insertMany([
 
 ```js
 
-
+db.movies.updateOne(
+  {
+    title: "Batman",
+    "cast.character": "Batman",
+  },
+  {
+    $push: {
+      "cast.$.actor": {
+        $each: ["Michael Keaton", "Val Kilmer", "George Clooney"],
+        $sort: 1,
+      },
+    },
+  },
+);
 
 
 ```
