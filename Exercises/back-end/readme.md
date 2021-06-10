@@ -31,7 +31,7 @@
 - [x] (23.3) _[Project - Data Flights](https://github.com/tryber/sd-09-mongodb-dataflights/pull/80)_
 <hr>
 
-#### Block 24: [MongoDB: Simple and complex updates](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_24) :triangular_flag_on_post:
+#### Block 24: [MongoDB: Simple and complex updates](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_24) :heavy_check_mark:
 - [x] (24.1) Simple updates
 - [x] (24.2) Complex updates - Arrays - Part 1
 - [x] (24.3) Complex updates - Arrays - Part 2
@@ -40,7 +40,7 @@
 
 #### Block 25: [MongoDB: Aggregation Framework](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_25) :triangular_flag_on_post:
 - [x] (25.1) Aggregation Framework - Part 1
-- [ ] (25.2) Aggregation Framework - Part 2
+- [x] (25.2) Aggregation Framework - Part 2
 - [ ] (25.3) _[Projeto - Aggregations]_
 <hr>
 
