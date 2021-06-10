@@ -35,7 +35,7 @@
 - [x] (24.1) Simple updates
 - [x] (24.2) Complex updates - Arrays - Part 1
 - [x] (24.3) Complex updates - Arrays - Part 2
-- [ ] (24.4) _[Project - Commerce]_
+- [x] (24.4) _[Project - Commerce](https://github.com/tryber/sd-09-mongodb-commerce/pull/50)_
 <hr>
 
 #### Block 25: [MongoDB: Aggregation Framework](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_25) :triangular_flag_on_post:
