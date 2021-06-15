@@ -419,7 +419,7 @@ db.movies.insertMany([
 <br>
 
 
-**Exercício 1**: Utilizando o operador $all , retorne todos os filmes que contenham action e adventure no array category .
+**Exercício 1**: Utilizando o operador $all , retorne todos os filmes que contenham action e adventure no array category.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -427,6 +427,14 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.find(
+  {
+    category: {
+      $all: ["action", "adventure"]
+    }
+  }
+);
 
 ```
 
@@ -444,6 +452,15 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find(
+  {
+    category: {
+      $all: ["action"]
+    },
+    imdbRating: { $gt: 7 }
+  }
+).pretty();
+
 ```
 
 </details>
@@ -459,6 +476,17 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: {
+      ratings: {
+        $each: [85, 100, 102, 105]
+      }
+    }
+  }
+);
 
 ```
 
@@ -476,6 +504,17 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.updateOne(
+  { title: "Godzilla" },
+  {
+    $push: {
+      ratings: {
+        $each: [78, 52, 95, 102]
+      }
+    }
+  }
+);
+
 ```
 
 </details>
@@ -492,6 +531,17 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $push: {
+      ratings: {
+        $each: [200, 99, 65]
+      }
+    }
+  }
+);
+
 ```
 
 </details>
@@ -507,6 +557,19 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: { $gt: 103 }
+    }
+  },
+  {
+    _id: 0,
+    title: 1,
+    ratings: 1
+  }
+).pretty();
 
 ```
 
@@ -525,6 +588,19 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: { $gte: 100, $lte: 105 }
+    }
+  },
+  {
+    _id: 0,
+    title: 1,
+    ratings: 1
+  }
+).pretty();
+
 ```
 
 </details>
@@ -541,6 +617,19 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: { $gte: 64, $lte: 105, $mod: [9, 0] }
+    }
+  },
+  {
+    _id: 0,
+    title: 1,
+    ratings: 1
+  }
+).pretty();
 
 ```
 
@@ -559,6 +648,21 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find(
+  {
+    ratings: {
+      $elemMatch: { $gt: 103 }
+    },
+    category: { $all: ["adventure"] }
+  },
+  {
+    _id: 0,
+    title: 1,
+    ratings: 1,
+    category: 1
+  }
+).pretty();
+
 ```
 
 </details>
@@ -575,6 +679,11 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.find(
+  { category: { $size: 2 } },
+  { _id: 0, title: 1 }
+).pretty();
 
 ```
 
@@ -593,6 +702,11 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find(
+  { ratings: { $size: 4 } },
+  { _id: 0, title: 1 }
+).pretty();
+
 ```
 
 </details>
@@ -610,6 +724,11 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find({
+  budget: { $mod: [5, 0] },
+  category: { $size: 2 }
+}).pretty();
+
 ```
 
 </details>
@@ -618,7 +737,7 @@ db.movies.insertMany([
 <hr>
 <br>
 
-**Exercício 13**: Retorne os filmes da categoria "sci-fi" ou que possua o ratings maior do que 199 , exibindo apenas os campos title , ratings e category .
+**Exercício 13**: Retorne os filmes da categoria "sci-fi" ou que possua o ratings maior do que 199, exibindo apenas os campos title, ratings e category.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -626,6 +745,16 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.find(
+  {
+    $or: [
+      { category: { $all: ["sci-fi"] } },
+      { ratings: { $elemMatch: { $gt: 199 } } }
+    ]
+  },
+  { _id: 0, title: 1, ratings: 1, category: 1 }
+);
 
 ```
 
@@ -645,6 +774,12 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find({ $and: [
+  { ratings: { $size: 4 } },
+  { category: { $in: ["adventure", "family"] } },
+  { imdbRating: { $not: { $lt: 7 } }}
+]});
+
 ```
 
 </details>
@@ -663,6 +798,15 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $set: {
+      description: "The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker."
+    }
+  }
+);
+
 ```
 
 </details>
@@ -679,6 +823,15 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.updateOne(
+  { title: "Godzilla" },
+  {
+    $set: {
+      description: "The world is beset by the appearance of monstrous creatures, but one of them may be the only one who can save humanity."
+    }
+  }
+);
 
 ```
 
@@ -698,6 +851,15 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.updateOne(
+  { title: "Home Alone" },
+  {
+    $set: {
+      description: "An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation."
+    }
+  }
+);
+
 ```
 
 </details>
@@ -715,6 +877,14 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find(
+  {
+    description: {
+      $regex: /^The/
+    }
+  }
+).pretty();
+
 ```
 
 </details>
@@ -731,6 +901,14 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.find(
+  {
+    description: {
+      $regex: /humanity.$/
+    }
+  }
+).pretty();
 
 ```
 
@@ -750,6 +928,9 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.createIndex({ description: "text" });
+
+
 ```
 
 </details>
@@ -766,6 +947,14 @@ db.movies.insertMany([
 <br>
 
 ```js
+
+db.movies.find(
+  {
+    $text: {
+      $search: "vacation"
+    }
+  }
+).pretty();
 
 ```
 
@@ -784,6 +973,14 @@ db.movies.insertMany([
 
 ```js
 
+db.movies.find(
+  {
+    $text: {
+      $search: "monstrous criminal"
+    }
+  }
+).pretty();
+
 ```
 
 </details>
@@ -801,7 +998,13 @@ db.movies.insertMany([
 
 ```js
 
-
+db.movies.find(
+  {
+    $text: {
+      $search: "\"when he is accidentally\""
+    }
+  }
+).pretty();
 
 ```
 
