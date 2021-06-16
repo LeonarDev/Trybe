@@ -38,10 +38,10 @@
 - [x] (24.4) _[Project - Commerce](https://github.com/tryber/sd-09-mongodb-commerce/pull/50)_
 <hr>
 
-#### Block 25: [MongoDB: Aggregation Framework](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_25) :triangular_flag_on_post:
+#### Block 25: [MongoDB: Aggregation Framework](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_25) :heavy_check_mark:
 - [x] (25.1) Aggregation Framework - Part 1
 - [x] (25.2) Aggregation Framework - Part 2
-- [ ] (25.3) _[Projeto - Aggregations]_
+- [x] (25.3) _[Projeto - Aggregations]_
 <hr>
 
 #### Block 26: [Introduction to web development with NodeJS] :triangular_flag_on_post:
