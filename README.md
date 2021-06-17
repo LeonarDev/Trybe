@@ -46,7 +46,7 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 22 [Database modeling and standardization](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_22) | :heavy_check_mark:
 | Block 23 [Introduction to MongoDB](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_23)	| :heavy_check_mark:
 | Block 24 [MongoDB: Simple and complex updates](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_24)	| :heavy_check_mark:
-| Block 25 [MongoDB: Aggregation Framework]	| :triangular_flag_on_post:
+| Block 25 [MongoDB: Aggregation Framework](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_25)	| :heavy_check_mark:
 | Block 26 [Introduction to web development with NodeJS | :triangular_flag_on_post:
 | Block 27 [NodeJS: Service layer, Rest & Restful Architectures] | :triangular_flag_on_post:
 | Block 28 [Authentication and File Upload] | :hourglass_flowing_sand:
