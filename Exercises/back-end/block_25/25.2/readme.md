@@ -672,7 +672,24 @@ db.clients.insertMany([
 <br>
 
 ```js
-
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      let: { user_name: "$name" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $eq: ["$from", "$$user_name"],
+            }
+          }
+        }
+      ],
+      as: "transactions"
+    }
+  }
+]);
 ```
 
 </details>
@@ -690,7 +707,30 @@ db.clients.insertMany([
 
 ```js
 
-
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      let: { user_name: "$name" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $eq: ["$to", "$$user_name"],
+            }
+          }
+        }
+      ],
+      as: "received_transactions"
+    }
+  },
+  {
+    $sort: { State: 1 }
+  }, 
+  {
+    $limit: 4
+  }
+]);
 
 ```
 
@@ -699,20 +739,40 @@ db.clients.insertMany([
 <hr>
 <br>
 
-**Exercício 3**: Selecione todos os cliente do estado da "Florida" e suas respectivas transações recebidas.
+**Exercício 3**: Selecione todos os clientes do estado da "Florida" e suas respectivas transações recebidas.
 
 <details>
 <summary>Mostrar resposta</summary>
 
 <br>
 
-> 
 ```js
 
-
+db.clients.aggregate([
+  {
+    $match: {
+      State: "Florida"
+    }
+  },
+  {
+    $lookup: {
+      from: "transactions",
+      let: { user_name: "$name" },
+      pipeline: [
+        {
+          $match: {
+            $expr: {
+              $eq: ["$to", "$$user_name"],
+            }
+          }
+        }
+      ],
+      as: "received_transactions"
+    }
+  }
+]);
 
 ```
-> 
 
 </details>
 
@@ -744,7 +804,17 @@ db.products.insertMany([
 > 
 ```js
 
-
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      totalCost: {
+        $add: ["$purchase_price", "$taxes"]
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -764,7 +834,20 @@ db.products.insertMany([
 > 
 ```js
 
-
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      totalProfit: {
+        $subtract: [
+          "$sale_price",
+          { $add: ["$purchase_price", "$taxes"] }
+        ]        
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -784,6 +867,18 @@ db.products.insertMany([
 > 
 ```js
 
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      sale_price: 1,
+      floored_sale_price: {
+        $floor: "$sale_price"
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -793,7 +888,7 @@ db.products.insertMany([
 <hr>
 <br>
 
-**Exercício 7**: Retorne o maior número inteiro relativo ao lucro total sobre cada produto.
+**Exercício 7**: Retorne o maior número inteiro relativo ao preço de venda de cada produto.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -803,6 +898,17 @@ db.products.insertMany([
 > 
 ```js
 
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      ceiling_sale_price: { 
+        $ceil: "$sale_price"
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -822,7 +928,22 @@ db.products.insertMany([
 > 
 ```js
 
-
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      delta: {
+        $abs: {
+          $subtract: [
+            "$sale_price",
+            { $add: ["$taxes", "$purchase_price"] }
+          ]
+        }
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -842,7 +963,17 @@ db.products.insertMany([
 > 
 ```js
 
-
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      total_price_in_stock: {
+        $multiply: ["$sale_price", "$quantity"]
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -862,7 +993,20 @@ db.products.insertMany([
 > 
 ```js
 
-
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      total_profit_from_stock: {
+        $multiply: [
+          { $subtract: [ "$sale_price", { $add: ["$purchase_price", "$taxes"] } ] },
+          "$quantity"
+        ]
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -883,7 +1027,17 @@ db.products.insertMany([
 > 
 ```js
 
-
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      total_sale_50_percent_off: {
+        $divide: ["$sale_price", 2]
+      }
+    }
+  }
+]);
 
 ```
 > 
@@ -904,6 +1058,15 @@ db.products.insertMany([
 
 ```js
 
+db.products.aggregate([
+  {
+    $addFields: {
+      total_price_in_stock: {
+        $multiply: [ "$sale_price", "$quantity" ]
+      }
+    }
+  }
+]);
 
 
 ```
