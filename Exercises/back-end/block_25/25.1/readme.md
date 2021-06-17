@@ -722,6 +722,7 @@ Antes de começar, crie um banco de dados chamado agg_example e rode a query aba
 
 ```js
 use agg_example;
+
 db.transactions.insertMany([
   { value: 5900, from: "Dave America", to: "Ned Flanders", bank: 'International' },
   { value: 1000, from: "Mark Zuck", to: "Edna Krabappel", bank: 'FloridaBank' },
@@ -746,6 +747,9 @@ db.transactions.insertMany([
 <br>
 
 ```js
+db.transactions.aggregate([
+  { $match: { from: "Dave America" } }
+]);
 
 ```
 
@@ -765,7 +769,16 @@ db.transactions.insertMany([
 
 ```js
 
-
+db.transactions.aggregate([
+  { 
+    $match: { 
+      $or: [
+        { to: "Lisa Simpson" },
+        { value: { $gt: 700, $lt: 6000 } }
+      ]
+    } 
+  }
+]);
 
 ```
 
@@ -785,6 +798,17 @@ db.transactions.insertMany([
 > 
 ```js
 
+db.transactions.aggregate([
+  { 
+    $match:{ 
+      value: { $gt: 1000 } 
+    },
+  },
+  { 
+    $limit: 3
+  }
+
+]);
 
 
 ```
@@ -805,6 +829,13 @@ db.transactions.insertMany([
 > 
 ```js
 
+db.transactions.aggregate([
+  { 
+    $group: {
+      _id: "$bank"
+    }
+  }
+]);
 
 
 ```
@@ -825,7 +856,15 @@ db.transactions.insertMany([
 > 
 ```js
 
-
+db.transactions.aggregate([
+  { 
+    $group: {
+      _id: "$bank",
+      totalValue: { $sum: "$value" },
+      count: { $sum: 1 }
+    }
+  },
+]);
 
 ```
 > 
@@ -844,6 +883,14 @@ db.transactions.insertMany([
 
 > 
 ```js
+db.transactions.aggregate([
+  { 
+    $group: {
+      _id: null,
+      totalValue: { $sum: "$value" }
+    }
+  },
+]);
 
 
 ```
@@ -863,10 +910,19 @@ db.transactions.insertMany([
 
  
 ```js
-
+db.transactions.aggregate([
+  { 
+    $group: {
+      _id: "$bank",
+      totalValue: { $sum: "$value" }
+    }
+  },
+  {
+    $match: { totalValue: { $gt: 1000 } }
+  }
+]);
 
 ```
-
 
 </details>
 
@@ -877,6 +933,7 @@ db.transactions.insertMany([
 
 ```js
 use agg_example;
+
 db.clients.insertMany([
   { name: "Dave America", State: "Florida" },
   { name: "Ned Flanders", State: "Alasca" },
@@ -899,7 +956,16 @@ db.clients.insertMany([
 > 
 ```js
 
-
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      localField: "name",
+      foreignField: "from",
+      as: "transactions_history"
+    },
+  },
+]);
 
 ```
 > 
@@ -919,7 +985,19 @@ db.clients.insertMany([
 > 
 ```js
 
-
+db.clients.aggregate([
+  {
+    $lookup: {
+      from: "transactions",
+      localField: "name",
+      foreignField: "to",
+      as: "transactions_history"
+    },
+  },
+  {
+    $limit: 4,
+  },
+]);
 
 ```
 > 
@@ -929,7 +1007,7 @@ db.clients.insertMany([
 <hr>
 <br>
 
-**Exercício 10**: Selecione todos os cliente do estado da "Florida" e suas respectivas transações recebidas.
+**Exercício 10**: Selecione todos os clientes do estado da "Florida" e suas respectivas transações recebidas.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -939,7 +1017,21 @@ db.clients.insertMany([
 > 
 ```js
 
-
+db.clients.aggregate([
+  {
+    $match: {
+      State: "Florida"
+    },
+  },
+  {
+    $lookup: {
+      from: "transactions",
+      localField: "name",
+      foreignField: "from",
+      as: "transactions_history"
+    },
+  }
+]);
 
 ```
 > 
@@ -959,9 +1051,16 @@ db.clients.insertMany([
 
 >Faça a importação para sua instância do MongoDB:
 ```js
+
 mongoimport --db erp <caminho_do_arquivo_clientes.json>
+// mongoimport --db erp clientes.json
+
 mongoimport --db erp <caminho_do_arquivo_produtos.json>
+// mongoimport --db erp produtos.json
+ 
 mongoimport --db erp <caminho_do_arquivo_vendas.json>
+// mongoimport --db erp vendas.json
+
 ```
 
 >Conecte-se à sua instância e confira o número de documentos em cada coleção:
@@ -985,7 +1084,12 @@ Com o dataset importado, é hora de colocar a mão na massa!
 > 
 ```js
 
-
+db.clientes.aggregate([
+  { $match: {
+      sexo: "MASCULINO"
+    },
+  },
+]);
 
 ```
 > 
@@ -1006,7 +1110,16 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.clientes.aggregate([
+  { $match: {
+      sexo: "FEMININO",
+      dataNascimento: {
+        $gte: ISODate('1995-01-01'),
+        $lte: ISODate('2005-12-31')
+      }
+    },
+  },
+]);
 
 ```
 
@@ -1024,7 +1137,17 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.clientes.aggregate([
+  { $match: {
+      sexo: "FEMININO",
+      dataNascimento: {
+        $gte: ISODate('1995-01-01'),
+        $lte: ISODate('2005-12-31')
+      }
+    },
+  },
+  { $limit: 5 }
+]);
 
 ```
 
@@ -1042,7 +1165,19 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.clientes.aggregate([
+  {
+    $match: {
+      "endereco.uf": "SC"
+    }
+  },
+  {
+    $group: {
+      _id: "SC",
+      total: { $sum: 1 }
+    }
+  }
+]);
 
 ```
 
@@ -1051,7 +1186,7 @@ Com o dataset importado, é hora de colocar a mão na massa!
 <hr>
 <br>
 
-**Exercício 15**: Agrupe os clientes por sexo . Retorne o total de clientes de cada sexo no campo total.
+**Exercício 15**: Agrupe os clientes por sexo. Retorne o total de clientes de cada sexo no campo total.
 
 <details>
 <summary>Mostrar resposta</summary>
@@ -1060,6 +1195,14 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: "$sexo",
+      total: { $sum: 1 }
+    }
+  }
+]);
 
 
 ```
@@ -1078,6 +1221,17 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: { 
+        sexo: "$sexo", 
+        uf: "$endereco.uf" 
+      },
+      total: { $sum: 1 }
+    }
+  }
+]);
 
 
 ```
@@ -1104,6 +1258,25 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
+db.clientes.aggregate([
+  {
+    $group: {
+      _id: { 
+        sexo: "$sexo", 
+        uf: "$endereco.uf" 
+      },
+      total: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      estado: "$_id.uf",
+      sexo: "$_id.sexo",
+      total: 1
+    }
+  }
+]);
 
 
 ```
@@ -1122,7 +1295,29 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.vendas.aggregate([
+  {
+    $match: {
+      status: { $in: ["ENTREGUE", "EM SEPARACAO"] }
+    }
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      valorTotal: {
+        $sum: "$valorTotal"
+      }
+    }
+  },
+  {
+    $sort: {
+      valorTotal: -1
+    }
+  },
+  {
+    $limit: 5
+  }
+]);
 
 ```
 
@@ -1140,7 +1335,32 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate('2019-01-01'),
+        $lte: ISODate('2019-12-31')
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      valorTotal: {
+        $sum: "$valorTotal"
+      }
+    }
+  },
+  {
+    $sort: {
+      valorTotal: -1
+    }
+  },
+  {
+    $limit: 10
+  }
+]);
 
 ```
 
@@ -1159,7 +1379,24 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.vendas.aggregate([
+  {
+    $group: {
+      _id: "$clienteId",
+      totalCompras: {
+        $sum: 1
+      }
+    }
+  },
+  {
+    $match: {
+      totalCompras: { $gt: 5 }
+    }
+  },
+  {
+    $count: 'clientes'
+  },
+]);
 
 ```
 
@@ -1177,7 +1414,32 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate('2020-01-01'),
+        $lte: ISODate('2020-03-31')
+      }
+    }
+  },
+  {
+    $group: {
+      _id: "$clienteId",
+      totalCompras: {
+        $sum: 1
+      }
+    }
+  },
+  {
+    $match: {
+      totalCompras: { $lt: 3 }
+    }
+  },
+  {
+    $count: 'clientes'
+  }
+]);
 
 ```
 
@@ -1202,7 +1464,47 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate('2020-01-01')
+      }
+    }
+  },
+  {
+    $lookup: {
+      from: 'clientes',
+      localField: 'clienteId',
+      foreignField: 'clienteId',
+      as: 'dadosCliente'
+    }
+  },
+  {
+    $unwind: "$dadosCliente"
+  },
+  {
+    $group: {
+      _id: "$dadosCliente.endereco.uf",
+      totalVendas: {
+        $sum: 1
+      }
+    }
+  },
+  {
+    $sort: {
+      totalVendas: -1
+    }
+  },
+  { $limit: 3 },
+  {
+    $project: {
+      _id: 0,
+      uf: "$_id",
+      totalVendas: 1
+    }
+  }
+]);
 
 ```
 
@@ -1228,7 +1530,47 @@ Com o dataset importado, é hora de colocar a mão na massa!
 
 ```js
 
-
+db.vendas.aggregate([
+  {
+    $match: {
+      dataVenda: {
+        $gte: ISODate('2019-01-01'),
+        $lte: ISODate('2019-12-31')
+      }
+    }
+  },
+  {
+    $lookup: {
+      from: 'clientes',
+      localField: 'clienteId',
+      foreignField: 'clienteId',
+      as: 'cliente'
+    }
+  },
+  {
+    $unwind: "$cliente"
+  },
+  {
+    $group: {
+      _id: "$cliente.endereco.uf",
+      mediaVendas: { $avg: "$valorTotal" },
+      totalVendas: { $sum: 1 }
+    }
+  },
+  {
+    $project: {
+      _id: 0,
+      uf: "$_id",
+      mediaVendas: 1,
+      totalVendas: 1
+    }
+  },
+  {
+    $sort: {
+      uf: 1
+    }
+  }
+]);
 
 ```
 
