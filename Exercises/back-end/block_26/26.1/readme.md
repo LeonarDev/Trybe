@@ -15,6 +15,7 @@
 
 ```js
 // brlValue.js
+
 const brl = 5.37;
 
 const usdToBrl = (valueInUsd) => valueInUsd * brl;
@@ -28,6 +29,7 @@ O uso desse nosso módulo se daria da seguinte forma:
 
 ```js
 // index.js
+
 const convert = require('./brlValue');
 
 const usd = 10;
@@ -42,6 +44,7 @@ Suponhamos agora que seja desejável exportar tanto a função de conversão qua
 
 ```js
 // brlValue.js
+
 const brl = 5.37;
 
 const usdToBrl = (valueInUsd) => valueInUsd * brl;
@@ -56,6 +59,7 @@ Dessa forma, ao importarmos o módulo, receberemos um objeto como resposta:
 
 ```js
 // index.js
+
 const brlValue = require('./brValue');
 
 console.log(brlValue); // { brl: 5.37, usdToBrl: [Function: usdToBrl] }
@@ -105,6 +109,7 @@ module.exports = function () {
 
 ```js
 // meuModulo/index.js
+
 const funcionalidade1 = require('./funcionalidade-1');
 const funcionalidade2 = require('./funcionalidade-2');
 
@@ -117,6 +122,7 @@ Para importarmos e utilizarmos o módulo meuModulo , basta passar o caminho da p
 
 ```js
 // minha-aplicacao/index.js
+
 const meuModulo = require('./meuModulo');
 
 console.log(meuModulo); // { funcionalidade1: [Function: funcionalidade1], funcionalidade2: [Function: funcionalidade2] }
