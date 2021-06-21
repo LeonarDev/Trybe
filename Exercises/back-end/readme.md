@@ -44,7 +44,7 @@
 - [x] (25.3) _[Projeto - Aggregations]_
 <hr>
 
-#### Block 26: [Introduction to web development with NodeJS] :triangular_flag_on_post:
+#### Block 26: [Introduction to web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) :triangular_flag_on_post:
 - [x] (26.1) NodeJS - Introduction
 - [ ] (26.2) NodeJS - Asynchronous Flow
 - [ ] (26.3) NodeJS - Architecture
