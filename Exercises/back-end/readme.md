@@ -46,7 +46,7 @@
 
 #### Block 26: [Introduction to web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) :triangular_flag_on_post:
 - [x] (26.1) NodeJS - Introduction
-- [ ] (26.2) NodeJS - Asynchronous Flow
+- [x] (26.2) NodeJS - Asynchronous Flow
 - [ ] (26.3) NodeJS - Architecture
 - [ ] (26.4) Express: HTTP with NodeJS
 - [ ] (26.5) Practicing Express
