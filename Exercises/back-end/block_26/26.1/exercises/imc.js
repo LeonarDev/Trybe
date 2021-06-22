@@ -1,7 +1,5 @@
 const rs = require('readline-sync');
 
-//console.log('Hello, world!');
-
 const name = rs.question('Qual é seu nome? ');
 //const age = rs.questionInt('Qual é sua idade? ');
 const heigth = rs.questionFloat('Qual é sua altura? (em metros) ');

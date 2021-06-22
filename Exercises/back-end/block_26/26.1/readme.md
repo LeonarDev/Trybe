@@ -302,18 +302,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Permita que o script seja executado através do comando `npm run imc`.
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
-
 <hr>
 <br>
 
@@ -328,18 +316,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 | Entre 35,0 e 39,9 | Obesidade grau II         |
 | 40,0 e acima      | Obesidade graus III e IV  |
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
-
 <hr>
 <br>
 
@@ -353,17 +329,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Considere a distância em metros e o tempo em segundos.
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
 
 <hr>
 <br>
@@ -384,17 +349,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Ao final, pergunte se a pessoa deseja jogar novamente. Se sim, volte ao começo do script.
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
 
 <hr>
 <br>
@@ -411,19 +365,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Você pode utilizar o require para executar o script em questão.
 
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
-
 <hr>
 <br>
 
@@ -438,18 +379,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 >Adicione o script ao menu criado no exercício 5.
 
 >Adicione validações para garantir que o valor informado seja um inteiro maior que 0.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
 
 <hr>
 <br>
@@ -469,15 +398,3 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 >Quando n = 10, exatamente 10 elementos devem ser exibidos;
 
 >Adicione validações para garantir que o valor informado é um inteiro maior que 0.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
