@@ -15,6 +15,7 @@
 
 ```js
 // brlValue.js
+
 const brl = 5.37;
 
 const usdToBrl = (valueInUsd) => valueInUsd * brl;
@@ -28,6 +29,7 @@ O uso desse nosso módulo se daria da seguinte forma:
 
 ```js
 // index.js
+
 const convert = require('./brlValue');
 
 const usd = 10;
@@ -42,6 +44,7 @@ Suponhamos agora que seja desejável exportar tanto a função de conversão qua
 
 ```js
 // brlValue.js
+
 const brl = 5.37;
 
 const usdToBrl = (valueInUsd) => valueInUsd * brl;
@@ -56,6 +59,7 @@ Dessa forma, ao importarmos o módulo, receberemos um objeto como resposta:
 
 ```js
 // index.js
+
 const brlValue = require('./brValue');
 
 console.log(brlValue); // { brl: 5.37, usdToBrl: [Function: usdToBrl] }
@@ -105,6 +109,7 @@ module.exports = function () {
 
 ```js
 // meuModulo/index.js
+
 const funcionalidade1 = require('./funcionalidade-1');
 const funcionalidade2 = require('./funcionalidade-2');
 
@@ -117,6 +122,7 @@ Para importarmos e utilizarmos o módulo meuModulo , basta passar o caminho da p
 
 ```js
 // minha-aplicacao/index.js
+
 const meuModulo = require('./meuModulo');
 
 console.log(meuModulo); // { funcionalidade1: [Function: funcionalidade1], funcionalidade2: [Function: funcionalidade2] }
@@ -296,18 +302,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Permita que o script seja executado através do comando `npm run imc`.
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
-
 <hr>
 <br>
 
@@ -322,18 +316,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 | Entre 35,0 e 39,9 | Obesidade grau II         |
 | 40,0 e acima      | Obesidade graus III e IV  |
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
-
 <hr>
 <br>
 
@@ -347,17 +329,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Considere a distância em metros e o tempo em segundos.
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
 
 <hr>
 <br>
@@ -378,17 +349,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Ao final, pergunte se a pessoa deseja jogar novamente. Se sim, volte ao começo do script.
 
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
 
 <hr>
 <br>
@@ -405,19 +365,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 
 >Você pode utilizar o require para executar o script em questão.
 
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
-
 <hr>
 <br>
 
@@ -432,18 +379,6 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 >Adicione o script ao menu criado no exercício 5.
 
 >Adicione validações para garantir que o valor informado seja um inteiro maior que 0.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
 
 <hr>
 <br>
@@ -463,15 +398,3 @@ Antes de começar, crie uma nova pasta e, dentro dela, crie um pacote Node.js co
 >Quando n = 10, exatamente 10 elementos devem ser exibidos;
 
 >Adicione validações para garantir que o valor informado é um inteiro maior que 0.
-
-<details>
-<summary>Mostrar resposta</summary>
-
-<br>
-
-```js
-
-
-```
-
-</details>
