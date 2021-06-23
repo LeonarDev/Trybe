@@ -41,41 +41,42 @@
 #### Block 25: [MongoDB: Aggregation Framework](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_25) :heavy_check_mark:
 - [x] (25.1) Aggregation Framework - Part 1
 - [x] (25.2) Aggregation Framework - Part 2
-- [x] (25.3) _[Projeto - Aggregations]_
+- [x] (25.3) _[Projeto - Aggregations](https://github.com/tryber/sd-09-mongodb-aggregations/pull/78)_
 <hr>
 
 #### Block 26: [Introduction to web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) :triangular_flag_on_post:
 - [x] (26.1) NodeJS - Introduction
 - [x] (26.2) NodeJS - Asynchronous Flow
-- [ ] (26.3) NodeJS - Architecture
-- [ ] (26.4) Express: HTTP with NodeJS
+- [x] (26.3) NodeJS - Tests with NodeJS
+- [x] (26.4) Express: HTTP with NodeJS
 - [ ] (26.5) Practicing Express
-- [ ] (26.6) Software Architecture - Introduction to MVC
-- [ ] (26.7) _[Project - Cookmaster]_
+- [ ] (26.6) _[Project - Talk Manager]_
 <hr>
 
 #### Block 27: [NodeJS: Service layer, Rest & Restful Architectures] :hourglass_flowing_sand:
-- [ ] (27.1) Software Architecture - Service Layer
-- [ ] (27.2) Web architecture - Rest and Restful
-- [ ] (27.3) _[Project - Store Manager]_
+- [ ] (27.1) Software Architecture - Model Layer
+- [ ] (27.2) Software Architecture - Controller and Service Layer
+- [ ] (27.3) Web architecture - Rest and Restful
+- [ ] (27.4) Software Architecture - Testing the Layers
+- [ ] (27.5) _[Project - Store Manager]_
 <hr>
 
 #### Block 28: [Authentication and File Upload]	:hourglass_flowing_sand:
 - [ ] (28.1) NodeJS - JWT - (JSON Web Token)
 - [ ] (28.2) NodeJS - Upload files with Multer
-- [ ] (28.3) _[Project - Cookmaster v2]_
+- [ ] (28.3) NodeJS - Testing APIs with Integration Tests
+- [ ] (28.4) _[Project - Cookmaster]_
 <hr>
 
 #### Block 29: [Deployment] :hourglass_flowing_sand:
-- [ ] (29.1) Deploy - Introduction
 - [ ] (29.1) Infrastructure - Deploy with Heroku
 - [ ] (29.2) Deploy - Process Managers
 - [ ] (29.3) _[Project - Stranger Things]_
 <hr>
 
-#### Block 30: Project: Tryber] :hourglass_flowing_sand:
+<!-- #### Block 30: Project: Tryber] :hourglass_flowing_sand:
 - [ ] (30.1) _[Project - Trybeer]_
-<hr>
+<hr> -->
 
 #### Block 31: [Architecture: SOLID and ORM] :hourglass_flowing_sand:
 - [ ] (31.1) Architecture - SOLID Principles
