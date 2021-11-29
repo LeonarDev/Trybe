@@ -1,4 +1,4 @@
-# Block 27: NodeJS: Service layer, Rest & Restful Architectures ⏳
+# Block 27: NodeJS: Service layer, Rest & Restful Architectures ✔️
  - (27.1) Software Architecture - Model Layer
  - (27.2) Software Architecture - Controller and Service Layer
  - (27.3) Web architecture - Rest and Restful
