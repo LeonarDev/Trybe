@@ -1,6 +1,6 @@
 # Back-end Development :construction:
 
-#### Block 20: [Introduction to Back-end](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	✔️
+#### Block 20: [Introduction to SQL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	✔️
 - [x] (20.1) SQL - Introduction
 - [x] (20.1) Relational database - Introduction
 - [x] (20.1) SQL database
@@ -44,7 +44,7 @@
 - [x] (25.3) _[Projeto - Aggregations](https://github.com/tryber/sd-09-mongodb-aggregations/pull/78)_
 <hr>
 
-#### Block 26: [Introduction to web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) :triangular_flag_on_post:
+#### Block 26: [Web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) :triangular_flag_on_post:
 - [x] (26.1) NodeJS - Introduction
 - [x] (26.2) NodeJS - Asynchronous Flow
 - [x] (26.3) NodeJS - Tests with NodeJS
@@ -53,7 +53,7 @@
 - [ ] (26.6) _[Project - Talk Manager]_
 <hr>
 
-#### Block 27: [NodeJS: Service layer, Rest & Restful Architectures] :hourglass_flowing_sand:
+#### Block 27.1: [NodeJS: Service layer, Rest & Restful Architectures](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.1)  :hourglass_flowing_sand:
 - [ ] (27.1) Software Architecture - Model Layer
 - [ ] (27.2) Software Architecture - Controller and Service Layer
 - [ ] (27.3) Web architecture - Rest and Restful
@@ -61,14 +61,14 @@
 - [ ] (27.5) _[Project - Store Manager]_
 <hr>
 
-#### Block 28: [Authentication and File Upload]	:hourglass_flowing_sand:
+#### Block 27.2: [Authentication and File Upload](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.2) 	:hourglass_flowing_sand:
 - [ ] (28.1) NodeJS - JWT - (JSON Web Token)
 - [ ] (28.2) NodeJS - Upload files with Multer
 - [ ] (28.3) NodeJS - Testing APIs with Integration Tests
 - [ ] (28.4) _[Project - Cookmaster]_
 <hr>
 
-#### Block 29: [Deployment] :hourglass_flowing_sand:
+#### Block 28: [Deployment](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_28) :hourglass_flowing_sand:
 - [ ] (29.1) Infrastructure - Deploy with Heroku
 - [ ] (29.2) Deploy - Process Managers
 - [ ] (29.3) _[Project - Stranger Things]_
@@ -78,7 +78,7 @@
 - [ ] (30.1) _[Project - Trybeer]_
 <hr> -->
 
-#### Block 31: [Architecture: SOLID and ORM] :hourglass_flowing_sand:
+#### Block 29: [Architecture: SOLID and ORM](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_29)  :hourglass_flowing_sand:
 - [ ] (31.1) Architecture - SOLID Principles
 - [ ] (31.2) ORM - Application interface with the database
 - [ ] (31.3) ORM - Associations
@@ -86,11 +86,11 @@
 - [ ] (31.5) _[Project - Blogs API]_
 <hr>
 
-#### Block 32: [Sockets] :hourglass_flowing_sand:
+#### Block 30: [Sockets](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_30) :hourglass_flowing_sand:
 - [ ] (32.1) Sockets - TCP/UDP & NET
 - [ ] (32.2) Sockets - Socket.io
 - [ ] (32.3) _[Project - Webchat]_
 <hr>
 
-#### Block 33: [Project: Tryber II]	:hourglass_flowing_sand:
+#### Block 31: [Project: Tryber II]	:hourglass_flowing_sand:
 - [ ] (33.1) _[Project - Trybeer v2]_
