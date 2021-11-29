@@ -44,7 +44,7 @@
 - [x] (25.3) _[Projeto - Aggregations](https://github.com/tryber/sd-09-mongodb-aggregations/pull/78)_
 <hr>
 
-#### Block 26: [Web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) :triangular_flag_on_post:
+#### Block 26: [Web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) ✔️
 - [x] (26.1) NodeJS - Introduction
 - [x] (26.2) NodeJS - Asynchronous Flow
 - [x] (26.3) NodeJS - Tests with NodeJS
@@ -53,7 +53,7 @@
 - [ ] (26.6) _[Project - Talk Manager]_
 <hr>
 
-#### Block 27.1: [NodeJS: Service layer, Rest & Restful Architectures](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.1)  :hourglass_flowing_sand:
+#### Block 27.1: [NodeJS: Service layer, Rest & Restful Architectures](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.1)  ✔️
 - [ ] (27.1) Software Architecture - Model Layer
 - [ ] (27.2) Software Architecture - Controller and Service Layer
 - [ ] (27.3) Web architecture - Rest and Restful
@@ -61,14 +61,14 @@
 - [ ] (27.5) _[Project - Store Manager]_
 <hr>
 
-#### Block 27.2: [Authentication and File Upload](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.2) 	:hourglass_flowing_sand:
+#### Block 27.2: [Authentication and File Upload](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.2) 	:triangular_flag_on_post:
 - [ ] (28.1) NodeJS - JWT - (JSON Web Token)
 - [ ] (28.2) NodeJS - Upload files with Multer
 - [ ] (28.3) NodeJS - Testing APIs with Integration Tests
 - [ ] (28.4) _[Project - Cookmaster]_
 <hr>
 
-#### Block 28: [Deployment](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_28) :hourglass_flowing_sand:
+#### Block 28: [Deployment](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_28) :triangular_flag_on_post:
 - [ ] (29.1) Infrastructure - Deploy with Heroku
 - [ ] (29.2) Deploy - Process Managers
 - [ ] (29.3) _[Project - Stranger Things]_
