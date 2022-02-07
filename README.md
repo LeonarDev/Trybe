@@ -49,18 +49,18 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 | Block 25 [MongoDB: Aggregation Framework](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_25)	| :heavy_check_mark:
 | Block 26 [Introduction to web development with NodeJS](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_26) | :heavy_check_mark:
 | Block 27.1 [NodeJS: Service layer, Rest & Restful Architectures](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.1) | :heavy_check_mark:
-| Block 27.2 [Authentication and File Upload](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.2) | :triangular_flag_on_post:
-| Block 28 [Deployment](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_28) | :triangular_flag_on_post:
-| Block 29 [Architecture: SOLID and ORM](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_29) | :hourglass_flowing_sand:
-| Block 30 [Sockets](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_30) | :hourglass_flowing_sand:
-| Block 31 [Project: Tryber II](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_31) | :hourglass_flowing_sand:
+| Block 27.2 [Authentication and File Upload](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.2) | :heavy_check_mark:
+| Block 28 [Deployment](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_28) | :heavy_check_mark:
+| Block 29 [Architecture: SOLID and ORM](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_29) | :heavy_check_mark:
+| Block 30 [Sockets](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_30) | :heavy_check_mark:
+| Block 31 [Project: Tryber II](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_31) | :heavy_check_mark:
 
 <br>
 
 ### MODULE 4
 | [COMPUTER SCIENCE](https://github.com/LeonarDev/Trybe/tree/main/Exercises/computer-science) | Status
 | --- | :---: |
-| Block 32 [Introduction to Python and Web Data Scraping]	| :hourglass_flowing_sand:
+| Block 32 [Introduction to Python and Web Data Scraping]	| :triangular_flag_on_post:
 | Block 33 [Object Oriented Programming and Design Patterns] | :hourglass_flowing_sand:
 | Block 34 [Network and Data Scraping] | :hourglass_flowing_sand:
 | Block 35 [Algorithms and Data Structure]	| :hourglass_flowing_sand:
