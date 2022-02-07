@@ -1,4 +1,4 @@
-# Back-end Development :construction:
+# Back-end Development ✔️
 
 #### Block 20: [Introduction to SQL](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_20)	✔️
 - [x] (20.1) SQL - Introduction
