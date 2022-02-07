@@ -49,48 +49,48 @@
 - [x] (26.2) NodeJS - Asynchronous Flow
 - [x] (26.3) NodeJS - Tests with NodeJS
 - [x] (26.4) Express: HTTP with NodeJS
-- [ ] (26.5) Practicing Express
-- [ ] (26.6) _[Project - Talk Manager]_
+- [x] (26.5) Practicing Express
+- [x] (26.6) _[Project - Talk Manager]_
 <hr>
 
 #### Block 27.1: [NodeJS: Service layer, Rest & Restful Architectures](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.1)  ✔️
-- [ ] (27.1) Software Architecture - Model Layer
-- [ ] (27.2) Software Architecture - Controller and Service Layer
-- [ ] (27.3) Web architecture - Rest and Restful
-- [ ] (27.4) Software Architecture - Testing the Layers
-- [ ] (27.5) _[Project - Store Manager]_
+- [x] (27.1) Software Architecture - Model Layer
+- [x] (27.2) Software Architecture - Controller and Service Layer
+- [x] (27.3) Web architecture - Rest and Restful
+- [x] (27.4) Software Architecture - Testing the Layers
+- [x] (27.5) _[Project - Store Manager]_
 <hr>
 
-#### Block 27.2: [Authentication and File Upload](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.2) 	:triangular_flag_on_post:
-- [ ] (28.1) NodeJS - JWT - (JSON Web Token)
-- [ ] (28.2) NodeJS - Upload files with Multer
-- [ ] (28.3) NodeJS - Testing APIs with Integration Tests
-- [ ] (28.4) _[Project - Cookmaster]_
+#### Block 27.2: [Authentication and File Upload](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_27.2) 	✔️
+- [x] (28.1) NodeJS - JWT - (JSON Web Token)
+- [x] (28.2) NodeJS - Upload files with Multer
+- [x] (28.3) NodeJS - Testing APIs with Integration Tests
+- [x] (28.4) _[Project - Cookmaster]_
 <hr>
 
-#### Block 28: [Deployment](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_28) :triangular_flag_on_post:
-- [ ] (29.1) Infrastructure - Deploy with Heroku
-- [ ] (29.2) Deploy - Process Managers
-- [ ] (29.3) _[Project - Stranger Things]_
+#### Block 28: [Deployment](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_28) ✔️
+- [x] (29.1) Infrastructure - Deploy with Heroku
+- [x] (29.2) Deploy - Process Managers
+- [x] (29.3) _[Project - Stranger Things]_
 <hr>
 
 <!-- #### Block 30: Project: Tryber] :hourglass_flowing_sand:
-- [ ] (30.1) _[Project - Trybeer]_
+- [x] (30.1) _[Project - Trybeer]_
 <hr> -->
 
-#### Block 29: [Architecture: SOLID and ORM](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_29)  :hourglass_flowing_sand:
-- [ ] (31.1) Architecture - SOLID Principles
-- [ ] (31.2) ORM - Application interface with the database
-- [ ] (31.3) ORM - Associations
-- [ ] (31.4) Good practice in writing tests
-- [ ] (31.5) _[Project - Blogs API]_
+#### Block 29: [Architecture: SOLID and ORM](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_29)  ✔️
+- [x] (31.1) Architecture - SOLID Principles
+- [x] (31.2) ORM - Application interface with the database
+- [x] (31.3) ORM - Associations
+- [x] (31.4) Good practice in writing tests
+- [x] (31.5) _[Project - Blogs API]_
 <hr>
 
-#### Block 30: [Sockets](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_30) :hourglass_flowing_sand:
-- [ ] (32.1) Sockets - TCP/UDP & NET
-- [ ] (32.2) Sockets - Socket.io
-- [ ] (32.3) _[Project - Webchat]_
+#### Block 30: [Sockets](https://github.com/LeonarDev/Trybe/tree/main/Exercises/back-end/block_30) ✔️
+- [x] (32.1) Sockets - TCP/UDP & NET
+- [x] (32.2) Sockets - Socket.io
+- [x] (32.3) _[Project - Webchat]_
 <hr>
 
-#### Block 31: [Project: Tryber II]	:hourglass_flowing_sand:
-- [ ] (33.1) _[Project - Trybeer v2]_
+#### Block 31: [Project: Tryber II]	✔️
+- [x] (33.1) _[Project - Trybeer v2]_
