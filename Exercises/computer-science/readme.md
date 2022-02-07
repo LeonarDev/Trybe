@@ -1,4 +1,4 @@
-## Computer Science :hourglass_flowing_sand:
+## Computer Science :construction:
 
 #### Block 34 - Computer and Network Architecture	:hourglass_flowing_sand:
 - [ ] (34.1) omputer Science - Introduction
