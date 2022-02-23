@@ -60,9 +60,9 @@ The program has more than 1.500 hours of in-person and online classes and deals 
 ### MODULE 4
 | [COMPUTER SCIENCE](https://github.com/LeonarDev/Trybe/tree/main/Exercises/computer-science) | Status
 | --- | :---: |
-| Block 32 [Introduction to Python and Web Data Scraping]	| :triangular_flag_on_post:
-| Block 33 [Object Oriented Programming and Design Patterns] | :hourglass_flowing_sand:
+| Block 32 [Introduction to Python]	| ✔️
+| Block 33 [Object Oriented Programming and Design Patterns] | :triangular_flag_on_post:
 | Block 34 [Network and Data Scraping] | :hourglass_flowing_sand:
-| Block 35 [Algorithms and Data Structure]	| :hourglass_flowing_sand:
-| Block 36 [Data Structure I: Hash and Set]	| :hourglass_flowing_sand:
+| Block 35 [Algorithms]	| :hourglass_flowing_sand:
+| Block 36 [Data Structure I: Arrays, Hashmaps and Sets]	| :hourglass_flowing_sand:
 | Block 37 [Data Structure II: Stacks, Queues and Lists]	| :hourglass_flowing_sand:
